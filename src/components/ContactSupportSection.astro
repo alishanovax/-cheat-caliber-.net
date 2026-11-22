@@ -1,0 +1,85 @@
+---
+import '../styles/support-section.css';
+import { t } from '../i18n';
+import Icon from './icons/Icon.astro';
+import type { IconName } from './icons/types';
+import { Button } from '@/components/starwind/button';
+import { Card, CardFooter } from '@/components/starwind/card';
+
+interface Props {
+  /** Visible H1 — defaults to i18n support title. */
+  pageTitle?: string;
+  titleId?: string;
+  showTicketTips?: boolean;
+  class?: string;
+}
+
+const {
+  pageTitle,
+  titleId = 'support-title',
+  showTicketTips = false,
+  class: className,
+} = Astro.props;
+const c = t.support;
+const heading = pageTitle ?? c.title;
+---
+
+<section
+  id="support"
+  class:list={['support-section border-y border-border bg-muted/20 py-16 md:py-24', className]}
+  aria-labelledby={titleId}
+>
+  <div class="support-section__inner mx-auto max-w-6xl px-5">
+    <header class="section-header section-header--wide support-section__header">
+      <p class="section-header__eyebrow">{c.eyebrow}</p>
+      <h1 id={titleId} class="section-header__title">{heading}</h1>
+      <p class="section-header__subtitle">{c.subtitle}</p>
+    </header>
+
+    <ul class="support-section__cards">
+      {
+        c.channels.map((channel) => (
+          <li class="min-w-0">
+            <Card class="support-channel-card group flex h-full flex-col transition-shadow hover:shadow-md">
+              <div class="support-channel-card__body">
+                <div class="support-channel-card__icon" aria-hidden="true">
+                  <Icon name={channel.icon as IconName} size={22} class="support-section__icon" />
+                </div>
+                <h3 class="support-channel-card__title">{channel.title}</h3>
+                <p class="support-channel-card__desc">{channel.desc}</p>
+              </div>
+              <CardFooter class="support-channel-card__footer mt-auto">
+                <Button
+                  as="a"
+                  href={channel.href}
+                  variant="outline"
+                  size="sm"
+                  class="w-full"
+                >
+                  {channel.linkLabel}
+                  <Icon name="arrowRight" size={17} />
+                </Button>
+              </CardFooter>
+            </Card>
+          </li>
+        ))
+      }
+    </ul>
+
+    {
+      showTicketTips && (
+        <div class="support-section__tips">
+          <h3 class="support-section__tips-title">{c.ticketTitle}</h3>
+          <ul class="support-section__tips-list">
+            {c.ticketItems.map((item) => (
+              <li class="support-section__tips-item">
+                <p class="support-section__tips-item-title">{item.title}</p>
+                <p class="support-section__tips-item-desc">{item.desc}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
+  </div>
+</section>

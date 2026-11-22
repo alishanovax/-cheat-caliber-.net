@@ -1,0 +1,47 @@
+---
+import { t } from '../i18n';
+import { footerLogoAltForPath } from '../config/seoLogoAlt';
+
+interface Props {
+  showIcon?: boolean;
+  /** Header: pill lockup. Footer: icon-only (letter C mark). */
+  compact?: boolean;
+  class?: string;
+}
+
+const { showIcon = false, compact = false, class: className } = Astro.props;
+const brandTagline = 'CS:GO on PC — aimbot, ESP & config tools';
+const footerIconOnly = showIcon && !compact;
+---
+
+<a
+  href="/"
+  class:list={['site-brand', compact && 'site-brand--compact', className]}
+  aria-label={showIcon ? 'Return to csgo-cheat.org homepage' : t.ui.homeAria}
+>
+  {
+    showIcon && (
+      <img
+        src="/logo.svg"
+        alt={footerLogoAltForPath(Astro.url.pathname)}
+        width="32"
+        height="32"
+        class="site-brand__icon shrink-0 rounded-md"
+      />
+    )
+  }
+  {
+    compact ? (
+      <span class="site-brand__pill" aria-hidden="true">
+        CS:GO <span class="site-brand__pill-accent">Cheats</span>
+      </span>
+    ) : footerIconOnly ? null : (
+      <span class="site-brand__stack min-w-0" aria-hidden="true">
+        <span class="site-brand__title">
+          CS:GO <span class="site-brand__title-accent">Cheats</span>
+        </span>
+        <span class="site-brand__tagline">{brandTagline}</span>
+      </span>
+    )
+  }
+</a>

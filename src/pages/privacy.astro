@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../i18n';
+import { resolvePageSeo } from '../config/seo';
+import LegalPage from '../components/LegalPage.astro';
+import { breadcrumbSchema, webPageSchema } from '../utils/schema';
+
+const content = t.legalPages.privacy;
+const seo = resolvePageSeo('/privacy/');
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  jsonLd={[
+    webPageSchema({
+      name: seo.h1 ?? content.title,
+      description: seo.description,
+      url: '/privacy/',
+    }),
+    breadcrumbSchema([
+      { name: 'Home', path: '/' },
+      { name: 'Privacy Policy', path: '/privacy/' },
+    ]),
+  ]}
+>
+  <style slot="head" is:inline>
+    @media (max-width: 639px) {
+      :root {
+        --privacy-rbp: phone;
+      }
+    }
+    @media (min-width: 640px) and (max-width: 1023px) {
+      :root {
+        --privacy-rbp: tablet;
+      }
+    }
+    @media (min-width: 1024px) {
+      :root {
+        --privacy-rbp: desktop;
+      }
+    }
+  </style>
+  <LegalPage
+    title={seo.h1 ?? content.title}
+    description={content.description}
+    breadcrumbLabel="Privacy Policy"
+    keywordSubheading="Analytics, cookies and checkout data"
+    sectionHeadingLevel="h3"
+    sections={content.sections}
+    supportCtaLabel="Support and FAQ"
+    homeCtaLabel="Back to csgo-cheat.org home"
+  />
+</BaseLayout>

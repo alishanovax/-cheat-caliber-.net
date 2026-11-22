@@ -1,0 +1,35 @@
+---
+import type { ProductPage } from '../../data/products';
+
+interface Props {
+  product: ProductPage;
+}
+
+const { product } = Astro.props;
+const buyHref = product.buyUrl;
+---
+
+<aside
+  class="product-checkout text-left lg:sticky lg:top-24"
+  aria-labelledby={`checkout-${product.slug}`}
+>
+  <div class="overflow-hidden rounded-2xl border border-border bg-card shadow-lg">
+    <div class="space-y-4 px-5 py-5">
+      <p
+        id={`checkout-${product.slug}`}
+        class="text-base font-semibold tracking-tight text-white"
+      >
+        Ready to checkout
+      </p>
+      <p class="text-sm text-neutral-400">
+        Continue to secure checkout for this tier. Plan details are confirmed on the checkout page.
+      </p>
+      <a
+        href={buyHref}
+        class="flex w-full items-center justify-center rounded-xl bg-white px-4 py-3.5 text-sm font-semibold text-[#0a0a0a] transition-colors hover:bg-neutral-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+      >
+        Buy Now
+      </a>
+    </div>
+  </div>
+</aside>

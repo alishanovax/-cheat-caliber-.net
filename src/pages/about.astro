@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../i18n';
+import { resolvePageSeo } from '../config/seo';
+
+const seo = resolvePageSeo('/about/');
+import LegalPage from '../components/LegalPage.astro';
+import { breadcrumbSchema, organizationSchema, webPageSchema } from '../utils/schema';
+
+const content = t.legalPages.about;
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  jsonLd={[
+    organizationSchema(),
+    webPageSchema({
+      name: seo.h1 ?? content.title,
+      description: seo.description,
+      url: '/about/',
+    }),
+    breadcrumbSchema([
+      { name: 'Home', path: '/' },
+      { name: 'About', path: '/about/' },
+    ]),
+  ]}
+>
+  <style slot="head" is:inline>
+    @media (max-width: 639px) {
+      :root {
+        --about-rbp: phone;
+      }
+    }
+    @media (min-width: 640px) and (max-width: 1023px) {
+      :root {
+        --about-rbp: tablet;
+      }
+    }
+    @media (min-width: 1024px) {
+      :root {
+        --about-rbp: desktop;
+      }
+    }
+  </style>
+  <LegalPage
+    title={seo.h1 ?? content.title}
+    description={content.description}
+    breadcrumbLabel="About"
+    keywordSubheading="Aimbot Esp: CSGO Cheats"
+    sections={content.sections}
+    supportCtaLabel="About: loader and checkout support"
+    homeCtaLabel="About: return to homepage"
+  />
+</BaseLayout>

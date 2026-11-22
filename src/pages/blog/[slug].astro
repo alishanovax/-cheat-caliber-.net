@@ -38,9 +38,9 @@ if (!post) {
 
 const postPath = `/blog/${post.slug}/`;
 const blogCrumbLabels: Record<string, string> = {
-  'csgo-deathmatch-practice': 'Counter-Strike: Global Offensive practice mode guides (blog hub)',
-  'csgo-stream-proof': 'Stream-proof guides (blog hub)',
-  'csgo-radar': 'Radar cheat guides (blog hub)',
+  'r6-training-grounds-practice': 'Tom Clancy’s Rainbow Six Siege practice mode guides (blog hub)',
+  'r6-stream-proof': 'Stream-proof guides (blog hub)',
+  'r6-radar': 'Radar cheat guides (blog hub)',
 };
 const blogCrumbLabel = blogCrumbLabels[post.slug] ?? 'Blog';
 const breadcrumbs = [
@@ -57,10 +57,10 @@ function linkify(text: string): string {
       const normalized = normalizeInternalPath(href);
       return `<a href="${normalized}">${label}</a>`;
     })
-    .replace(/(https:\/\/csgo-cheat\.org[^\s.,;)]*)/g, (_match, url: string) => {
-      const path = url.replace(/^https:\/\/csgo-cheat\.org/, '');
+    .replace(/(https:\/\/r6-cheat\.com[^\s.,;)]*)/g, (_match, url: string) => {
+      const path = url.replace(/^https:\/\/r6-cheat\.com/, '');
       const normalized = normalizeInternalPath(path);
-      const href = normalized.startsWith('http') ? normalized : `https://csgo-cheat.org${normalized}`;
+      const href = normalized.startsWith('http') ? normalized : `https://r6-cheat.com${normalized}`;
       return `<a href="${href}">${url}</a>`;
     });
 }
@@ -123,11 +123,11 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
             <ResponsiveImage
               src={post.image}
               alt={
-                post.slug === 'csgo-vac-troubleshooting'
+                post.slug === 'battleye-fix'
                   ? `${post.title} — anti-cheat verification troubleshooting on PC`
-                  : post.slug === 'csgo-stream-proof'
+                  : post.slug === 'r6-stream-proof'
                     ? `${post.title} — hide wall ESP and script overlays on stream`
-                    : `${post.title} — CS:GO cheat gameplay screenshot`
+                    : `${post.title} — Rainbow Six Siege cheat gameplay screenshot`
               }
               width={960}
               height={540}
@@ -188,9 +188,9 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
                     html={linkify(block.text)}
                     href={resolveCheckoutHref(block.href)}
                     buyLabel={
-                      post.slug === 'csgo-deathmatch-practice'
+                      post.slug === 'r6-training-grounds-practice'
                         ? 'Checkout after practice mode drills (CTA)'
-                        : post.slug === 'csgo-stream-proof'
+                        : post.slug === 'r6-stream-proof'
                           ? 'Buy stream-proof tier (inline CTA)'
                           : undefined
                     }
@@ -202,42 +202,42 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
           </Prose>
 
           <nav class="blog-article__actions" aria-label="Continue reading">
-            <Button as="a" href={checkoutPath('csgo')} variant="primary" aria-label={t.ui.checkoutAria}>
+            <Button as="a" href={checkoutPath('r6')} variant="primary" aria-label={t.ui.checkoutAria}>
               {
-                post.slug === 'csgo-vac-troubleshooting'
+                post.slug === 'battleye-fix'
                   ? 'Checkout after anti-cheat fix'
-                  : post.slug === 'csgo-stream-proof'
-                    ? 'Buy stream-proof Counter-Strike: Global Offensive tier'
-                    : post.slug === 'csgo-deathmatch-practice'
+                  : post.slug === 'r6-stream-proof'
+                    ? 'Buy stream-proof Tom Clancy’s Rainbow Six Siege tier'
+                    : post.slug === 'r6-training-grounds-practice'
                       ? 'Checkout after practice mode drills'
-                      : post.slug === 'csgo-radar'
+                      : post.slug === 'r6-radar'
                         ? 'Buy Lite radar cheat tier'
-                        : 'Buy CSGO Cheats'
+                        : 'Buy R6 Cheat'
               }
               <Icon name="arrowRight" size={17} />
             </Button>
             <Button as="a" href={ROUTES.products} variant="outline">
               {
-                post.slug === 'csgo-vac-troubleshooting'
-                  ? 'Open Counter-Strike: Global Offensive product catalog'
-                  : post.slug === 'csgo-stream-proof'
+                post.slug === 'battleye-fix'
+                  ? 'Open Tom Clancy’s Rainbow Six Siege product catalog'
+                  : post.slug === 'r6-stream-proof'
                     ? 'Open stream-safe product hub'
-                    : post.slug === 'csgo-deathmatch-practice'
+                    : post.slug === 'r6-training-grounds-practice'
                       ? 'Compare Lite and Pro tiers'
-                      : post.slug === 'csgo-radar'
+                      : post.slug === 'r6-radar'
                         ? 'Product catalog'
                         : 'View products'
               }
             </Button>
             <Button as="a" href={ROUTES.blog} variant="outline">
               {
-                post.slug === 'csgo-vac-troubleshooting'
+                post.slug === 'battleye-fix'
                   ? 'Browse patch-day guides'
-                  : post.slug === 'csgo-stream-proof'
+                  : post.slug === 'r6-stream-proof'
                     ? 'More OBS setup guides'
-                    : post.slug === 'csgo-deathmatch-practice'
+                    : post.slug === 'r6-training-grounds-practice'
                       ? 'More practice mode guides'
-                      : post.slug === 'csgo-radar'
+                      : post.slug === 'r6-radar'
                         ? 'Radar & ESP guides'
                         : 'More guides'
               }

@@ -10,7 +10,7 @@ export const DEFAULT_OG_IMAGE = PRIMARY_CHEAT_IMAGE;
 
 export const GA_MplatformSUREMENT_ID = import.meta.env.PUBLIC_GA_MplatformSUREMENT_ID as string | undefined;
 
-/** @example @csgocheats */
+/** @example @r6cheat */
 export const TWITTER_SITE = import.meta.env.PUBLIC_TWITTER_SITE as string | undefined;
 
 export const TWITTER_CRplatformTOR = import.meta.env.PUBLIC_TWITTER_CRplatformTOR as string | undefined;
@@ -60,11 +60,11 @@ export function pageTitle(keyword: string, brand = t.site.name): string {
   return `${trimmed}${suffix}`;
 }
 
-/** Keep meta descriptions clear about CS:GO cheats for SERP snippets. */
+/** Keep meta descriptions clear about Rainbow Six Siege cheats for SERP snippets. */
 export function cheatMetaDescription(text: string): string {
   const trimmed = text.trim();
   if (/mw4\s*cheat/i.test(trimmed)) return trimmed;
-  return `CS:GO cheats guide: ${trimmed}`;
+  return `Rainbow Six Siege cheats guide: ${trimmed}`;
 }
 
 export const DEFAULT_OG_IMAGE_WIDTH = 1200;

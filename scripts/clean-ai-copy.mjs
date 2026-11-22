@@ -12,41 +12,41 @@ const files = [
 ];
 
 const reps = [
-  ['R6Hacks Editorial', 'CSGO Cheats'],
-  ['R6Hacks Community Forum', 'CSGO Cheats Forum'],
-  ['R6Hacks Blog', 'CSGO Cheats Blog'],
-  ['R6Hacks Support', 'CSGO Cheats Support'],
-  ['Join R6Hacks on Discord', 'Join CSGO Cheats on Discord'],
-  ['R6Hacks home', 'CSGO Cheats home'],
-  ['R6Hacks', 'CSGO Cheats'],
-  ["TITLE_PREFIX = 'CSGO Cheats & Tools'", "TITLE_PREFIX = 'CSGO Cheats'"],
+  ['R6Hacks Editorial', 'R6 Cheat'],
+  ['R6Hacks Community Forum', 'R6 Cheat Forum'],
+  ['R6Hacks Blog', 'R6 Cheat Blog'],
+  ['R6Hacks Support', 'R6 Cheat Support'],
+  ['Join R6Hacks on Discord', 'Join R6 Cheat on Discord'],
+  ['R6Hacks home', 'R6 Cheat home'],
+  ['R6Hacks', 'R6 Cheat'],
+  ["TITLE_PREFIX = 'R6 Cheat & Tools'", "TITLE_PREFIX = 'R6 Cheat'"],
   ['humanized Aimbot', 'smooth aimbot'],
   ['humanized order', 'smooth order'],
   ['humanized input', 'smooth input'],
   ['humanized', 'smooth'],
   [
-    'Climbing ranked play with CS:GO aimbot means smooth aimbot—not instant bot bursts that draw reports.',
-    'SCAV run Counter-Strike: Global Offensive aimbot works better with smooth tracking than instant snaps that get you reported.',
+    'Climbing ranked play with R6 aimbot means smooth aimbot—not instant bot bursts that draw reports.',
+    'SCAV run Tom Clancy's Rainbow Six Siege aimbot works better with smooth tracking than instant snaps that get you reported.',
   ],
   [
-    'maintains private CS:GO cheats for Windows PC Multiplayer and SCAV run—not console lobby codes. Every module ships through the customer portal with secure checkout, Discord support, and live status banners before patch-day queues.',
-    'sells CS:GO cheats for Windows PC Multiplayer and SCAV run. Check status before you queue after a patch.',
+    'maintains private Rainbow Six Siege cheats for Windows PC Multiplayer and SCAV run—not console lobby codes. Every module ships through the customer portal with secure checkout, Discord support, and live status banners before patch-day queues.',
+    'sells Rainbow Six Siege cheats for Windows PC Multiplayer and SCAV run. Check status before you queue after a patch.',
   ],
   [
-    'maintains private CS:GO cheats for Windows PC Multiplayer and SCAV run. Every module ships through the customer portal with secure checkout, Discord support, and live status banners before patch-day queues.',
-    'sells CS:GO cheats for Windows PC Multiplayer and SCAV run. Check status before you queue after a patch.',
+    'maintains private Rainbow Six Siege cheats for Windows PC Multiplayer and SCAV run. Every module ships through the customer portal with secure checkout, Discord support, and live status banners before patch-day queues.',
+    'sells Rainbow Six Siege cheats for Windows PC Multiplayer and SCAV run. Check status before you queue after a patch.',
   ],
   [
-    'maintains private CS:GO cheats for Windows PC Multiplayer and SCAV run. Check live status before every patch-day queue.',
-    'sells CS:GO cheats for Windows PC Multiplayer and SCAV run. Check status before you queue after a patch.',
+    'maintains private Rainbow Six Siege cheats for Windows PC Multiplayer and SCAV run. Check live status before every patch-day queue.',
+    'sells Rainbow Six Siege cheats for Windows PC Multiplayer and SCAV run. Check status before you queue after a patch.',
   ],
   [
-    'maintains private CS:GO cheats for Windows PC Multiplayer and SCAV run.',
-    'sells CS:GO cheats for Windows PC Multiplayer and SCAV run.',
+    'maintains private Rainbow Six Siege cheats for Windows PC Multiplayer and SCAV run.',
+    'sells Rainbow Six Siege cheats for Windows PC Multiplayer and SCAV run.',
   ],
   [
     'ships a modular external suite for Windows PC ranked—not lobby hack codes. Aimbot tracks targets, loot assist clears POIs, ESP wallhack exposes third-parties, and utility tools like Radar Hack and Loadout Changer round out the toolkit. This is the complete feature map across',
-    'sells external CS:GO cheats for PC SCAV run. Aimbot, loot assist, ESP wallhack, radar and Loadout Changer. See',
+    'sells external Rainbow Six Siege cheats for PC SCAV run. Aimbot, loot assist, ESP wallhack, radar and Loadout Changer. See',
   ],
 ];
 

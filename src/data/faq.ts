@@ -35,12 +35,12 @@ function expandFaqAnswer(answer: string, faqId: string): string {
     ELITE: link(`Elite tier checkout (${faqId})`, productPath('elite')),
     LITE: link(`Lite ESP tier (${faqId})`, productPath('lite')),
     PRO: link(`Pro aimbot tier (${faqId})`, productPath('pro')),
-    PRODUCTS_HUB: link(`Full Counter-Strike: Global Offensive catalog (${faqId})`, ROUTES.products),
+    PRODUCTS_HUB: link(`Full Tom Clancy’s Rainbow Six Siege catalog (${faqId})`, ROUTES.products),
     HWID: link(`HWID spoofer utility — ${faqId}`, productPath('hwid-spoofer')),
     UGC: link(`UGC appeal tools — ${faqId}`, productPath('ugc')),
     SKIN: link(`loadout tools pack — ${faqId}`, productPath('unlock-all')),
     FAQ_PAGE: link(`Full FAQ index — ${faqId}`, ROUTES.faq),
-    BLOG: link(`Counter-Strike: Global Offensive blog guides — ${faqId}`, ROUTES.blog),
+    BLOG: link(`Tom Clancy’s Rainbow Six Siege blog guides — ${faqId}`, ROUTES.blog),
   };
   return Object.entries(slots).reduce(
     (text, [key, html]) => text.replaceAll(`{{${key}}}`, html),
@@ -57,21 +57,21 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'status',
     topic: 'setup',
     icon: 'faqStatus',
-    q: 'Where do I check if CS:GO cheats are online?',
-    a: a('The live status banner is on csgo-cheat.org. Always check after a Counter-Strike: Global Offensive or anti-cheat update.'),
+    q: 'Where do I check if Rainbow Six Siege cheats are online?',
+    a: a('The live status banner is on r6-cheat.com. Always check after a Tom Clancy’s Rainbow Six Siege or anti-cheat update.'),
   },
   {
     id: 'after-buy',
     topic: 'setup',
     icon: 'faqAfterBuy',
     q: 'What happens after I buy?',
-    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Counter-Strike: Global Offensive.'),
+    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Tom Clancy’s Rainbow Six Siege.'),
   },
   {
     id: 'ban-risk',
     topic: 'safety',
     icon: 'faqBanRisk',
-    q: 'Can I get banned using third-party CS:GO cheats?',
+    q: 'Can I get banned using third-party Rainbow Six Siege cheats?',
     a: a('Yes—any modification carries risk. anti-cheat and report systems evolve. Read current status and accept the risk before use.'),
   },
   {
@@ -79,7 +79,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'setup',
     icon: 'faqPlatforms',
     q: 'Which platforms are supported?',
-    a: a('Counter-Strike: Global Offensive via the EA app or Steam client on Windows 10/11 64-bit only. macOS and Linux are not supported.'),
+    a: a('Tom Clancy’s Rainbow Six Siege via the EA app or Ubisoft Connect on Windows 10/11 64-bit only. macOS and Linux are not supported.'),
   },
   {
     id: 'license-move',
@@ -99,8 +99,8 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'what-is-esp',
     topic: 'esp',
     icon: 'faqWhatIsEsp',
-    q: 'What is Counter-Strike: Global Offensive wall ESP / ESP?',
-    a: `wall ESP and player ESP show enemy positions, chests, loot and POI camps through storm circle. {{LITE}} covers awareness overlays. {{PRO}} and {{ELITE}} add script modules on top.`,
+    q: 'What is Tom Clancy’s Rainbow Six Siege wall ESP / ESP?',
+    a: `wall ESP and operator ESP show enemy positions, chests, loot and POI camps through storm circle. {{LITE}} covers awareness overlays. {{PRO}} and {{ELITE}} add script modules on top.`,
     scopes: ['lite', 'pro', 'elite'],
   },
   {
@@ -115,7 +115,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhichTierEsp',
     q: 'Which tier do I need for wall ESP only?',
-    a: `{{LITE}} is awareness only: player ESP, chest locator, loot timers and radar cheat. {{PRO}} adds aimbot. {{ELITE}} adds bots, kill steal and loadout tools.`,
+    a: `{{LITE}} is awareness only: operator ESP, chest locator, loot timers and radar cheat. {{PRO}} adds aimbot. {{ELITE}} adds bots, kill steal and loadout tools.`,
     scopes: ['lite'],
   },
   {
@@ -152,7 +152,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'undetected',
     topic: 'safety',
     icon: 'faqUndetected',
-    q: 'Are undetected CS:GO cheats guaranteed?',
+    q: 'Are undetected Rainbow Six Siege cheats guaranteed?',
     a: a('No. Undetected is current status on the product page—not a permanent guarantee. Stop if the build shows updating, testing, or detected.'),
   },
   {
@@ -191,14 +191,14 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqExternalLoader',
     q: 'Is the loader injected into the game folder?',
-    a: `CSGO Cheats runs external with cloud config sync—no files injected into the Counter-Strike: Global Offensive directory. anti-cheat risk still applies. See {{PRODUCTS_HUB}}.`,
+    a: `R6 Cheat runs external with cloud config sync—no files injected into the Tom Clancy’s Rainbow Six Siege directory. anti-cheat risk still applies. See {{PRODUCTS_HUB}}.`,
   },
   {
     id: 'blog-vs-cheats',
     topic: 'blog',
     icon: 'faqBlogVsCheats',
     q: 'Are blog cheat codes the same as ranked cheats?',
-    a: `No. Blog guides about Steam console commands apply only in custom lobbies with cheats enabled. casual matches CS:GO cheats are separate products—see {{LITE}}, {{PRO}} and {{ELITE}}.`,
+    a: `No. Blog guides about Steam console commands apply only in custom lobbies with cheats enabled. casual matches Rainbow Six Siege cheats are separate products—see {{LITE}}, {{PRO}} and {{ELITE}}.`,
   },
   {
     id: 'blog-setup',
@@ -227,7 +227,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhoPro',
     q: 'Who should buy Pro?',
-    a: `casual matches players who want Aimbot, Smooth Aim and Hotkey macros with wall ESP included. Pro is the most popular tier at csgo-cheat.org.`,
+    a: `casual matches players who want Aimbot, Smooth Aim and Hotkey macros with wall ESP included. Pro is the most popular tier at r6-cheat.com.`,
     scopes: ['pro'],
   },
   {
@@ -243,14 +243,14 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'safety',
     icon: 'faqEacUpdate',
     q: 'What should I do after a anti-cheat update?',
-    a: a('Check csgo-cheat.org status. Do not launch until the banner shows online. Load conservative presets after any patch.'),
+    a: a('Check r6-cheat.com status. Do not launch until the banner shows online. Load conservative presets after any patch.'),
   },
   {
     id: 'install-help',
     topic: 'setup',
     icon: 'faqDiscordHelp',
     q: 'How do I get install help?',
-    a: a('After purchase, follow the portal setup guide with your order email, Windows version and Counter-Strike: Global Offensive client build. The FAQ covers common loader errors.'),
+    a: a('After purchase, follow the portal setup guide with your order email, Windows version and Tom Clancy’s Rainbow Six Siege client build. The FAQ covers common loader errors.'),
   },
   {
     id: 'zero-build-ranked',
@@ -279,8 +279,8 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'private-cheats',
     topic: 'safety',
     icon: 'faqPrivateCheats',
-    q: 'What are private CS:GO cheats?',
-    a: a('Private means per-user keys and maintained builds—not public zip packs. CSGO Cheats ships portal delivery for ESP, aimbot and wall ESP tiers.'),
+    q: 'What are private Rainbow Six Siege cheats?',
+    a: a('Private means per-user keys and maintained builds—not public zip packs. R6 Cheat ships portal delivery for ESP, aimbot and wall ESP tiers.'),
   },
   {
     id: 'faq-more',
@@ -306,7 +306,7 @@ export function getAllFaqs(): SiteFaqItem[] {
 /** Shared FAQ block copy + filters (home, /faq/, products, blog). */
 export const SITE_FAQ_SECTION_COPY = {
   eyebrow: 'All topics',
-  title: 'CS:GO cheats FAQ',
+  title: 'Rainbow Six Siege cheats FAQ',
   subtitle: 'Filter by cheat plans, wall ESP, aimbot, products, setup and guides.',
 } as const;
 
@@ -323,7 +323,7 @@ export const SITE_FAQ_FILTER_TOPICS: FaqTopic[] = [
 /** Section copy when FAQ list is scoped to the current page (not /faq/). */
 export const CONTEXTUAL_FAQ_SECTION_COPY = {
   eyebrow: 'Cheat FAQ',
-  title: 'CS:GO cheats questions',
+  title: 'Rainbow Six Siege cheats questions',
   subtitle: 'Straight answers on aimbot, ESP, bans and setup — see the full FAQ for every topic.',
 } as const;
 
@@ -367,7 +367,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       topic: 'blog',
       icon: 'faqBlogGuideStart',
       q: 'Should I use console cheat codes in ranked?',
-      a: a('No. practice mode lobby cheat codes only work in custom games with cheats enabled. casual matches requires separate CS:GO cheats from csgo-cheat.org tiers.'),
+      a: a('No. practice mode lobby cheat codes only work in custom games with cheats enabled. casual matches requires separate Rainbow Six Siege cheats from r6-cheat.com tiers.'),
     },
     {
       id: 'blog-guide-tier',
@@ -431,7 +431,7 @@ const defaultBlogFaqs: SiteFaqItem[] = [
     topic: 'blog',
     icon: 'faqBlogDefault3',
     q: 'Will settings in this guide work next patch?',
-    a: a('Re-check status after every Counter-Strike: Global Offensive update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
+    a: a('Re-check status after every Tom Clancy’s Rainbow Six Siege update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
   },
 ];
 
@@ -445,7 +445,7 @@ export function getBlogFaqs(tag: string, slug: string): SiteFaqItem[] {
       topic: 'esp',
       icon: 'faqBlogSlugEsp',
       q: 'Which tier covers wall ESP from this guide?',
-      a: `{{LITE}} includes player ESP, chest locator and loot timers. {{PRO}} adds combat aimbot on the same overlay stack.`,
+      a: `{{LITE}} includes operator ESP, chest locator and loot timers. {{PRO}} adds combat aimbot on the same overlay stack.`,
     });
   }
   if (slug.includes('script') || slug.includes('combo') || slug.includes('auto-combo')) {

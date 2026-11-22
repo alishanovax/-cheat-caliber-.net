@@ -9,7 +9,7 @@ export type CheckoutProduct = keyof typeof CHECKOUT;
 
 /** URL slug for /go/[slug]/ checkout redirect pages. */
 export const CHECKOUT_SLUGS: Record<CheckoutProduct, string> = {
-  csgo: 'cs-go',
+  r6: 'r6',
   skinChanger: 'skin-changer',
   hwidSpoofer: 'hwid-spoofer',
   ugc: 'ugc',
@@ -19,17 +19,17 @@ export const CHECKOUT_SLUG_TO_PRODUCT = Object.fromEntries(
   Object.entries(CHECKOUT_SLUGS).map(([product, slug]) => [slug, product as CheckoutProduct]),
 ) as Record<string, CheckoutProduct>;
 
-/** All Buy now / checkout CTAs use the same Zadeyo go link. */
-export function checkoutPath(_product: CheckoutProduct = 'csgo'): string {
-  return CHECKOUT.csgo;
+/** All Buy now / checkout CTAs use the same external go link. */
+export function checkoutPath(_product: CheckoutProduct = 'r6'): string {
+  return CHECKOUT.r6;
 }
 
 /** Default product checkout redirect (replaces legacy Discord CTAs). */
-export const PRIMARY_CHECKOUT_PATH = checkoutPath('csgo');
+export const PRIMARY_CHECKOUT_PATH = checkoutPath('r6');
 
-/** Map internal product slugs to checkout (single Zadeyo destination). */
+/** Map internal product slugs to checkout (single destination). */
 export function checkoutForSlug(_slug: string): string {
-  return CHECKOUT.csgo;
+  return CHECKOUT.r6;
 }
 
 /** Resolve blog CTA or legacy href values to internal checkout paths. */
@@ -39,7 +39,7 @@ export function resolveCheckoutHref(href: string): string {
   if (!href.startsWith('http')) {
     const normalized = href.startsWith('/') ? href : `/${href}`;
     if (GO_CHECKOUT_PATH.test(normalized)) {
-      return CHECKOUT.csgo;
+      return CHECKOUT.r6;
     }
     return normalized;
   }
@@ -51,7 +51,7 @@ export function resolveCheckoutHref(href: string): string {
   }
 
   if (href.includes('%2Fproducts%2Fcloud-dma') || href.includes('/products/cloud-dma')) {
-    return checkoutPath('csgo');
+    return checkoutPath('r6');
   }
   if (href.includes('%2Fproducts%2Fskin-changer') || href.includes('/products/skin-changer')) {
     return checkoutPath('skinChanger');
@@ -64,16 +64,16 @@ export function resolveCheckoutHref(href: string): string {
   }
   if (
     href.includes('zadeyo.com/go/') ||
-    href.includes('%2Fcs-go-cheats') ||
-    href.includes('/cs-go-cheats') ||
-    href.includes('%2Fproducts%2Fcs-go') ||
-    href.includes('/products/cs-go-legends') ||
+    href.includes('%2Fr6-cheats') ||
+    href.includes('/r6-cheats') ||
+    href.includes('%2Fproducts%2Fr6-faceit') ||
+    href.includes('/products/r6-legends') ||
     href.includes('%2Fproducts%2Fapex') ||
-    href.includes('/products/cs-go') ||
-    href.includes('%2Fproducts%2Fcs-go') ||
-    href.includes('/products/cs-go')
+    href.includes('/products/r6') ||
+    href.includes('%2Fproducts%2Fr6-faceit') ||
+    href.includes('/products/r6')
   ) {
-    return checkoutPath('csgo');
+    return checkoutPath('r6');
   }
 
   return href;

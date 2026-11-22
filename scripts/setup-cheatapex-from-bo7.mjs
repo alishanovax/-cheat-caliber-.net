@@ -1,5 +1,5 @@
 /**
- * bo7cheats.org template → csgo-cheat.org (Counter-Strike: Global Offensive)
+ * bo7cheats.org template → r6-cheat.com (Tom Clancy's Rainbow Six Siege)
  * Run: node scripts/setup-cheatapex-from-bo7.mjs
  */
 import fs from 'node:fs';
@@ -8,7 +8,7 @@ import path from 'node:path';
 const root = path.resolve(import.meta.dirname, '..');
 
 const APEX_CHECKOUT =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcs-go';
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fr6-faceit';
 
 const APEX_IMAGE_URLS = [
   'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/apex/05c202fe-8171-4881-bc3a-b25833919850/1794003238685-a4vmq5-apex1.webp',
@@ -19,11 +19,11 @@ const APEX_IMAGE_URLS = [
 ];
 
 const IMAGE_ALTS = [
-  'Counter-Strike: Global Offensive squad combat screenshot with HUD on PC',
-  'Counter-Strike: Global Offensive Ranked firefight with full overlay on PC',
-  'Counter-Strike: Global Offensive third-person team fight on Dust II-style map on PC',
-  'Counter-Strike: Global Offensive in-match view with loot and zone pressure on PC',
-  'Counter-Strike: Global Offensive Legends squad fight with tactical overlays on PC',
+  'Tom Clancy's Rainbow Six Siege squad combat screenshot with HUD on PC',
+  'Tom Clancy's Rainbow Six Siege Ranked firefight with full overlay on PC',
+  'Tom Clancy's Rainbow Six Siege third-person team fight on Oregon-style map on PC',
+  'Tom Clancy's Rainbow Six Siege in-match view with loot and zone pressure on PC',
+  'Tom Clancy's Rainbow Six Siege Legends squad fight with tactical overlays on PC',
 ];
 
 const TEXT_EXTS = new Set([
@@ -50,83 +50,83 @@ const SKIP_FILES = new Set(['setup-cheatapex-from-bo7.mjs', 'rebrand-bo7.mjs', '
 const REPLACEMENTS = [
   ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fblack-ops-7', APEX_CHECKOUT],
   ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fbo7', APEX_CHECKOUT],
-  ['%2Fproducts%2Fblack-ops-7', '%2Fproducts%2Fcs-go'],
-  ['%2Fproducts%2Fbo7', '%2Fproducts%2Fcs-go'],
-  ['https://bo7cheats.org', 'https://csgo-cheat.org'],
-  ['bo7cheats.org', 'csgo-cheat.org'],
-  ['bo7cheats-org', 'csgo-cheat-org'],
-  ['bo7cheats-b-2026', 'csgo-cheat-c-2026'],
+  ['%2Fproducts%2Fblack-ops-7', '%2Fproducts%2Fr6-faceit'],
+  ['%2Fproducts%2Fbo7', '%2Fproducts%2Fr6-faceit'],
+  ['https://bo7cheats.org', 'https://r6-cheat.com'],
+  ['bo7cheats.org', 'r6-cheat.com'],
+  ['bo7cheats-org', 'r6-cheat-com'],
+  ['bo7cheats-b-2026', 'r6-cheat-r-2026'],
   ['bo7cheats-forum-vote:', 'cheatapex-forum-vote:'],
-  ['bo7CheatsLanding', 'csgoCheatsLanding'],
-  ['zadeyoBo7ProductSeo', 'zadeyoCsgoProductSeo'],
-  ['ZADEYO_BO7_CHECKOUT_URL', 'ZADEYO_CSGO_CHECKOUT_URL'],
-  ['BO7_CHECKOUT_URL', 'CSGO_CHECKOUT_URL'],
-  ['/bo7-cheats/', '/cs-go-cheats/'],
-  ['/bo7-cheats', '/cs-go-cheats'],
-  ['bo7-cheats', 'cs-go-cheats'],
-  ['/products/bo7/', '/products/cs-go/'],
-  ['/products/bo7', '/products/cs-go'],
-  ['/go/bo7/', '/go/cs-go/'],
-  ['/go/bo7', '/go/cs-go'],
-  ["checkoutPath('bo7')", "checkoutPath('csgo')"],
-  ['checkoutPath("bo7")', 'checkoutPath("csgo")'],
-  ["product: 'bo7'", "product: 'csgo'"],
-  ['  bo7:', '  csgo:'],
-  ['return CHECKOUT.bo7;', 'return CHECKOUT.csgo;'],
-  ["PRIMARY_CHECKOUT_PATH = checkoutPath('bo7')", "PRIMARY_CHECKOUT_PATH = checkoutPath('csgo')"],
+  ['bo7CheatsLanding', 'r6CheatsLanding'],
+  ['zadeyoBo7ProductSeo', 'zadeyoR6ProductSeo'],
+  ['ZADEYO_BO7_CHECKOUT_URL', 'ZADEYO_R6_CHECKOUT_URL'],
+  ['BO7_CHECKOUT_URL', 'R6_CHECKOUT_URL'],
+  ['/bo7-cheats/', '/r6-cheats/'],
+  ['/bo7-cheats', '/r6-cheats'],
+  ['bo7-cheats', 'r6-cheats'],
+  ['/products/bo7/', '/products/r6/'],
+  ['/products/bo7', '/products/r6'],
+  ['/go/bo7/', '/go/r6/'],
+  ['/go/bo7', '/go/r6'],
+  ["checkoutPath('bo7')", "checkoutPath('r6')"],
+  ['checkoutPath("bo7")', 'checkoutPath("r6")'],
+  ["product: 'bo7'", "product: 'r6'"],
+  ['  bo7:', '  r6:'],
+  ['return CHECKOUT.bo7;', 'return CHECKOUT.r6;'],
+  ["PRIMARY_CHECKOUT_PATH = checkoutPath('bo7')", "PRIMARY_CHECKOUT_PATH = checkoutPath('r6')"],
   ["CheckoutProduct = 'bo7'", "CheckoutProduct = 'apex'"],
-  ["_product: CheckoutProduct = 'bo7'", "_product: CheckoutProduct = 'csgo'"],
-  ["PRODUCT_BASE = '/products/bo7/'", "PRODUCT_BASE = '/products/cs-go/'"],
-  ['Black Ops 7 <span class="site-brand__pill-accent">Cheats</span>', 'CS:GO <span class="site-brand__pill-accent">Cheats</span>'],
-  ['Black Ops 7 <span class="site-brand__title-accent">Cheats</span>', 'CS:GO <span class="site-brand__title-accent">Cheats</span>'],
-  ['Black Ops 7 Cheats', 'CSGO Cheats'],
-  ['Black Ops 7 cheats', 'CS:GO cheats'],
-  ['Black Ops 7 cheat', 'CS:GO cheat'],
-  ['Black Ops 7 Lite', 'CS:GO Lite'],
-  ['Black Ops 7 Pro', 'CS:GO Pro'],
-  ['Black Ops 7 Elite', 'CS:GO Elite'],
+  ["_product: CheckoutProduct = 'bo7'", "_product: CheckoutProduct = 'r6'"],
+  ["PRODUCT_BASE = '/products/bo7/'", "PRODUCT_BASE = '/products/r6/'"],
+  ['Black Ops 7 <span class="site-brand__pill-accent">Cheats</span>', 'R6 Siege <span class="site-brand__pill-accent">Cheats</span>'],
+  ['Black Ops 7 <span class="site-brand__title-accent">Cheats</span>', 'R6 Siege <span class="site-brand__title-accent">Cheats</span>'],
+  ['Black Ops 7 Cheats', 'R6 Cheat'],
+  ['Black Ops 7 cheats', 'Rainbow Six Siege cheats'],
+  ['Black Ops 7 cheat', 'Rainbow Six Siege cheat'],
+  ['Black Ops 7 Lite', 'R6 Lite'],
+  ['Black Ops 7 Pro', 'R6 Pro'],
+  ['Black Ops 7 Elite', 'R6 Elite'],
   ['/blog/bo7-', '/blog/apex-'],
   ['slug: "bo7-', 'slug: "apex-'],
   ["slug: 'bo7-", "slug: 'apex-"],
-  ['buy-bo7-cheats', 'buy-cs-go-cheats'],
-  ['bo7-lite-vs-pro', 'csgo-lite-vs-pro'],
-  ['bo7-practice-tips', 'csgo-deathmatch-practice'],
-  ['bo7-training-tips', 'csgo-training-tips'],
-  ['bo7-esp-setup', 'csgo-esp-setup'],
-  ['bo7-radar', 'csgo-radar'],
-  ['bo7-aimbot-guide', 'csgo-aimbot-competitive'],
-  ['bo7-aimbot-combat', 'csgo-aimbot-combat'],
-  ['bo7-stream-proof', 'csgo-stream-proof'],
-  ['bo7-elite-tier', 'csgo-elite-tier'],
-  ['bo7-cheat-features', 'csgo-cheat-features'],
-  ['bo7-hwid-ban', 'csgo-hwid-ban'],
-  ['bo7-external-loader', 'csgo-external-loader'],
-  ['bo7-loadouts', 'csgo-loadouts'],
-  ['bo7-cheat-setup', 'csgo-cheat-setup'],
-  ['bo7-practice-settings', 'csgo-practice-settings'],
-  ['after-bo7-patch', 'after-csgo-patch'],
-  ['bo7-positioning', 'csgo-map-control'],
-  ['bo7-aim-practice', 'csgo-aim-practice'],
-  ['bo7-map-awareness', 'csgo-map-awareness'],
-  ['choose-bo7-tier', 'choose-csgo-tier'],
-  ['bo7 aimbot', 'CS:GO aimbot'],
-  ['bo7 ESP', 'CS:GO ESP'],
-  ['bo7 weapon ESP', 'CS:GO weapon ESP'],
-  ['bo7 recoil control', 'CS:GO recoil control'],
-  ['bo7 compatibility', 'CS:GO compatibility'],
-  ['the Call of Duty PC launcher', 'the EA app or Steam client'],
-  ['Call of Duty PC launcher', 'EA app or Steam client'],
-  ['Battlestate Games account', 'Steam account'],
+  ['buy-bo7-cheats', 'buy-r6-cheats'],
+  ['bo7-lite-vs-pro', 'r6-lite-vs-pro'],
+  ['bo7-practice-tips', 'r6-training-grounds-practice'],
+  ['bo7-training-tips', 'r6-training-tips'],
+  ['bo7-esp-setup', 'r6-esp-setup'],
+  ['bo7-radar', 'r6-radar'],
+  ['bo7-aimbot-guide', 'r6-aimbot-ranked'],
+  ['bo7-aimbot-combat', 'r6-aimbot-combat'],
+  ['bo7-stream-proof', 'r6-stream-proof'],
+  ['bo7-elite-tier', 'r6-elite-tier'],
+  ['bo7-cheat-features', 'r6-cheat-features'],
+  ['bo7-hwid-ban', 'r6-hwid-ban'],
+  ['bo7-external-loader', 'r6-external-loader'],
+  ['bo7-loadouts', 'r6-loadouts'],
+  ['bo7-cheat-setup', 'r6-cheat-setup'],
+  ['bo7-practice-settings', 'r6-console-commands'],
+  ['after-bo7-patch', 'after-r6-patch'],
+  ['bo7-positioning', 'r6-high-ground'],
+  ['bo7-aim-practice', 'r6-aim-practice'],
+  ['bo7-map-awareness', 'r6-map-awareness'],
+  ['choose-bo7-tier', 'choose-r6-tier'],
+  ['bo7 aimbot', 'R6 aimbot'],
+  ['bo7 ESP', 'R6 ESP'],
+  ['bo7 gadget ESP', 'R6 gadget ESP'],
+  ['bo7 recoil control', 'R6 recoil control'],
+  ['bo7 compatibility', 'R6 compatibility'],
+  ['the Call of Duty PC launcher', 'the EA app or Ubisoft Connect'],
+  ['Call of Duty PC launcher', 'EA app or Ubisoft Connect'],
+  ['Battlestate Games account', 'Ubisoft account'],
   ['Battlestate Games', 'Respawn Entertainment'],
-  ['Black Ops 7 PC — aimbot, ESP & config tools', 'Counter-Strike: Global Offensive PC — aimbot, ESP & config tools'],
-  ["TITLE_PREFIX = 'Black Ops 7 Cheats'", "TITLE_PREFIX = 'CSGO Cheats'"],
-  ['Black Ops 7', 'Counter-Strike: Global Offensive'],
+  ['Black Ops 7 PC — aimbot, ESP & config tools', 'Tom Clancy's Rainbow Six Siege PC — aimbot, ESP & config tools'],
+  ["TITLE_PREFIX = 'Black Ops 7 Cheats'", "TITLE_PREFIX = 'R6 Cheat'"],
+  ['Black Ops 7', 'Tom Clancy's Rainbow Six Siege'],
   ['Call of Duty', 'Apex'],
   ['bo7-', 'apex-'],
   ["'bo7'", "'apex'"],
   ['"bo7"', '"apex"'],
   ['bo7:', 'apex:'],
-  ['/products/black-ops-7', '/products/cs-go-legends'],
+  ['/products/black-ops-7', '/products/r6-legends'],
   ['@bo7cheats', '@cheatapex'],
 ];
 
@@ -162,19 +162,19 @@ function renameIfExists(fromRel, toRel) {
 function patchSiteImages() {
   const file = path.join(root, 'src', 'config', 'siteImages.ts');
   const lines = [
-    '/** Approved Counter-Strike: Global Offensive media — only these remote URLs are used site-wide. */',
+    '/** Approved Tom Clancy's Rainbow Six Siege media — only these remote URLs are used site-wide. */',
     'export interface SiteCheatImage {',
     '  src: string;',
     '  alt: string;',
     '}',
     '',
-    'const CSGO_MEDIA = [',
+    'const R6_MEDIA = [',
     ...APEX_IMAGE_URLS.map((u) => `  '${u}',`),
     '] as const;',
     '',
     'export const SITE_CHEAT_IMAGES: SiteCheatImage[] = [',
     ...APEX_IMAGE_URLS.map(
-      (src, i) => `  {\n    src: CSGO_MEDIA[${i}],\n    alt: '${IMAGE_ALTS[i]}',\n  },`,
+      (src, i) => `  {\n    src: R6_MEDIA[${i}],\n    alt: '${IMAGE_ALTS[i]}',\n  },`,
     ),
     '];',
     '',
@@ -207,20 +207,20 @@ function patchSiteImages() {
 function patchCheckoutRedirects() {
   const file = path.join(root, 'src', 'config', 'checkout-redirects.mjs');
   const content = `/** Primary Zadeyo affiliate checkout (go link + product path). */
-export const CSGO_CHECKOUT_URL =
+export const R6_CHECKOUT_URL =
   '${APEX_CHECKOUT}';
 
 export const CHECKOUT_URLS = {
-  csgo: CSGO_CHECKOUT_URL,
-  skinChanger: CSGO_CHECKOUT_URL,
-  hwidSpoofer: CSGO_CHECKOUT_URL,
-  ugc: CSGO_CHECKOUT_URL,
+  r6: R6_CHECKOUT_URL,
+  skinChanger: R6_CHECKOUT_URL,
+  hwidSpoofer: R6_CHECKOUT_URL,
+  ugc: R6_CHECKOUT_URL,
 };
 
 /** Checkout paths → external product URLs (used by Node serve + Astro middleware). */
 export const CHECKOUT_PATH_REDIRECTS = new Map([
-  ['/go/cs-go', CHECKOUT_URLS.apex],
-  ['/go/cs-go/', CHECKOUT_URLS.apex],
+  ['/go/r6', CHECKOUT_URLS.apex],
+  ['/go/r6/', CHECKOUT_URLS.apex],
   ['/go/skin-changer', CHECKOUT_URLS.skinChanger],
   ['/go/skin-changer/', CHECKOUT_URLS.skinChanger],
   ['/go/hwid-spoofer', CHECKOUT_URLS.hwidSpoofer],
@@ -247,12 +247,12 @@ export function resolveCheckoutPathRedirect(pathname) {
 function patchSiteTs() {
   const file = path.join(root, 'src', 'config', 'site.ts');
   const content = `/** Bump when favicon assets change so browsers reload tab icons. */
-export const FAVICON_VERSION = 'csgo-cheat-c-2026';
+export const FAVICON_VERSION = 'r6-cheat-r-2026';
 
-export const SITE_DOMAIN = 'csgo-cheat.org';
+export const SITE_DOMAIN = 'r6-cheat.com';
 export const SITE_URL = \`https://\${SITE_DOMAIN}\`;
-export const PRODUCT_BASE = '/products/cs-go/';
-export const TITLE_PREFIX = 'CSGO Cheats';
+export const PRODUCT_BASE = '/products/r6/';
+export const TITLE_PREFIX = 'R6 Cheat';
 export const SUPPORT_EMAIL = \`support@\${SITE_DOMAIN}\`;
 export const DISCORD_URL = 'https://discord.gg/Vu85F8auQS';
 `;
@@ -264,8 +264,8 @@ function patchFavicons() {
     const file = path.join(root, 'public', name);
     if (!fs.existsSync(file)) continue;
     let svg = fs.readFileSync(file, 'utf8');
-    svg = svg.replace(/Black Ops 7 Cheats/g, 'CSGO Cheats');
-    svg = svg.replace(/CSGO Cheats/g, 'CSGO Cheats');
+    svg = svg.replace(/Black Ops 7 Cheats/g, 'R6 Cheat');
+    svg = svg.replace(/R6 Cheat/g, 'R6 Cheat');
     svg = svg.replace(
       /(\n\s*fill="#F5F7FA"\s*\n\s*>)[A-Z](<\/text>)/,
       '$1A$2',
@@ -280,7 +280,7 @@ function patchCheckoutTs() {
   content = content.replace(
     /export const CHECKOUT_SLUGS[\s\S]*?};/,
     `export const CHECKOUT_SLUGS: Record<CheckoutProduct, string> = {
-  csgo: 'apex',
+  r6: 'apex',
   skinChanger: 'skin-changer',
   hwidSpoofer: 'hwid-spoofer',
   ugc: 'ugc',
@@ -288,16 +288,16 @@ function patchCheckoutTs() {
   );
   content = content.replace(
     /export function checkoutPath\(_product: CheckoutProduct = 'bo7'\)/,
-    "export function checkoutPath(_product: CheckoutProduct = 'csgo')",
+    "export function checkoutPath(_product: CheckoutProduct = 'r6')",
   );
-  content = content.replace(/return CHECKOUT\.bo7;/g, 'return CHECKOUT.csgo;');
-  content = content.replace(/checkoutPath\('bo7'\)/g, "checkoutPath('csgo')");
+  content = content.replace(/return CHECKOUT\.bo7;/g, 'return CHECKOUT.r6;');
+  content = content.replace(/checkoutPath\('bo7'\)/g, "checkoutPath('r6')");
   content = content.replace(
     /href\.includes\('%2Fproducts%2Fblack-ops-7'\)[\s\S]*?href\.includes\('\/products\/bo7'\)/,
-    `href.includes('%2Fproducts%2Fcs-go') ||
-    href.includes('/products/cs-go-legends') ||
+    `href.includes('%2Fproducts%2Fr6-faceit') ||
+    href.includes('/products/r6-legends') ||
     href.includes('%2Fproducts%2Fapex') ||
-    href.includes('/products/cs-go') ||
+    href.includes('/products/r6') ||
     href.includes('%2Fproducts%2Fbo7') ||
     href.includes('/products/bo7')`,
   );
@@ -319,10 +319,10 @@ function patchRedirects() {
 function patchPathTs() {
   const file = path.join(root, 'src', 'utils', 'path.ts');
   let content = fs.readFileSync(file, 'utf8');
-  content = content.replace(/\/bo7-cheats/g, '/cs-go-cheats');
-  content = content.replace(/\/products\/bo7/g, '/products/cs-go');
-  content = content.replace(/bo7-lite-vs-pro/g, 'csgo-lite-vs-pro');
-  content = content.replace(/products\/bo7-/g, 'products/cs-go-');
+  content = content.replace(/\/bo7-cheats/g, '/r6-cheats');
+  content = content.replace(/\/products\/bo7/g, '/products/r6');
+  content = content.replace(/bo7-lite-vs-pro/g, 'r6-lite-vs-pro');
+  content = content.replace(/products\/bo7-/g, 'products/r6-');
   fs.writeFileSync(file, content, 'utf8');
 }
 
@@ -331,20 +331,20 @@ function patchSeoMeta() {
   let content = fs.readFileSync(file, 'utf8');
   content = content.replace(
     'Keep meta descriptions blunt about Black Ops 7 cheats for SERP snippets.',
-    'Keep meta descriptions clear about CS:GO cheats for SERP snippets.',
+    'Keep meta descriptions clear about Rainbow Six Siege cheats for SERP snippets.',
   );
   content = content.replace(
     /return `Black Ops 7 cheats guide: \$\{trimmed\}`;/,
-    'return `CS:GO cheats guide: ${trimmed}`;',
+    'return `Rainbow Six Siege cheats guide: ${trimmed}`;',
   );
   fs.writeFileSync(file, content, 'utf8');
 }
 
-renameIfExists('src/data/bo7CheatsLanding.ts', 'src/data/csgoCheatsLanding.ts');
-renameIfExists('src/config/zadeyoBo7ProductSeo.ts', 'src/config/zadeyoCsgoProductSeo.ts');
-renameIfExists('src/pages/go/bo7', 'src/pages/go/cs-go');
-renameIfExists('src/pages/bo7-cheats', 'src/pages/cs-go-cheats');
-renameIfExists('src/pages/products/bo7', 'src/pages/products/cs-go');
+renameIfExists('src/data/bo7CheatsLanding.ts', 'src/data/r6CheatsLanding.ts');
+renameIfExists('src/config/zadeyoBo7ProductSeo.ts', 'src/config/zadeyoR6ProductSeo.ts');
+renameIfExists('src/pages/go/bo7', 'src/pages/go/r6');
+renameIfExists('src/pages/bo7-cheats', 'src/pages/r6-cheats');
+renameIfExists('src/pages/products/bo7', 'src/pages/products/r6');
 
 patchSiteImages();
 patchCheckoutRedirects();

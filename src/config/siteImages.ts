@@ -1,37 +1,42 @@
-/** Approved CS:GO media — only these remote URLs are used site-wide. */
+/** Approved Rainbow Six Siege media — only these remote URLs are used site-wide. */
 export interface SiteCheatImage {
   src: string;
   alt: string;
 }
 
-const CSGO_MEDIA = [
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/cs-go/9795e424-670f-4650-b1df-6d9e99bd6f01/1795371551484-iosq1x-cs5.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/cs-go/9795e424-670f-4650-b1df-6d9e99bd6f01/1795371504938-7fkatv-cs1.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/cs-go/7a5973f7-2cf8-4de3-90ea-2060bf036d16/1795370314892-mdsa2m-cs5.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/cs-go/7a5973f7-2cf8-4de3-90ea-2060bf036d16/1795370250052-9okmnm-cs3.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/cs-go/7a5973f7-2cf8-4de3-90ea-2060bf036d16/1795370230164-gk0v3x-cs2.webp',
+const R6_MEDIA = [
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/r6/05c202fe-8171-4881-bc3a-b25833919850/1793895886073-hgicom-1r61.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/r6/05c202fe-8171-4881-bc3a-b25833919850/1793890761432-79v2k6-r6s5.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/r6/f8fb1df6-697d-4d9b-b239-91326d061bf8/1793467008010-7f5ql2-5.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/r6/f8fb1df6-697d-4d9b-b239-91326d061bf8/1793466989730-wh94c1-1.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/r6/f8fb1df6-697d-4d9b-b239-91326d061bf8/1793466995758-0n86gr-2.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/r6/f8fb1df6-697d-4d9b-b239-91326d061bf8/1793467030413-2xvj89-8.webp',
 ] as const;
 
 export const SITE_CHEAT_IMAGES: SiteCheatImage[] = [
   {
-    src: CSGO_MEDIA[0],
-    alt: 'Counter-Strike: Global Offensive competitive match on Dust II with HUD on PC',
+    src: R6_MEDIA[0],
+    alt: 'Rainbow Six Siege ranked match gameplay on PC',
   },
   {
-    src: CSGO_MEDIA[1],
-    alt: 'CS:GO midnight map gameplay screenshot with tactical overlays on PC',
+    src: R6_MEDIA[1],
+    alt: 'Tom Clancy’s Rainbow Six Siege tactical firefight screenshot',
   },
   {
-    src: CSGO_MEDIA[2],
-    alt: 'Counter-Strike: Global Offensive in-match firefight screenshot on PC',
+    src: R6_MEDIA[2],
+    alt: 'R6 Siege operator engagement in destructible environment',
   },
   {
-    src: CSGO_MEDIA[3],
-    alt: 'CS:GO bomb-site engagement with full game UI on PC',
+    src: R6_MEDIA[3],
+    alt: 'Rainbow Six Siege bombsite round with full HUD on PC',
   },
   {
-    src: CSGO_MEDIA[4],
-    alt: 'Counter-Strike: Global Offensive product-style gameplay view on PC',
+    src: R6_MEDIA[4],
+    alt: 'Rainbow Six Siege competitive match screenshot on PC',
+  },
+  {
+    src: R6_MEDIA[5],
+    alt: 'R6 Siege in-match tactical view on PC',
   },
 ];
 

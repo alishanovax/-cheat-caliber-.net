@@ -3,10 +3,10 @@ Allow: /
 
 Disallow: /go/
 
-Sitemap: https://csgo-cheat.org/sitemap.xml
-Sitemap: https://csgo-cheat.org/sitemap-pages.xml
-Sitemap: https://csgo-cheat.org/sitemap-products.xml
-Sitemap: https://csgo-cheat.org/sitemap-blog.xml
-Sitemap: https://csgo-cheat.org/sitemap-forum.xml
+Sitemap: https://r6-cheat.com/sitemap.xml
+Sitemap: https://r6-cheat.com/sitemap-pages.xml
+Sitemap: https://r6-cheat.com/sitemap-products.xml
+Sitemap: https://r6-cheat.com/sitemap-blog.xml
+Sitemap: https://r6-cheat.com/sitemap-forum.xml
 
-# RSS: https://csgo-cheat.org/rss.xml
+# RSS: https://r6-cheat.com/rss.xml

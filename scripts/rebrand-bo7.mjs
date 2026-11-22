@@ -47,9 +47,9 @@ const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.astro']);
 /** Ordered longest-first replacements. */
 const REPLACEMENTS = [
   ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Frobrun', BO7_CHECKOUT],
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcs-go', BO7_CHECKOUT],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fr6-faceit', BO7_CHECKOUT],
   ['%2Fproducts%2Frobrun', '%2Fproducts%2Fblack-ops-7'],
-  ['%2Fproducts%2Fcs-go', '%2Fproducts%2Fblack-ops-7'],
+  ['%2Fproducts%2Fr6-faceit', '%2Fproducts%2Fblack-ops-7'],
   ['https://cheatsrobrun.net', 'https://bo7cheats.org'],
   ['cheatsrobrun.net', 'bo7cheats.org'],
   ['cheatsrobrun-net', 'bo7cheats-org'],
@@ -105,7 +105,7 @@ const REPLACEMENTS = [
   ['after-robrun-patch', 'after-bo7-patch'],
   ['robrun aimbot', 'bo7 aimbot'],
   ['robrun ESP', 'bo7 ESP'],
-  ['robrun weapon ESP', 'bo7 weapon ESP'],
+  ['robrun gadget ESP', 'bo7 gadget ESP'],
   ['robrun recoil control', 'bo7 recoil control'],
   ['robrun compatibility', 'bo7 compatibility'],
   ['the Battlestate Games launcher', 'the Call of Duty PC launcher'],

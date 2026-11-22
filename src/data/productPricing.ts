@@ -9,7 +9,7 @@ export interface ProductPlan {
   popular?: boolean;
 }
 
-/** Matches Zadeyo Counter-Strike: Global Offensive offers (Monthly $35 / 31 days, Lifetime $150). */
+/** Tom Clancy’s Rainbow Six Siege plan tiers (Monthly $35 / 31 days, Lifetime $150). */
 const standardPlans: ProductPlan[] = [
   {
     id: 'monthly',
@@ -41,7 +41,7 @@ export function formatPlanPrice(usd: number): string {
   return Number.isInteger(usd) ? `$${usd}` : `$${usd.toFixed(2)}`;
 }
 
-/** Checkout uses a single Zadeyo URL; plan selection updates UI only. */
+/** Checkout uses a single purchase URL; plan selection updates UI only. */
 export function checkoutUrlWithPlan(baseUrl: string, _planId: ProductPlanId): string {
   return baseUrl;
 }

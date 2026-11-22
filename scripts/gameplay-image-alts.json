@@ -2,22 +2,22 @@
   "gameplay": [
     {
       "file": "r6-hack-aimbot-esp.png",
-      "alt": "Counter-Strike: Global Offensive aimbot and ESP with FOV circle, red target box and snap line through cover",
+      "alt": "Tom Clancy's Rainbow Six Siege aimbot and ESP with FOV circle, red target box and snap line through cover",
       "srcIndex": 0
     },
     {
       "file": "r6-hack-esp-wallhack.png",
-      "alt": "Counter-Strike: Global Offensive ESP wallhack with green player boxes in a tactical indoor firefight",
+      "alt": "Tom Clancy's Rainbow Six Siege ESP wallhack with green player boxes in a tactical indoor firefight",
       "srcIndex": 1
     },
     {
       "file": "r6-hack-gameplay.jpg",
-      "alt": "Counter-Strike: Global Offensive PMC raid gameplay on PC with body-camera perspective in a gritty urban map",
+      "alt": "Tom Clancy's Rainbow Six Siege PMC raid gameplay on PC with body-camera perspective in a gritty urban map",
       "srcIndex": 2
     },
     {
       "file": "r6-hack-esp-indoor.png",
-      "alt": "Counter-Strike: Global Offensive ESP overlay with green bounding box while clearing an indoor hallway with a shotgun",
+      "alt": "Tom Clancy's Rainbow Six Siege ESP overlay with green bounding box while clearing an indoor hallway with a shotgun",
       "srcIndex": 3
     }
   ],

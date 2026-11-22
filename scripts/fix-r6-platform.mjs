@@ -3,8 +3,8 @@ import path from 'node:path';
 
 const root = path.join(process.cwd(), 'src');
 const REPLACEMENTS = [
-  ['Counter-Strike: Global Offensive and BattlEye receive', 'Counter-Strike: Global Offensive and BattlEye receive'],
-  ['Easy Anti-Hack or Counter-Strike: Global Offensive', 'BattlEye or Counter-Strike: Global Offensive'],
+  ['Tom Clancy's Rainbow Six Siege and BattlEye receive', 'Tom Clancy's Rainbow Six Siege and BattlEye receive'],
+  ['Easy Anti-Hack or Tom Clancy's Rainbow Six Siege', 'BattlEye or Tom Clancy's Rainbow Six Siege'],
   ['Easy Anti-Hack', 'BattlEye'],
   ['Easy Anti-Hack', 'BattlEye'],
   ['BattlEye patch-day', 'BattlEye patch-day'],
@@ -19,9 +19,9 @@ const REPLACEMENTS = [
   ['BattlEye Unable to verify', 'BattlEye connection issues on'],
   ['BattlEye cannot verify', 'BattlEye cannot verify'],
   ['if BattlEye cannot', 'if BattlEye cannot'],
-  ['from the loader or Steam', 'from the loader or BSG Connect'],
-  ['launch Counter-Strike: Global Offensive on Steam', 'launch Counter-Strike: Global Offensive through BSG Connect'],
-  ['Counter-Strike: Global Offensive on Steam', 'Counter-Strike: Global Offensive on PC'],
+  ['from the loader or Steam', 'from the loader or Ubisoft Connect'],
+  ['launch Tom Clancy's Rainbow Six Siege on Steam', 'launch Tom Clancy's Rainbow Six Siege through Ubisoft Connect'],
+  ['Tom Clancy's Rainbow Six Siege on Steam', 'Tom Clancy's Rainbow Six Siege on PC'],
   ['for Steam players', 'for PC players'],
   ['on Steam PC', 'on PC'],
   ['Steam PC', 'PC'],
@@ -30,14 +30,14 @@ const REPLACEMENTS = [
   ['Steam locker', 'in-game inventory'],
   ['Steam inventory', 'in-game inventory'],
   ['Steam review', 'BSG review'],
-  ['Steam restrictions', 'BSG account restrictions'],
+  ['Steam restrictions', 'Ubisoft account restrictions'],
   ['Steam ban appeals', 'BSG ban appeals'],
-  ['Steam game file verification', 'BSG Connect file verification'],
-  ['through Steam', 'through BSG Connect'],
-  ['normal Steam launch', 'normal BSG Connect launch'],
+  ['Steam game file verification', 'Ubisoft Connect file verification'],
+  ['through Steam', 'through Ubisoft Connect'],
+  ['normal Steam launch', 'normal Ubisoft Connect launch'],
   ['into the Steam folder', 'into the game folder'],
   ['Loot-shooter action on Steam', 'Tactical shooter action on PC'],
-  ['Mw4 Hacks', 'CSGO Cheats'],
+  ['Mw4 Hacks', 'R6 Cheat'],
 ];
 
 function walk(dir, out = []) {

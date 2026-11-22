@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { resolveDistDir } from './dist-dir.mjs';
 
-const SITE = 'https://csgo-cheat.org';
+const SITE = 'https://r6-cheat.com';
 const dist = resolveDistDir();
 const publicDir = path.join(path.dirname(dist), 'public');
 
@@ -68,7 +68,7 @@ function normalizeUrl(loc) {
     return null;
   }
   if (url.protocol !== 'https:') url.protocol = 'https:';
-  url.hostname = 'csgo-cheat.org';
+  url.hostname = 'r6-cheat.com';
   url.hash = '';
   url.search = '';
   let pathname = url.pathname;

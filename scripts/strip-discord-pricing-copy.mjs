@@ -4,7 +4,7 @@ import path from 'node:path';
 const root = path.resolve(import.meta.dirname, '..');
 const files = [
   'src/data/blog/posts.ts',
-  'src/data/csgoCheatsLanding.ts',
+  'src/data/r6CheatsLanding.ts',
   'src/config/pageSeo.ts',
 ];
 

@@ -1,17 +1,17 @@
-# Search Console workflow (csgo-cheat.org)
+# Search Console workflow (r6-cheat.com)
 
 You verify the domain at your DNS provider—no HTML meta tags in the repo.
 
 ## Setup (once)
 
-1. Open [Google Search Console](https://search.google.com/search-console) and add the **domain** property for `csgo-cheat.org` if it is not already there.
+1. Open [Google Search Console](https://search.google.com/search-console) and add the **domain** property for `r6-cheat.com` if it is not already there.
 2. Under **Sitemaps**, submit the index first (required):
-   - `https://csgo-cheat.org/sitemap.xml`
+   - `https://r6-cheat.com/sitemap.xml`
 3. Optional — submit child sitemaps too (same URLs, clearer GSC status per section):
-   - `https://csgo-cheat.org/sitemap-pages.xml`
-   - `https://csgo-cheat.org/sitemap-products.xml`
-   - `https://csgo-cheat.org/sitemap-blog.xml`
-   - `https://csgo-cheat.org/sitemap-forum.xml`
+   - `https://r6-cheat.com/sitemap-pages.xml`
+   - `https://r6-cheat.com/sitemap-products.xml`
+   - `https://r6-cheat.com/sitemap-blog.xml`
+   - `https://r6-cheat.com/sitemap-forum.xml`
 4. Repeat in [Bing Webmaster Tools](https://www.bing.com/webmasters) if you use Bing.
 
 ## Monthly tune (15 minutes)
@@ -26,10 +26,10 @@ You verify the domain at your DNS provider—no HTML meta tags in the repo.
 
 | Common query intent | Edit path in `pageSeo.ts` |
 | ------------------- | ------------------------- |
-| CS:GO cheats (broad) | `/` |
+| Rainbow Six Siege cheats (broad) | `/` |
 | lite / pro / elite | `/hacks/compare/`, `/hacks/lite/`, etc. |
 | ESP wallhack, aimbot | `/hacks/pro/`, blog posts (titles set per article) |
-| hwid, loadout changer | `/products/cs-go/utilities/` |
+| hwid, loadout changer | `/products/r6/utilities/` |
 | purchase / refund | `/terms/`, `/contact/` |
 
 Product and blog article pages still use their own titles from content; add entries to `PAGE_SEO` only when you want a fixed override for a specific pathname.

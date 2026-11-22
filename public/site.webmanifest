@@ -1,7 +1,7 @@
 {
-  "name": "CSGO Cheats",
-  "short_name": "CSGO Cheats",
-  "description": "Counter-Strike: Global Offensive PC cheats: aimbot, ESP, radar, and loot tools.",
+  "name": "R6 Cheat",
+  "short_name": "R6 Cheat",
+  "description": "Tom Clancy's Rainbow Six Siege PC cheats: aimbot, ESP, radar, and loot tools.",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

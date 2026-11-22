@@ -10,8 +10,8 @@ const files = [
 for (const file of files) {
   let text = fs.readFileSync(file, 'utf8');
   const before = text;
-  text = text.split('R6Hacks').join('CSGO Cheats');
-  text = text.replace(/status:\s*'Counter-Strike: Global Offensive[^']*'/, "status: 'Counter-Strike: Global Offensive online'");
+  text = text.split('R6Hacks').join('R6 Cheat');
+  text = text.replace(/status:\s*'Tom Clancy's Rainbow Six Siege[^']*'/, "status: 'Tom Clancy's Rainbow Six Siege online'");
   if (text !== before) {
     fs.writeFileSync(file, text);
     console.log('updated', file);

@@ -1,5 +1,5 @@
 /**
- * MW4 Hack → CSGO Cheats rebrand for csgo-cheat.org
+ * MW4 Hack → R6 Cheat rebrand for r6-cheat.com
  * Run from project root: node scripts/rebrand-r6.mjs
  */
 import fs from 'node:fs';
@@ -26,7 +26,7 @@ const TEXT_EXTS = new Set([
 const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.seo-baseline', '_template']);
 
 const R6_CHECKOUT =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcs-go-cheats';
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fr6-faceit-cheats';
 const R6_CHECKOUT_ENCODED = '%2Fproducts%2Frainbow-six-siege-hacks';
 
 /** Ordered longest-first replacements. */
@@ -38,51 +38,51 @@ const REPLACEMENTS = [
   ['%2Fproducts%2Fborderlands-3', R6_CHECKOUT_ENCODED],
   ['%2Fproducts%2Fbodycam', R6_CHECKOUT_ENCODED],
 
-  ['mw4hack.org', 'csgo-cheat.org'],
+  ['mw4hack.org', 'r6-cheat.com'],
   ['mw4hack-org', 'r6hacks-org'],
   ['Mw4Hack', 'R6Hacks'],
   ['Mw4hack', 'R6hacks'],
   ['mw4hack', 'r6hacks'],
 
-  ['/products/mw4-hacks', '/products/cs-go-hacks'],
-  ['products/mw4-hacks', 'products/cs-go-cheats'],
-  ['/mw4-hacks/', '/cs-go-cheats/'],
-  ['/mw4-hacks', '/cs-go-cheats'],
+  ['/products/mw4-hacks', '/products/r6-hacks'],
+  ['products/mw4-hacks', 'products/r6-cheats'],
+  ['/mw4-hacks/', '/r6-cheats/'],
+  ['/mw4-hacks', '/r6-cheats'],
   ['mw4-hacks/', 'r6-hacks/'],
   ['mw4-hacks', 'r6-hacks'],
 
-  ['/go/mw4/', '/go/cs-go/'],
-  ['/go/mw4', '/go/cs-go'],
-  ['/go/borderlands/', '/go/cs-go/'],
-  ['/go/borderlands', '/go/cs-go'],
-  ['/go/bodycam/', '/go/cs-go/'],
-  ['/go/bodycam', '/go/cs-go'],
-  ['/go/fortnite/', '/go/cs-go/'],
-  ['/go/fortnite', '/go/cs-go'],
+  ['/go/mw4/', '/go/r6/'],
+  ['/go/mw4', '/go/r6'],
+  ['/go/borderlands/', '/go/r6/'],
+  ['/go/borderlands', '/go/r6'],
+  ['/go/bodycam/', '/go/r6/'],
+  ['/go/bodycam', '/go/r6'],
+  ['/go/fortnite/', '/go/r6/'],
+  ['/go/fortnite', '/go/r6'],
 
-  ["checkoutPath('mw4')", "checkoutPath('csgo')"],
-  ['checkoutPath("mw4")', 'checkoutPath("csgo")'],
+  ["checkoutPath('mw4')", "checkoutPath('r6')"],
+  ['checkoutPath("mw4")', 'checkoutPath("r6")'],
   ["product: 'mw4'", "product: 'r6'"],
   ['  mw4:', '  r6:'],
   ['MW4_CHECKOUT_URL', 'R6_CHECKOUT_URL'],
-  ['mw4CheatsLanding', 'csgoCheatsLanding'],
-  ['zadeyoMw4ProductSeo', 'zadeyoCsgoProductSeo'],
+  ['mw4CheatsLanding', 'r6CheatsLanding'],
+  ['zadeyoMw4ProductSeo', 'zadeyoR6ProductSeo'],
   ['zadeyo-mw4-hacks-product-seo', 'zadeyo-r6-hacks-product-seo'],
 
-  ['Modern Warfare 4', 'Counter-Strike: Global Offensive'],
+  ['Modern Warfare 4', 'Tom Clancy's Rainbow Six Siege'],
   ['modern warfare 4', 'rainbow six siege'],
-  ['Modern Warfare', 'Counter-Strike: Global Offensive'],
+  ['Modern Warfare', 'Tom Clancy's Rainbow Six Siege'],
   ['modern warfare', 'rainbow six siege'],
 
-  ['MW4 Hacks', 'CSGO Cheats'],
-  ['MW4 Hack', 'CSGO Cheats'],
-  ['MW4 hacks', 'CS:GO cheats'],
-  ['MW4 hack', 'CS:GO cheat'],
-  ['MW4 hacks', 'CS:GO cheats'],
-  ['MW4 hack', 'CS:GO cheat'],
-  ['MW4 Lite', 'CS:GO Lite'],
-  ['MW4 Pro', 'CS:GO Pro'],
-  ['MW4 Elite', 'CS:GO Elite'],
+  ['MW4 Hacks', 'R6 Cheat'],
+  ['MW4 Hack', 'R6 Cheat'],
+  ['MW4 hacks', 'Rainbow Six Siege cheats'],
+  ['MW4 hack', 'Rainbow Six Siege cheat'],
+  ['MW4 hacks', 'Rainbow Six Siege cheats'],
+  ['MW4 hack', 'Rainbow Six Siege cheat'],
+  ['MW4 Lite', 'R6 Lite'],
+  ['MW4 Pro', 'R6 Pro'],
+  ['MW4 Elite', 'R6 Elite'],
   ['MW4 ', 'R6 '],
   [' mw4 ', ' r6 '],
   ['mw4 ', 'r6 '],
@@ -91,8 +91,8 @@ const REPLACEMENTS = [
   ['blog/mw4-', 'blog/r6-'],
   ['mw4-', 'r6-'],
 
-  ["TITLE_PREFIX = 'CSGO Cheats'", "TITLE_PREFIX = 'CSGO Cheats'"],
-  ['PRODUCT_BASE = \'/products/mw4-hacks/\'', "PRODUCT_BASE = '/products/cs-go/'"],
+  ["TITLE_PREFIX = 'R6 Cheat'", "TITLE_PREFIX = 'R6 Cheat'"],
+  ['PRODUCT_BASE = \'/products/mw4-hacks/\'', "PRODUCT_BASE = '/products/r6/'"],
   ['FAVICON_VERSION = \'m2026\'', "FAVICON_VERSION = 'r6-2026'"],
 ];
 
@@ -126,20 +126,20 @@ function renameIfExists(fromRel, toRel) {
 
 function renameLandingFile() {
   const from = path.join(root, 'src', 'data', 'mw4CheatsLanding.ts');
-  const to = path.join(root, 'src', 'data', 'csgoCheatsLanding.ts');
+  const to = path.join(root, 'src', 'data', 'r6CheatsLanding.ts');
   if (fs.existsSync(from)) {
     const content = applyText(fs.readFileSync(from, 'utf8'));
     fs.writeFileSync(to, content);
     fs.unlinkSync(from);
-    console.log('renamed mw4CheatsLanding.ts → csgoCheatsLanding.ts');
+    console.log('renamed mw4CheatsLanding.ts → r6CheatsLanding.ts');
   }
 }
 
 renameLandingFile();
-renameIfExists('src/pages/go/mw4', 'src/pages/go/cs-go');
-renameIfExists('src/pages/mw4-hacks', 'src/pages/cs-go-cheats');
-renameIfExists('src/pages/products/mw4-hacks', 'src/pages/products/cs-go-hacks');
-renameIfExists('src/config/zadeyoMw4ProductSeo.ts', 'src/config/zadeyoCsgoProductSeo.ts');
+renameIfExists('src/pages/go/mw4', 'src/pages/go/r6');
+renameIfExists('src/pages/mw4-hacks', 'src/pages/r6-cheats');
+renameIfExists('src/pages/products/mw4-hacks', 'src/pages/products/r6-hacks');
+renameIfExists('src/config/zadeyoMw4ProductSeo.ts', 'src/config/zadeyoR6ProductSeo.ts');
 renameIfExists('scripts/zadeyo-mw4-hacks-product-seo.mjs', 'scripts/zadeyo-r6-hacks-product-seo.mjs');
 renameIfExists('scripts/install-mw4-hack-images.mjs', 'scripts/install-r6-hack-images.mjs');
 

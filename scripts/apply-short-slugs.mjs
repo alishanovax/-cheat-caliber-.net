@@ -7,34 +7,34 @@ import path from 'node:path';
 const root = process.cwd();
 
 const REPLACEMENTS = [
-  ['/products/cs-go-hacks/', '/products/cs-go/'],
-  ['products/cs-go-cheats/', 'products/r6/'],
+  ['/products/r6-hacks/', '/products/r6/'],
+  ['products/r6-cheats/', 'products/r6/'],
 
-  ['csgo-cheat-features', 'csgo-cheat-features'],
-  ['csgo-practice-settings-guide', 'csgo-deathmatch-practice'],
-  ['r6-console-hacks-tips', 'csgo-training-tips'],
-  ['how-to-use-csgo-practice-settings', 'csgo-cheat-setup'],
-  ['csgo-practice-settings-hacks', 'csgo-practice-settings'],
-  ['how-to-buy-cs-go-cheats-2026', 'buy-cs-go-cheats'],
-  ['r6-hwid-spoofer-after-ban', 'csgo-hwid-ban'],
-  ['csgo-radar-hack-guide', 'csgo-radar'],
-  ['csgo-external-loader', 'csgo-external-loader'],
-  ['r6-esp-wallhack-setup', 'csgo-esp-setup'],
-  ['csgo-stream-proof-setup', 'csgo-stream-proof'],
-  ['csgo-aimbot-competitive-guide', 'csgo-aimbot-competitive'],
-  ['csgo-aimbot-combat-guide', 'csgo-aimbot-combat'],
-  ['csgo-elite-tier-tier-guide', 'csgo-elite-tier'],
-  ['r6-skin-changer-guide', 'csgo-loadouts'],
+  ['r6-cheat-features', 'r6-cheat-features'],
+  ['r6-console-commands-guide', 'r6-training-grounds-practice'],
+  ['r6-console-hacks-tips', 'r6-training-tips'],
+  ['how-to-use-r6-console-commands', 'r6-cheat-setup'],
+  ['r6-console-commands-hacks', 'r6-console-commands'],
+  ['how-to-buy-r6-cheats-2026', 'buy-r6-cheats'],
+  ['r6-hwid-spoofer-after-ban', 'r6-hwid-ban'],
+  ['r6-radar-hack-guide', 'r6-radar'],
+  ['r6-external-loader', 'r6-external-loader'],
+  ['r6-esp-wallhack-setup', 'r6-esp-setup'],
+  ['r6-stream-proof-setup', 'r6-stream-proof'],
+  ['r6-aimbot-ranked-guide', 'r6-aimbot-ranked'],
+  ['r6-aimbot-combat-guide', 'r6-aimbot-combat'],
+  ['r6-elite-tier-tier-guide', 'r6-elite-tier'],
+  ['r6-skin-changer-guide', 'r6-loadouts'],
   ['battleye-patch-day-day-checklist', 'battleye-patch-day'],
-  ['easy-anti-cheat-r6-guide', 'battleye-troubleshooting'],
+  ['BattlEye-r6-guide', 'battleye-troubleshooting'],
 
   ['can-custom-lobby-hack-codes-be-used-in-ranked', 'lobby-codes-ranked'],
-  ['how-to-enable-the-r6-console', 'csgo-practice-settings-forum'],
-  ['practice-csgo-map-control-safely', 'csgo-map-control'],
-  ['what-to-check-after-a-r6-patch', 'after-csgo-patch'],
+  ['how-to-enable-the-r6-console', 'r6-console-commands-forum'],
+  ['practice-r6-high-ground-safely', 'r6-high-ground'],
+  ['what-to-check-after-a-r6-patch', 'after-r6-patch'],
   ['r6-lite-or-pro-tier-comparison', 'lite-vs-pro'],
-  ['how-to-learn-weapon-aim-in-creative', 'csgo-aim-practice'],
-  ['what-does-csgo-map-awareness-include', 'csgo-map-awareness'],
+  ['how-to-learn-weapon-aim-in-creative', 'r6-aim-practice'],
+  ['what-does-r6-map-awareness-include', 'r6-map-awareness'],
   ['how-to-set-up-map-overlay', 'map-overlay-setup'],
   ['what-zoom-settings-are-comfortable', 'camera-zoom'],
   ['how-to-tune-script-delay-settings', 'aimbot-delay'],
@@ -47,7 +47,7 @@ const REPLACEMENTS = [
   ['how-to-check-stream-proof-capture', 'stream-proof-obs'],
   ['what-to-do-after-hwid-change', 'after-hwid-change'],
   ['what-to-check-before-installing-tools', 'before-install'],
-  ['how-to-choose-r6-product-tier', 'choose-csgo-tier'],
+  ['how-to-choose-r6-product-tier', 'choose-r6-tier'],
 ];
 
 const SKIP = new Set(['node_modules', '.git', 'dist']);
@@ -83,7 +83,7 @@ const fromDir = path.join(root, 'src', 'pages', 'products', 'r6-hacks');
 const toDir = path.join(root, 'src', 'pages', 'products', 'r6');
 if (fs.existsSync(fromDir) && !fs.existsSync(toDir)) {
   fs.renameSync(fromDir, toDir);
-  console.log('renamed pages/products/cs-go-hacks → r6');
+  console.log('renamed pages/products/r6-hacks → r6');
 }
 
 console.log(`Updated ${n} files.`);

@@ -1,5 +1,5 @@
 /**
- * Replace Dota-era gameplay/blog PNGs with Counter-Strike: Global Offensive screenshots.
+ * Replace Dota-era gameplay/blog PNGs with Tom Clancy's Rainbow Six Siege screenshots.
  * Run after npm ci: node scripts/fetch-r6-gameplay.mjs
  */
 import { writeFile, mkdir } from 'node:fs/promises';
@@ -17,8 +17,8 @@ const publicDir = path.resolve('public');
 const GAMEPLAY = [
   { file: 'r6-esp-wallhack.png', url: `${CDN_B}/r6-battle-royale-chapter-5-season-1-train-1920x1080-a1_1nkx.1400.jpg` },
   { file: 'r6-player-esp.png', url: `${CDN_A}/screenshot-6815-1725916496014_zkpv.1400.jpg` },
-  { file: 'csgo-aimbot-combat.png', url: `${CDN_B}/r6-battle-royale-chapter-5-season-1-screenshot-c-1920x_vu5r.1400.jpg` },
-  { file: 'csgo-radar-hack.png', url: `${CDN_A}/screenshot-6670-1725916496013_zv3w.1400.jpg` },
+  { file: 'r6-aimbot-combat.png', url: `${CDN_B}/r6-battle-royale-chapter-5-season-1-screenshot-c-1920x_vu5r.1400.jpg` },
+  { file: 'r6-radar-hack.png', url: `${CDN_A}/screenshot-6670-1725916496013_zv3w.1400.jpg` },
   { file: 'r6-skin-changer.png', url: `${CDN_B}/r6-battle-royale-chapter-5-season-1-screenshot-b-1920x_8z8k.1400.jpg` },
   { file: 'r6-auto-aim.png', url: `${CDN_A}/screenshot-7105-1725916496016_j9dr.1400.jpg` },
   { file: 'r6-loot-radar.png', url: `${CDN_A}/screenshot-6960-1725916496015_vbtg.1400.jpg` },
@@ -34,24 +34,24 @@ const BLOG_POOL = [
 ];
 
 const BLOG_BASES = [
-  'csgo-deathmatch-practice',
-  'csgo-training-tips',
-  'csgo-cheat-setup',
-  'csgo-cheat-features',
-  'csgo-practice-settings',
-  'csgo-lite-vs-pro',
-  'csgo-elite-tier',
-  'csgo-aimbot-competitive',
-  'csgo-esp-setup',
-  'csgo-radar-hack-guide',
-  'csgo-loadouts',
+  'r6-training-grounds-practice',
+  'r6-training-tips',
+  'r6-cheat-setup',
+  'r6-cheat-features',
+  'r6-console-commands',
+  'r6-lite-vs-pro',
+  'r6-elite-tier',
+  'r6-aimbot-ranked',
+  'r6-esp-setup',
+  'r6-radar-hack-guide',
+  'r6-loadouts',
   'battleye-patch-day-checklist',
-  'csgo-hwid-ban',
-  'buy-cs-go-cheats',
-  'csgo-aimbot-combat',
+  'r6-hwid-ban',
+  'buy-r6-cheats',
+  'r6-aimbot-combat',
   'eac-bypass-r6-guide',
-  'csgo-external-loader',
-  'csgo-stream-proof',
+  'r6-external-loader',
+  'r6-stream-proof',
 ];
 
 async function fetchPng(url) {
@@ -103,7 +103,7 @@ if (hero) {
     await writeFile(path.join(publicDir, name), await sharp(logo).resize(size, size).png().toBuffer());
   }
   await writeFile(path.join(publicDir, 'favicon.ico'), await sharp(logo).resize(32, 32).png().toBuffer());
-  console.log('updated favicons from Counter-Strike: Global Offensive art');
+  console.log('updated favicons from Tom Clancy's Rainbow Six Siege art');
 }
 
-console.log('Done fetching Counter-Strike: Global Offensive gameplay/blog images.');
+console.log('Done fetching Tom Clancy's Rainbow Six Siege gameplay/blog images.');

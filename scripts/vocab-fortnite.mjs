@@ -1,5 +1,5 @@
 /**
- * Second-pass vocabulary cleanup: Dota/Steam/VAC leftovers → Counter-Strike: Global Offensive.
+ * Second-pass vocabulary cleanup: Dota/Steam/BattlEye leftovers → Tom Clancy's Rainbow Six Siege.
  * Run: node scripts/vocab-mw4.mjs
  */
 import fs from 'node:fs';
@@ -27,16 +27,16 @@ const REPLACEMENTS = [
   ['via Steam', 'via Steam Games'],
   ['on Steam PC', 'on PC'],
   ['Steam PC', 'Windows PC'],
-  ['Steam account', 'Steam account'],
+  ['Ubisoft account', 'Ubisoft account'],
   ['Steam inventory', 'Steam locker'],
   ['Steam platform', 'Steam Games platform'],
   ['Steam overlay', 'Steam overlay'],
-  ['Steam restrictions', 'Steam account restrictions'],
-  ['Steam Counter-Strike: Global Offensive', 'Counter-Strike: Global Offensive on Epic'],
+  ['Steam restrictions', 'Ubisoft account restrictions'],
+  ['Steam Tom Clancy's Rainbow Six Siege', 'Tom Clancy's Rainbow Six Siege on Epic'],
   ['through Steam', 'through Steam Games'],
   ['exiting Steam', 'exiting the Steam Games Launcher'],
-  ['Current Counter-Strike: Global Offensive client via Steam', 'Current Counter-Strike: Global Offensive client via Steam Games Launcher'],
-  ['right-click Counter-Strike: Global Offensive → Properties', 'open Counter-Strike: Global Offensive settings in the Steam Games Launcher'],
+  ['Current Tom Clancy's Rainbow Six Siege client via Steam', 'Current Tom Clancy's Rainbow Six Siege client via Steam Games Launcher'],
+  ['right-click Tom Clancy's Rainbow Six Siege → Properties', 'open Tom Clancy's Rainbow Six Siege settings in the Steam Games Launcher'],
   ['reqSteam', 'reqEpic'],
   ['compatSteam', 'compatEpic'],
   [' Steam ', ' Steam Games '],
@@ -55,12 +55,12 @@ const REPLACEMENTS = [
   ['Valve,', 'Epic,'],
   ['Valve.', 'Epic.'],
 
-  [' after VAC', ' after BattlEye'],
-  [' game, VAC,', ' game, BattlEye,'],
-  ['VAC-aware', 'BattlEye-aware'],
-  ['VAC enforcement', 'BattlEye enforcement'],
-  [' VAC ', ' BattlEye '],
-  ['(VAC)', '(BattlEye)'],
+  [' after BattlEye', ' after BattlEye'],
+  [' game, BattlEye,', ' game, BattlEye,'],
+  ['BattlEye-aware', 'BattlEye-aware'],
+  ['BattlEye enforcement', 'BattlEye enforcement'],
+  [' BattlEye ', ' BattlEye '],
+  ['(BattlEye)', '(BattlEye)'],
 
   ['ranked MMR', 'ranked play'],
   ['live MMR', 'live ranked'],
@@ -89,7 +89,7 @@ const REPLACEMENTS = [
   ['map hack, zoom hack', 'ESP, radar hack'],
   ['map hack and', 'ESP wallhack and'],
   ['full map hack', 'full ESP wallhack'],
-  ['Map hack and hero ESP', 'ESP wallhack and player ESP'],
+  ['Map hack and hero ESP', 'ESP wallhack and operator ESP'],
   ['map hack ESP', 'ESP wallhack'],
   ['map hack setup', 'ESP wallhack setup'],
   ['map hack', 'ESP wallhack'],
@@ -123,7 +123,7 @@ const REPLACEMENTS = [
   ['per-hero', 'per-weapon'],
   ['Per-hero', 'Per-weapon'],
   ['hero configs', 'weapon configs'],
-  ['hero ESP', 'player ESP'],
+  ['hero ESP', 'operator ESP'],
   ['Hero ESP', 'Player ESP'],
   ['enemy hero', 'enemy player'],
   ['enemy heroes', 'enemy players'],
@@ -146,7 +146,7 @@ const REPLACEMENTS = [
   ['ward lines', 'sight lines'],
   ['ward spots', 'high-ground spots'],
   ['ward study', 'cover study'],
-  ['ward ESP', 'weapon ESP'],
+  ['ward ESP', 'gadget ESP'],
   ['ward information', 'chest information'],
   ['placed wards', 'placed markers'],
   ['observer and sentry ward', 'chest and reboot'],
@@ -200,7 +200,7 @@ const REPLACEMENTS = [
   ['Fog of war', 'Storm circle'],
   ['fog of war', 'storm circle'],
 
-  ['Counter-Strike: Global Offensive Scripts, Map Hack & ESP', 'Counter-Strike: Global Offensive Aimbot, ESP & Wallhack'],
+  ['Tom Clancy's Rainbow Six Siege Scripts, Map Hack & ESP', 'Tom Clancy's Rainbow Six Siege Aimbot, ESP & Wallhack'],
   ['humanized scripts', 'humanized aimbot'],
   ['script automation', 'aimbot automation'],
   ['script delays', 'aimbot smoothness'],

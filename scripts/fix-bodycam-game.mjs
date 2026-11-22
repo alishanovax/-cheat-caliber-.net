@@ -1,4 +1,4 @@
-/** Counter-Strike: Global Offensive (Steam FPS) copy fixes — run: node scripts/fix-r6-game.mjs */
+/** Tom Clancy's Rainbow Six Siege (Steam FPS) copy fixes — run: node scripts/fix-r6-game.mjs */
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -7,13 +7,13 @@ const SKIP = new Set(['node_modules', '.git', 'dist', '_template']);
 const EXTS = new Set(['.ts', '.astro', '.mjs', '.md']);
 
 const REPLACEMENTS = [
-  ['Steam Games Launcher', 'Steam client'],
+  ['Steam Games Launcher', 'Ubisoft Connect'],
   ['Steam Games file', 'Steam game file'],
   ['Steam Games launch', 'Steam launch'],
   ['through Steam Games', 'through Steam'],
   ['on Steam Games', 'on Steam'],
   ['Steam Games', 'Steam'],
-  ['launch Counter-Strike: Global Offensive on Epic', 'launch Counter-Strike: Global Offensive on Steam'],
+  ['launch Tom Clancy's Rainbow Six Siege on Epic', 'launch Tom Clancy's Rainbow Six Siege on Steam'],
   ['Private Servers', 'offline raid'],
   ['private servers', 'shooting range'],
   ['Auto Shield Break', 'Recoil control'],
@@ -30,12 +30,12 @@ const REPLACEMENTS = [
   ['same POI clear', 'same map route'],
   ['Private Servers island', 'offline raid session'],
   ['Private Servers islands', 'offline raid sessions'],
-  ['BR, SCAV run, SCAV run, Private Servers', 'Wingman, Body Bomb, TDM, Hardpoint'],
-  ['Multiplayer, SCAV run, SCAV run, Private Servers', 'PMC raid, SCAV run, Wingman, Hardpoint'],
-  ['Multiplayer, SCAV run and SCAV run', 'PMC raid, Wingman and ranked seasons'],
+  ['BR, SCAV run, SCAV run, Private Servers', 'Unranked, Body Bomb, TDM, Hardpoint'],
+  ['Multiplayer, SCAV run, SCAV run, Private Servers', 'PMC raid, SCAV run, Unranked, Hardpoint'],
+  ['Multiplayer, SCAV run and SCAV run', 'PMC raid, Unranked and ranked seasons'],
   ['Multiplayer and SCAV run', 'PMC raid and SCAV run'],
   ['SCAV run and Private Servers', 'SCAV run seasons and offline raid'],
-  ['SCAV run or SCAV run', 'Wingman or SCAV run'],
+  ['SCAV run or SCAV run', 'Unranked or SCAV run'],
   ['SCAV run presets', 'ranked-season presets'],
   ['before SCAV run', 'before ranked matchmaking'],
   ['in SCAV run', 'in ranked playlists'],

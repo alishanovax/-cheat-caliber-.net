@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { resolvePageSeo } from '../../config/seo';
 import { PRIMARY_CHEAT_IMAGE } from '../../config/siteImages';
 import { checkoutPath } from '../../config/checkout';
-import { csgoCheatsLanding } from '../../data/csgoCheatsLanding';
+import { r6CheatsLanding } from '../../data/r6CheatsLanding';
 import ResponsiveImage from '../../components/ResponsiveImage.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { breadcrumbSchema, webPageSchema } from '../../utils/schema';
@@ -11,13 +11,13 @@ import { Button } from '@/components/starwind/button';
 import { Prose } from '@/components/starwind/prose';
 import { ROUTES } from '../../utils/path';
 
-const seo = resolvePageSeo('/cs-go-cheats/');
+const seo = resolvePageSeo('/r6-cheats/');
 const breadcrumbs = [
   { name: 'Home', path: '/' },
-  { name: 'PC', path: '/cs-go-cheats/' },
+  { name: 'PC', path: '/r6-cheats/' },
 ];
-const checkout = checkoutPath('csgo');
-const copy = csgoCheatsLanding;
+const checkout = checkoutPath('r6');
+const copy = r6CheatsLanding;
 
 function linkify(text: string): string {
   return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label: string, href: string) => {
@@ -34,7 +34,7 @@ function linkify(text: string): string {
     webPageSchema({
       name: copy.h1,
       description: seo.description,
-      url: '/cs-go-cheats/',
+      url: '/r6-cheats/',
     }),
     breadcrumbSchema(breadcrumbs),
   ]}

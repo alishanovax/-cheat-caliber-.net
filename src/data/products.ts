@@ -59,50 +59,50 @@ export interface ProductPage {
 
 /** Guides paired with each product detail page */
 export const productRelatedBlogSlugs: Record<string, string[]> = {
-  lite: ['csgo-esp-setup', 'csgo-lite-vs-pro', 'csgo-radar', 'csgo-vac-patch-day'],
+  lite: ['r6-esp-setup', 'r6-lite-vs-pro', 'r6-radar', 'battleye-patch'],
   pro: [
-    'csgo-aimbot-competitive',
-    'csgo-aimbot-combat',
-    'csgo-lite-vs-pro',
-    'csgo-stream-proof',
+    'r6-aimbot-ranked',
+    'r6-aimbot-combat',
+    'r6-lite-vs-pro',
+    'r6-stream-proof',
   ],
   elite: [
-    'csgo-elite-tier',
-    'csgo-cheat-features',
-    'csgo-esp-setup',
-    'csgo-vac-patch-day',
-    'buy-cs-go-cheats',
+    'r6-elite-tier',
+    'r6-cheat-features',
+    'r6-esp-setup',
+    'battleye-patch',
+    'buy-r6-cheats',
   ],
   'hwid-spoofer': [
-    'csgo-hwid-ban',
-    'csgo-vac-troubleshooting',
-    'csgo-vac-patch-day',
-    'csgo-external-loader',
+    'r6-hwid-ban',
+    'battleye-fix',
+    'battleye-patch',
+    'r6-external-loader',
   ],
   ugc: [
-    'csgo-vac-troubleshooting',
-    'csgo-hwid-ban',
-    'buy-cs-go-cheats',
+    'battleye-fix',
+    'r6-hwid-ban',
+    'buy-r6-cheats',
   ],
   'unlock-all': [
-    'csgo-loadouts',
-    'csgo-cheat-features',
-    'csgo-stream-proof',
+    'r6-loadouts',
+    'r6-cheat-features',
+    'r6-stream-proof',
   ],
 };
 
-const productBase = '/products/cs-go/';
+const productBase = '/products/r6/';
 
 const defaultAcquisitionSteps: AcquisitionStep[] = [
   {
     num: '01',
     title: 'Review current status',
-    desc: 'Check the live banner on csgo-cheat.org before purchase—especially after a Counter-Strike: Global Offensive or anti-cheat update.',
+    desc: 'Check the live banner on r6-cheat.com before purchase—especially after a Tom Clancy’s Rainbow Six Siege or anti-cheat update.',
   },
   {
     num: '02',
     title: 'Choose your access tier',
-    desc: 'Select Elite CS:GO cheats or the utility that matches your goal. Review the feature list before checkout via our secure checkout.',
+    desc: 'Select Elite Rainbow Six Siege cheats or the utility that matches your goal. Review the feature list before checkout via our secure checkout.',
   },
   {
     num: '03',
@@ -124,17 +124,17 @@ function acquisitionFor(productName: string): ProductAcquisition {
 }
 
 const sharedGoodToKnow =
-  'Counter-Strike: Global Offensive and anti-cheat receive frequent updates. Confirm module availability on the live status panel at csgo-cheat.org before you purchase or launch. Overlay behavior may differ in lobbies, replays and spectator mode after patches.';
+  'Tom Clancy’s Rainbow Six Siege and anti-cheat receive frequent updates. Confirm module availability on the live status panel at r6-cheat.com before you purchase or launch. Overlay behavior may differ in lobbies, replays and spectator mode after patches.';
 
 const sharedLimitations =
-  'Third-party software in Counter-Strike: Global Offensive can violate the game terms of service and lead to anti-cheat action. You use this software at your own risk. Compatibility and availability can change after game, anti-cheat, or Windows updates without notice.';
+  'Third-party software in Tom Clancy’s Rainbow Six Siege can violate the game terms of service and lead to anti-cheat action. You use this software at your own risk. Compatibility and availability can change after game, anti-cheat, or Windows updates without notice.';
 
-const csgoSystemRequirements: SystemRequirement[] = [
+const r6SystemRequirements: SystemRequirement[] = [
   { icon: 'reqWindows', text: 'Windows 10 or Windows 11 (64-bit) with HVCI, Core Isolation, TPM and Secure Boot enabled.' },
-  { icon: 'reqEpic', text: 'Current PC build of Counter-Strike: Global Offensive with the latest patches applied.' },
+  { icon: 'reqEpic', text: 'Current PC build of Tom Clancy’s Rainbow Six Siege with the latest patches applied.' },
   { icon: 'reqSettings', text: 'Cloud DMA access for full functionality on supported builds.' },
   { icon: 'reqWifi', text: 'Stable internet connection for portal access and loader updates.' },
-  { icon: 'reqCpu', text: 'Intel or AMD system that meets Counter-Strike: Global Offensive hardware requirements.' },
+  { icon: 'reqCpu', text: 'Intel or AMD system that meets Tom Clancy’s Rainbow Six Siege hardware requirements.' },
 ];
 
 type GalleryKey = keyof typeof galleryRaw;
@@ -144,31 +144,31 @@ const galleryRaw = {
     src: SITE_CHEAT_IMAGES[0].src,
     alt: SITE_CHEAT_IMAGES[0].alt,
     caption: 'Soft aim & ESP',
-    captionDesc: 'Counter-Strike: Global Offensive trainer overlays tuned for PC gunfights.',
+    captionDesc: 'Tom Clancy’s Rainbow Six Siege trainer overlays tuned for PC gunfights.',
   },
   gpEspWallhack: {
     src: SITE_CHEAT_IMAGES[1].src,
     alt: SITE_CHEAT_IMAGES[1].alt,
     caption: 'Enemy ESP',
-    captionDesc: 'Player ESP with health, health and distance in Counter-Strike: Global Offensive multiplayer.',
+    captionDesc: 'Player ESP with health, health and distance in Tom Clancy’s Rainbow Six Siege multiplayer.',
   },
   gpGameplay: {
     src: SITE_CHEAT_IMAGES[2].src,
     alt: SITE_CHEAT_IMAGES[2].alt,
-    caption: 'Counter-Strike: Global Offensive co-op',
+    caption: 'Tom Clancy’s Rainbow Six Siege co-op',
     captionDesc: 'Tactical shooter action on PC with trainer-friendly overlays.',
   },
   gpEspIndoor: {
     src: SITE_CHEAT_IMAGES[3].src,
     alt: SITE_CHEAT_IMAGES[3].alt,
-    caption: 'Counter-Strike: Global Offensive raid combat',
-    captionDesc: 'Cel-shaded Counter-Strike: Global Offensive combat in a twilight outpost.',
+    caption: 'Tom Clancy’s Rainbow Six Siege raid combat',
+    captionDesc: 'Cel-shaded Tom Clancy’s Rainbow Six Siege combat in a twilight outpost.',
   },
   gpCourtyard: {
     src: SITE_CHEAT_IMAGES[0]!.src,
     alt: SITE_CHEAT_IMAGES[0]!.alt,
-    caption: 'Counter-Strike: Global Offensive firefight',
-    captionDesc: 'Counter-Strike: Global Offensive combat screenshot from approved media library.',
+    caption: 'Tom Clancy’s Rainbow Six Siege firefight',
+    captionDesc: 'Tom Clancy’s Rainbow Six Siege combat screenshot from approved media library.',
   },
 };
 
@@ -185,7 +185,7 @@ function slide(...keys: GalleryKey[]): ProductSlide[] {
 }
 
 const productDetailGalleryCaptions = [
-  { caption: 'Updates & anti-cheat', captionDesc: 'Stay aligned with Counter-Strike: Global Offensive patch and security news.' },
+  { caption: 'Updates & anti-cheat', captionDesc: 'Stay aligned with Tom Clancy’s Rainbow Six Siege patch and security news.' },
   { caption: 'Multiplayer gameplay', captionDesc: 'In-match view on a compact map with full HUD.' },
   { caption: 'Quick Match perspective', captionDesc: 'First-person combat with kill feed and minimap.' },
 ] as const;
@@ -204,14 +204,14 @@ function productDetailGallery(): ProductSlide[] {
 
 function slugFromHref(href: string): string {
   const segment = href.replace(productBase, '').replace(/^\//, '').replace(/\/$/, '');
-  return segment || 'csgo';
+  return segment || 'r6';
 }
 
 const tierAbout: Record<string, ProductPage['about']> = {
   lite: [
     {
       type: 'p',
-      text: 'CS:GO Lite is built for players who want map awareness first. In ranked, knowing enemy positions, chest locations and loot timings wins more fights than raw mechanics—Lite gives you that edge without aimbot automation.',
+      text: 'R6 Lite is built for players who want map awareness first. In ranked, knowing enemy positions, chest locations and loot timings wins more fights than raw mechanics—Lite gives you that edge without aimbot automation.',
     },
     { type: 'h2', text: 'casual matches-safe by design' },
     {
@@ -222,7 +222,7 @@ const tierAbout: Record<string, ProductPage['about']> = {
   pro: [
     {
       type: 'p',
-      text: 'CS:GO Pro is the sweet spot for ranked grinders. Aimbot, Smooth Aim and Sticky Aim help you win squad fights without obvious bot patterns—when you tune Smoothness sliders using our portal presets.',
+      text: 'R6 Pro is the sweet spot for ranked grinders. Aimbot, Smooth Aim and Sticky Aim help you win squad fights without obvious bot patterns—when you tune Smoothness sliders using our portal presets.',
     },
     { type: 'h2', text: 'Aimbot + awareness combined' },
     {
@@ -233,7 +233,7 @@ const tierAbout: Record<string, ProductPage['about']> = {
   elite: [
     {
       type: 'p',
-      text: 'CS:GO Elite is the private build for players who want everything—Loot Assist, Triggerbot, Recoil control, loadout tools, full wall ESP and direct developer support. Limited slots keep the build maintainable and patch cycles fast.',
+      text: 'R6 Elite is the private build for players who want everything—Loot Assist, Triggerbot, Recoil control, loadout tools, full wall ESP and direct developer support. Limited slots keep the build maintainable and patch cycles fast.',
     },
     { type: 'h2', text: 'Use Elite responsibly' },
     {
@@ -265,7 +265,7 @@ const tierBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Recommended pairing' },
     {
       type: 'p',
-      text: 'Pro is the most popular tier at csgo-cheat.org—enough firepower for high-rank lobbies without Elite slot limits. Pair with our aimbot guide in the blog before your first ranked session.',
+      text: 'Pro is the most popular tier at r6-cheat.com—enough firepower for high-rank lobbies without Elite slot limits. Pair with our aimbot guide in the blog before your first ranked session.',
     },
   ],
   elite: [
@@ -287,7 +287,7 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'When you need it' },
     {
       type: 'p',
-      text: 'Use when fresh platform accounts fail instantly on one PC but work elsewhere—classic HWID enforcement. Do not use for account-only anti-cheat cases; see [UGC](/products/cs-go/ugc/) instead.',
+      text: 'Use when fresh platform accounts fail instantly on one PC but work elsewhere—classic HWID enforcement. Do not use for account-only anti-cheat cases; see [UGC](/products/r6/ugc/) instead.',
     },
     { type: 'h2', text: 'Full workflow' },
     {
@@ -304,7 +304,7 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Realistic expectations' },
     {
       type: 'p',
-      text: 'Some anti-cheat bans cannot be reversed. UGC organizes evidence and follow-ups for platform review. Pair with [HWID Spoofer](/products/cs-go/hwid-spoofer/) when hardware is flagged, or a new account when reputation is burned.',
+      text: 'Some anti-cheat bans cannot be reversed. UGC organizes evidence and follow-ups for platform review. Pair with [HWID Spoofer](/products/r6/hwid-spoofer/) when hardware is flagged, or a new account when reputation is burned.',
     },
   ],
   'unlock-all': [
@@ -329,7 +329,7 @@ const productContent: Record<
     images: productDetailGallery(),
     goodToKnow: sharedGoodToKnow,
     limitations: sharedLimitations,
-    systemRequirements: csgoSystemRequirements,
+    systemRequirements: r6SystemRequirements,
     fullFeatures: [
       'Player ESP & player boxes',
       'Chest & loot locator',
@@ -347,10 +347,10 @@ const productContent: Record<
       'Patch auto-updater',
     ],
     overview: {
-      title: 'CS:GO Lite: ESP and radar',
+      title: 'R6 Lite: ESP and radar',
       paragraphs: [
-        'Lite is for player ESP, chest markers, loot timers and radar. No aimbot. Set distance, colors and stream-proof in the portal before you queue.',
-        'Best if you want awareness in online matches and casual matches without combat automation. Overlays are updated after Counter-Strike: Global Offensive patches.',
+        'Lite is for operator ESP, chest markers, loot timers and radar. No aimbot. Set distance, colors and stream-proof in the portal before you queue.',
+        'Best if you want awareness in online matches and casual matches without combat automation. Overlays are updated after Tom Clancy’s Rainbow Six Siege patches.',
       ],
     },
   },
@@ -358,7 +358,7 @@ const productContent: Record<
     images: productDetailGallery(),
     goodToKnow: sharedGoodToKnow,
     limitations: sharedLimitations,
-    systemRequirements: csgoSystemRequirements,
+    systemRequirements: r6SystemRequirements,
     fullFeatures: [
       'All Lite ESP & wall ESP modules',
       'Aimbot',
@@ -377,7 +377,7 @@ const productContent: Record<
       'Operator setup guidance',
     ],
     overview: {
-      title: 'CS:GO Pro: aimbot plus ESP',
+      title: 'R6 Pro: aimbot plus ESP',
       paragraphs: [
         'Pro includes everything in Lite, plus Aimbot, Smooth Aim, Sticky Aim and hotkey macros. Aim settings live in one tab. Start with a portal preset, not max sliders.',
         'Most people pick Pro for online matches and casual matches. Bone priority and macros help in fights while defaults stay smooth.',
@@ -388,7 +388,7 @@ const productContent: Record<
     images: productDetailGallery(),
     goodToKnow: sharedGoodToKnow,
     limitations: sharedLimitations,
-    systemRequirements: csgoSystemRequirements,
+    systemRequirements: r6SystemRequirements,
     fullFeatures: [
       'All Lite + Pro modules',
       'Loot Assist',
@@ -412,20 +412,20 @@ const productContent: Record<
       title: 'Elite: full cheat + extras',
       paragraphs: [
         'Elite includes Lite and Pro modules, plus loot assist, Triggerbot, Recoil control, loadout tools, full wall ESP and faster patch priority.',
-        'Elite slots are limited. Portal guides help you set safer profiles before ranked matchmaking. Check the status banner on csgo-cheat.org before you buy Elite access.',
+        'Elite slots are limited. Portal guides help you set safer profiles before ranked matchmaking. Check the status banner on r6-cheat.com before you buy Elite access.',
       ],
     },
   },
   'hwid-spoofer': {
     images: slide('gpEspIndoor', 'gpEspWallhack', 'gpGameplay'),
     goodToKnow:
-      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching Counter-Strike: Global Offensive.',
+      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching Tom Clancy’s Rainbow Six Siege.',
     limitations:
       'Spoofing does not help account-only anti-cheat cases. Never stack two spoof tools. Shared or work PCs may not be suitable. You accept all risk from driver-level changes.',
     systemRequirements: [
       { icon: 'reqWindows', text: 'Windows 10 or 11 64-bit with administrator access.' },
       { icon: 'reqRestorePoint', text: 'Ability to create a system restore point before running.' },
-      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching Counter-Strike: Global Offensive after spoofing.' },
+      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching Tom Clancy’s Rainbow Six Siege after spoofing.' },
       { icon: 'reqWifi', text: 'Stable connection for portal verification tools.' },
     ],
     fullFeatures: [
@@ -441,7 +441,7 @@ const productContent: Record<
       'Recovery case support',
     ],
     overview: {
-      title: 'HWID Spoofer for Counter-Strike: Global Offensive PC bans',
+      title: 'HWID Spoofer for Tom Clancy’s Rainbow Six Siege PC bans',
       paragraphs: [
         'Use the HWID Spoofer when anti-cheat flags your PC hardware but the platform account is still fine. Includes disk and MAC tools, a restore-point checklist, a compatibility scan and post-spoof checks.',
         'Use it when new accounts die on one PC but work on another. It does not fix account-only anti-cheat bans. After spoofing, use a safer cheat profile before ranked matchmaking.',
@@ -457,7 +457,7 @@ const productContent: Record<
     limitations:
       'UGC does not guarantee account restoration. Results vary by case type. Permanent anti-cheat bans may require a new account path instead of appeal.',
     systemRequirements: [
-      { icon: 'reqMailOrder', text: 'Order email used at checkout on csgo-cheat.org or at checkout on csgo-cheat.org.' },
+      { icon: 'reqMailOrder', text: 'Order email used at checkout on r6-cheat.com or at checkout on r6-cheat.com.' },
       { icon: 'reqShieldAccount', text: 'Account details and ban or restriction notification if available.' },
       { icon: 'reqWifiPortal', text: 'Internet access for portal updates and case dashboard.' },
     ],
@@ -486,7 +486,7 @@ const productContent: Record<
       'Loadout Pack previews cosmetics locally on your client. Other players in your lobby see your real inventory—not preview skins. Included with Elite tier.',
     limitations:
       'Local preview only—does not modify in-game inventory or store state. Other players cannot see previewed skins or sets.',
-    systemRequirements: csgoSystemRequirements,
+    systemRequirements: r6SystemRequirements,
     fullFeatures: [
       'Outfit skin swap',
       'Skin & wrap preview',
@@ -500,7 +500,7 @@ const productContent: Record<
     overview: {
       title: 'loadout tools / Loadout Pack',
       paragraphs: [
-        'loadout tools / Loadout Pack lets you preview outfits, camos and attachments on your Counter-Strike: Global Offensive client. loadout tools does not change your in-game inventory or store purchases.',
+        'loadout tools / Loadout Pack lets you preview outfits, camos and attachments on your Tom Clancy’s Rainbow Six Siege client. loadout tools does not change your in-game inventory or store purchases.',
         'Only you see the preview skins. Other players see your real inventory. Included with Elite, or buy loadout tools alone without combat modules.',
       ],
     },
@@ -511,7 +511,7 @@ function buildTierPages(): ProductPage[] {
   return t.cheats.items.map((cheat) => {
     const slug = slugFromHref(cheat.href);
     const content = productContent[slug];
-    const displayName = cheat.name === 'Lite' ? 'CS:GO Lite' : cheat.name === 'Pro' ? 'CS:GO Pro' : 'CS:GO Elite';
+    const displayName = cheat.name === 'Lite' ? 'R6 Lite' : cheat.name === 'Pro' ? 'R6 Pro' : 'R6 Elite';
     return {
       slug,
       kind: 'tier',
@@ -598,6 +598,6 @@ export const productHub = {
   path: productBase,
   title: t.products.title,
   subtitle: t.products.subtitle,
-  description: 'CS:GO Elite cheats with aimbot and ESP, plus HWID spoofer, UGC recovery and loadout tools for PC.',
-  buyUrl: checkoutPath('csgo'),
+  description: 'R6 Elite cheats with aimbot and ESP, plus HWID spoofer, UGC recovery and loadout tools for PC.',
+  buyUrl: checkoutPath('r6'),
 };

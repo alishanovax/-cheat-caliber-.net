@@ -7,9 +7,9 @@ import path from 'node:path';
 const root = path.join(process.cwd(), 'src');
 
 const REPLACEMENTS = [
-  ['Counter-Strike: Global Offensive or BattlEye update', 'Counter-Strike: Global Offensive or BattlEye update'],
-  ['Counter-Strike: Global Offensive or BattlEye updates', 'Counter-Strike: Global Offensive or BattlEye updates'],
-  ['Counter-Strike: Global Offensive or BattlEye', 'Counter-Strike: Global Offensive or BattlEye'],
+  ['Tom Clancy's Rainbow Six Siege or BattlEye update', 'Tom Clancy's Rainbow Six Siege or BattlEye update'],
+  ['Tom Clancy's Rainbow Six Siege or BattlEye updates', 'Tom Clancy's Rainbow Six Siege or BattlEye updates'],
+  ['Tom Clancy's Rainbow Six Siege or BattlEye', 'Tom Clancy's Rainbow Six Siege or BattlEye'],
   ['after BattlEye patches', 'after BattlEye patches'],
   ['BattlEye patches', 'BattlEye patches'],
   ['BattlEye update', 'BattlEye update'],
@@ -18,7 +18,7 @@ const REPLACEMENTS = [
   ['BattlEye bans', 'BattlEye bans'],
   ['BattlEye penalties', 'BattlEye penalties'],
   ['BattlEye issues', 'BattlEye issues'],
-  ['BattlEye Unable to Verify Counter-Strike: Global Offensive', 'BattlEye connection issues on Counter-Strike: Global Offensive'],
+  ['BattlEye Unable to Verify Tom Clancy's Rainbow Six Siege', 'BattlEye connection issues on Tom Clancy's Rainbow Six Siege'],
   ['eac verification', 'BattlEye verification'],
   ['eac fix', 'BattlEye fix'],
   ['BattlEye patch day', 'BattlEye patch day'],
@@ -33,14 +33,14 @@ const REPLACEMENTS = [
   ['Hajin DMZ loot', 'Item ESP'],
   ['kevlar and helmet', 'operator health'],
   ['armor', 'health'],
-  ['Steam client', 'BSG Connect'],
-  ['launch Modern Warfare 4 on Steam', 'launch Counter-Strike: Global Offensive through BSG Connect'],
-  ['Modern Warfare 4 on Steam', 'Counter-Strike: Global Offensive on PC'],
-  ['Steam accounts', 'BSG accounts'],
-  ['Steam account', 'BSG account'],
+  ['Ubisoft Connect', 'Ubisoft Connect'],
+  ['launch Modern Warfare 4 on Steam', 'launch Tom Clancy's Rainbow Six Siege through Ubisoft Connect'],
+  ['Modern Warfare 4 on Steam', 'Tom Clancy's Rainbow Six Siege on PC'],
+  ['Ubisoft accounts', 'Ubisoft accounts'],
+  ['Ubisoft account', 'Ubisoft account'],
   ['Loadout Changer', 'PMC loadout tools'],
   ['Ricochet', 'BattlEye'],
-  ['ZADEYO_MW4_PRODUCT_SEO', 'ZADEYO_APEX_PRODUCT_SEO'],
+  ['ZADEYO_MW4_PRODUCT_SEO', 'ZADEYO_R6_PRODUCT_SEO'],
   ['mw4SystemRequirements', 'r6SystemRequirements'],
 ];
 

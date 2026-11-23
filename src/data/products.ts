@@ -59,9 +59,9 @@ export interface ProductPage {
 
 /** Guides paired with each product detail page */
 export const productRelatedBlogSlugs: Record<string, string[]> = {
-  lite: ['r6-esp-setup', 'r6-lite-vs-pro', 'r6-radar', 'battleye-patch'],
+  lite: ['r6-esp-setup', 'r6-lite-vs-pro', 'r6-radar', 'anti-cheat-patch'],
   pro: [
-    'r6-aimbot-ranked',
+    'r6-aimbot-competitive',
     'r6-aimbot-combat',
     'r6-lite-vs-pro',
     'r6-stream-proof',
@@ -70,17 +70,17 @@ export const productRelatedBlogSlugs: Record<string, string[]> = {
     'r6-elite-tier',
     'r6-cheat-features',
     'r6-esp-setup',
-    'battleye-patch',
+    'anti-cheat-patch',
     'buy-r6-cheats',
   ],
   'hwid-spoofer': [
     'r6-hwid-ban',
-    'battleye-fix',
-    'battleye-patch',
+    'anti-cheat-fix',
+    'anti-cheat-patch',
     'r6-external-loader',
   ],
   ugc: [
-    'battleye-fix',
+    'anti-cheat-fix',
     'r6-hwid-ban',
     'buy-r6-cheats',
   ],
@@ -97,12 +97,12 @@ const defaultAcquisitionSteps: AcquisitionStep[] = [
   {
     num: '01',
     title: 'Review current status',
-    desc: 'Check the live banner on r6-cheat.com before purchase—especially after a Rainbow Six Siege or anti-cheat update.',
+    desc: 'Check the live banner on rivalscheat.net before purchase—especially after a Marvel Rivals or anti-cheat update.',
   },
   {
     num: '02',
     title: 'Choose your access tier',
-    desc: 'Select Elite Rainbow Six Siege cheats or the utility that matches your goal. Review the feature list before checkout via our secure checkout.',
+    desc: 'Select Elite Marvel Rivals cheats or the utility that matches your goal. Review the feature list before checkout via our secure checkout.',
   },
   {
     num: '03',
@@ -112,7 +112,7 @@ const defaultAcquisitionSteps: AcquisitionStep[] = [
   {
     num: '04',
     title: 'Follow guided setup',
-    desc: 'Use only the customer portal, patch loader, and setup guide. Test in a lobby, load presets, then queue ranked or casual matches.',
+    desc: 'Use only the customer portal, patch loader, and setup guide. Test in a lobby, load presets, then queue competitive or casual matches.',
   },
 ];
 
@@ -124,17 +124,17 @@ function acquisitionFor(productName: string): ProductAcquisition {
 }
 
 const sharedGoodToKnow =
-  'Rainbow Six Siege and anti-cheat receive frequent updates. Confirm module availability on the live status panel at r6-cheat.com before you purchase or launch. Overlay behavior may differ in lobbies, replays and spectator mode after patches.';
+  'Marvel Rivals and anti-cheat receive frequent updates. Confirm module availability on the live status panel at rivalscheat.net before you purchase or launch. Overlay behavior may differ in lobbies, replays and spectator mode after patches.';
 
 const sharedLimitations =
-  'Third-party software in Rainbow Six Siege can violate the game terms of service and lead to anti-cheat action. You use this software at your own risk. Compatibility and availability can change after game, anti-cheat, or Windows updates without notice.';
+  'Third-party software in Marvel Rivals can violate the game terms of service and lead to anti-cheat action. You use this software at your own risk. Compatibility and availability can change after game, anti-cheat, or Windows updates without notice.';
 
 const r6SystemRequirements: SystemRequirement[] = [
   { icon: 'reqWindows', text: 'Windows 10 or Windows 11 (64-bit) with HVCI, Core Isolation, TPM and Secure Boot enabled.' },
-  { icon: 'reqEpic', text: 'Current PC build of Rainbow Six Siege with the latest patches applied.' },
+  { icon: 'reqEpic', text: 'Current PC build of Marvel Rivals with the latest patches applied.' },
   { icon: 'reqSettings', text: 'Cloud DMA access for full functionality on supported builds.' },
   { icon: 'reqWifi', text: 'Stable internet connection for portal access and loader updates.' },
-  { icon: 'reqCpu', text: 'Intel or AMD system that meets Rainbow Six Siege hardware requirements.' },
+  { icon: 'reqCpu', text: 'Intel or AMD system that meets Marvel Rivals hardware requirements.' },
 ];
 
 type GalleryKey = keyof typeof galleryRaw;
@@ -144,31 +144,31 @@ const galleryRaw = {
     src: SITE_CHEAT_IMAGES[0].src,
     alt: SITE_CHEAT_IMAGES[0].alt,
     caption: 'Soft aim & ESP',
-    captionDesc: 'Rainbow Six Siege trainer overlays tuned for PC gunfights.',
+    captionDesc: 'Marvel Rivals trainer overlays tuned for PC gunfights.',
   },
   gpEspWallhack: {
     src: SITE_CHEAT_IMAGES[1].src,
     alt: SITE_CHEAT_IMAGES[1].alt,
     caption: 'Enemy ESP',
-    captionDesc: 'Player ESP with health, health and distance in Rainbow Six Siege multiplayer.',
+    captionDesc: 'Player ESP with health, health and distance in Marvel Rivals multiplayer.',
   },
   gpGameplay: {
     src: SITE_CHEAT_IMAGES[2].src,
     alt: SITE_CHEAT_IMAGES[2].alt,
-    caption: 'Rainbow Six Siege co-op',
+    caption: 'Marvel Rivals co-op',
     captionDesc: 'Tactical shooter action on PC with trainer-friendly overlays.',
   },
   gpEspIndoor: {
     src: SITE_CHEAT_IMAGES[3].src,
     alt: SITE_CHEAT_IMAGES[3].alt,
-    caption: 'Rainbow Six Siege raid combat',
-    captionDesc: 'Cel-shaded Rainbow Six Siege combat in a twilight outpost.',
+    caption: 'Marvel Rivals raid combat',
+    captionDesc: 'Cel-shaded Marvel Rivals combat in a twilight outpost.',
   },
   gpCourtyard: {
     src: SITE_CHEAT_IMAGES[0]!.src,
     alt: SITE_CHEAT_IMAGES[0]!.alt,
-    caption: 'Rainbow Six Siege firefight',
-    captionDesc: 'Rainbow Six Siege combat screenshot from approved media library.',
+    caption: 'Marvel Rivals firefight',
+    captionDesc: 'Marvel Rivals combat screenshot from approved media library.',
   },
 };
 
@@ -185,7 +185,7 @@ function slide(...keys: GalleryKey[]): ProductSlide[] {
 }
 
 const productDetailGalleryCaptions = [
-  { caption: 'Updates & anti-cheat', captionDesc: 'Stay aligned with Rainbow Six Siege patch and security news.' },
+  { caption: 'Updates & anti-cheat', captionDesc: 'Stay aligned with Marvel Rivals patch and security news.' },
   { caption: 'Multiplayer gameplay', captionDesc: 'In-match view on a compact map with full HUD.' },
   { caption: 'Quick Match perspective', captionDesc: 'First-person combat with kill feed and minimap.' },
 ] as const;
@@ -211,7 +211,7 @@ const tierAbout: Record<string, ProductPage['about']> = {
   lite: [
     {
       type: 'p',
-      text: 'R6 Lite is built for players who want map awareness first. In ranked, knowing enemy positions, chest locations and loot timings wins more fights than raw mechanics—Lite gives you that edge without aimbot automation.',
+      text: 'Lite is built for players who want map awareness first. In competitive, knowing enemy positions, chest locations and loot timings wins more fights than raw mechanics—Lite gives you that edge without aimbot automation.',
     },
     { type: 'h2', text: 'casual matches-safe by design' },
     {
@@ -222,7 +222,7 @@ const tierAbout: Record<string, ProductPage['about']> = {
   pro: [
     {
       type: 'p',
-      text: 'R6 Pro is the sweet spot for ranked grinders. Aimbot, Smooth Aim and Sticky Aim help you win squad fights without obvious bot patterns—when you tune Smoothness sliders using our portal presets.',
+      text: 'Pro is the sweet spot for competitive grinders. Aimbot, Smooth Aim and Sticky Aim help you win squad fights without obvious bot patterns—when you tune Smoothness sliders using our portal presets.',
     },
     { type: 'h2', text: 'Aimbot + awareness combined' },
     {
@@ -233,12 +233,12 @@ const tierAbout: Record<string, ProductPage['about']> = {
   elite: [
     {
       type: 'p',
-      text: 'R6 Elite is the private build for players who want everything—Loot Assist, Triggerbot, Recoil control, loadout tools, full wall ESP and direct developer support. Limited slots keep the build maintainable and patch cycles fast.',
+      text: 'Elite is the private build for players who want everything—Loot Assist, Triggerbot, Recoil control, loadout tools, full wall ESP and direct developer support. Limited slots keep the build maintainable and patch cycles fast.',
     },
     { type: 'h2', text: 'Use Elite responsibly' },
     {
       type: 'p',
-      text: 'Elite power demands disciplined profiles. Test in lobbies, start with portal conservative presets, and scale up over days—not minutes. Use the portal guides before your first ranked queue.',
+      text: 'Elite power demands disciplined profiles. Test in lobbies, start with portal conservative presets, and scale up over days—not minutes. Use the portal guides before your first competitive queue.',
     },
   ],
 };
@@ -260,19 +260,19 @@ const tierBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Aimbot and automation' },
     {
       type: 'p',
-      text: 'Aimbot, Smooth Aim, Sticky Aim with Prediction, Bone Priority and hotkey macros for heals and mobility. Smoothness sliders tunes cast timing so aimbot stay natural in ranked. Start with portal presets, not max sliders.',
+      text: 'Aimbot, Smooth Aim, Sticky Aim with Prediction, Bone Priority and hotkey macros for heals and mobility. Smoothness sliders tunes cast timing so aimbot stay natural in competitive. Start with portal presets, not max sliders.',
     },
     { type: 'h2', text: 'Recommended pairing' },
     {
       type: 'p',
-      text: 'Pro is the most popular tier at r6-cheat.com—enough firepower for high-rank lobbies without Elite slot limits. Pair with our aimbot guide in the blog before your first ranked session.',
+      text: 'Pro is the most popular tier at rivalscheat.net—enough firepower for high-rank lobbies without Elite slot limits. Pair with our aimbot guide in the blog before your first competitive session.',
     },
   ],
   elite: [
     { type: 'h2', text: 'Full bot and finish suite' },
     {
       type: 'p',
-      text: 'Loot Assist, Rotation Assist AI, Triggerbot, Recoil control, loadout tools and full wall ESP with smoke alerts. Use lobby testing before ranked—Elite power requires disciplined profiles, not rage settings.',
+      text: 'Loot Assist, Rotation Assist AI, Triggerbot, Recoil control, loadout tools and full wall ESP with smoke alerts. Use lobby testing before competitive—Elite power requires disciplined profiles, not rage settings.',
     },
     { type: 'h2', text: 'Availability' },
     {
@@ -292,7 +292,7 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Full workflow' },
     {
       type: 'p',
-      text: 'Restore point, driver cleanup, spoof application, cold reboot, identifier verification, then conservative cheat profile before ranked. Full checklist ships in the portal and in our HWID blog guide.',
+      text: 'Restore point, driver cleanup, spoof application, cold reboot, identifier verification, then conservative cheat profile before competitive. Full checklist ships in the portal and in our HWID blog guide.',
     },
   ],
   'ugc': [
@@ -347,10 +347,10 @@ const productContent: Record<
       'Patch auto-updater',
     ],
     overview: {
-      title: 'R6 Lite: ESP and radar',
+      title: 'Lite: ESP and radar',
       paragraphs: [
-        'Lite is for operator ESP, chest markers, loot timers and radar. No aimbot. Set distance, colors and stream-proof in the portal before you queue.',
-        'Best if you want awareness in online matches and casual matches without combat automation. Overlays are updated after Rainbow Six Siege patches.',
+        'Lite is for hero ESP, chest markers, loot timers and radar. No aimbot. Set distance, colors and stream-proof in the portal before you queue.',
+        'Best if you want awareness in online matches and casual matches without combat automation. Overlays are updated after Marvel Rivals patches.',
       ],
     },
   },
@@ -377,7 +377,7 @@ const productContent: Record<
       'Operator setup guidance',
     ],
     overview: {
-      title: 'R6 Pro: aimbot plus ESP',
+      title: 'Pro: aimbot plus ESP',
       paragraphs: [
         'Pro includes everything in Lite, plus Aimbot, Smooth Aim, Sticky Aim and hotkey macros. Aim settings live in one tab. Start with a portal preset, not max sliders.',
         'Most people pick Pro for online matches and casual matches. Bone priority and macros help in fights while defaults stay smooth.',
@@ -412,20 +412,20 @@ const productContent: Record<
       title: 'Elite: full cheat + extras',
       paragraphs: [
         'Elite includes Lite and Pro modules, plus loot assist, Triggerbot, Recoil control, loadout tools, full wall ESP and faster patch priority.',
-        'Elite slots are limited. Portal guides help you set safer profiles before ranked matchmaking. Check the status banner on r6-cheat.com before you buy Elite access.',
+        'Elite slots are limited. Portal guides help you set safer profiles before competitive matchmaking. Check the status banner on rivalscheat.net before you buy Elite access.',
       ],
     },
   },
   'hwid-spoofer': {
     images: slide('gpEspIndoor', 'gpEspWallhack', 'gpGameplay'),
     goodToKnow:
-      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching Rainbow Six Siege.',
+      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching Marvel Rivals.',
     limitations:
       'Spoofing does not help account-only anti-cheat cases. Never stack two spoof tools. Shared or work PCs may not be suitable. You accept all risk from driver-level changes.',
     systemRequirements: [
       { icon: 'reqWindows', text: 'Windows 10 or 11 64-bit with administrator access.' },
       { icon: 'reqRestorePoint', text: 'Ability to create a system restore point before running.' },
-      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching Rainbow Six Siege after spoofing.' },
+      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching Marvel Rivals after spoofing.' },
       { icon: 'reqWifi', text: 'Stable connection for portal verification tools.' },
     ],
     fullFeatures: [
@@ -441,10 +441,10 @@ const productContent: Record<
       'Recovery case support',
     ],
     overview: {
-      title: 'HWID Spoofer for Rainbow Six Siege PC bans',
+      title: 'HWID Spoofer for Marvel Rivals PC bans',
       paragraphs: [
         'Use the HWID Spoofer when anti-cheat flags your PC hardware but the platform account is still fine. Includes disk and MAC tools, a restore-point checklist, a compatibility scan and post-spoof checks.',
-        'Use it when new accounts die on one PC but work on another. It does not fix account-only anti-cheat bans. After spoofing, use a safer cheat profile before ranked matchmaking.',
+        'Use it when new accounts die on one PC but work on another. It does not fix account-only anti-cheat bans. After spoofing, use a safer cheat profile before competitive matchmaking.',
       ],
     },
   },
@@ -457,7 +457,7 @@ const productContent: Record<
     limitations:
       'UGC does not guarantee account restoration. Results vary by case type. Permanent anti-cheat bans may require a new account path instead of appeal.',
     systemRequirements: [
-      { icon: 'reqMailOrder', text: 'Order email used at checkout on r6-cheat.com or at checkout on r6-cheat.com.' },
+      { icon: 'reqMailOrder', text: 'Order email used at checkout on rivalscheat.net or at checkout on rivalscheat.net.' },
       { icon: 'reqShieldAccount', text: 'Account details and ban or restriction notification if available.' },
       { icon: 'reqWifiPortal', text: 'Internet access for portal updates and case dashboard.' },
     ],
@@ -500,7 +500,7 @@ const productContent: Record<
     overview: {
       title: 'loadout tools / Loadout Pack',
       paragraphs: [
-        'loadout tools / Loadout Pack lets you preview outfits, camos and attachments on your Rainbow Six Siege client. loadout tools does not change your in-game inventory or store purchases.',
+        'loadout tools / Loadout Pack lets you preview outfits, camos and attachments on your Marvel Rivals client. loadout tools does not change your in-game inventory or store purchases.',
         'Only you see the preview skins. Other players see your real inventory. Included with Elite, or buy loadout tools alone without combat modules.',
       ],
     },
@@ -511,7 +511,7 @@ function buildTierPages(): ProductPage[] {
   return t.cheats.items.map((cheat) => {
     const slug = slugFromHref(cheat.href);
     const content = productContent[slug];
-    const displayName = cheat.name === 'Lite' ? 'R6 Lite' : cheat.name === 'Pro' ? 'R6 Pro' : 'R6 Elite';
+    const displayName = cheat.name === 'Lite' ? 'Lite' : cheat.name === 'Pro' ? 'Pro' : 'Elite';
     return {
       slug,
       kind: 'tier',
@@ -598,6 +598,6 @@ export const productHub = {
   path: productBase,
   title: t.products.title,
   subtitle: t.products.subtitle,
-  description: 'R6 Elite cheats with aimbot and ESP, plus HWID spoofer, UGC recovery and loadout tools for PC.',
+  description: 'Elite cheats with aimbot and ESP, plus HWID spoofer, UGC recovery and loadout tools for PC.',
   buyUrl: checkoutPath('r6'),
 };

@@ -1,6 +1,6 @@
-# r6-cheat.com
+# rivalscheat.net
 
-Astro storefront and content site for **R6 Cheat** at r6-cheat.com, based on the [levoredirect](https://github.com/Stellarhamza/levoredirect) Astro template.
+Astro storefront and content site for **Rivals Cheat** at rivalscheat.net, based on the [levoredirect](https://github.com/Stellarhamza/levoredirect) Astro template.
 
 ## Quick start
 

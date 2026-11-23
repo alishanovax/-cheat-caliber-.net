@@ -1,5 +1,5 @@
 /**
- * Install the four approved Tom Clancy's Rainbow Six Siege hack screenshots into public/images/.
+ * Install the four approved Marvel Rivals hack screenshots into public/images/.
  * Run: node scripts/install-r6-hack-images.mjs
  */
 import fs from 'node:fs';

@@ -35,12 +35,12 @@ function expandFaqAnswer(answer: string, faqId: string): string {
     ELITE: link(`Elite tier checkout (${faqId})`, productPath('elite')),
     LITE: link(`Lite ESP tier (${faqId})`, productPath('lite')),
     PRO: link(`Pro aimbot tier (${faqId})`, productPath('pro')),
-    PRODUCTS_HUB: link(`Full Rainbow Six Siege catalog (${faqId})`, ROUTES.products),
+    PRODUCTS_HUB: link(`Full Marvel Rivals catalog (${faqId})`, ROUTES.products),
     HWID: link(`HWID spoofer utility — ${faqId}`, productPath('hwid-spoofer')),
     UGC: link(`UGC appeal tools — ${faqId}`, productPath('ugc')),
     SKIN: link(`loadout tools pack — ${faqId}`, productPath('unlock-all')),
     FAQ_PAGE: link(`Full FAQ index — ${faqId}`, ROUTES.faq),
-    BLOG: link(`Rainbow Six Siege blog guides — ${faqId}`, ROUTES.blog),
+    BLOG: link(`Marvel Rivals blog guides — ${faqId}`, ROUTES.blog),
   };
   return Object.entries(slots).reduce(
     (text, [key, html]) => text.replaceAll(`{{${key}}}`, html),
@@ -57,21 +57,21 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'status',
     topic: 'setup',
     icon: 'faqStatus',
-    q: 'Where do I check if Rainbow Six Siege cheats are online?',
-    a: a('The live status banner is on r6-cheat.com. Always check after a Rainbow Six Siege or anti-cheat update.'),
+    q: 'Where do I check if Marvel Rivals cheats are online?',
+    a: a('The live status banner is on rivalscheat.net. Always check after a Marvel Rivals or anti-cheat update.'),
   },
   {
     id: 'after-buy',
     topic: 'setup',
     icon: 'faqAfterBuy',
     q: 'What happens after I buy?',
-    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Rainbow Six Siege.'),
+    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Marvel Rivals.'),
   },
   {
     id: 'ban-risk',
     topic: 'safety',
     icon: 'faqBanRisk',
-    q: 'Can I get banned using third-party Rainbow Six Siege cheats?',
+    q: 'Can I get banned using third-party Marvel Rivals cheats?',
     a: a('Yes—any modification carries risk. anti-cheat and report systems evolve. Read current status and accept the risk before use.'),
   },
   {
@@ -79,7 +79,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'setup',
     icon: 'faqPlatforms',
     q: 'Which platforms are supported?',
-    a: a('Rainbow Six Siege via the EA app or Ubisoft Connect on Windows 10/11 64-bit only. macOS and Linux are not supported.'),
+    a: a('Marvel Rivals via the EA app or Ubisoft Connect on Windows 10/11 64-bit only. macOS and Linux are not supported.'),
   },
   {
     id: 'license-move',
@@ -99,8 +99,8 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'what-is-esp',
     topic: 'esp',
     icon: 'faqWhatIsEsp',
-    q: 'What is Rainbow Six Siege wall ESP / ESP?',
-    a: `wall ESP and operator ESP show enemy positions, chests, loot and POI camps through storm circle. {{LITE}} covers awareness overlays. {{PRO}} and {{ELITE}} add script modules on top.`,
+    q: 'What is Marvel Rivals wall ESP / ESP?',
+    a: `wall ESP and hero ESP show enemy positions, chests, loot and POI camps through storm circle. {{LITE}} covers awareness overlays. {{PRO}} and {{ELITE}} add script modules on top.`,
     scopes: ['lite', 'pro', 'elite'],
   },
   {
@@ -115,7 +115,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhichTierEsp',
     q: 'Which tier do I need for wall ESP only?',
-    a: `{{LITE}} is awareness only: operator ESP, chest locator, loot timers and radar cheat. {{PRO}} adds aimbot. {{ELITE}} adds bots, kill steal and loadout tools.`,
+    a: `{{LITE}} is awareness only: hero ESP, chest locator, loot timers and radar cheat. {{PRO}} adds aimbot. {{ELITE}} adds bots, kill steal and loadout tools.`,
     scopes: ['lite'],
   },
   {
@@ -152,7 +152,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'undetected',
     topic: 'safety',
     icon: 'faqUndetected',
-    q: 'Are undetected Rainbow Six Siege cheats guaranteed?',
+    q: 'Are undetected Marvel Rivals cheats guaranteed?',
     a: a('No. Undetected is current status on the product page—not a permanent guarantee. Stop if the build shows updating, testing, or detected.'),
   },
   {
@@ -191,14 +191,14 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqExternalLoader',
     q: 'Is the loader injected into the game folder?',
-    a: `R6 Cheat runs external with cloud config sync—no files injected into the Rainbow Six Siege directory. anti-cheat risk still applies. See {{PRODUCTS_HUB}}.`,
+    a: `Rivals Cheat runs external with cloud config sync—no files injected into the Marvel Rivals directory. anti-cheat risk still applies. See {{PRODUCTS_HUB}}.`,
   },
   {
     id: 'blog-vs-cheats',
     topic: 'blog',
     icon: 'faqBlogVsCheats',
-    q: 'Are blog cheat codes the same as ranked cheats?',
-    a: `No. Blog guides about Steam console commands apply only in custom lobbies with cheats enabled. casual matches Rainbow Six Siege cheats are separate products—see {{LITE}}, {{PRO}} and {{ELITE}}.`,
+    q: 'Are blog cheat codes the same as competitive cheats?',
+    a: `No. Blog guides about Steam console commands apply only in custom lobbies with cheats enabled. casual matches Marvel Rivals cheats are separate products—see {{LITE}}, {{PRO}} and {{ELITE}}.`,
   },
   {
     id: 'blog-setup',
@@ -227,7 +227,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhoPro',
     q: 'Who should buy Pro?',
-    a: `casual matches players who want Aimbot, Smooth Aim and Hotkey macros with wall ESP included. Pro is the most popular tier at r6-cheat.com.`,
+    a: `casual matches players who want Aimbot, Smooth Aim and Hotkey macros with wall ESP included. Pro is the most popular tier at rivalscheat.net.`,
     scopes: ['pro'],
   },
   {
@@ -243,17 +243,17 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'safety',
     icon: 'faqEacUpdate',
     q: 'What should I do after a anti-cheat update?',
-    a: a('Check r6-cheat.com status. Do not launch until the banner shows online. Load conservative presets after any patch.'),
+    a: a('Check rivalscheat.net status. Do not launch until the banner shows online. Load conservative presets after any patch.'),
   },
   {
     id: 'install-help',
     topic: 'setup',
     icon: 'faqDiscordHelp',
     q: 'How do I get install help?',
-    a: a('After purchase, follow the portal setup guide with your order email, Windows version and Rainbow Six Siege client build. The FAQ covers common loader errors.'),
+    a: a('After purchase, follow the portal setup guide with your order email, Windows version and Marvel Rivals client build. The FAQ covers common loader errors.'),
   },
   {
-    id: 'zero-build-ranked',
+    id: 'zero-build-competitive',
     topic: 'plans',
     icon: 'faqZoomRaids',
     q: 'Do tiers work in Player and casual matches?',
@@ -279,8 +279,8 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'private-cheats',
     topic: 'safety',
     icon: 'faqPrivateCheats',
-    q: 'What are private Rainbow Six Siege cheats?',
-    a: a('Private means per-user keys and maintained builds—not public zip packs. R6 Cheat ships portal delivery for ESP, aimbot and wall ESP tiers.'),
+    q: 'What are private Marvel Rivals cheats?',
+    a: a('Private means per-user keys and maintained builds—not public zip packs. Rivals Cheat ships portal delivery for ESP, aimbot and wall ESP tiers.'),
   },
   {
     id: 'faq-more',
@@ -306,7 +306,7 @@ export function getAllFaqs(): SiteFaqItem[] {
 /** Shared FAQ block copy + filters (home, /faq/, products, blog). */
 export const SITE_FAQ_SECTION_COPY = {
   eyebrow: 'All topics',
-  title: 'Rainbow Six Siege cheats FAQ',
+  title: 'Marvel Rivals cheats FAQ',
   subtitle: 'Filter by cheat plans, wall ESP, aimbot, products, setup and guides.',
 } as const;
 
@@ -323,7 +323,7 @@ export const SITE_FAQ_FILTER_TOPICS: FaqTopic[] = [
 /** Section copy when FAQ list is scoped to the current page (not /faq/). */
 export const CONTEXTUAL_FAQ_SECTION_COPY = {
   eyebrow: 'Cheat FAQ',
-  title: 'Rainbow Six Siege cheats questions',
+  title: 'Marvel Rivals cheats questions',
   subtitle: 'Straight answers on aimbot, ESP, bans and setup — see the full FAQ for every topic.',
 } as const;
 
@@ -366,8 +366,8 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       id: 'blog-guide-start',
       topic: 'blog',
       icon: 'faqBlogGuideStart',
-      q: 'Should I use console cheat codes in ranked?',
-      a: a('No. practice mode lobby cheat codes only work in custom games with cheats enabled. casual matches requires separate Rainbow Six Siege cheats from r6-cheat.com tiers.'),
+      q: 'Should I use console cheat codes in competitive?',
+      a: a('No. practice mode lobby cheat codes only work in custom games with cheats enabled. casual matches requires separate Marvel Rivals cheats from rivalscheat.net tiers.'),
     },
     {
       id: 'blog-guide-tier',
@@ -397,7 +397,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       topic: 'blog',
       icon: 'faqBlogSetupLobby',
       q: 'Should I test in a lobby first?',
-      a: a('Yes. Load conservative presets in a lobby or casual matches before ranked. Tune script delay and ESP distance caps over several sessions.'),
+      a: a('Yes. Load conservative presets in a lobby or casual matches before competitive. Tune script delay and ESP distance caps over several sessions.'),
     },
   ],
   Security: [
@@ -431,7 +431,7 @@ const defaultBlogFaqs: SiteFaqItem[] = [
     topic: 'blog',
     icon: 'faqBlogDefault3',
     q: 'Will settings in this guide work next patch?',
-    a: a('Re-check status after every Rainbow Six Siege update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
+    a: a('Re-check status after every Marvel Rivals update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
   },
 ];
 
@@ -445,7 +445,7 @@ export function getBlogFaqs(tag: string, slug: string): SiteFaqItem[] {
       topic: 'esp',
       icon: 'faqBlogSlugEsp',
       q: 'Which tier covers wall ESP from this guide?',
-      a: `{{LITE}} includes operator ESP, chest locator and loot timers. {{PRO}} adds combat aimbot on the same overlay stack.`,
+      a: `{{LITE}} includes hero ESP, chest locator and loot timers. {{PRO}} adds combat aimbot on the same overlay stack.`,
     });
   }
   if (slug.includes('script') || slug.includes('combo') || slug.includes('auto-combo')) {

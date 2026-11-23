@@ -3,10 +3,10 @@ Allow: /
 
 Disallow: /go/
 
-Sitemap: https://r6-cheat.com/sitemap.xml
-Sitemap: https://r6-cheat.com/sitemap-pages.xml
-Sitemap: https://r6-cheat.com/sitemap-products.xml
-Sitemap: https://r6-cheat.com/sitemap-blog.xml
-Sitemap: https://r6-cheat.com/sitemap-forum.xml
+Sitemap: https://rivalscheat.net/sitemap.xml
+Sitemap: https://rivalscheat.net/sitemap-pages.xml
+Sitemap: https://rivalscheat.net/sitemap-products.xml
+Sitemap: https://rivalscheat.net/sitemap-blog.xml
+Sitemap: https://rivalscheat.net/sitemap-forum.xml
 
-# RSS: https://r6-cheat.com/rss.xml
+# RSS: https://rivalscheat.net/rss.xml

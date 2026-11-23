@@ -38,7 +38,7 @@ if (!post) {
 
 const postPath = `/blog/${post.slug}/`;
 const blogCrumbLabels: Record<string, string> = {
-  'r6-training-grounds-practice': 'Rainbow Six Siege practice mode guides (blog hub)',
+  'r6-training-grounds-practice': 'Marvel Rivals practice mode guides (blog hub)',
   'r6-stream-proof': 'Stream-proof guides (blog hub)',
   'r6-radar': 'Radar cheat guides (blog hub)',
 };
@@ -60,7 +60,7 @@ function linkify(text: string): string {
     .replace(/(https:\/\/r6-cheat\.com[^\s.,;)]*)/g, (_match, url: string) => {
       const path = url.replace(/^https:\/\/r6-cheat\.com/, '');
       const normalized = normalizeInternalPath(path);
-      const href = normalized.startsWith('http') ? normalized : `https://r6-cheat.com${normalized}`;
+      const href = normalized.startsWith('http') ? normalized : `https://rivalscheat.net${normalized}`;
       return `<a href="${href}">${url}</a>`;
     });
 }
@@ -123,11 +123,11 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
             <ResponsiveImage
               src={post.image}
               alt={
-                post.slug === 'battleye-fix'
+                post.slug === 'anti-cheat-fix'
                   ? `${post.title} — anti-cheat verification troubleshooting on PC`
                   : post.slug === 'r6-stream-proof'
                     ? `${post.title} — hide wall ESP and script overlays on stream`
-                    : `${post.title} — Rainbow Six Siege cheat gameplay screenshot`
+                    : `${post.title} — Marvel Rivals cheat gameplay screenshot`
               }
               width={960}
               height={540}
@@ -204,22 +204,22 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
           <nav class="blog-article__actions" aria-label="Continue reading">
             <Button as="a" href={checkoutPath('r6')} variant="primary" aria-label={t.ui.checkoutAria}>
               {
-                post.slug === 'battleye-fix'
+                post.slug === 'anti-cheat-fix'
                   ? 'Checkout after anti-cheat fix'
                   : post.slug === 'r6-stream-proof'
-                    ? 'Buy stream-proof Rainbow Six Siege tier'
+                    ? 'Buy stream-proof Marvel Rivals tier'
                     : post.slug === 'r6-training-grounds-practice'
                       ? 'Checkout after practice mode drills'
                       : post.slug === 'r6-radar'
                         ? 'Buy Lite radar cheat tier'
-                        : 'Buy R6 Cheat'
+                        : 'Buy Rivals Cheat'
               }
               <Icon name="arrowRight" size={17} />
             </Button>
             <Button as="a" href={ROUTES.products} variant="outline">
               {
-                post.slug === 'battleye-fix'
-                  ? 'Open Rainbow Six Siege product catalog'
+                post.slug === 'anti-cheat-fix'
+                  ? 'Open Marvel Rivals product catalog'
                   : post.slug === 'r6-stream-proof'
                     ? 'Open stream-safe product hub'
                     : post.slug === 'r6-training-grounds-practice'
@@ -231,7 +231,7 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
             </Button>
             <Button as="a" href={ROUTES.blog} variant="outline">
               {
-                post.slug === 'battleye-fix'
+                post.slug === 'anti-cheat-fix'
                   ? 'Browse patch-day guides'
                   : post.slug === 'r6-stream-proof'
                     ? 'More OBS setup guides'

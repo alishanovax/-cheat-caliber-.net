@@ -56,7 +56,7 @@ export const heroStatusPills: { icon: IconName; label: string }[] = [
   { icon: 'mapHack', label: 'wall ESP' },
   { icon: 'support247', label: '24/7 Support' },
   { icon: 'instantDelivery', label: 'Instant Delivery' },
-  { icon: 'rankedSafe', label: 'casual matches Safe' },
+  { icon: 'competitiveSafe', label: 'casual matches Safe' },
   { icon: 'triggerBot', label: 'Trigger Bot' },
   { icon: 'boneSelect', label: 'Bone Select' },
   { icon: 'liveStatus', label: 'Live Status' },

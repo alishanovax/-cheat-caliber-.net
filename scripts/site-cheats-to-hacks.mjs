@@ -44,13 +44,13 @@ function protectUrls(text) {
 
 function applyVocab(text) {
   let next = protectUrls(text);
-  next = next.replace(/\bRainbow Six Siege cheats\b/gi, 'Tom Clancy's Rainbow Six Siege hacks');
-  next = next.replace(/\brainbow six siege cheats\b/gi, 'rainbow six siege hacks');
-  next = next.replace(/\bR6 Cheats\b/g, 'R6 Cheat');
-  next = next.replace(/\bR6 cheats\b/g, 'Rainbow Six Siege cheats');
-  next = next.replace(/\br6 cheats\b/g, 'Rainbow Six Siege cheats');
-  next = next.replace(/\bbuy r6 cheats\b/gi, 'buy Rainbow Six Siege cheats');
-  next = next.replace(/\bBuy R6 cheats\b/g, 'Buy Rainbow Six Siege cheats');
+  next = next.replace(/\bMarvel Rivals cheats\b/gi, 'Marvel Rivals hacks');
+  next = next.replace(/\bMarvel Rivals cheats\b/gi, 'Marvel Rivals hacks');
+  next = next.replace(/\bRivals Cheats\b/g, 'Rivals Cheat');
+  next = next.replace(/\bMarvel Rivals cheats\b/g, 'Marvel Rivals cheats');
+  next = next.replace(/\br6 cheats\b/g, 'Marvel Rivals cheats');
+  next = next.replace(/\bbuy r6 cheats\b/gi, 'buy Marvel Rivals cheats');
+  next = next.replace(/\bBuy Marvel Rivals cheats\b/g, 'Buy Marvel Rivals cheats');
   next = next.replace(/\bCheats\b/g, 'Hacks');
   next = next.replace(/\bcheats\b/g, 'hacks');
   next = next.replace(/\bCheat\b/g, 'Hack');

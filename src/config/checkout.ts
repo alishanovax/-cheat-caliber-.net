@@ -66,11 +66,11 @@ export function resolveCheckoutHref(href: string): string {
     href.includes('zadeyo.com/go/') ||
     href.includes('%2Fr6-cheats') ||
     href.includes('/r6-cheats') ||
-    href.includes('%2Fproducts%2Fr6-faceit') ||
+    href.includes('%2Fproducts%2Fmarvel-rivals') ||
     href.includes('/products/r6-legends') ||
     href.includes('%2Fproducts%2Fapex') ||
     href.includes('/products/r6') ||
-    href.includes('%2Fproducts%2Fr6-faceit') ||
+    href.includes('%2Fproducts%2Fmarvel-rivals') ||
     href.includes('/products/r6')
   ) {
     return checkoutPath('r6');

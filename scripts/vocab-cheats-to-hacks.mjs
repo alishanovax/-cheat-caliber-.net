@@ -65,7 +65,7 @@ function applyCopy(text) {
   next = next.replace(/\bcheat\b/g, 'hack');
 
   // User asked for "hacks" not singular "hack" on branding
-  next = next.replace(/\bR6 Cheat\b/g, 'R6 Cheat');
+  next = next.replace(/\bRivals Cheat\b/g, 'Rivals Cheat');
   next = next.replace(/\bBuy hack\b/gi, 'Buy hacks');
   next = next.replace(/\bBuy Hack\b/g, 'Buy Hacks');
 

@@ -1,42 +1,52 @@
-/** Approved Rainbow Six Siege media — only these remote URLs are used site-wide. */
+/** Approved Marvel Rivals media — only these remote URLs are used site-wide. */
 export interface SiteCheatImage {
   src: string;
   alt: string;
 }
 
-const R6_MEDIA = [
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/r6/05c202fe-8171-4881-bc3a-b25833919850/1793895886073-hgicom-1r61.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/r6/05c202fe-8171-4881-bc3a-b25833919850/1793890761432-79v2k6-r6s5.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/r6/f8fb1df6-697d-4d9b-b239-91326d061bf8/1793467008010-7f5ql2-5.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/r6/f8fb1df6-697d-4d9b-b239-91326d061bf8/1793466989730-wh94c1-1.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/r6/f8fb1df6-697d-4d9b-b239-91326d061bf8/1793466995758-0n86gr-2.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/r6/f8fb1df6-697d-4d9b-b239-91326d061bf8/1793467030413-2xvj89-8.webp',
+const MARVEL_RIVALS_MEDIA = [
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/f2609d45-0e57-4a51-9200-e519edcad54a/1795387373259-mos4di-screenshot-2026-11-23-031527.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/c7f7b806-cb3e-4eea-8fa1-eca85c479073/1793193984809-2hjndd-phoenix-marvel-s2.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/c7f7b806-cb3e-4eea-8fa1-eca85c479073/1793193982458-7tofpj-phoenix-marvel-s1.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/f2609d45-0e57-4a51-9200-e519edcad54a/1795386797756-23z56w-screenshot-2026-11-23-032550.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/f2609d45-0e57-4a51-9200-e519edcad54a/1795386882037-7mxuyq-screenshot-2026-11-23-032159.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/f2609d45-0e57-4a51-9200-e519edcad54a/1795386849550-jmrfd8-screenshot-2026-11-23-032325.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/f2609d45-0e57-4a51-9200-e519edcad54a/1795387033028-kpx1mv-screenshot-2026-11-23-031926.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/f2609d45-0e57-4a51-9200-e519edcad54a/1795387042722-tz30v0-screenshot-2026-11-23-031858.webp',
 ] as const;
 
 export const SITE_CHEAT_IMAGES: SiteCheatImage[] = [
   {
-    src: R6_MEDIA[0],
-    alt: 'Rainbow Six Siege ranked match gameplay on PC',
+    src: MARVEL_RIVALS_MEDIA[0],
+    alt: 'Marvel Rivals team fight screenshot on PC',
   },
   {
-    src: R6_MEDIA[1],
-    alt: 'Rainbow Six Siege tactical firefight screenshot',
+    src: MARVEL_RIVALS_MEDIA[1],
+    alt: 'Marvel Rivals Phoenix hero in Season 2 gameplay',
   },
   {
-    src: R6_MEDIA[2],
-    alt: 'R6 Siege operator engagement in destructible environment',
+    src: MARVEL_RIVALS_MEDIA[2],
+    alt: 'Marvel Rivals Phoenix hero ability combat scene',
   },
   {
-    src: R6_MEDIA[3],
-    alt: 'Rainbow Six Siege bombsite round with full HUD on PC',
+    src: MARVEL_RIVALS_MEDIA[3],
+    alt: 'Marvel Rivals objective map gameplay screenshot',
   },
   {
-    src: R6_MEDIA[4],
-    alt: 'Rainbow Six Siege competitive match screenshot on PC',
+    src: MARVEL_RIVALS_MEDIA[4],
+    alt: 'Marvel Rivals hero clash in a competitive match',
   },
   {
-    src: R6_MEDIA[5],
-    alt: 'R6 Siege in-match tactical view on PC',
+    src: MARVEL_RIVALS_MEDIA[5],
+    alt: 'Marvel Rivals in-match HUD and squad view',
+  },
+  {
+    src: MARVEL_RIVALS_MEDIA[6],
+    alt: 'Marvel Rivals 6v6 team composition screenshot',
+  },
+  {
+    src: MARVEL_RIVALS_MEDIA[7],
+    alt: 'Marvel Rivals map rotation gameplay on PC',
   },
 ];
 

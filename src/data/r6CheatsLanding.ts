@@ -1,21 +1,21 @@
-/** Server-rendered copy for /r6-cheats/ (Rainbow Six Siege cheats keyword landing). */
+/** Server-rendered copy for /r6-cheats/ (Marvel Rivals cheats keyword landing). */
 export const r6CheatsLanding = {
-  h1: 'Rainbow Six Siege cheats — checkout when the status banner shows online',
-  keywordH2: 'R6 Cheat: PC aimbot, ESP & radar',
+  h1: 'Marvel Rivals cheats — checkout when the status banner shows online',
+  keywordH2: 'Rivals Cheat: PC aimbot, ESP & radar',
   intro:
-    'Rainbow Six Siege cheats on this site for PC — aimbot, operator ESP, gadget ESP, skeleton and box overlays, and save/load config profiles. Compare modules on r6-cheat.com, then checkout when the status banner shows online.',
+    'Marvel Rivals cheats on this site for PC — aimbot, hero ESP, ability ESP, skeleton and box overlays, and save/load config profiles. Compare modules on rivalscheat.net, then checkout when the status banner shows online.',
   sections: [
     {
       heading: 'Verified cheat modules',
       paragraphs: [
-        'The R6 Siege product includes aimbot with FOV and smoothness controls, operator ESP with skeleton and box styles, weapon and utility ESP, and config save/load.',
+        'The Marvel Rivals product includes aimbot with FOV and smoothness controls, hero ESP with skeleton and box styles, weapon and utility ESP, and config save/load.',
         'Utilities on the product hub are optional add-ons that share the same secure checkout flow. Every product page lists modules before you pay.',
       ],
     },
     {
       heading: 'Setup and delivery',
       paragraphs: [
-        'Checkout unlocks the customer portal, Windows loader and setup guide. Reload the loader after major R6 Siege updates, then confirm the homepage status banner before each session.',
+        'Checkout unlocks the customer portal, Windows loader and setup guide. Reload the loader after major Marvel Rivals updates, then confirm the homepage status banner before each session.',
         'Use the FAQ and portal guides for config tuning and checkout questions. Keep your order email, Ubisoft account details, and Windows version handy during setup.',
       ],
     },
@@ -29,7 +29,7 @@ export const r6CheatsLanding = {
     {
       heading: 'After game updates',
       paragraphs: [
-        'Rainbow Six Siege and BattlEye receive periodic updates. Confirm module availability on the live status panel at r6-cheat.com before you purchase or launch.',
+        'Marvel Rivals and anti-cheat receive periodic updates. Confirm module availability on the live status panel at rivalscheat.net before you purchase or launch.',
       ],
     },
   ],

@@ -1,5 +1,5 @@
 /**
- * Replace Dota-era gameplay/blog PNGs with Tom Clancy's Rainbow Six Siege screenshots.
+ * Replace Dota-era gameplay/blog PNGs with Marvel Rivals screenshots.
  * Run after npm ci: node scripts/fetch-r6-gameplay.mjs
  */
 import { writeFile, mkdir } from 'node:fs/promises';
@@ -41,11 +41,11 @@ const BLOG_BASES = [
   'r6-console-commands',
   'r6-lite-vs-pro',
   'r6-elite-tier',
-  'r6-aimbot-ranked',
+  'r6-aimbot-competitive',
   'r6-esp-setup',
   'r6-radar-hack-guide',
   'r6-loadouts',
-  'battleye-patch-day-checklist',
+  'anti-cheat-patch-day-checklist',
   'r6-hwid-ban',
   'buy-r6-cheats',
   'r6-aimbot-combat',
@@ -103,7 +103,7 @@ if (hero) {
     await writeFile(path.join(publicDir, name), await sharp(logo).resize(size, size).png().toBuffer());
   }
   await writeFile(path.join(publicDir, 'favicon.ico'), await sharp(logo).resize(32, 32).png().toBuffer());
-  console.log('updated favicons from Tom Clancy's Rainbow Six Siege art');
+  console.log('updated favicons from Marvel Rivals art');
 }
 
-console.log('Done fetching Tom Clancy's Rainbow Six Siege gameplay/blog images.');
+console.log('Done fetching Marvel Rivals gameplay/blog images.');

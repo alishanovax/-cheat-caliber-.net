@@ -1,4 +1,4 @@
-/** Tom Clancy's Rainbow Six Siege (Steam FPS) copy fixes — run: node scripts/fix-r6-game.mjs */
+/** Marvel Rivals (Steam FPS) copy fixes — run: node scripts/fix-r6-game.mjs */
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -13,7 +13,7 @@ const REPLACEMENTS = [
   ['through Steam Games', 'through Steam'],
   ['on Steam Games', 'on Steam'],
   ['Steam Games', 'Steam'],
-  ['launch Tom Clancy's Rainbow Six Siege on Epic', 'launch Tom Clancy's Rainbow Six Siege on Steam'],
+  ['launch Marvel Rivals on Epic', 'launch Marvel Rivals on Steam'],
   ['Private Servers', 'offline raid'],
   ['private servers', 'shooting range'],
   ['Auto Shield Break', 'Recoil control'],
@@ -30,17 +30,17 @@ const REPLACEMENTS = [
   ['same POI clear', 'same map route'],
   ['Private Servers island', 'offline raid session'],
   ['Private Servers islands', 'offline raid sessions'],
-  ['BR, SCAV run, SCAV run, Private Servers', 'Unranked, Body Bomb, TDM, Hardpoint'],
-  ['Multiplayer, SCAV run, SCAV run, Private Servers', 'PMC raid, SCAV run, Unranked, Hardpoint'],
-  ['Multiplayer, SCAV run and SCAV run', 'PMC raid, Unranked and ranked seasons'],
+  ['BR, SCAV run, SCAV run, Private Servers', 'Uncompetitive, Body Bomb, TDM, Hardpoint'],
+  ['Multiplayer, SCAV run, SCAV run, Private Servers', 'PMC raid, SCAV run, Uncompetitive, Hardpoint'],
+  ['Multiplayer, SCAV run and SCAV run', 'PMC raid, Uncompetitive and competitive seasons'],
   ['Multiplayer and SCAV run', 'PMC raid and SCAV run'],
   ['SCAV run and Private Servers', 'SCAV run seasons and offline raid'],
-  ['SCAV run or SCAV run', 'Unranked or SCAV run'],
-  ['SCAV run presets', 'ranked-season presets'],
-  ['before SCAV run', 'before ranked matchmaking'],
-  ['in SCAV run', 'in ranked playlists'],
-  ['for SCAV run', 'for ranked play'],
-  ['queue SCAV run', 'queue ranked'],
+  ['SCAV run or SCAV run', 'Uncompetitive or SCAV run'],
+  ['SCAV run presets', 'competitive-season presets'],
+  ['before SCAV run', 'before competitive matchmaking'],
+  ['in SCAV run', 'in competitive playlists'],
+  ['for SCAV run', 'for competitive play'],
+  ['queue SCAV run', 'queue competitive'],
   ['player builds', 'weapon loadouts'],
   ['hero scripts', 'aim modules'],
   ['hero abilities', 'operator perks'],

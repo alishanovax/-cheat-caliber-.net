@@ -35,7 +35,7 @@ const toc = post.body
   }));
 
 const defaultProductLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'Rainbow Six Siege products', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'Marvel Rivals products', href: ROUTES.products, icon: 'sidebarHub' },
   { label: 'Elite cheats', href: ROUTES.productsElite, icon: 'sidebarElite' },
   { label: 'loadout tools', href: productPath('unlock-all'), icon: 'sidebarSkin' },
   { label: 'HWID Spoofer', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
@@ -43,7 +43,7 @@ const defaultProductLinks: { label: string; href: string; icon: IconName }[] = [
 ];
 
 const eacGuideProductLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'Rainbow Six Siege catalog (anti-cheat sidebar)', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'Marvel Rivals catalog (anti-cheat sidebar)', href: ROUTES.products, icon: 'sidebarHub' },
   { label: 'Elite tier (anti-cheat sidebar)', href: ROUTES.productsElite, icon: 'sidebarElite' },
   { label: 'loadout tools pack', href: productPath('unlock-all'), icon: 'sidebarSkin' },
   { label: 'HWID spoofer utility (eac)', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
@@ -51,7 +51,7 @@ const eacGuideProductLinks: { label: string; href: string; icon: IconName }[] = 
 ];
 
 const streamProofProductLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'Rainbow Six Siege cheats shop (stream sidebar)', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'Marvel Rivals cheats shop (stream sidebar)', href: ROUTES.products, icon: 'sidebarHub' },
   { label: 'Elite capture tools (stream)', href: ROUTES.productsElite, icon: 'sidebarElite' },
   { label: 'loadout tools (stream)', href: productPath('unlock-all'), icon: 'sidebarSkin' },
   { label: 'HWID spoofer (stream setup)', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
@@ -59,15 +59,15 @@ const streamProofProductLinks: { label: string; href: string; icon: IconName }[]
 ];
 
 const practiceLobbyProductLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'Practice hub — Rainbow Six Siege products', href: ROUTES.products, icon: 'sidebarHub' },
-  { label: 'Elite tier (post-drill ranked)', href: ROUTES.productsElite, icon: 'sidebarElite' },
+  { label: 'Practice hub — Marvel Rivals products', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'Elite tier (post-drill competitive)', href: ROUTES.productsElite, icon: 'sidebarElite' },
   { label: 'Loadout tools (practice sidebar)', href: productPath('unlock-all'), icon: 'sidebarSkin' },
   { label: 'HWID spoofer (practice guide)', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
   { label: 'UGC workspace (practice)', href: productPath('ugc'), icon: 'sidebarUgc' },
 ];
 
 const radarGuideProductLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'Rainbow Six Siege cheats shop (radar sidebar)', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'Marvel Rivals cheats shop (radar sidebar)', href: ROUTES.products, icon: 'sidebarHub' },
   { label: 'Elite tier (radar + aimbot)', href: ROUTES.productsElite, icon: 'sidebarElite' },
   { label: 'Loadout tools (radar guide)', href: productPath('unlock-all'), icon: 'sidebarSkin' },
   { label: 'HWID spoofer (radar setup)', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
@@ -75,7 +75,7 @@ const radarGuideProductLinks: { label: string; href: string; icon: IconName }[] 
 ];
 
 const productLinks =
-  post.slug === 'battleye-fix'
+  post.slug === 'anti-cheat-fix'
     ? eacGuideProductLinks
     : post.slug === 'r6-stream-proof'
       ? streamProofProductLinks
@@ -171,15 +171,15 @@ const productLinks =
     >
       <span class="truncate">
         {
-          post.slug === 'battleye-fix'
-            ? 'Start Rainbow Six Siege checkout'
+          post.slug === 'anti-cheat-fix'
+            ? 'Start Marvel Rivals checkout'
             : post.slug === 'r6-stream-proof'
               ? 'Checkout stream-proof tier'
               : post.slug === 'r6-training-grounds-practice'
                 ? 'Checkout after range drills'
                 : post.slug === 'r6-radar'
                   ? 'Checkout Lite radar tier'
-                  : 'Buy R6 Cheat'
+                  : 'Buy Rivals Cheat'
         }
       </span>
       <Icon name="arrowRight" size={16} class="shrink-0" />

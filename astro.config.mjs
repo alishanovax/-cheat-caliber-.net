@@ -5,7 +5,7 @@ import { sitemapSerialize } from './src/config/sitemap.ts';
 import { SLUG_REDIRECTS } from './src/config/slug-redirects.mjs';
 
 export default defineConfig({
-  site: 'https://r6-cheat.com',
+  site: 'https://rivalscheat.net',
   trailingSlash: 'always',
   server: {
     host: true,

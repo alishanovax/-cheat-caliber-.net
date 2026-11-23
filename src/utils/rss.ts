@@ -33,9 +33,9 @@ export function buildRssFeed(): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>R6 Cheat Blog</title>
+    <title>Rivals Cheat Blog</title>
     <link>${SITE_ORIGIN}/blog/</link>
-    <description>Rainbow Six Siege cheat guides, patch notes, and setup walkthroughs from r6-cheat.com.</description>
+    <description>Marvel Rivals cheat guides, patch notes, and setup walkthroughs from rivalscheat.net.</description>
     <language>en-us</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${feedUrl}" rel="self" type="application/rss+xml" />

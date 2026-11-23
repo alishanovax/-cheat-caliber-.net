@@ -26,13 +26,13 @@ const TEXT_EXTS = new Set([
 const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.seo-baseline', '_template']);
 
 const PURCHASE_URL =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fr6-faceit-cheats';
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fmarvel-rivals&sf=zadeyo';
 
 /** Ordered longest-first replacements. */
 const REPLACEMENTS = [
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fr6-faceit-cheats', PURCHASE_URL],
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fr6-faceit-cheats', PURCHASE_URL],
-  ['%2Fproducts%2Frainbow-six-siege-hacks', '%2Fproducts%2Frainbow-six-siege-hacks'],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fmarvel-rivals&sf=zadeyo', PURCHASE_URL],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fmarvel-rivals&sf=zadeyo', PURCHASE_URL],
+  ['%2Fproducts%2Fmarvel-rivals', '%2Fproducts%2Fmarvel-rivals'],
   ['/products/bodycam-hacks', '/products/borderlands-hacks'],
   ['products/bodycam-hacks', 'products/borderlands-hacks'],
   ['/bodycam-hacks/', '/borderlands-hacks/'],

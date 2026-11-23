@@ -1,5 +1,5 @@
 /**
- * bo7cheats.org template → r6-cheat.com (Tom Clancy's Rainbow Six Siege)
+ * bo7cheats.org template → rivalscheat.net (Marvel Rivals)
  * Run: node scripts/setup-cheatapex-from-bo7.mjs
  */
 import fs from 'node:fs';
@@ -8,7 +8,7 @@ import path from 'node:path';
 const root = path.resolve(import.meta.dirname, '..');
 
 const APEX_CHECKOUT =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fr6-faceit';
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fmarvel-rivals&sf=zadeyo';
 
 const APEX_IMAGE_URLS = [
   'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/apex/05c202fe-8171-4881-bc3a-b25833919850/1794003238685-a4vmq5-apex1.webp',
@@ -19,11 +19,11 @@ const APEX_IMAGE_URLS = [
 ];
 
 const IMAGE_ALTS = [
-  'Tom Clancy's Rainbow Six Siege squad combat screenshot with HUD on PC',
-  'Tom Clancy's Rainbow Six Siege Ranked firefight with full overlay on PC',
-  'Tom Clancy's Rainbow Six Siege third-person team fight on Oregon-style map on PC',
-  'Tom Clancy's Rainbow Six Siege in-match view with loot and zone pressure on PC',
-  'Tom Clancy's Rainbow Six Siege Legends squad fight with tactical overlays on PC',
+  'Marvel Rivals squad combat screenshot with HUD on PC',
+  'Marvel Rivals Competitive firefight with full overlay on PC',
+  'Marvel Rivals third-person team fight on Oregon-style map on PC',
+  'Marvel Rivals in-match view with loot and zone pressure on PC',
+  'Marvel Rivals Legends squad fight with tactical overlays on PC',
 ];
 
 const TEXT_EXTS = new Set([
@@ -50,12 +50,12 @@ const SKIP_FILES = new Set(['setup-cheatapex-from-bo7.mjs', 'rebrand-bo7.mjs', '
 const REPLACEMENTS = [
   ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fblack-ops-7', APEX_CHECKOUT],
   ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fbo7', APEX_CHECKOUT],
-  ['%2Fproducts%2Fblack-ops-7', '%2Fproducts%2Fr6-faceit'],
-  ['%2Fproducts%2Fbo7', '%2Fproducts%2Fr6-faceit'],
-  ['https://bo7cheats.org', 'https://r6-cheat.com'],
-  ['bo7cheats.org', 'r6-cheat.com'],
+  ['%2Fproducts%2Fblack-ops-7', '%2Fproducts%2Fmarvel-rivals'],
+  ['%2Fproducts%2Fbo7', '%2Fproducts%2Fmarvel-rivals'],
+  ['https://bo7cheats.org', 'https://rivalscheat.net'],
+  ['bo7cheats.org', 'rivalscheat.net'],
   ['bo7cheats-org', 'r6-cheat-com'],
-  ['bo7cheats-b-2026', 'r6-cheat-r-2026'],
+  ['bo7cheats-b-2026', 'rivals-cheat-m-2026'],
   ['bo7cheats-forum-vote:', 'cheatapex-forum-vote:'],
   ['bo7CheatsLanding', 'r6CheatsLanding'],
   ['zadeyoBo7ProductSeo', 'zadeyoR6ProductSeo'],
@@ -77,14 +77,14 @@ const REPLACEMENTS = [
   ["CheckoutProduct = 'bo7'", "CheckoutProduct = 'apex'"],
   ["_product: CheckoutProduct = 'bo7'", "_product: CheckoutProduct = 'r6'"],
   ["PRODUCT_BASE = '/products/bo7/'", "PRODUCT_BASE = '/products/r6/'"],
-  ['Black Ops 7 <span class="site-brand__pill-accent">Cheats</span>', 'R6 Siege <span class="site-brand__pill-accent">Cheats</span>'],
-  ['Black Ops 7 <span class="site-brand__title-accent">Cheats</span>', 'R6 Siege <span class="site-brand__title-accent">Cheats</span>'],
-  ['Black Ops 7 Cheats', 'R6 Cheat'],
-  ['Black Ops 7 cheats', 'Rainbow Six Siege cheats'],
-  ['Black Ops 7 cheat', 'Rainbow Six Siege cheat'],
-  ['Black Ops 7 Lite', 'R6 Lite'],
-  ['Black Ops 7 Pro', 'R6 Pro'],
-  ['Black Ops 7 Elite', 'R6 Elite'],
+  ['Black Ops 7 <span class="site-brand__pill-accent">Cheats</span>', 'Marvel Rivals <span class="site-brand__pill-accent">Cheats</span>'],
+  ['Black Ops 7 <span class="site-brand__title-accent">Cheats</span>', 'Marvel Rivals <span class="site-brand__title-accent">Cheats</span>'],
+  ['Black Ops 7 Cheats', 'Rivals Cheat'],
+  ['Black Ops 7 cheats', 'Marvel Rivals cheats'],
+  ['Black Ops 7 cheat', 'Marvel Rivals cheat'],
+  ['Black Ops 7 Lite', 'Lite'],
+  ['Black Ops 7 Pro', 'Pro'],
+  ['Black Ops 7 Elite', 'Elite'],
   ['/blog/bo7-', '/blog/apex-'],
   ['slug: "bo7-', 'slug: "apex-'],
   ["slug: 'bo7-", "slug: 'apex-"],
@@ -94,7 +94,7 @@ const REPLACEMENTS = [
   ['bo7-training-tips', 'r6-training-tips'],
   ['bo7-esp-setup', 'r6-esp-setup'],
   ['bo7-radar', 'r6-radar'],
-  ['bo7-aimbot-guide', 'r6-aimbot-ranked'],
+  ['bo7-aimbot-guide', 'r6-aimbot-competitive'],
   ['bo7-aimbot-combat', 'r6-aimbot-combat'],
   ['bo7-stream-proof', 'r6-stream-proof'],
   ['bo7-elite-tier', 'r6-elite-tier'],
@@ -109,18 +109,18 @@ const REPLACEMENTS = [
   ['bo7-aim-practice', 'r6-aim-practice'],
   ['bo7-map-awareness', 'r6-map-awareness'],
   ['choose-bo7-tier', 'choose-r6-tier'],
-  ['bo7 aimbot', 'R6 aimbot'],
-  ['bo7 ESP', 'R6 ESP'],
-  ['bo7 gadget ESP', 'R6 gadget ESP'],
-  ['bo7 recoil control', 'R6 recoil control'],
-  ['bo7 compatibility', 'R6 compatibility'],
+  ['bo7 aimbot', 'Marvel Rivals aimbot'],
+  ['bo7 ESP', 'Marvel Rivals ESP'],
+  ['bo7 ability ESP', 'Marvel Rivals ability ESP'],
+  ['bo7 recoil control', 'Marvel Rivals recoil control'],
+  ['bo7 compatibility', 'Marvel Rivals compatibility'],
   ['the Call of Duty PC launcher', 'the EA app or Ubisoft Connect'],
   ['Call of Duty PC launcher', 'EA app or Ubisoft Connect'],
   ['Battlestate Games account', 'Ubisoft account'],
   ['Battlestate Games', 'Respawn Entertainment'],
-  ['Black Ops 7 PC — aimbot, ESP & config tools', 'Tom Clancy's Rainbow Six Siege PC — aimbot, ESP & config tools'],
-  ["TITLE_PREFIX = 'Black Ops 7 Cheats'", "TITLE_PREFIX = 'R6 Cheat'"],
-  ['Black Ops 7', 'Tom Clancy's Rainbow Six Siege'],
+  ['Black Ops 7 PC — aimbot, ESP & config tools', 'Marvel Rivals PC — aimbot, ESP & config tools'],
+  ["TITLE_PREFIX = 'Black Ops 7 Cheats'", "TITLE_PREFIX = 'Rivals Cheat'"],
+  ['Black Ops 7', 'Marvel Rivals'],
   ['Call of Duty', 'Apex'],
   ['bo7-', 'apex-'],
   ["'bo7'", "'apex'"],
@@ -162,7 +162,7 @@ function renameIfExists(fromRel, toRel) {
 function patchSiteImages() {
   const file = path.join(root, 'src', 'config', 'siteImages.ts');
   const lines = [
-    '/** Approved Tom Clancy's Rainbow Six Siege media — only these remote URLs are used site-wide. */',
+    '/** Approved Marvel Rivals media — only these remote URLs are used site-wide. */',
     'export interface SiteCheatImage {',
     '  src: string;',
     '  alt: string;',
@@ -247,12 +247,12 @@ export function resolveCheckoutPathRedirect(pathname) {
 function patchSiteTs() {
   const file = path.join(root, 'src', 'config', 'site.ts');
   const content = `/** Bump when favicon assets change so browsers reload tab icons. */
-export const FAVICON_VERSION = 'r6-cheat-r-2026';
+export const FAVICON_VERSION = 'rivals-cheat-m-2026';
 
-export const SITE_DOMAIN = 'r6-cheat.com';
+export const SITE_DOMAIN = 'rivalscheat.net';
 export const SITE_URL = \`https://\${SITE_DOMAIN}\`;
 export const PRODUCT_BASE = '/products/r6/';
-export const TITLE_PREFIX = 'R6 Cheat';
+export const TITLE_PREFIX = 'Rivals Cheat';
 export const SUPPORT_EMAIL = \`support@\${SITE_DOMAIN}\`;
 export const DISCORD_URL = 'https://discord.gg/Vu85F8auQS';
 `;
@@ -264,8 +264,8 @@ function patchFavicons() {
     const file = path.join(root, 'public', name);
     if (!fs.existsSync(file)) continue;
     let svg = fs.readFileSync(file, 'utf8');
-    svg = svg.replace(/Black Ops 7 Cheats/g, 'R6 Cheat');
-    svg = svg.replace(/R6 Cheat/g, 'R6 Cheat');
+    svg = svg.replace(/Black Ops 7 Cheats/g, 'Rivals Cheat');
+    svg = svg.replace(/Rivals Cheat/g, 'Rivals Cheat');
     svg = svg.replace(
       /(\n\s*fill="#F5F7FA"\s*\n\s*>)[A-Z](<\/text>)/,
       '$1A$2',
@@ -294,7 +294,7 @@ function patchCheckoutTs() {
   content = content.replace(/checkoutPath\('bo7'\)/g, "checkoutPath('r6')");
   content = content.replace(
     /href\.includes\('%2Fproducts%2Fblack-ops-7'\)[\s\S]*?href\.includes\('\/products\/bo7'\)/,
-    `href.includes('%2Fproducts%2Fr6-faceit') ||
+    `href.includes('%2Fproducts%2Fmarvel-rivals') ||
     href.includes('/products/r6-legends') ||
     href.includes('%2Fproducts%2Fapex') ||
     href.includes('/products/r6') ||
@@ -331,11 +331,11 @@ function patchSeoMeta() {
   let content = fs.readFileSync(file, 'utf8');
   content = content.replace(
     'Keep meta descriptions blunt about Black Ops 7 cheats for SERP snippets.',
-    'Keep meta descriptions clear about Rainbow Six Siege cheats for SERP snippets.',
+    'Keep meta descriptions clear about Marvel Rivals cheats for SERP snippets.',
   );
   content = content.replace(
     /return `Black Ops 7 cheats guide: \$\{trimmed\}`;/,
-    'return `Rainbow Six Siege cheats guide: ${trimmed}`;',
+    'return `Marvel Rivals cheats guide: ${trimmed}`;',
   );
   fs.writeFileSync(file, content, 'utf8');
 }

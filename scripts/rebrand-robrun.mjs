@@ -105,7 +105,7 @@ const REPLACEMENTS = [
   ['choose-tarkov-tier', 'choose-robrun-tier'],
   ['tarkov aimbot', 'robrun aimbot'],
   ['tarkov ESP', 'robrun ESP'],
-  ['tarkov gadget ESP', 'robrun gadget ESP'],
+  ['tarkov ability ESP', 'robrun ability ESP'],
   ['tarkov recoil control', 'robrun recoil control'],
   ['tarkov compatibility', 'robrun compatibility'],
   ['Tarkov <span class="site-brand__pill-accent">Cheats</span>', 'RobRun <span class="site-brand__pill-accent">Cheats</span>'],

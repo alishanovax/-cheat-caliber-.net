@@ -1,6 +1,6 @@
 /** Primary affiliate checkout (go link + product path). */
 export const R6_CHECKOUT_URL =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fr6-faceit';
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fmarvel-rivals&sf=zadeyo';
 
 export const CHECKOUT_URLS = {
   r6: R6_CHECKOUT_URL,

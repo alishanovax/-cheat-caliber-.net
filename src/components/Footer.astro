@@ -63,15 +63,15 @@ const onProductsR6Hub = normalizedPath === '/products/r6';
             <li>
               <a href={link.href} class="text-sm text-muted-foreground hover:text-primary" aria-label={link.ariaLabel}>
                 {onProductsR6Hub && link.href === '/blog/'
-                  ? 'Rainbow Six Siege catalog hub — patch setup guides'
+                  ? 'Marvel Rivals catalog hub — patch setup guides'
                   : onProductsR6Hub && link.href === '/support/'
-                    ? 'Rainbow Six Siege catalog — loader and checkout support'
+                    ? 'Marvel Rivals catalog — loader and checkout support'
                     : onProductsR6Hub && link.href === '/products/r6/elite/'
                       ? 'Elite tier listing from catalog hub'
                       : onProductsR6Hub && link.href === '/products/r6/'
-                        ? 'Rainbow Six Siege product catalog (you are here)'
+                        ? 'Marvel Rivals product catalog (you are here)'
                         : onForumPage && link.href === '/blog/'
-                  ? 'Forum sidebar — Rainbow Six Siege setup guides'
+                  ? 'Forum sidebar — Marvel Rivals setup guides'
                   : onPrivacyPage && link.href === '/support/'
                   ? 'Privacy questions — shop support'
                   : onHomePage && link.href === '/support/'
@@ -93,7 +93,7 @@ const onProductsR6Hub = normalizedPath === '/products/r6';
                                 : onRadarPost && link.href === '/products/r6/elite/'
                                   ? 'Elite tier from radar guide sidebar'
                                   : onRadarPost && link.href === '/products/r6/'
-                                    ? 'Rainbow Six Siege cheats shop linked from radar guide'
+                                    ? 'Marvel Rivals cheats shop linked from radar guide'
                                     : onForumPage && link.href === '/support/'
                                       ? 'Forum page — loader and checkout support'
                                       : link.label}
@@ -109,7 +109,7 @@ const onProductsR6Hub = normalizedPath === '/products/r6';
           {legalLinks.map((link) => (
             <li>
               <a href={link.href} class="text-sm text-muted-foreground hover:text-primary">
-                {onForumPage && link.href === '/about/' ? 'Footer — about r6-cheat.com' : link.label}
+                {onForumPage && link.href === '/about/' ? 'Footer — about rivalscheat.net' : link.label}
               </a>
             </li>
           ))}

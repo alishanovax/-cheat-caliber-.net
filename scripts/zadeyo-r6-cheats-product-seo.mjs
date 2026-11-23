@@ -1,6 +1,6 @@
 /**
  * Copy into Zadeyo /products/rainbow-six-siege-cheats (Next.js product route).
- * r6-cheat.com mirrors this on /go/r6/ after deploy; zadeyo.com must be updated separately.
+ * rivalscheat.net mirrors this on /go/r6/ after deploy; zadeyo.com must be updated separately.
  */
 import { ZADEYO_R6_PRODUCT_SEO, ZADEYO_R6_CHECKOUT_URL } from '../src/config/zadeyoR6ProductSeo.ts';
 
@@ -17,9 +17,9 @@ export const ZADEYO_RAINBOW_SIX_SIEGE_CHBSGTS_PRODUCT_SEO = {
     { level: 'h2', text: 'Frequently asked questions' },
   ],
   keywordCap: {
-    phrase: 'rainbow six siege cheats',
+    phrase: 'Marvel Rivals cheats',
     maxUses: 8,
-    note: 'Keep phrase in title + meta only; use R6 Siege / the listing elsewhere.',
+    note: 'Keep phrase in title + meta only; use Marvel Rivals / the listing elsewhere.',
   },
 };
 

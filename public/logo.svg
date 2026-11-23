@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="R6 Cheat">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" role="img" aria-label="Rivals Cheat">
   <defs>
     <linearGradient id="bg" x1="8" y1="4" x2="56" y2="60" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0c0c12"/>
       <stop offset="1" stop-color="#111215"/>
     </linearGradient>
     <linearGradient id="accent" x1="16" y1="12" x2="48" y2="52" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#a78bfa"/>
+      <stop stop-color="#e11d48"/>
       <stop offset="1" stop-color="#7c3aed"/>
     </linearGradient>
   </defs>
@@ -21,5 +21,5 @@
     font-size="26"
     font-weight="700"
     fill="#F5F7FA"
-  >R</text>
+  >M</text>
 </svg>

@@ -60,11 +60,11 @@ export function pageTitle(keyword: string, brand = t.site.name): string {
   return `${trimmed}${suffix}`;
 }
 
-/** Keep meta descriptions clear about Rainbow Six Siege cheats for SERP snippets. */
+/** Keep meta descriptions clear about Marvel Rivals cheats for SERP snippets. */
 export function cheatMetaDescription(text: string): string {
   const trimmed = text.trim();
   if (/mw4\s*cheat/i.test(trimmed)) return trimmed;
-  return `Rainbow Six Siege cheats guide: ${trimmed}`;
+  return `Marvel Rivals cheats guide: ${trimmed}`;
 }
 
 export const DEFAULT_OG_IMAGE_WIDTH = 1200;

@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open [http://127.0.0.1:4322](http://127.0.0.1:4322) (if port 4322 is taken, use `npx astro dev --host 127.0.0.1 --port 4325 --force`).
+Open [http://127.0.0.1:4333](http://127.0.0.1:4333) (see `package.json` `dev` script for the configured port).
 
 ## Build & deploy
 

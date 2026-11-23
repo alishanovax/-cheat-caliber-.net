@@ -35,12 +35,12 @@ function expandFaqAnswer(answer: string, faqId: string): string {
     ELITE: link(`Elite tier checkout (${faqId})`, productPath('elite')),
     LITE: link(`Lite ESP tier (${faqId})`, productPath('lite')),
     PRO: link(`Pro aimbot tier (${faqId})`, productPath('pro')),
-    PRODUCTS_HUB: link(`Full Tom Clancy’s Rainbow Six Siege catalog (${faqId})`, ROUTES.products),
+    PRODUCTS_HUB: link(`Full Rainbow Six Siege catalog (${faqId})`, ROUTES.products),
     HWID: link(`HWID spoofer utility — ${faqId}`, productPath('hwid-spoofer')),
     UGC: link(`UGC appeal tools — ${faqId}`, productPath('ugc')),
     SKIN: link(`loadout tools pack — ${faqId}`, productPath('unlock-all')),
     FAQ_PAGE: link(`Full FAQ index — ${faqId}`, ROUTES.faq),
-    BLOG: link(`Tom Clancy’s Rainbow Six Siege blog guides — ${faqId}`, ROUTES.blog),
+    BLOG: link(`Rainbow Six Siege blog guides — ${faqId}`, ROUTES.blog),
   };
   return Object.entries(slots).reduce(
     (text, [key, html]) => text.replaceAll(`{{${key}}}`, html),
@@ -58,14 +58,14 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'setup',
     icon: 'faqStatus',
     q: 'Where do I check if Rainbow Six Siege cheats are online?',
-    a: a('The live status banner is on r6-cheat.com. Always check after a Tom Clancy’s Rainbow Six Siege or anti-cheat update.'),
+    a: a('The live status banner is on r6-cheat.com. Always check after a Rainbow Six Siege or anti-cheat update.'),
   },
   {
     id: 'after-buy',
     topic: 'setup',
     icon: 'faqAfterBuy',
     q: 'What happens after I buy?',
-    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Tom Clancy’s Rainbow Six Siege.'),
+    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Rainbow Six Siege.'),
   },
   {
     id: 'ban-risk',
@@ -79,7 +79,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'setup',
     icon: 'faqPlatforms',
     q: 'Which platforms are supported?',
-    a: a('Tom Clancy’s Rainbow Six Siege via the EA app or Ubisoft Connect on Windows 10/11 64-bit only. macOS and Linux are not supported.'),
+    a: a('Rainbow Six Siege via the EA app or Ubisoft Connect on Windows 10/11 64-bit only. macOS and Linux are not supported.'),
   },
   {
     id: 'license-move',
@@ -99,7 +99,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'what-is-esp',
     topic: 'esp',
     icon: 'faqWhatIsEsp',
-    q: 'What is Tom Clancy’s Rainbow Six Siege wall ESP / ESP?',
+    q: 'What is Rainbow Six Siege wall ESP / ESP?',
     a: `wall ESP and operator ESP show enemy positions, chests, loot and POI camps through storm circle. {{LITE}} covers awareness overlays. {{PRO}} and {{ELITE}} add script modules on top.`,
     scopes: ['lite', 'pro', 'elite'],
   },
@@ -191,7 +191,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqExternalLoader',
     q: 'Is the loader injected into the game folder?',
-    a: `R6 Cheat runs external with cloud config sync—no files injected into the Tom Clancy’s Rainbow Six Siege directory. anti-cheat risk still applies. See {{PRODUCTS_HUB}}.`,
+    a: `R6 Cheat runs external with cloud config sync—no files injected into the Rainbow Six Siege directory. anti-cheat risk still applies. See {{PRODUCTS_HUB}}.`,
   },
   {
     id: 'blog-vs-cheats',
@@ -250,7 +250,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'setup',
     icon: 'faqDiscordHelp',
     q: 'How do I get install help?',
-    a: a('After purchase, follow the portal setup guide with your order email, Windows version and Tom Clancy’s Rainbow Six Siege client build. The FAQ covers common loader errors.'),
+    a: a('After purchase, follow the portal setup guide with your order email, Windows version and Rainbow Six Siege client build. The FAQ covers common loader errors.'),
   },
   {
     id: 'zero-build-ranked',
@@ -431,7 +431,7 @@ const defaultBlogFaqs: SiteFaqItem[] = [
     topic: 'blog',
     icon: 'faqBlogDefault3',
     q: 'Will settings in this guide work next patch?',
-    a: a('Re-check status after every Tom Clancy’s Rainbow Six Siege update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
+    a: a('Re-check status after every Rainbow Six Siege update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
   },
 ];
 

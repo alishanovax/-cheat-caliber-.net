@@ -16,14 +16,14 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
     title: 'R6 Cheat — PC aimbot, ESP & setup guides',
     description:
-      'Compare Tom Clancy’s Rainbow Six Siege PC cheat tiers, read setup guides, and check out secure options — aimbot, operator ESP, configs and support at r6-cheat.com.',
+      'Compare Rainbow Six Siege PC cheat tiers, read setup guides, and check out secure options — aimbot, operator ESP, configs and support at r6-cheat.com.',
     h1: 'R6 Cheat',
   },
   '/products/r6/': {
-    title: 'Tom Clancy’s Rainbow Six Siege PC cheats — Lite, Pro, Elite & utilities',
+    title: 'Rainbow Six Siege PC cheats — Lite, Pro, Elite & utilities',
     description:
-      'Shop Tom Clancy’s Rainbow Six Siege PC cheats: Lite ESP, Pro aimbot, Elite suite, HWID tools and UGC — compare features and checkout at r6-cheat.com.',
-    h1: 'Tom Clancy’s Rainbow Six Siege PC cheats — compare tiers and utilities',
+      'Shop Rainbow Six Siege PC cheats: Lite ESP, Pro aimbot, Elite suite, HWID tools and UGC — compare features and checkout at r6-cheat.com.',
+    h1: 'Rainbow Six Siege PC cheats — compare tiers and utilities',
   },
   '/products/r6/lite/': {
     title: 'R6 Lite Cheats | Player ESP, Radar & Loot Timers',
@@ -33,48 +33,48 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/products/r6/pro/': {
     title: 'R6 Pro Cheats | Aimbot, Smooth Aim & Wall ESP',
     description:
-      'R6 Pro cheats include Lite ESP plus Aimbot, Smooth Aim, Sticky Aim and bone priority — ranked-safe defaults and portal presets for Tom Clancy’s Rainbow Six Siege on PC.',
+      'R6 Pro cheats include Lite ESP plus Aimbot, Smooth Aim, Sticky Aim and bone priority — ranked-safe defaults and portal presets for Rainbow Six Siege on PC.',
   },
   '/products/r6/elite/': {
     title: 'Elite R6 Cheat | Aimbot, ESP & Loot Assist',
     description:
-      'Elite tier includes advanced aim, full ESP, economy awareness tools, and priority update notes for Tom Clancy’s Rainbow Six Siege on PC.',
+      'Elite tier includes advanced aim, full ESP, economy awareness tools, and priority update notes for Rainbow Six Siege on PC.',
   },
   '/products/r6/hwid-spoofer/': {
-    title: 'HWID Spoofer for Tom Clancy’s Rainbow Six Siege | Hardware Identity Tools',
+    title: 'HWID Spoofer for Rainbow Six Siege | Hardware Identity Tools',
     description:
-      'HWID tools for Tom Clancy’s Rainbow Six Siege on PC — guided steps for hardware identity resets. Read compatibility and risk notes before you buy at r6-cheat.com.',
+      'HWID tools for Rainbow Six Siege on PC — guided steps for hardware identity resets. Read compatibility and risk notes before you buy at r6-cheat.com.',
   },
   '/products/r6/ugc/': {
-    title: 'UGC Tools | Tom Clancy’s Rainbow Six Siege anti-cheat & platform Ban Appeals',
+    title: 'UGC Tools | Rainbow Six Siege anti-cheat & platform Ban Appeals',
     description:
-      'UGC (Unban & Governance Control) organizes platform and anti-cheat ban appeals, dispute workflows and case tracking for Tom Clancy’s Rainbow Six Siege players.',
+      'UGC (Unban & Governance Control) organizes platform and anti-cheat ban appeals, dispute workflows and case tracking for Rainbow Six Siege players.',
   },
   '/products/r6/unlock-all/': {
     title: 'loadout tools — skins, wraps & weapon previews',
     description:
-      'Loadout Pack for Tom Clancy’s Rainbow Six Siege on PC — local cosmetic and weapon previews with your client. Compare scope and checkout at r6-cheat.com.',
+      'Loadout Pack for Rainbow Six Siege on PC — local cosmetic and weapon previews with your client. Compare scope and checkout at r6-cheat.com.',
   },
   '/products/r6/utilities/': {
     title: 'Rainbow Six Siege cheat utilities — HWID, UGC & loadout tools',
     description:
-      'Utilities hub: HWID tools, platform and anti-cheat appeal workflows (UGC), and player loadout helpers for Tom Clancy’s Rainbow Six Siege PC — compare before checkout.',
-    h1: 'Compare Tom Clancy’s Rainbow Six Siege utilities — HWID, UGC & loadout tools',
+      'Utilities hub: HWID tools, platform and anti-cheat appeal workflows (UGC), and player loadout helpers for Rainbow Six Siege PC — compare before checkout.',
+    h1: 'Compare Rainbow Six Siege utilities — HWID, UGC & loadout tools',
   },
   '/blog/': {
-    title: 'Tom Clancy’s Rainbow Six Siege guides — aimbot, ESP, tiers & patch days',
+    title: 'Rainbow Six Siege guides — aimbot, ESP, tiers & patch days',
     description:
-      'Guides for Tom Clancy’s Rainbow Six Siege PC cheats: aimbot and ESP setup, Lite vs Pro, practice mode drills, and what to check after patches and anti-cheat updates.',
+      'Guides for Rainbow Six Siege PC cheats: aimbot and ESP setup, Lite vs Pro, practice mode drills, and what to check after patches and anti-cheat updates.',
     h1: 'Rainbow Six Siege cheat guides — setup, tiers and patch checks',
   },
   '/forum/': {
-    title: 'Tom Clancy’s Rainbow Six Siege forum — loader, configs & product discussion',
+    title: 'Rainbow Six Siege forum — loader, configs & product discussion',
     description:
       'Community threads on loader setup, aim configs, product questions and patch-day checks — backed by guides on r6-cheat.com.',
     h1: 'Forum — loader help, configs and Rainbow Six Siege cheat discussion',
   },
   '/faq/': {
-    title: 'FAQ — Tom Clancy’s Rainbow Six Siege tiers, bans, loader & checkout | r6-cheat.com',
+    title: 'FAQ — Rainbow Six Siege tiers, bans, loader & checkout | r6-cheat.com',
     description:
       'FAQ on Lite, Pro and Elite tiers, aimbot, wall ESP, radar, HWID spoofer, loadout tools, bans and loader setup at r6-cheat.com.',
     h1: 'FAQ — R6 Cheat tiers, bans, anti-cheat setup, loader help and checkout',
@@ -82,7 +82,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/terms/': {
     title: 'Terms — licenses, delivery, refunds & account risk',
     description:
-      'Terms for buying digital Tom Clancy’s Rainbow Six Siege software on r6-cheat.com: license use, delivery, refunds, and risks when using third-party tools with platform titles.',
+      'Terms for buying digital Rainbow Six Siege software on r6-cheat.com: license use, delivery, refunds, and risks when using third-party tools with platform titles.',
     h1: 'Terms — licenses, delivery, refunds & account risk',
   },
   '/privacy/': {
@@ -92,10 +92,10 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
     h1: 'Privacy — analytics, cookies, checkout and contact data',
   },
   '/about/': {
-    title: 'About — Tom Clancy’s Rainbow Six Siege tier guides, loader help & updates',
+    title: 'About — Rainbow Six Siege tier guides, loader help & updates',
     description:
-      'Who we are: Tom Clancy’s Rainbow Six Siege PC cheat tier comparisons, setup guides, and support channels at r6-cheat.com — independent of platform and publishers.',
-    h1: 'About — Tom Clancy’s Rainbow Six Siege tier guides, loader help & updates',
+      'Who we are: Rainbow Six Siege PC cheat tier comparisons, setup guides, and support channels at r6-cheat.com — independent of platform and publishers.',
+    h1: 'About — Rainbow Six Siege tier guides, loader help & updates',
   },
   '/support/': {
     title: 'Support — loader, HWID & checkout help | r6-cheat.com',
@@ -106,7 +106,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/r6-cheats/': {
     title: 'Rainbow Six Siege cheats hub — PC tiers, features & checkout',
     description:
-      'Overview of Tom Clancy’s Rainbow Six Siege PC cheat tiers, core features, and loader-focused notes. Compare options and checkout at r6-cheat.com.',
+      'Overview of Rainbow Six Siege PC cheat tiers, core features, and loader-focused notes. Compare options and checkout at r6-cheat.com.',
   },
 };
 
@@ -124,33 +124,33 @@ export function getPageSeoEntry(pathname: string): PageSeoEntry | undefined {
 /** Blog post `<title>` / meta description overrides (exact audit phrases). */
 export const BLOG_POST_SEO: Record<string, Partial<PageSeoEntry>> = {
   'r6-radar': {
-    title: 'Tom Clancy’s Rainbow Six Siege radar guide — FOV, spacing & team callouts',
+    title: 'Rainbow Six Siege radar guide — FOV, spacing & team callouts',
     description:
-      'Use radar overlays safely in Tom Clancy’s Rainbow Six Siege: FOV habits, spacing, and squad callouts for online matches and ranked — guide at r6-cheat.com.',
+      'Use radar overlays safely in Rainbow Six Siege: FOV habits, spacing, and squad callouts for online matches and ranked — guide at r6-cheat.com.',
   },
   'r6-stream-proof': {
     title: 'Stream-safe overlays — hiding ESP from OBS & capture',
     description:
-      'Test OBS, Game Bar, and capture-card setups so stream viewers do not see overlays — practical checklist for Tom Clancy’s Rainbow Six Siege creators on r6-cheat.com.',
+      'Test OBS, Game Bar, and capture-card setups so stream viewers do not see overlays — practical checklist for Rainbow Six Siege creators on r6-cheat.com.',
   },
   'r6-aimbot-ranked': {
     title: 'casual matches aimbot — bone priority, prediction & smoothness',
   },
   'battleye-fix': {
-    title: 'anti-cheat errors on Tom Clancy’s Rainbow Six Siege PC — verify, repair & recovery',
+    title: 'anti-cheat errors on Rainbow Six Siege PC — verify, repair & recovery',
     description:
-      'When anti-cheat fails to verify Tom Clancy’s Rainbow Six Siege on PC: file checks, repairs, reinstall paths, and when account recovery applies — guide at r6-cheat.com.',
+      'When anti-cheat fails to verify Rainbow Six Siege on PC: file checks, repairs, reinstall paths, and when account recovery applies — guide at r6-cheat.com.',
   },
 };
 
 /** Optional on-page H1 overrides (blog posts). */
 export const BLOG_POST_PAGE_H1: Record<string, string> = {
   'battleye-fix':
-    'What the anti-cheat error means — anti-cheat unable to verify Tom Clancy’s Rainbow Six Siege (Rainbow Six Siege cheats)',
+    'What the anti-cheat error means — anti-cheat unable to verify Rainbow Six Siege (Rainbow Six Siege cheats)',
   'r6-stream-proof':
     'Stream-Proof Overlay Setup — hide wall ESP and script overlays from OBS (Rainbow Six Siege cheats)',
   'r6-training-grounds-practice': 'Training Grounds practice: aim drills before ranked (Rainbow Six Siege cheats)',
-  'r6-radar': 'Tom Clancy’s Rainbow Six Siege radar on PC — FOV habits, spacing and team callouts',
+  'r6-radar': 'Rainbow Six Siege radar on PC — FOV habits, spacing and team callouts',
 };
 
 export function getBlogPostSeo(slug: string, fallback: PageSeoEntry): PageSeoEntry {

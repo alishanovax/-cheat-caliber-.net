@@ -7,7 +7,7 @@ export const ZADEYO_R6_CHECKOUT_URL =
 export const ZADEYO_R6_PRODUCT_SEO = {
   title: 'R6 Cheat – PC access and loader delivery',
   description:
-    "Tom Clancy’s Rainbow Six Siege PC cheats with operator ESP, aimbot, radar, and recoil control. Compare tiers on r6-cheat.com, then checkout when the status banner shows online.",
+    "Rainbow Six Siege PC cheats with operator ESP, aimbot, radar, and recoil control. Compare tiers on r6-cheat.com, then checkout when the status banner shows online.",
   h1: 'R6 Cheat — ESP, aimbot, wall ESP & ranked presets',
   h2ProductDetails: 'Product details',
   h2Features: 'Features',
@@ -41,7 +41,7 @@ export const ZADEYO_R6_PRODUCT_SEO = {
       headingKey: 'h2Checkout' as const,
       paragraphs: [
         'Payment and license delivery complete after you choose a plan. You receive digital loader access and setup guidance—no physical shipment.',
-        "Use r6-cheat.com for tier tables, BattlEye patch notes, and pre-purchase FAQ before you launch Tom Clancy’s Rainbow Six Siege on PC.",
+        "Use r6-cheat.com for tier tables, BattlEye patch notes, and pre-purchase FAQ before you launch Rainbow Six Siege on PC.",
       ],
     },
     {
@@ -49,7 +49,7 @@ export const ZADEYO_R6_PRODUCT_SEO = {
       headingKey: 'h2Loader' as const,
       paragraphs: [
         'The customer portal hosts the current Windows loader, default configs, and save/load profiles for ranked and casual matches.',
-        "After a Tom Clancy’s Rainbow Six Siege or BattlEye update, reload the loader from the portal and read the homepage status banner before ranked queue.",
+        "After a Rainbow Six Siege or BattlEye update, reload the loader from the portal and read the homepage status banner before ranked queue.",
       ],
     },
     {
@@ -62,8 +62,8 @@ export const ZADEYO_R6_PRODUCT_SEO = {
     },
   ],
   screenshotAlts: [
-    "Tom Clancy’s Rainbow Six Siege ESP overlay screenshot 1",
-    "Tom Clancy’s Rainbow Six Siege aimbot FOV screenshot 2",
-    "Tom Clancy’s Rainbow Six Siege gadget ESP screenshot 3",
+    "Rainbow Six Siege ESP overlay screenshot 1",
+    "Rainbow Six Siege aimbot FOV screenshot 2",
+    "Rainbow Six Siege gadget ESP screenshot 3",
   ],
 } as const;

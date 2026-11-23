@@ -2,9 +2,9 @@ import { normalizeSeoPath } from './pageSeo';
 
 /** Footer logo alt text matched to each route’s audit keyword (exact phrases). */
 const LOGO_ALT_BY_PATH: Record<string, string> = {
-  '/products/r6/': 'Tom Clancy’s Rainbow Six Siege – R6 Cheat shop logo',
+  '/products/r6/': 'Rainbow Six Siege – R6 Cheat shop logo',
   '/about/': 'Aimbot Esp – logo',
-  '/blog/': 'Tom Clancy’s Rainbow Six Siege guides – logo',
+  '/blog/': 'Rainbow Six Siege guides – logo',
   '/faq/': 'Faq – logo',
   '/forum/': 'Forum – logo',
   '/privacy/': 'Privacy – logo',

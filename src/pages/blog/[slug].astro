@@ -38,7 +38,7 @@ if (!post) {
 
 const postPath = `/blog/${post.slug}/`;
 const blogCrumbLabels: Record<string, string> = {
-  'r6-training-grounds-practice': 'Tom Clancy’s Rainbow Six Siege practice mode guides (blog hub)',
+  'r6-training-grounds-practice': 'Rainbow Six Siege practice mode guides (blog hub)',
   'r6-stream-proof': 'Stream-proof guides (blog hub)',
   'r6-radar': 'Radar cheat guides (blog hub)',
 };
@@ -207,7 +207,7 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
                 post.slug === 'battleye-fix'
                   ? 'Checkout after anti-cheat fix'
                   : post.slug === 'r6-stream-proof'
-                    ? 'Buy stream-proof Tom Clancy’s Rainbow Six Siege tier'
+                    ? 'Buy stream-proof Rainbow Six Siege tier'
                     : post.slug === 'r6-training-grounds-practice'
                       ? 'Checkout after practice mode drills'
                       : post.slug === 'r6-radar'
@@ -219,7 +219,7 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
             <Button as="a" href={ROUTES.products} variant="outline">
               {
                 post.slug === 'battleye-fix'
-                  ? 'Open Tom Clancy’s Rainbow Six Siege product catalog'
+                  ? 'Open Rainbow Six Siege product catalog'
                   : post.slug === 'r6-stream-proof'
                     ? 'Open stream-safe product hub'
                     : post.slug === 'r6-training-grounds-practice'

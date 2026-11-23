@@ -35,7 +35,7 @@ const toc = post.body
   }));
 
 const defaultProductLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'Tom Clancy’s Rainbow Six Siege products', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'Rainbow Six Siege products', href: ROUTES.products, icon: 'sidebarHub' },
   { label: 'Elite cheats', href: ROUTES.productsElite, icon: 'sidebarElite' },
   { label: 'loadout tools', href: productPath('unlock-all'), icon: 'sidebarSkin' },
   { label: 'HWID Spoofer', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
@@ -43,7 +43,7 @@ const defaultProductLinks: { label: string; href: string; icon: IconName }[] = [
 ];
 
 const eacGuideProductLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'Tom Clancy’s Rainbow Six Siege catalog (anti-cheat sidebar)', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'Rainbow Six Siege catalog (anti-cheat sidebar)', href: ROUTES.products, icon: 'sidebarHub' },
   { label: 'Elite tier (anti-cheat sidebar)', href: ROUTES.productsElite, icon: 'sidebarElite' },
   { label: 'loadout tools pack', href: productPath('unlock-all'), icon: 'sidebarSkin' },
   { label: 'HWID spoofer utility (eac)', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
@@ -59,7 +59,7 @@ const streamProofProductLinks: { label: string; href: string; icon: IconName }[]
 ];
 
 const practiceLobbyProductLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'Practice hub — Tom Clancy’s Rainbow Six Siege products', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'Practice hub — Rainbow Six Siege products', href: ROUTES.products, icon: 'sidebarHub' },
   { label: 'Elite tier (post-drill ranked)', href: ROUTES.productsElite, icon: 'sidebarElite' },
   { label: 'Loadout tools (practice sidebar)', href: productPath('unlock-all'), icon: 'sidebarSkin' },
   { label: 'HWID spoofer (practice guide)', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
@@ -172,7 +172,7 @@ const productLinks =
       <span class="truncate">
         {
           post.slug === 'battleye-fix'
-            ? 'Start Tom Clancy’s Rainbow Six Siege checkout'
+            ? 'Start Rainbow Six Siege checkout'
             : post.slug === 'r6-stream-proof'
               ? 'Checkout stream-proof tier'
               : post.slug === 'r6-training-grounds-practice'

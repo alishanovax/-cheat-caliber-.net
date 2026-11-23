@@ -97,7 +97,7 @@ const defaultAcquisitionSteps: AcquisitionStep[] = [
   {
     num: '01',
     title: 'Review current status',
-    desc: 'Check the live banner on r6-cheat.com before purchase—especially after a Tom Clancy’s Rainbow Six Siege or anti-cheat update.',
+    desc: 'Check the live banner on r6-cheat.com before purchase—especially after a Rainbow Six Siege or anti-cheat update.',
   },
   {
     num: '02',
@@ -124,17 +124,17 @@ function acquisitionFor(productName: string): ProductAcquisition {
 }
 
 const sharedGoodToKnow =
-  'Tom Clancy’s Rainbow Six Siege and anti-cheat receive frequent updates. Confirm module availability on the live status panel at r6-cheat.com before you purchase or launch. Overlay behavior may differ in lobbies, replays and spectator mode after patches.';
+  'Rainbow Six Siege and anti-cheat receive frequent updates. Confirm module availability on the live status panel at r6-cheat.com before you purchase or launch. Overlay behavior may differ in lobbies, replays and spectator mode after patches.';
 
 const sharedLimitations =
-  'Third-party software in Tom Clancy’s Rainbow Six Siege can violate the game terms of service and lead to anti-cheat action. You use this software at your own risk. Compatibility and availability can change after game, anti-cheat, or Windows updates without notice.';
+  'Third-party software in Rainbow Six Siege can violate the game terms of service and lead to anti-cheat action. You use this software at your own risk. Compatibility and availability can change after game, anti-cheat, or Windows updates without notice.';
 
 const r6SystemRequirements: SystemRequirement[] = [
   { icon: 'reqWindows', text: 'Windows 10 or Windows 11 (64-bit) with HVCI, Core Isolation, TPM and Secure Boot enabled.' },
-  { icon: 'reqEpic', text: 'Current PC build of Tom Clancy’s Rainbow Six Siege with the latest patches applied.' },
+  { icon: 'reqEpic', text: 'Current PC build of Rainbow Six Siege with the latest patches applied.' },
   { icon: 'reqSettings', text: 'Cloud DMA access for full functionality on supported builds.' },
   { icon: 'reqWifi', text: 'Stable internet connection for portal access and loader updates.' },
-  { icon: 'reqCpu', text: 'Intel or AMD system that meets Tom Clancy’s Rainbow Six Siege hardware requirements.' },
+  { icon: 'reqCpu', text: 'Intel or AMD system that meets Rainbow Six Siege hardware requirements.' },
 ];
 
 type GalleryKey = keyof typeof galleryRaw;
@@ -144,31 +144,31 @@ const galleryRaw = {
     src: SITE_CHEAT_IMAGES[0].src,
     alt: SITE_CHEAT_IMAGES[0].alt,
     caption: 'Soft aim & ESP',
-    captionDesc: 'Tom Clancy’s Rainbow Six Siege trainer overlays tuned for PC gunfights.',
+    captionDesc: 'Rainbow Six Siege trainer overlays tuned for PC gunfights.',
   },
   gpEspWallhack: {
     src: SITE_CHEAT_IMAGES[1].src,
     alt: SITE_CHEAT_IMAGES[1].alt,
     caption: 'Enemy ESP',
-    captionDesc: 'Player ESP with health, health and distance in Tom Clancy’s Rainbow Six Siege multiplayer.',
+    captionDesc: 'Player ESP with health, health and distance in Rainbow Six Siege multiplayer.',
   },
   gpGameplay: {
     src: SITE_CHEAT_IMAGES[2].src,
     alt: SITE_CHEAT_IMAGES[2].alt,
-    caption: 'Tom Clancy’s Rainbow Six Siege co-op',
+    caption: 'Rainbow Six Siege co-op',
     captionDesc: 'Tactical shooter action on PC with trainer-friendly overlays.',
   },
   gpEspIndoor: {
     src: SITE_CHEAT_IMAGES[3].src,
     alt: SITE_CHEAT_IMAGES[3].alt,
-    caption: 'Tom Clancy’s Rainbow Six Siege raid combat',
-    captionDesc: 'Cel-shaded Tom Clancy’s Rainbow Six Siege combat in a twilight outpost.',
+    caption: 'Rainbow Six Siege raid combat',
+    captionDesc: 'Cel-shaded Rainbow Six Siege combat in a twilight outpost.',
   },
   gpCourtyard: {
     src: SITE_CHEAT_IMAGES[0]!.src,
     alt: SITE_CHEAT_IMAGES[0]!.alt,
-    caption: 'Tom Clancy’s Rainbow Six Siege firefight',
-    captionDesc: 'Tom Clancy’s Rainbow Six Siege combat screenshot from approved media library.',
+    caption: 'Rainbow Six Siege firefight',
+    captionDesc: 'Rainbow Six Siege combat screenshot from approved media library.',
   },
 };
 
@@ -185,7 +185,7 @@ function slide(...keys: GalleryKey[]): ProductSlide[] {
 }
 
 const productDetailGalleryCaptions = [
-  { caption: 'Updates & anti-cheat', captionDesc: 'Stay aligned with Tom Clancy’s Rainbow Six Siege patch and security news.' },
+  { caption: 'Updates & anti-cheat', captionDesc: 'Stay aligned with Rainbow Six Siege patch and security news.' },
   { caption: 'Multiplayer gameplay', captionDesc: 'In-match view on a compact map with full HUD.' },
   { caption: 'Quick Match perspective', captionDesc: 'First-person combat with kill feed and minimap.' },
 ] as const;
@@ -350,7 +350,7 @@ const productContent: Record<
       title: 'R6 Lite: ESP and radar',
       paragraphs: [
         'Lite is for operator ESP, chest markers, loot timers and radar. No aimbot. Set distance, colors and stream-proof in the portal before you queue.',
-        'Best if you want awareness in online matches and casual matches without combat automation. Overlays are updated after Tom Clancy’s Rainbow Six Siege patches.',
+        'Best if you want awareness in online matches and casual matches without combat automation. Overlays are updated after Rainbow Six Siege patches.',
       ],
     },
   },
@@ -419,13 +419,13 @@ const productContent: Record<
   'hwid-spoofer': {
     images: slide('gpEspIndoor', 'gpEspWallhack', 'gpGameplay'),
     goodToKnow:
-      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching Tom Clancy’s Rainbow Six Siege.',
+      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching Rainbow Six Siege.',
     limitations:
       'Spoofing does not help account-only anti-cheat cases. Never stack two spoof tools. Shared or work PCs may not be suitable. You accept all risk from driver-level changes.',
     systemRequirements: [
       { icon: 'reqWindows', text: 'Windows 10 or 11 64-bit with administrator access.' },
       { icon: 'reqRestorePoint', text: 'Ability to create a system restore point before running.' },
-      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching Tom Clancy’s Rainbow Six Siege after spoofing.' },
+      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching Rainbow Six Siege after spoofing.' },
       { icon: 'reqWifi', text: 'Stable connection for portal verification tools.' },
     ],
     fullFeatures: [
@@ -441,7 +441,7 @@ const productContent: Record<
       'Recovery case support',
     ],
     overview: {
-      title: 'HWID Spoofer for Tom Clancy’s Rainbow Six Siege PC bans',
+      title: 'HWID Spoofer for Rainbow Six Siege PC bans',
       paragraphs: [
         'Use the HWID Spoofer when anti-cheat flags your PC hardware but the platform account is still fine. Includes disk and MAC tools, a restore-point checklist, a compatibility scan and post-spoof checks.',
         'Use it when new accounts die on one PC but work on another. It does not fix account-only anti-cheat bans. After spoofing, use a safer cheat profile before ranked matchmaking.',
@@ -500,7 +500,7 @@ const productContent: Record<
     overview: {
       title: 'loadout tools / Loadout Pack',
       paragraphs: [
-        'loadout tools / Loadout Pack lets you preview outfits, camos and attachments on your Tom Clancy’s Rainbow Six Siege client. loadout tools does not change your in-game inventory or store purchases.',
+        'loadout tools / Loadout Pack lets you preview outfits, camos and attachments on your Rainbow Six Siege client. loadout tools does not change your in-game inventory or store purchases.',
         'Only you see the preview skins. Other players see your real inventory. Included with Elite, or buy loadout tools alone without combat modules.',
       ],
     },

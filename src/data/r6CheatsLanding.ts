@@ -3,7 +3,7 @@ export const r6CheatsLanding = {
   h1: 'Rainbow Six Siege cheats — checkout when the status banner shows online',
   keywordH2: 'R6 Cheat: PC aimbot, ESP & radar',
   intro:
-    'Tom Clancy’s Rainbow Six Siege cheats on this site for PC — aimbot, operator ESP, gadget ESP, skeleton and box overlays, and save/load config profiles. Compare modules on r6-cheat.com, then checkout when the status banner shows online.',
+    'Rainbow Six Siege cheats on this site for PC — aimbot, operator ESP, gadget ESP, skeleton and box overlays, and save/load config profiles. Compare modules on r6-cheat.com, then checkout when the status banner shows online.',
   sections: [
     {
       heading: 'Verified cheat modules',
@@ -29,7 +29,7 @@ export const r6CheatsLanding = {
     {
       heading: 'After game updates',
       paragraphs: [
-        'Tom Clancy’s Rainbow Six Siege and BattlEye receive periodic updates. Confirm module availability on the live status panel at r6-cheat.com before you purchase or launch.',
+        'Rainbow Six Siege and BattlEye receive periodic updates. Confirm module availability on the live status panel at r6-cheat.com before you purchase or launch.',
       ],
     },
   ],

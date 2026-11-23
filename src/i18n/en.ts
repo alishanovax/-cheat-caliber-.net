@@ -11,7 +11,7 @@ export const en: Translations = {
     domain: 'r6-cheat.com',
     title: 'R6 Cheat',
     description:
-      'Rainbow Six Siege cheats for Tom Clancy’s Rainbow Six Siege on PC — aimbot, operator ESP, gadget ESP, skeleton and box visuals, config profiles, and installation guides. Checkout on r6-cheat.com.',
+      'Rainbow Six Siege cheats on PC — aimbot, operator ESP, gadget ESP, skeleton and box visuals, config profiles, and installation guides. Checkout on r6-cheat.com.',
     discord: '',
   },
   nav: [
@@ -22,7 +22,7 @@ export const en: Translations = {
     { href: '/support/', label: 'Support' },
   ],
   hero: {
-    status: 'Tom Clancy’s Rainbow Six Siege · PC',
+    status: 'Rainbow Six Siege · PC',
     eyebrow: 'Rainbow Six Siege cheats for PC',
     h1: 'R6 Cheat',
     h1Accent: '',
@@ -43,12 +43,12 @@ export const en: Translations = {
     eyebrow: 'Cheat features',
     title: 'Rainbow Six Siege cheat modules',
     subtitle:
-      'Aimbot, operator ESP, gadget ESP, and config tools aligned with the Tom Clancy’s Rainbow Six Siege PC product listing — for ranked, casual, custom, and practice sessions.',
+      'Aimbot, operator ESP, gadget ESP, and config tools aligned with our Rainbow Six Siege PC product listing — for ranked, casual, custom, and practice sessions.',
     items: [
       {
         title: 'Aimbot',
         subtitle: 'FOV, smoothness, hitboxes',
-        desc: 'Configurable aimbot with FOV circle, smoothness, hitbox selection, and optional target line for Tom Clancy’s Rainbow Six Siege gunfights.',
+        desc: 'Configurable aimbot with FOV circle, smoothness, hitbox selection, and optional target line for Rainbow Six Siege gunfights.',
         bullets: [
           'Enable aimbot with customizable FOV',
           'Draw FOV and target line on screen',
@@ -103,7 +103,7 @@ export const en: Translations = {
       {
         title: 'Compatibility',
         subtitle: 'Windows PC requirements',
-        desc: 'Built for Tom Clancy’s Rainbow Six Siege on Windows 10 and 11. Cloud DMA is required for full functionality with HVCI, Core Isolation, TPM, and Secure Boot enabled.',
+        desc: 'Built for Rainbow Six Siege on Windows 10 and 11. Cloud DMA is required for full functionality with HVCI, Core Isolation, TPM, and Secure Boot enabled.',
         bullets: [
           'Windows 10 or 11 (64-bit)',
           'Intel or AMD CPU',
@@ -117,14 +117,14 @@ export const en: Translations = {
       {
         title: 'Match types',
         subtitle: 'Online and practice focus',
-        desc: 'Designed for Tom Clancy’s Rainbow Six Siege multiplayer — ranked queues, casual lobbies, custom rooms, and practice modes.',
+        desc: 'Designed for Rainbow Six Siege multiplayer — ranked queues, casual lobbies, custom rooms, and practice modes.',
         bullets: [
           'Ranked and casual matchmaking',
           'Custom lobby support',
           'Practice mode for config testing',
           'Profiles for different session types',
         ],
-        tags: ['Tom Clancy’s Rainbow Six Siege matches', 'multiplayer', 'ranked'],
+        tags: ['Rainbow Six Siege matches', 'multiplayer', 'ranked'],
         bento:
           'sm:col-span-2 lg:col-span-4 lg:row-span-2 lg:col-start-9 lg:row-start-4',
       },
@@ -148,7 +148,7 @@ export const en: Translations = {
     rows: [
       {
         title: 'Loader updates after patches',
-        desc: 'New builds usually go out within hours of a Tom Clancy’s Rainbow Six Siege or anti-cheat update. Check the homepage status banner before you queue.',
+        desc: 'New builds usually go out within hours of a Rainbow Six Siege or anti-cheat update. Check the homepage status banner before you queue.',
       },
       {
         title: 'Smooth aimbot defaults',
@@ -175,7 +175,7 @@ export const en: Translations = {
       {
         value: '<24h',
         title: 'Patch turnaround',
-        desc: 'Usual time to ship a loader after a big Tom Clancy’s Rainbow Six Siege or anti-cheat update.',
+        desc: 'Usual time to ship a loader after a big Rainbow Six Siege or anti-cheat update.',
       },
       {
         value: '24/7',
@@ -194,7 +194,7 @@ export const en: Translations = {
     titleLead: 'Buy cheats. Play in',
     titleHighlight: 'three steps',
     intro:
-      'Buy your Rainbow Six Siege cheat, download the loader, load a preset, then open Tom Clancy’s Rainbow Six Siege. Use Support or the FAQ if you get stuck.',
+      'Buy your Rainbow Six Siege cheat, download the loader, load a preset, then open Rainbow Six Siege. Use Support or the FAQ if you get stuck.',
     ctaPrimary: 'Buy cheats',
     ctaSecondary: 'Setup FAQ',
     ctaPrimaryHref: PRIMARY_CHECKOUT_PATH,
@@ -208,20 +208,20 @@ export const en: Translations = {
       {
         step: 'Step 2',
         title: 'Load presets',
-        desc: 'Run the loader, load a Tom Clancy’s Rainbow Six Siege preset, and tune soft aim and ESP ranges.',
+        desc: 'Run the loader, load a Rainbow Six Siege preset, and tune soft aim and ESP ranges.',
       },
       {
         step: 'Step 3',
         title: 'Check status and play',
-        desc: 'Confirm the status banner is online, launch Tom Clancy’s Rainbow Six Siege through the EA app or Ubisoft Connect, and use your saved config.',
+        desc: 'Confirm the status banner is online, launch Rainbow Six Siege through the EA app or Ubisoft Connect, and use your saved config.',
       },
     ],
   },
   compatibility: {
     eyebrow: 'Platform',
     title: 'Windows PC',
-    subtitle: 'Check the status banner after Tom Clancy’s Rainbow Six Siege updates before you launch.',
-    items: ['Windows 10 & 11', 'the EA app or Ubisoft Connect', 'Tom Clancy’s Rainbow Six Siege client', 'Auto updater', 'Config cloud sync', 'Setup guides', 'HWID reset', 'External loader'],
+    subtitle: 'Check the status banner after Rainbow Six Siege updates before you launch.',
+    items: ['Windows 10 & 11', 'the EA app or Ubisoft Connect', 'Rainbow Six Siege client', 'Auto updater', 'Config cloud sync', 'Setup guides', 'HWID reset', 'External loader'],
   },
   cheats: {
     eyebrow: 'Elite cheat',
@@ -267,9 +267,9 @@ export const en: Translations = {
   },
   products: {
     eyebrow: 'Shop',
-    title: 'Buy Tom Clancy’s Rainbow Six Siege — PC cheats shop',
+    title: 'Buy Rainbow Six Siege — PC cheats shop',
     subtitle:
-      'Buy Tom Clancy’s Rainbow Six Siege for Elite aimbot and ESP, HWID spoofer, UGC recovery and loadout tools — pick what you need and checkout in minutes.',
+      'Buy Rainbow Six Siege cheats for Elite aimbot and ESP, HWID spoofer, UGC recovery and loadout tools — pick what you need and checkout in minutes.',
     viewAll: 'View all cheats',
     get: 'Buy',
     explore: 'Explore',
@@ -277,9 +277,9 @@ export const en: Translations = {
       {
         badge: 'Available',
         category: 'System utility',
-        title: 'Tom Clancy’s Rainbow Six Siege HWID Spoofer — hardware ban bypass',
+        title: 'Rainbow Six Siege HWID Spoofer — hardware ban bypass',
         subtitle: 'Clean slate for your PC',
-        desc: 'Buy a Tom Clancy’s Rainbow Six Siege HWID spoofer for disk serials, MAC addresses and GPU IDs—run the portal guide before launching cheats again.',
+        desc: 'Buy a Rainbow Six Siege HWID spoofer for disk serials, MAC addresses and GPU IDs—run the portal guide before launching cheats again.',
         features: ['Spoofer & cleanup tools', 'Serial profile rotation', 'Compatibility scan', 'Post-spoof verification'],
         more: 9,
         href: `${productBase}hwid-spoofer/`,
@@ -287,9 +287,9 @@ export const en: Translations = {
       {
         badge: 'Available',
         category: 'Account recovery',
-        title: 'UGC tools — Tom Clancy’s Rainbow Six Siege platform ban appeals',
+        title: 'UGC tools — Rainbow Six Siege platform ban appeals',
         subtitle: 'Unban & governance control',
-        desc: 'Buy Tom Clancy’s Rainbow Six Siege UGC tools for platform account restrictions, anti-cheat bans and security holds—custom appeal workflows and dispute automation.',
+        desc: 'Buy Rainbow Six Siege UGC tools for platform account restrictions, anti-cheat bans and security holds—custom appeal workflows and dispute automation.',
         features: ['Custom appeal workflows', 'Dispute automation', 'Case documentation', 'Status tracking dashboard'],
         more: 6,
         href: `${productBase}ugc/`,
@@ -297,9 +297,9 @@ export const en: Translations = {
       {
         badge: 'Available',
         category: 'Cosmetic',
-        title: 'loadout tools / Loadout Pack — Tom Clancy’s Rainbow Six Siege cosmetics',
+        title: 'loadout tools / Loadout Pack — Rainbow Six Siege cosmetics',
         subtitle: 'Unlock every cosmetic locally',
-        desc: 'Buy Tom Clancy’s Rainbow Six Siege loadout tools / Loadout Pack for outfits, camos and attachments—local preview without in-game inventory purchases.',
+        desc: 'Buy Rainbow Six Siege loadout tools / Loadout Pack for outfits, camos and attachments—local preview without in-game inventory purchases.',
         features: ['Outfit skin swap', 'Wrap & weapon customizer', 'Exclusive set preview', 'Loadout favorites export'],
         more: 7,
         href: `${productBase}unlock-all/`,
@@ -387,7 +387,7 @@ export const en: Translations = {
       },
       {
         tag: 'Setup',
-        title: 'Buy Tom Clancy’s Rainbow Six Siege Aimbot Cheats for ranked play',
+        title: 'Buy Rainbow Six Siege Aimbot Cheats for ranked play',
         slug: 'r6-aimbot-ranked',
         image: cheatImageForSlug('r6-aimbot-ranked'),
         desc: 'Aimbot, Prediction and Hotkey macros configs for climbing ranked with Pro tier Rainbow Six Siege cheats.',
@@ -396,7 +396,7 @@ export const en: Translations = {
       },
       {
         tag: 'Setup',
-        title: 'Tom Clancy’s Rainbow Six Siege wall ESP cheats setup for ranked play',
+        title: 'Rainbow Six Siege wall ESP cheats setup for ranked play',
         slug: 'r6-esp-setup',
         image: cheatImageForSlug('r6-esp-setup'),
         desc: 'Enemy position tracking, gadget ESP, smoke alerts and vision detector tuning for Lite and Elite tiers.',
@@ -405,7 +405,7 @@ export const en: Translations = {
       },
       {
         tag: 'Setup',
-        title: 'Tom Clancy’s Rainbow Six Siege radar cheats guide',
+        title: 'Rainbow Six Siege radar cheats guide',
         slug: 'r6-radar',
         image: cheatImageForSlug('r6-radar'),
         desc: 'Mini-radar, FOV awareness and safe distance caps for online matches and casual matches.',
@@ -414,7 +414,7 @@ export const en: Translations = {
       },
       {
         tag: 'Guides',
-        title: 'Tom Clancy’s Rainbow Six Siege loadout tools cheats / Loadout Pack guide',
+        title: 'Rainbow Six Siege loadout tools cheats / Loadout Pack guide',
         slug: 'r6-loadouts',
         image: cheatImageForSlug('r6-loadouts'),
         desc: 'Preview skins, wraps and exclusive sets locally with our Loadout Pack loadout tools module.',
@@ -426,13 +426,13 @@ export const en: Translations = {
         title: 'anti-cheat patch day checklist for Rainbow Six Siege cheats',
         slug: 'battleye-patch',
         image: cheatImageForSlug('battleye-patch'),
-        desc: 'Status banner, loader reload and conservative profiles after every Tom Clancy’s Rainbow Six Siege or anti-cheat update.',
+        desc: 'Status banner, loader reload and conservative profiles after every Rainbow Six Siege or anti-cheat update.',
         date: 'Apr 18, 2026',
         readTime: '5 min read',
       },
       {
         tag: 'Guides',
-        title: 'Tom Clancy’s Rainbow Six Siege HWID Spoofer vs New Account After anti-cheat ban',
+        title: 'Rainbow Six Siege HWID Spoofer vs New Account After anti-cheat ban',
         slug: 'r6-hwid-ban',
         image: cheatImageForSlug('r6-hwid-ban'),
         desc: 'When to spoof hardware, when to start fresh, and how r6-cheat.com/products/r6 fits each path.',
@@ -450,7 +450,7 @@ export const en: Translations = {
       },
       {
         tag: 'Setup',
-        title: 'Tom Clancy’s Rainbow Six Siege aimbot cheats guide: AR, SMG and Shotgun',
+        title: 'Rainbow Six Siege aimbot cheats guide: AR, SMG and Shotgun',
         slug: 'r6-aimbot-combat',
         image: cheatImageForSlug('r6-aimbot-combat'),
         desc: 'Per-weapon aimbot profiles for Pro tier—AR spray, SMG tracking and shotgun push settings for ranked play.',
@@ -459,7 +459,7 @@ export const en: Translations = {
       },
       {
         tag: 'Troubleshooting',
-        title: 'anti-cheat connection issues on Tom Clancy’s Rainbow Six Siege — cheats and appeal fixes',
+        title: 'anti-cheat connection issues on Rainbow Six Siege — cheats and appeal fixes',
         slug: 'battleye-fix',
         image: cheatImageForSlug('battleye-fix'),
         desc: 'Fix verification errors, file integrity checks and when to use UGC appeal workflows after anti-cheat issues.',
@@ -468,7 +468,7 @@ export const en: Translations = {
       },
       {
         tag: 'Guides',
-        title: 'Tom Clancy’s Rainbow Six Siege external cheat guide',
+        title: 'Rainbow Six Siege external cheat guide',
         slug: 'r6-external-loader',
         image: cheatImageForSlug('r6-external-loader'),
         desc: 'Why external Rainbow Six Siege cheats matter, how the external loader works on PC and what makes private software safer than free tools.',
@@ -540,7 +540,7 @@ export const en: Translations = {
     eyebrow: 'Notes',
     title: 'Quick tips',
     items: [
-      { num: '01', title: 'After patches', desc: 'Check the homepage status banner and portal status before you queue ranked after a Tom Clancy’s Rainbow Six Siege update.' },
+      { num: '01', title: 'After patches', desc: 'Check the homepage status banner and portal status before you queue ranked after a Rainbow Six Siege update.' },
       { num: '02', title: 'Start slow', desc: 'Use the default aimbot smoothness and ESP range first, then raise them if you need to.' },
       { num: '03', title: 'Support', desc: 'Stuck on the loader or configs? Use the Support page and FAQ with your order details handy.' },
     ],
@@ -575,7 +575,7 @@ export const en: Translations = {
     ticketTitle: 'Include in your ticket',
     ticketItems: [
       { title: 'Order email', desc: 'The email you used at checkout on r6-cheat.com.' },
-      { title: 'Platform', desc: 'Windows 10 or 11, the EA app or Ubisoft Connect, and your Tom Clancy’s Rainbow Six Siege version.' },
+      { title: 'Platform', desc: 'Windows 10 or 11, the EA app or Ubisoft Connect, and your Rainbow Six Siege version.' },
       { title: 'Error detail', desc: 'Screenshot or exact text from the loader or the EA app or Ubisoft Connect.' },
     ],
   },
@@ -587,12 +587,12 @@ export const en: Translations = {
       {
         num: '01',
         q: 'Where do I check if Rainbow Six Siege cheats are online?',
-        a: 'The live status banner is on r6-cheat.com. Always check after a Tom Clancy’s Rainbow Six Siege or anti-cheat update.',
+        a: 'The live status banner is on r6-cheat.com. Always check after a Rainbow Six Siege or anti-cheat update.',
       },
       {
         num: '02',
         q: 'What happens after I buy?',
-        a: 'Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Tom Clancy’s Rainbow Six Siege.',
+        a: 'Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Rainbow Six Siege.',
       },
       {
         num: '03',
@@ -602,7 +602,7 @@ export const en: Translations = {
       {
         num: '04',
         q: 'Which platforms are supported?',
-        a: 'Tom Clancy’s Rainbow Six Siege via the EA app or Ubisoft Connect on Windows 10/11 64-bit only. macOS and Linux are not supported.',
+        a: 'Rainbow Six Siege via the EA app or Ubisoft Connect on Windows 10/11 64-bit only. macOS and Linux are not supported.',
       },
       {
         num: '05',
@@ -641,7 +641,7 @@ export const en: Translations = {
         {
           heading: 'Who we are',
           paragraphs: [
-            'R6 Cheat is a PC shop focused on aimbot ESP, wall ESP, radar and utility tools for Tom Clancy’s Rainbow Six Siege on PC. We publish tier comparisons, setup guides and live status notes when anti-cheat or Tom Clancy’s Rainbow Six Siege patches land.',
+            'R6 Cheat is a PC shop focused on aimbot ESP, wall ESP, radar and utility tools for Rainbow Six Siege on PC. We publish tier comparisons, setup guides and live status notes when anti-cheat or Rainbow Six Siege patches land.',
             'Modules ship with ranked-safe defaults first—you can tighten FOV and smoothness later in the customer portal. Game and product names are for identification only.',
             'We are independent of platform. Checkout, loader delivery and support run through r6-cheat.com and our customer portal.',
           ],
@@ -650,7 +650,7 @@ export const en: Translations = {
           heading: 'What we sell',
           paragraphs: [
             'Lite, Pro and Elite Rainbow Six Siege cheats, plus HWID Spoofer, loadout tools and UGC recovery. Coverage spans online matches, casual matches and ranked modes when the status banner shows online.',
-            'The blog covers configs, patch checks and anti-cheat updates. Pages are updated when Tom Clancy’s Rainbow Six Siege or the loader changes—check the homepage status banner before you play.',
+            'The blog covers configs, patch checks and anti-cheat updates. Pages are updated when Rainbow Six Siege or the loader changes—check the homepage status banner before you play.',
           ],
         },
         {
@@ -716,14 +716,14 @@ export const en: Translations = {
           heading: 'What you purchase',
           paragraphs: [
             'We sell Rainbow Six Siege cheat tiers (Lite, Pro, Elite) and tools (HWID Spoofer, UGC, loadout tools / Loadout Pack) through a portal and Windows loader for Steam.',
-            'Product pages list what is included when you buy. Features can change when Tom Clancy’s Rainbow Six Siege or anti-cheat updates.',
+            'Product pages list what is included when you buy. Features can change when Rainbow Six Siege or anti-cheat updates.',
           ],
         },
         {
           heading: 'Checkout and delivery',
           paragraphs: [
             'Payment and license delivery run on external checkout pages. r6-cheat.com does not process or store payment card numbers.',
-            'After purchase, use the customer portal linked from your order flow to download the current loader and setup guide before launching Tom Clancy’s Rainbow Six Siege.',
+            'After purchase, use the customer portal linked from your order flow to download the current loader and setup guide before launching Rainbow Six Siege.',
           ],
         },
         {
@@ -736,14 +736,14 @@ export const en: Translations = {
           heading: 'Refunds and purchases',
           paragraphs: [
             'All sales are final once checkout completes. We do not refund change-of-mind purchases, account bans, anti-cheat penalties, or issues caused by ignoring setup guides or running modules while the status banner shows offline.',
-            'If the product does not work as described on a supported setup—Tom Clancy’s Rainbow Six Siege on PC on Windows 10/11, current loader from the portal, and the live status banner showing online when you started—contact us through the Support page. Include your order email, Windows version, Tom Clancy’s Rainbow Six Siege build, and screenshots or exact error text from the loader.',
+            'If the product does not work as described on a supported setup—Rainbow Six Siege on PC on Windows 10/11, current loader from the portal, and the live status banner showing online when you started—contact us through the Support page. Include your order email, Windows version, Rainbow Six Siege build, and screenshots or exact error text from the loader.',
             'We may, at our discretion, offer a fix, replacement access, or partial/full refund when we confirm a fault on our side. We are not obligated to approve every request.',
           ],
         },
         {
           heading: 'Availability and risk',
           paragraphs: [
-            'Third-party tools for Tom Clancy’s Rainbow Six Siege can conflict with game updates and anti-cheat systems. You use this software at your own risk, including possible account action.',
+            'Third-party tools for Rainbow Six Siege can conflict with game updates and anti-cheat systems. You use this software at your own risk, including possible account action.',
             'Check the homepage status banner before every session. Do not queue ranked while modules are offline or misaligned after a patch.',
           ],
         },

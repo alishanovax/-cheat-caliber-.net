@@ -9,7 +9,7 @@ export interface ProductPlan {
   popular?: boolean;
 }
 
-/** Tom Clancy’s Rainbow Six Siege plan tiers (Monthly $35 / 31 days, Lifetime $150). */
+/** Rainbow Six Siege plan tiers (Monthly $35 / 31 days, Lifetime $150). */
 const standardPlans: ProductPlan[] = [
   {
     id: 'monthly',

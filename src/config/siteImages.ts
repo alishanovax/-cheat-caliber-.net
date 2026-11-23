@@ -20,7 +20,7 @@ export const SITE_CHEAT_IMAGES: SiteCheatImage[] = [
   },
   {
     src: R6_MEDIA[1],
-    alt: 'Tom Clancy’s Rainbow Six Siege tactical firefight screenshot',
+    alt: 'Rainbow Six Siege tactical firefight screenshot',
   },
   {
     src: R6_MEDIA[2],

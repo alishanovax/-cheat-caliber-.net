@@ -7,7 +7,7 @@ export const ZADEYO_TARKOV_CHECKOUT_URL =
 export const ZADEYO_R6_PRODUCT_SEO = {
   title: 'EFT Cheats – PC access and loader delivery',
   description:
-    "Escape from Tarkov PC cheats with PMC and Scav ESP, aimbot, radar, and recoil control. Compare tiers on cheatseft.org, then checkout when the status banner shows online.",
+    "Escape from Tarkov PC cheats with PMC and Scav ESP, aimbot, map overlay, and recoil control. Compare tiers on cheatseft.org, then checkout when the status banner shows online.",
   h1: 'EFT Cheats — ESP, aimbot, wall ESP & competitive presets',
   h2ProductDetails: 'Product details',
   h2Features: 'Features',

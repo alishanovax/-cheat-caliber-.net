@@ -4,6 +4,9 @@
  * @type {Record<string, string>}
  */
 export const SLUG_REDIRECTS = {
+  '/blog/tarkov-radar/': '/blog/tarkov-zone-map/',
+  '/blog/tarkov-radar': '/blog/tarkov-zone-map/',
+
   '/tarkov-hacks/': '/escape-from-tarkov-cheats/',
 
   '/products/tarkov/account-recovery/': '/products/tarkov/ugc/',
@@ -28,7 +31,7 @@ export const SLUG_REDIRECTS = {
   '/blog/tarkov-console-commands-hacks/': '/blog/tarkov-console-commands/',
   '/blog/how-to-buy-tarkov-hacks-2026/': '/blog/buy-escape-from-tarkov-cheats/',
   '/blog/tarkov-hwid-spoofer-after-ban/': '/blog/tarkov-hwid-ban/',
-  '/blog/tarkov-radar-hack-guide/': '/blog/tarkov-radar/',
+  '/blog/tarkov-zone-map-hack-guide/': '/blog/tarkov-zone-map/',
   '/blog/tarkov-external-hack-guide/': '/blog/tarkov-external-loader/',
   '/blog/tarkov-esp-wallhack-setup/': '/blog/tarkov-esp-setup/',
   '/blog/tarkov-stream-proof-setup/': '/blog/tarkov-stream-proof/',

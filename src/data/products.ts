@@ -59,7 +59,7 @@ export interface ProductPage {
 
 /** Guides paired with each product detail page */
 export const productRelatedBlogSlugs: Record<string, string[]> = {
-  lite: ['tarkov-esp-setup', 'tarkov-lite-vs-pro', 'tarkov-radar', 'anti-cheat-patch'],
+  lite: ['tarkov-esp-setup', 'tarkov-lite-vs-pro', 'tarkov-zone-map', 'anti-cheat-patch'],
   pro: [
     'tarkov-aimbot-raids',
     'tarkov-aimbot-combat',
@@ -216,7 +216,7 @@ const tierAbout: Record<string, ProductPage['about']> = {
     { type: 'h2', text: 'online raids-safe by design' },
     {
       type: 'p',
-      text: 'Lite skips Aimbot and bot modules entirely. Your gameplay looks natural while ESP, radar cheat and loot timers keep you informed. Stream-proof mode hides overlays from OBS capture for content creators.',
+      text: 'Lite skips Aimbot and bot modules entirely. Your gameplay looks natural while ESP, map overlay and loot timers keep you informed. Stream-proof mode hides overlays from OBS capture for content creators.',
     },
   ],
   pro: [
@@ -248,7 +248,7 @@ const tierBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Included modules' },
     {
       type: 'p',
-      text: 'Player ESP with distance and name tags, chest and reboot-van locator, loot spawn timers, radar cheat, and stream-safe overlay hiding. Config presets for online raids and online raids ship in the portal—load before your first queue.',
+      text: 'Player ESP with distance and name tags, chest and reboot-van locator, loot spawn timers, map overlay, and stream-safe overlay hiding. Config presets for online raids and online raids ship in the portal—load before your first queue.',
     },
     { type: 'h2', text: 'Upgrade path' },
     {
@@ -335,21 +335,21 @@ const productContent: Record<
       'Chest & loot locator',
       'POI awareness',
       'Health & shield tracking',
-      'Mini-radar overlay',
+      'Mini-map overlay',
       'Streamproof overlay mode',
       'Distance readouts',
       'Team color filter',
       'Loot spawn timers',
-      'Radar cheat',
+      'Map overlay',
       'online raids preset config',
       'online raids preset config',
       'Cloud config backup',
       'Patch auto-updater',
     ],
     overview: {
-      title: 'Lite: ESP and radar',
+      title: 'Lite: ESP and map overlay',
       paragraphs: [
-        'Lite is for PMC and Scav ESP, chest markers, loot timers and radar. No aimbot. Set distance, colors and stream-proof in the portal before you queue.',
+        'Lite is for PMC and Scav ESP, chest markers, loot timers and map overlay. No aimbot. Set distance, colors and stream-proof in the portal before you queue.',
         'Best if you want awareness in online raids and online raids without combat automation. Overlays are updated after Escape from Tarkov patches.',
       ],
     },

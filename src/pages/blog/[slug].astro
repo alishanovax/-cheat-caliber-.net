@@ -38,9 +38,9 @@ if (!post) {
 
 const postPath = `/blog/${post.slug}/`;
 const blogCrumbLabels: Record<string, string> = {
-  'tarkov-offline-practice': 'Escape from Tarkov practice mode guides (blog hub)',
+  'tarkov-training-grounds-practice': 'Buy Escape from Tarkov cheats — tier guides (blog hub)',
   'tarkov-stream-proof': 'Stream-proof guides (blog hub)',
-  'tarkov-radar': 'Radar cheat guides (blog hub)',
+  'tarkov-zone-map': 'Zone map guides (blog hub)',
 };
 const blogCrumbLabel = blogCrumbLabels[post.slug] ?? 'Blog';
 const breadcrumbs = [
@@ -188,8 +188,8 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
                     html={linkify(block.text)}
                     href={resolveCheckoutHref(block.href)}
                     buyLabel={
-                      post.slug === 'tarkov-offline-practice'
-                        ? 'Checkout after practice mode drills (CTA)'
+                      post.slug === 'tarkov-training-grounds-practice'
+                        ? 'Shop Escape from Tarkov cheats (CTA)'
                         : post.slug === 'tarkov-stream-proof'
                           ? 'Buy stream-proof tier (inline CTA)'
                           : undefined
@@ -208,10 +208,10 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
                   ? 'Checkout after anti-cheat fix'
                   : post.slug === 'tarkov-stream-proof'
                     ? 'Buy stream-proof Escape from Tarkov tier'
-                    : post.slug === 'tarkov-offline-practice'
-                      ? 'Checkout after practice mode drills'
-                      : post.slug === 'tarkov-radar'
-                        ? 'Buy Lite radar cheat tier'
+                    : post.slug === 'tarkov-training-grounds-practice'
+                      ? 'Shop Escape from Tarkov cheats'
+                      : post.slug === 'tarkov-zone-map'
+                        ? 'Buy Lite map overlay tier'
                         : 'Buy EFT Cheats'
               }
               <Icon name="arrowRight" size={17} />
@@ -222,9 +222,9 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
                   ? 'Open Escape from Tarkov product catalog'
                   : post.slug === 'tarkov-stream-proof'
                     ? 'Open stream-safe product hub'
-                    : post.slug === 'tarkov-offline-practice'
+                    : post.slug === 'tarkov-training-grounds-practice'
                       ? 'Compare Lite and Pro tiers'
-                      : post.slug === 'tarkov-radar'
+                      : post.slug === 'tarkov-zone-map'
                         ? 'Product catalog'
                         : 'View products'
               }
@@ -235,10 +235,10 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
                   ? 'Browse patch-day guides'
                   : post.slug === 'tarkov-stream-proof'
                     ? 'More OBS setup guides'
-                    : post.slug === 'tarkov-offline-practice'
-                      ? 'More practice mode guides'
-                      : post.slug === 'tarkov-radar'
-                        ? 'Radar & ESP guides'
+                    : post.slug === 'tarkov-training-grounds-practice'
+                      ? 'More buy & checkout guides'
+                      : post.slug === 'tarkov-zone-map'
+                        ? 'Map overlay & ESP guides'
                         : 'More guides'
               }
               <Icon name="arrowRight" size={17} />

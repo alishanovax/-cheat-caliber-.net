@@ -58,20 +58,20 @@ const streamProofProductLinks: { label: string; href: string; icon: IconName }[]
   { label: 'UGC appeals (stream)', href: productPath('ugc'), icon: 'sidebarUgc' },
 ];
 
-const practiceLobbyProductLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'Practice hub — Escape from Tarkov products', href: ROUTES.products, icon: 'sidebarHub' },
-  { label: 'Elite tier (post-drill competitive)', href: ROUTES.productsElite, icon: 'sidebarElite' },
-  { label: 'Loadout tools (practice sidebar)', href: productPath('unlock-all'), icon: 'sidebarSkin' },
-  { label: 'HWID spoofer (practice guide)', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
-  { label: 'UGC workspace (practice)', href: productPath('ugc'), icon: 'sidebarUgc' },
+const tierBuyGuideProductLinks: { label: string; href: string; icon: IconName }[] = [
+  { label: 'Escape from Tarkov cheats shop', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'Elite tier — loot & automation', href: ROUTES.productsElite, icon: 'sidebarElite' },
+  { label: 'Loadout tools', href: productPath('unlock-all'), icon: 'sidebarSkin' },
+  { label: 'HWID spoofer', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
+  { label: 'UGC workspace', href: productPath('ugc'), icon: 'sidebarUgc' },
 ];
 
-const radarGuideProductLinks: { label: string; href: string; icon: IconName }[] = [
-  { label: 'Escape from Tarkov cheats shop (radar sidebar)', href: ROUTES.products, icon: 'sidebarHub' },
-  { label: 'Elite tier (radar + aimbot)', href: ROUTES.productsElite, icon: 'sidebarElite' },
-  { label: 'Loadout tools (radar guide)', href: productPath('unlock-all'), icon: 'sidebarSkin' },
-  { label: 'HWID spoofer (radar setup)', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
-  { label: 'UGC appeals (radar)', href: productPath('ugc'), icon: 'sidebarUgc' },
+const zoneMapGuideProductLinks: { label: string; href: string; icon: IconName }[] = [
+  { label: 'Escape from Tarkov cheats shop (zone map sidebar)', href: ROUTES.products, icon: 'sidebarHub' },
+  { label: 'Elite tier (map overlay + aimbot)', href: ROUTES.productsElite, icon: 'sidebarElite' },
+  { label: 'Loadout tools (zone map guide)', href: productPath('unlock-all'), icon: 'sidebarSkin' },
+  { label: 'HWID spoofer (zone map setup)', href: productPath('hwid-spoofer'), icon: 'sidebarHwid' },
+  { label: 'UGC appeals (zone map)', href: productPath('ugc'), icon: 'sidebarUgc' },
 ];
 
 const productLinks =
@@ -79,10 +79,10 @@ const productLinks =
     ? eacGuideProductLinks
     : post.slug === 'tarkov-stream-proof'
       ? streamProofProductLinks
-      : post.slug === 'tarkov-offline-practice'
-        ? practiceLobbyProductLinks
-        : post.slug === 'tarkov-radar'
-          ? radarGuideProductLinks
+      : post.slug === 'tarkov-training-grounds-practice'
+        ? tierBuyGuideProductLinks
+        : post.slug === 'tarkov-zone-map'
+          ? zoneMapGuideProductLinks
           : defaultProductLinks;
 ---
 
@@ -175,10 +175,10 @@ const productLinks =
             ? 'Start Escape from Tarkov checkout'
             : post.slug === 'tarkov-stream-proof'
               ? 'Checkout stream-proof tier'
-              : post.slug === 'tarkov-offline-practice'
-                ? 'Checkout after range drills'
-                : post.slug === 'tarkov-radar'
-                  ? 'Checkout Lite radar tier'
+              : post.slug === 'tarkov-training-grounds-practice'
+                ? 'Shop Escape from Tarkov cheats'
+                : post.slug === 'tarkov-zone-map'
+                  ? 'Checkout Lite map overlay tier'
                   : 'Buy EFT Cheats'
         }
       </span>

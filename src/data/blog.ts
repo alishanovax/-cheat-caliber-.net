@@ -59,8 +59,19 @@ export function getFeaturedBlogPosts(limit = 3) {
   return featured ? [featured, ...rest].slice(0, limit) : blogPosts.slice(0, limit);
 }
 
-/** Homepage blog strip — spread dates across the year (not only the newest month). */
+/** Homepage blog strip — transactional/commercial picks first. */
+const HOMEPAGE_COMMERCIAL_SLUGS = [
+  'buy-escape-from-tarkov-cheats',
+  'tarkov-lite-vs-pro',
+  'tarkov-aimbot-competitive',
+] as const;
+
 export function getHomepageBlogPosts(limit = 3) {
+  const commercial = HOMEPAGE_COMMERCIAL_SLUGS.map((slug) => blogPosts.find((p) => p.slug === slug)).filter(
+    (p): p is (typeof blogPosts)[0] => Boolean(p),
+  );
+  if (commercial.length >= limit) return commercial.slice(0, limit);
+
   if (blogPosts.length <= limit) return [...blogPosts];
   const sorted = [...blogPosts].sort(
     (a, b) => getBlogPostTimestamp(b.date) - getBlogPostTimestamp(a.date),
@@ -71,8 +82,8 @@ export function getHomepageBlogPosts(limit = 3) {
       : sorted.map((_, i) => i).filter((_, i) => i % Math.ceil(sorted.length / limit) === 0);
   const picked = indices.slice(0, limit).map((i) => sorted[i]!);
   const unique = new Map<string, (typeof blogPosts)[0]>();
-  for (const post of picked) unique.set(post.slug, post);
-  return [...unique.values()];
+  for (const post of [...commercial, ...picked]) unique.set(post.slug, post);
+  return [...unique.values()].slice(0, limit);
 }
 
 export function getRelatedBlogPosts(slug: string, limit = 3) {

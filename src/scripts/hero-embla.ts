@@ -1,4 +1,4 @@
-export const HERO_AUTOPLAY_MS = 4800;
+export const HERO_AUTOPLAY_MS = 3400;
 
 type EmblaApi = {
   selectedScrollSnap: () => number;
@@ -94,7 +94,7 @@ async function initHeroCarousels(root: ParentNode = document) {
     });
 
     const instance = createCarousel(carouselRoot, {
-      opts: { loop: true, align: 'start', duration: 20 },
+      opts: { loop: true, align: 'start', duration: 14 },
       plugins: [autoplay],
     });
 

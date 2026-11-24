@@ -56,7 +56,7 @@ const SLUG_REPLACEMENTS = [
   ['tarkov-practice-lobby', 'csgo-deathmatch-practice'],
   ['tarkov-training-tips', 'csgo-training-tips'],
   ['tarkov-esp-setup', 'csgo-esp-setup'],
-  ['tarkov-radar', 'csgo-radar'],
+  ['tarkov-zone-map', 'csgo-radar'],
   ['tarkov-aimbot-raids', 'csgo-aimbot-competitive'],
   ['tarkov-aimbot-combat', 'csgo-aimbot-combat'],
   ['tarkov-stream-proof', 'csgo-stream-proof'],

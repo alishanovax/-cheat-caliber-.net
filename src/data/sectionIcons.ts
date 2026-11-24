@@ -3,12 +3,12 @@ import type { IconName } from '../components/icons/types';
 export const featureIcons: Record<string, IconName> = {
   Scripts: 'stepCrosshair',
   'wall ESP / ESP': 'featureEsp',
-  'Radar & Loot': 'featureRadar',
+  'Map & Loot': 'featureZoneMap',
   'Aimbot': 'featureAimbot',
   'Utility Suite': 'featureUtilitySuite',
   'Loot Assist': 'compareAutoFarm',
   'Stream Proof': 'streamProof',
-  'Radar Cheat': 'compareZoomHack',
+  'Map overlay': 'compareZoomHack',
   'Cloud Config & Updates': 'compareCloudBackup',
 };
 
@@ -19,7 +19,7 @@ export const setupStepIcons: IconName[] = ['acqPackage', 'acqSettings', 'acqChec
 export const toolkitIcons: Record<string, IconName> = {
   Combat: 'toolkitCombat',
   Vision: 'toolkitVision',
-  Radar: 'toolkitRadar',
+  Awareness: 'toolkitZoneMap',
   Weapons: 'toolkitWeapons',
   Movement: 'toolkitMovement',
   Profiles: 'toolkitProfiles',
@@ -44,7 +44,7 @@ export const blogTagIcons: Record<string, IconName> = {
 
 export const heroStatusPills: { icon: IconName; label: string }[] = [
   { icon: 'espActive', label: 'ESP Active' },
-  { icon: 'radarOnline', label: 'Radar Online' },
+  { icon: 'mapOnline', label: 'Map Online' },
   { icon: 'seasonBuild', label: 'Season Build' },
   { icon: 'undetected', label: 'Undetected' },
   { icon: 'softAim', label: 'Soft Aim Ready' },
@@ -52,7 +52,7 @@ export const heroStatusPills: { icon: IconName; label: string }[] = [
   { icon: 'streamProof', label: 'Stream Proof' },
   { icon: 'lootEsp', label: 'Loot ESP' },
   { icon: 'skeletonEsp', label: 'Skeleton ESP' },
-  { icon: 'uavRadar', label: 'UAV Radar' },
+  { icon: 'uavOverlay', label: 'UAV overlay' },
   { icon: 'mapHack', label: 'wall ESP' },
   { icon: 'support247', label: '24/7 Support' },
   { icon: 'instantDelivery', label: 'Instant Delivery' },

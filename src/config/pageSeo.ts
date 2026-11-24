@@ -16,7 +16,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
     title: 'EFT Cheats — PC aimbot, ESP & setup guides',
     description:
-      'Compare Escape from Tarkov PC cheat tiers, read setup guides, and check out secure options — aimbot, PMC and scav ESP, configs and support at cheatseft.org.',
+      'Shop Escape from Tarkov cheats for ESP, aimbot, and advanced gameplay features. Explore available tools and features for EFT players.',
     h1: 'EFT Cheats',
   },
   '/products/tarkov/': {
@@ -26,9 +26,9 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
     h1: 'Escape from Tarkov PC cheats — compare tiers and utilities',
   },
   '/products/tarkov/lite/': {
-    title: 'Lite Cheats | Player ESP, Radar & Loot Timers',
+    title: 'Lite Cheats | Player ESP, Map & Loot Timers',
     description:
-      'Lite cheats for PC — PMC and scav ESP, bomb-site markers, round timers and radar without aimbot. Stream-proof overlay and competitive presets on cheatseft.org.',
+      'Lite cheats for PC — PMC and scav ESP, bomb-site markers, round timers and map overlay without aimbot. Stream-proof overlay and competitive presets on cheatseft.org.',
   },
   '/products/tarkov/pro/': {
     title: 'Pro Cheats | Aimbot, Smooth Aim & Wall ESP',
@@ -62,10 +62,10 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
     h1: 'Compare Escape from Tarkov utilities — HWID, UGC & loadout tools',
   },
   '/blog/': {
-    title: 'Escape from Tarkov guides — aimbot, ESP, tiers & patch days',
+    title: 'Buy Escape from Tarkov cheats — compare tiers & checkout | cheatseft.org',
     description:
-      'Guides for Escape from Tarkov PC cheats: aimbot and ESP setup, Lite vs Pro, practice mode drills, and what to check after patches and anti-cheat updates.',
-    h1: 'Escape from Tarkov cheat guides — setup, tiers and patch checks',
+      'Commercial guides to shop Escape from Tarkov cheats: compare Lite, Pro, and Elite, open secure checkout, and pick aimbot, ESP, and utility tools for EFT.',
+    h1: 'Shop Escape from Tarkov cheats — tier guides & checkout',
   },
   '/forum/': {
     title: 'Escape from Tarkov forum — loader, configs & product discussion',
@@ -76,7 +76,7 @@ export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/faq/': {
     title: 'FAQ — Escape from Tarkov tiers, bans, loader & checkout | cheatseft.org',
     description:
-      'FAQ on Lite, Pro and Elite tiers, aimbot, wall ESP, radar, HWID spoofer, loadout tools, bans and loader setup at cheatseft.org.',
+      'FAQ on Lite, Pro and Elite tiers, aimbot, wall ESP, map overlay, HWID spoofer, loadout tools, bans and loader setup at cheatseft.org.',
     h1: 'FAQ — EFT Cheats tiers, bans, anti-cheat setup, loader help and checkout',
   },
   '/terms/': {
@@ -123,10 +123,15 @@ export function getPageSeoEntry(pathname: string): PageSeoEntry | undefined {
 
 /** Blog post `<title>` / meta description overrides (exact audit phrases). */
 export const BLOG_POST_SEO: Record<string, Partial<PageSeoEntry>> = {
-  'tarkov-radar': {
-    title: 'Escape from Tarkov radar guide — FOV, spacing & team callouts',
+  'tarkov-training-grounds-practice': {
+    title: 'Buy Escape from Tarkov cheats — tier advantages | cheatseft.org',
     description:
-      'Use radar overlays safely in Escape from Tarkov: FOV habits, spacing, and squad callouts for online matches and competitive — guide at cheatseft.org.',
+      'Compare Lite, Pro, and Elite cheat advantages—ESP, aimbot, loot tools—and open secure checkout for Escape from Tarkov on cheatseft.org.',
+  },
+  'tarkov-zone-map': {
+    title: 'Escape from Tarkov zone map guide — FOV, spacing & team callouts',
+    description:
+      'Use map overlays safely in Escape from Tarkov: FOV habits, spacing, and squad callouts for online matches and competitive — guide at cheatseft.org.',
   },
   'tarkov-stream-proof': {
     title: 'Stream-safe overlays — hiding ESP from OBS & capture',
@@ -149,8 +154,9 @@ export const BLOG_POST_PAGE_H1: Record<string, string> = {
     'What the anti-cheat error means — anti-cheat unable to verify Escape from Tarkov (Escape from Tarkov cheats)',
   'tarkov-stream-proof':
     'Stream-Proof Overlay Setup — hide wall ESP and script overlays from OBS (Escape from Tarkov cheats)',
-  'tarkov-offline-practice': 'Practice practice: aim drills before competitive (Escape from Tarkov cheats)',
-  'tarkov-radar': 'Escape from Tarkov radar on PC — FOV habits, spacing and team callouts',
+  'tarkov-training-grounds-practice':
+    'Buy Escape from Tarkov cheats — tier advantages before checkout | cheatseft.org',
+  'tarkov-zone-map': 'Escape from Tarkov map overlay on PC — FOV habits, spacing and team callouts',
 };
 
 export function getBlogPostSeo(slug: string, fallback: PageSeoEntry): PageSeoEntry {

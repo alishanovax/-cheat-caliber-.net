@@ -1,9 +1,9 @@
 /** Server-rendered copy for /escape-from-tarkov-cheats/ (Escape from Tarkov cheats keyword landing). */
 export const tarkovCheatsLanding = {
   h1: 'Escape from Tarkov cheats — checkout when the status banner shows online',
-  keywordH2: 'EFT Cheats: PC aimbot, ESP & radar',
+  keywordH2: 'EFT Cheats: PC aimbot, ESP & map overlay',
   intro:
-    'Escape from Tarkov cheats on this site for PC — aimbot, PMC and Scav ESP, loot radar, skeleton and box overlays, and save/load config profiles. Compare modules on cheatseft.org, then checkout when the status banner shows online.',
+    'Shop Escape from Tarkov cheats for ESP, aimbot, and advanced gameplay features. Explore available tools and features for EFT players, then checkout when the status banner shows online.',
   sections: [
     {
       heading: 'Verified cheat modules',

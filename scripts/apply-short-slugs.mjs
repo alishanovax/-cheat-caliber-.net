@@ -17,7 +17,7 @@ const REPLACEMENTS = [
   ['tarkov-practice-settings-hacks', 'tarkov-practice-settings'],
   ['how-to-buy-escape-from-tarkov-cheats-2026', 'buy-escape-from-tarkov-cheats'],
   ['tarkov-hwid-spoofer-after-ban', 'tarkov-hwid-ban'],
-  ['tarkov-radar-hack-guide', 'tarkov-radar'],
+  ['tarkov-zone-map-hack-guide', 'tarkov-zone-map'],
   ['tarkov-external-loader', 'tarkov-external-loader'],
   ['tarkov-esp-wallhack-setup', 'tarkov-esp-setup'],
   ['tarkov-stream-proof-setup', 'tarkov-stream-proof'],

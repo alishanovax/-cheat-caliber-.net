@@ -93,7 +93,7 @@ const REPLACEMENTS = [
   ['bo7-practice-tips', 'tarkov-offline-practice'],
   ['bo7-training-tips', 'tarkov-training-tips'],
   ['bo7-esp-setup', 'tarkov-esp-setup'],
-  ['bo7-radar', 'tarkov-radar'],
+  ['bo7-radar', 'tarkov-zone-map'],
   ['bo7-aimbot-guide', 'tarkov-aimbot-raids'],
   ['bo7-aimbot-combat', 'tarkov-aimbot-combat'],
   ['bo7-stream-proof', 'tarkov-stream-proof'],

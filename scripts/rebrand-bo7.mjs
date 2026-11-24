@@ -111,7 +111,7 @@ const REPLACEMENTS = [
   ['the Battlestate Games launcher', 'the Call of Duty PC launcher'],
   ['Battlestate Games launcher', 'Call of Duty PC launcher'],
   ['Return to bo7cheats.org homepage', 'Return to bo7cheats.org homepage'],
-  ['RobRun PC — Aimbot, ESP & radar tools', 'Black Ops 7 PC — aimbot, ESP & config tools'],
+  ['RobRun PC — Aimbot, ESP & map overlay tools', 'Black Ops 7 PC — aimbot, ESP & config tools'],
   ['TITLE_PREFIX = \'RobRun Cheats\'', "TITLE_PREFIX = 'Black Ops 7 Cheats'"],
   ['RobRun', 'Black Ops 7'],
   ['robrun-', 'bo7-'],

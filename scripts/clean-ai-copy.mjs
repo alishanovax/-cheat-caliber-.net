@@ -46,7 +46,7 @@ const reps = [
   ],
   [
     'ships a modular external suite for Windows PC competitive—not lobby hack codes. Aimbot tracks targets, loot assist clears POIs, ESP wallhack exposes third-parties, and utility tools like Radar Hack and Loadout Changer round out the toolkit. This is the complete feature map across',
-    'sells external Escape from Tarkov cheats for PC SCAV run. Aimbot, loot assist, ESP wallhack, radar and Loadout Changer. See',
+    'sells external Escape from Tarkov cheats for PC SCAV run. Aimbot, loot assist, ESP wallhack, map overlay and Loadout Changer. See',
   ],
 ];
 

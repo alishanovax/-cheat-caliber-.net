@@ -17,7 +17,7 @@ const REPLACEMENTS = [
   ['ability ESP', 'loot and container ESP'],
   ['Ability ESP', 'Loot and container ESP'],
   ['Hero ESP', 'Player ESP'],
-  ['PMC and scav ESP, loot and container ESP', 'PMC and Scav ESP, loot radar'],
+  ['PMC and scav ESP, loot and container ESP', 'PMC and Scav ESP, loot ESP'],
   ['PMC and scav ESP', 'PMC and Scav ESP'],
   ['Competitive', 'PMC'],
   ['Casual', 'Scav'],
@@ -59,7 +59,7 @@ const REPLACEMENTS = [
   ['Quick Match perspective', 'Customs raid perspective'],
   ['First-person combat with kill feed and minimap.', 'First-person raid with HUD and loot ESP.'],
   ['Practice practice:', 'Offline practice:'],
-  ['round timers and radar', 'raid timers and radar'],
+  ['round timers and map overlay', 'raid timers and map overlay'],
 ];
 
 for (const file of targets) {

@@ -86,7 +86,7 @@ const REPLACEMENTS = [
   ['tarkov-training-tips', 'robrun-training-tips'],
   ['tarkov-offline-practice', 'robrun-practice-tips'],
   ['tarkov-esp-setup', 'robrun-esp-setup'],
-  ['tarkov-radar', 'robrun-radar'],
+  ['tarkov-zone-map', 'robrun-radar'],
   ['tarkov-aimbot-raids', 'robrun-aimbot-guide'],
   ['tarkov-aimbot-combat', 'robrun-aimbot-combat'],
   ['tarkov-stream-proof', 'robrun-stream-proof'],

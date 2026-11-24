@@ -23,7 +23,7 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
 export function websiteSchema(input?: { description?: string }) {
   const description =
     input?.description?.trim() ||
-    'Escape from Tarkov cheats for PC — aimbot, PMC and scav ESP, guides and tier comparisons on cheatseft.org.';
+    'Shop Escape from Tarkov cheats for ESP, aimbot, and advanced gameplay features. Explore available tools and features for EFT players.';
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',

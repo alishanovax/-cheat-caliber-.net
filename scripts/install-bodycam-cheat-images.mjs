@@ -1,6 +1,6 @@
 /**
- * Install the four approved Marvel Rivals hack screenshots into public/images/.
- * Run: node scripts/install-r6-hack-images.mjs
+ * Install the four approved Escape from Tarkov hack screenshots into public/images/.
+ * Run: node scripts/install-tarkov-hack-images.mjs
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -28,10 +28,10 @@ function findAsset(namePart) {
 }
 
 const TARGETS = [
-  { id: 'image-f47b9287', out: 'r6-hack-aimbot-esp.png' },
-  { id: 'image-8c08f8ce', out: 'r6-hack-esp-wallhack.png' },
-  { id: 'image-af852abe', out: 'r6-hack-gameplay.jpg' },
-  { id: 'image-77a0ce29', out: 'r6-hack-esp-indoor.png' },
+  { id: 'image-f47b9287', out: 'tarkov-hack-aimbot-esp.png' },
+  { id: 'image-8c08f8ce', out: 'tarkov-hack-esp-wallhack.png' },
+  { id: 'image-af852abe', out: 'tarkov-hack-gameplay.jpg' },
+  { id: 'image-77a0ce29', out: 'tarkov-hack-esp-indoor.png' },
 ];
 
 const imagesRoot = path.join(root, 'public', 'images');

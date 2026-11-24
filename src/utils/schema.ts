@@ -23,11 +23,11 @@ export function breadcrumbSchema(items: BreadcrumbItem[]) {
 export function websiteSchema(input?: { description?: string }) {
   const description =
     input?.description?.trim() ||
-    'Marvel Rivals cheats for PC — aimbot, hero ESP, guides and tier comparisons on rivalscheat.net.';
+    'Escape from Tarkov cheats for PC — aimbot, PMC and scav ESP, guides and tier comparisons on cheatseft.org.';
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: 'Rivals Cheat',
+    name: 'EFT Cheats',
     url: `${SITE_ORIGIN}/`,
     inLanguage: 'en-US',
     description,
@@ -40,7 +40,7 @@ export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Rivals Cheat',
+    name: 'EFT Cheats',
     url: `${SITE_ORIGIN}/`,
     logo: `${SITE_ORIGIN}/logo.svg`,
     email: SUPPORT_EMAIL,
@@ -68,7 +68,7 @@ export function collectionPageSchema(input: { name: string; description: string;
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Rivals Cheat',
+      name: 'EFT Cheats',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -84,7 +84,7 @@ export function webPageSchema(input: { name: string; description: string; url: s
     inLanguage: 'en-US',
     isPartOf: {
       '@type': 'WebSite',
-      name: 'Rivals Cheat',
+      name: 'EFT Cheats',
       url: `${SITE_ORIGIN}/`,
     },
   };
@@ -133,7 +133,7 @@ export function discussionForumPostingSchema(input: {
     url: canonicalUrl(input.url),
     author: { '@type': 'Person', name: input.author },
     commentCount: input.comments,
-    isPartOf: { '@type': 'CollectionPage', name: 'Rivals Cheat Forum', url: canonicalUrl('/forum/') },
+    isPartOf: { '@type': 'CollectionPage', name: 'EFT Cheats Forum', url: canonicalUrl('/forum/') },
   };
 }
 
@@ -158,7 +158,7 @@ export function productSchema(input: {
     sku: input.sku ?? input.url.replace(/\//g, '-'),
     brand: {
       '@type': 'Brand',
-      name: 'Rivals Cheat',
+      name: 'EFT Cheats',
     },
     ...(input.image ? { image: absoluteAssetUrl(input.image) } : {}),
     offers: {
@@ -167,7 +167,7 @@ export function productSchema(input: {
       availability: 'https://schema.org/InStock',
       seller: {
         '@type': 'Organization',
-        name: 'Rivals Cheat',
+        name: 'EFT Cheats',
       },
     },
   };
@@ -210,11 +210,11 @@ export function articleSchema(input: {
     inLanguage: 'en-US',
     author: {
       '@type': 'Organization',
-      name: 'Rivals Cheat',
+      name: 'EFT Cheats',
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Rivals Cheat',
+      name: 'EFT Cheats',
       logo: {
         '@type': 'ImageObject',
         url: `${SITE_ORIGIN}/logo.svg`,

@@ -1,5 +1,5 @@
 /**
- * R6 Cheat → Rivals Cheat (Marvel Rivals) rebrand for rivalscheat.net
+ * R6 Cheat → EFT Cheats (Escape from Tarkov) rebrand for cheatseft.org
  * Run from project root: node scripts/rebrand-marvel-rivals.mjs
  */
 import fs from 'node:fs';
@@ -26,52 +26,52 @@ const TEXT_EXTS = new Set([
 const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.seo-baseline', '_template']);
 
 const MARVEL_CHECKOUT =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fmarvel-rivals&sf=zadeyo';
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo';
 
-/** Ordered longest-first replacements. Path slugs (/r6/, blog/r6-*) are preserved. */
+/** Ordered longest-first replacements. Path slugs (/r6/, blog/tarkov-*) are preserved. */
 const REPLACEMENTS = [
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fr6-faceit-cheats', MARVEL_CHECKOUT],
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fr6-faceit', MARVEL_CHECKOUT],
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fr6-legends', MARVEL_CHECKOUT],
-  ['%2Fproducts%2Fr6-faceit', '%2Fproducts%2Fmarvel-rivals'],
-  ['%2Fproducts%2Fr6-legends', '%2Fproducts%2Fmarvel-rivals'],
-  ['%2Fproducts%2Frainbow-six-siege-hacks', '%2Fproducts%2Fmarvel-rivals'],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Ftarkov-faceit-cheats', MARVEL_CHECKOUT],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Ftarkov-faceit', MARVEL_CHECKOUT],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Ftarkov-legends', MARVEL_CHECKOUT],
+  ['%2Fproducts%2Ftarkov-faceit', '%2Fproducts%2Fescape-from-tarkov'],
+  ['%2Fproducts%2Ftarkov-legends', '%2Fproducts%2Fescape-from-tarkov'],
+  ['%2Fproducts%2Frainbow-six-siege-hacks', '%2Fproducts%2Fescape-from-tarkov'],
 
-  ['r6-cheat.com', 'rivalscheat.net'],
-  ['r6-cheat-r-2026', 'rivals-cheat-m-2026'],
+  ['tarkov-cheat.com', 'cheatseft.org'],
+  ['tarkov-cheat-r-2026', 'rivals-cheat-m-2026'],
 
-  ["TITLE_PREFIX = 'R6 Cheat'", "TITLE_PREFIX = 'Rivals Cheat'"],
-  ["FAVICON_VERSION = 'r6-cheat-r-2026'", "FAVICON_VERSION = 'rivals-cheat-m-2026'"],
-  ["export const SITE_DOMAIN = 'r6-cheat.com'", "export const SITE_DOMAIN = 'rivalscheat.net'"],
+  ["TITLE_PREFIX = 'R6 Cheat'", "TITLE_PREFIX = 'EFT Cheats'"],
+  ["FAVICON_VERSION = 'tarkov-cheat-r-2026'", "FAVICON_VERSION = 'rivals-cheat-m-2026'"],
+  ["export const SITE_DOMAIN = 'tarkov-cheat.com'", "export const SITE_DOMAIN = 'cheatseft.org'"],
 
-  ['site: \'https://r6-cheat.com\'', "site: 'https://rivalscheat.net'"],
+  ['site: \'https://tarkov-cheat.com\'', "site: 'https://cheatseft.org'"],
 
-  ['Tom Clancy\'s Rainbow Six Siege', 'Marvel Rivals'],
-  ['Tom Clancys Rainbow Six Siege', 'Marvel Rivals'],
-  ['Rainbow Six Siege', 'Marvel Rivals'],
-  ['rainbow six siege', 'Marvel Rivals'],
-  ['R6 Siege', 'Marvel Rivals'],
+  ['Tom Clancy\'s Rainbow Six Siege', 'Escape from Tarkov'],
+  ['Tom Clancys Rainbow Six Siege', 'Escape from Tarkov'],
+  ['Rainbow Six Siege', 'Escape from Tarkov'],
+  ['rainbow six siege', 'Escape from Tarkov'],
+  ['R6 Siege', 'Escape from Tarkov'],
   ['BattlEye', 'anti-cheat'],
   ['battleye', 'anti-cheat'],
 
-  ['R6 Cheat', 'Rivals Cheat'],
-  ['R6 cheat', 'Marvel Rivals cheat'],
-  ['R6 cheats', 'Marvel Rivals cheats'],
-  ['R6 Hacks', 'Rivals Cheat'],
-  ['R6 Hack', 'Rivals Cheat'],
-  ['R6 hacks', 'Marvel Rivals cheats'],
-  ['R6 hack', 'Marvel Rivals cheat'],
+  ['R6 Cheat', 'EFT Cheats'],
+  ['R6 cheat', 'Escape from Tarkov cheat'],
+  ['R6 cheats', 'Escape from Tarkov cheats'],
+  ['R6 Hacks', 'EFT Cheats'],
+  ['R6 Hack', 'EFT Cheats'],
+  ['R6 hacks', 'Escape from Tarkov cheats'],
+  ['R6 hack', 'Escape from Tarkov cheat'],
 
-  ['R6 aimbot', 'Marvel Rivals aimbot'],
-  ['R6 ESP', 'Marvel Rivals ESP'],
-  ['R6 gadget ESP', 'Marvel Rivals ability ESP'],
-  ['R6 recoil control', 'Marvel Rivals recoil control'],
-  ['R6 compatibility', 'Marvel Rivals compatibility'],
+  ['R6 aimbot', 'Escape from Tarkov aimbot'],
+  ['R6 ESP', 'Escape from Tarkov ESP'],
+  ['R6 gadget ESP', 'Escape from Tarkov ability ESP'],
+  ['R6 recoil control', 'Escape from Tarkov recoil control'],
+  ['R6 compatibility', 'Escape from Tarkov compatibility'],
   ['R6 Lite', 'Lite'],
   ['R6 Pro', 'Pro'],
   ['R6 Elite', 'Elite'],
 
-  ['operator ESP', 'hero ESP'],
+  ['operator ESP', 'PMC and scav ESP'],
   ['Operator ESP', 'Hero ESP'],
   ['gadget ESP', 'ability ESP'],
   ['Gadget ESP', 'Ability ESP'],
@@ -83,32 +83,32 @@ const REPLACEMENTS = [
   ['defuse kits', 'health packs'],
   ['Defuse kits', 'Health packs'],
 
-  ['Return to r6-cheat.com homepage', 'Return to rivalscheat.net homepage'],
-  ['on r6-cheat.com', 'on rivalscheat.net'],
-  ['r6-cheat.com before', 'rivalscheat.net before'],
+  ['Return to tarkov-cheat.com homepage', 'Return to cheatseft.org homepage'],
+  ['on tarkov-cheat.com', 'on cheatseft.org'],
+  ['tarkov-cheat.com before', 'cheatseft.org before'],
 
-  ['Rainbow Six Siege on PC', 'Marvel Rivals on PC'],
-  ['Rainbow Six Siege cheats', 'Marvel Rivals cheats'],
-  ['Rainbow Six Siege cheat', 'Marvel Rivals cheat'],
-  ['Rainbow Six Siege PC', 'Marvel Rivals PC'],
-  ['Rainbow Six Siege multiplayer', 'Marvel Rivals multiplayer'],
-  ['Rainbow Six Siege matches', 'Marvel Rivals matches'],
-  ['Rainbow Six Siege catalog', 'Marvel Rivals catalog'],
-  ['Rainbow Six Siege product', 'Marvel Rivals product'],
+  ['Rainbow Six Siege on PC', 'Escape from Tarkov on PC'],
+  ['Rainbow Six Siege cheats', 'Escape from Tarkov cheats'],
+  ['Rainbow Six Siege cheat', 'Escape from Tarkov cheat'],
+  ['Rainbow Six Siege PC', 'Escape from Tarkov PC'],
+  ['Rainbow Six Siege multiplayer', 'Escape from Tarkov multiplayer'],
+  ['Rainbow Six Siege matches', 'Escape from Tarkov matches'],
+  ['Rainbow Six Siege catalog', 'Escape from Tarkov catalog'],
+  ['Rainbow Six Siege product', 'Escape from Tarkov product'],
 
-  ['aria-label="R6 Cheat"', 'aria-label="Rivals Cheat"'],
-  ['>R</text>', '>M</text>'],
-  ['R6 <span class="site-brand__pill-accent">Cheat</span>', 'Rivals <span class="site-brand__pill-accent">Cheat</span>'],
-  ['R6 <span class="site-brand__title-accent">Cheat</span>', 'Rivals <span class="site-brand__title-accent">Cheat</span>'],
+  ['aria-label="R6 Cheat"', 'aria-label="EFT Cheats"'],
+  ['>R</text>', '>E</text>'],
+  ['R6 <span class="site-brand__pill-accent">Cheat</span>', 'EFT <span class="site-brand__pill-accent">Cheats</span>'],
+  ['R6 <span class="site-brand__title-accent">Cheat</span>', 'EFT <span class="site-brand__title-accent">Cheats</span>'],
 
-  ['Rainbow Six Siege cheats guide:', 'Marvel Rivals cheats guide:'],
-  ['Rainbow Six Siege · PC', 'Marvel Rivals · PC'],
+  ['Rainbow Six Siege cheats guide:', 'Escape from Tarkov cheats guide:'],
+  ['Rainbow Six Siege · PC', 'Escape from Tarkov · PC'],
   ['Ranked', 'Competitive'],
   ['ranked', 'competitive'],
 
-  ['name: \'R6 Cheat\'', "name: 'Rivals Cheat'"],
-  ['domain: \'r6-cheat.com\'', "domain: 'rivalscheat.net'"],
-  ['title: \'R6 Cheat\'', "title: 'Rivals Cheat'"],
+  ['name: \'R6 Cheat\'', "name: 'EFT Cheats'"],
+  ['domain: \'tarkov-cheat.com\'', "domain: 'cheatseft.org'"],
+  ['title: \'R6 Cheat\'', "title: 'EFT Cheats'"],
 ];
 
 function walk(dir, out = []) {
@@ -147,8 +147,8 @@ for (const file of files) {
 const checkoutFile = path.join(root, 'src', 'config', 'checkout-redirects.mjs');
 let checkout = fs.readFileSync(checkoutFile, 'utf8');
 checkout = checkout.replace(
-  /export const R6_CHECKOUT_URL\s*=\s*'[^']*'/,
-  `export const R6_CHECKOUT_URL =\n  '${MARVEL_CHECKOUT}'`,
+  /export const TARKOV_CHECKOUT_URL\s*=\s*'[^']*'/,
+  `export const TARKOV_CHECKOUT_URL =\n  '${MARVEL_CHECKOUT}'`,
 );
 fs.writeFileSync(checkoutFile, checkout);
 console.log('patched checkout-redirects.mjs');

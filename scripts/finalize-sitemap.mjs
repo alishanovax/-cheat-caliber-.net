@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { resolveDistDir } from './dist-dir.mjs';
 
-const SITE = 'https://rivalscheat.net';
+const SITE = 'https://cheatseft.org';
 const dist = resolveDistDir();
 const publicDir = path.join(path.dirname(dist), 'public');
 
@@ -68,7 +68,7 @@ function normalizeUrl(loc) {
     return null;
   }
   if (url.protocol !== 'https:') url.protocol = 'https:';
-  url.hostname = 'rivalscheat.net';
+  url.hostname = 'cheatseft.org';
   url.hash = '';
   url.search = '';
   let pathname = url.pathname;

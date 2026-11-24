@@ -60,11 +60,11 @@ export function pageTitle(keyword: string, brand = t.site.name): string {
   return `${trimmed}${suffix}`;
 }
 
-/** Keep meta descriptions clear about Marvel Rivals cheats for SERP snippets. */
+/** Keep meta descriptions clear about Escape from Tarkov cheats for SERP snippets. */
 export function cheatMetaDescription(text: string): string {
   const trimmed = text.trim();
   if (/mw4\s*cheat/i.test(trimmed)) return trimmed;
-  return `Marvel Rivals cheats guide: ${trimmed}`;
+  return `Escape from Tarkov cheats guide: ${trimmed}`;
 }
 
 export const DEFAULT_OG_IMAGE_WIDTH = 1200;

@@ -36,10 +36,10 @@ const REPLACEMENTS = [
   ['products/fortnite-hacks', 'products/bodycam-hacks'],
   ['https://zadeyo.com/go/QRH?to=%2Fproducts%2Ffortnite', 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Frainbow-six-siege-cheats'],
   ['https://zadeyo.com/products/fortnite', 'https://zadeyo.com/products/bodycam'],
-  ['%2Fproducts%2Ffortnite', '%2Fproducts%2Fmarvel-rivals'],
+  ['%2Fproducts%2Ffortnite', '%2Fproducts%2Fescape-from-tarkov'],
   ['/products/fortnite', '/products/bodycam'],
-  ['/go/r6/', '/go/r6/'],
-  ['/go/r6', '/go/r6'],
+  ['/go/tarkov/', '/go/tarkov/'],
+  ['/go/tarkov', '/go/tarkov'],
 
   ["checkoutPath('fortnite')", "checkoutPath('bodycam')"],
   ['checkoutPath("fortnite")', 'checkoutPath("bodycam")'],

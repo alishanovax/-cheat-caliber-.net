@@ -1,5 +1,5 @@
 /**
- * bo7cheats.org template → rivalscheat.net (Marvel Rivals)
+ * bo7cheats.org template → cheatseft.org (Escape from Tarkov)
  * Run: node scripts/setup-cheatapex-from-bo7.mjs
  */
 import fs from 'node:fs';
@@ -8,7 +8,7 @@ import path from 'node:path';
 const root = path.resolve(import.meta.dirname, '..');
 
 const APEX_CHECKOUT =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fmarvel-rivals&sf=zadeyo';
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo';
 
 const APEX_IMAGE_URLS = [
   'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/apex/05c202fe-8171-4881-bc3a-b25833919850/1794003238685-a4vmq5-apex1.webp',
@@ -19,11 +19,11 @@ const APEX_IMAGE_URLS = [
 ];
 
 const IMAGE_ALTS = [
-  'Marvel Rivals squad combat screenshot with HUD on PC',
-  'Marvel Rivals Competitive firefight with full overlay on PC',
-  'Marvel Rivals third-person team fight on Oregon-style map on PC',
-  'Marvel Rivals in-match view with loot and zone pressure on PC',
-  'Marvel Rivals Legends squad fight with tactical overlays on PC',
+  'Escape from Tarkov squad combat screenshot with HUD on PC',
+  'Escape from Tarkov Competitive firefight with full overlay on PC',
+  'Escape from Tarkov third-person team fight on Oregon-style map on PC',
+  'Escape from Tarkov in-match view with loot and zone pressure on PC',
+  'Escape from Tarkov Legends squad fight with tactical overlays on PC',
 ];
 
 const TEXT_EXTS = new Set([
@@ -50,83 +50,83 @@ const SKIP_FILES = new Set(['setup-cheatapex-from-bo7.mjs', 'rebrand-bo7.mjs', '
 const REPLACEMENTS = [
   ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fblack-ops-7', APEX_CHECKOUT],
   ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fbo7', APEX_CHECKOUT],
-  ['%2Fproducts%2Fblack-ops-7', '%2Fproducts%2Fmarvel-rivals'],
-  ['%2Fproducts%2Fbo7', '%2Fproducts%2Fmarvel-rivals'],
-  ['https://bo7cheats.org', 'https://rivalscheat.net'],
-  ['bo7cheats.org', 'rivalscheat.net'],
-  ['bo7cheats-org', 'r6-cheat-com'],
+  ['%2Fproducts%2Fblack-ops-7', '%2Fproducts%2Fescape-from-tarkov'],
+  ['%2Fproducts%2Fbo7', '%2Fproducts%2Fescape-from-tarkov'],
+  ['https://bo7cheats.org', 'https://cheatseft.org'],
+  ['bo7cheats.org', 'cheatseft.org'],
+  ['bo7cheats-org', 'cheatseft-org'],
   ['bo7cheats-b-2026', 'rivals-cheat-m-2026'],
   ['bo7cheats-forum-vote:', 'cheatapex-forum-vote:'],
-  ['bo7CheatsLanding', 'r6CheatsLanding'],
-  ['zadeyoBo7ProductSeo', 'zadeyoR6ProductSeo'],
-  ['ZADEYO_BO7_CHECKOUT_URL', 'ZADEYO_R6_CHECKOUT_URL'],
-  ['BO7_CHECKOUT_URL', 'R6_CHECKOUT_URL'],
-  ['/bo7-cheats/', '/r6-cheats/'],
-  ['/bo7-cheats', '/r6-cheats'],
-  ['bo7-cheats', 'r6-cheats'],
-  ['/products/bo7/', '/products/r6/'],
-  ['/products/bo7', '/products/r6'],
-  ['/go/bo7/', '/go/r6/'],
-  ['/go/bo7', '/go/r6'],
-  ["checkoutPath('bo7')", "checkoutPath('r6')"],
-  ['checkoutPath("bo7")', 'checkoutPath("r6")'],
-  ["product: 'bo7'", "product: 'r6'"],
-  ['  bo7:', '  r6:'],
-  ['return CHECKOUT.bo7;', 'return CHECKOUT.r6;'],
-  ["PRIMARY_CHECKOUT_PATH = checkoutPath('bo7')", "PRIMARY_CHECKOUT_PATH = checkoutPath('r6')"],
+  ['bo7CheatsLanding', 'tarkovCheatsLanding'],
+  ['zadeyoBo7ProductSeo', 'zadeyoTarkovProductSeo'],
+  ['ZADEYO_BO7_CHECKOUT_URL', 'ZADEYO_TARKOV_CHECKOUT_URL'],
+  ['BO7_CHECKOUT_URL', 'TARKOV_CHECKOUT_URL'],
+  ['/bo7-cheats/', '/escape-from-tarkov-cheats/'],
+  ['/bo7-cheats', '/escape-from-tarkov-cheats'],
+  ['bo7-cheats', 'escape-from-tarkov-cheats'],
+  ['/products/bo7/', '/products/tarkov/'],
+  ['/products/bo7', '/products/tarkov'],
+  ['/go/bo7/', '/go/tarkov/'],
+  ['/go/bo7', '/go/tarkov'],
+  ["checkoutPath('bo7')", "checkoutPath('tarkov')"],
+  ['checkoutPath("bo7")', 'checkoutPath("tarkov")'],
+  ["product: 'bo7'", "product: 'tarkov'"],
+  ['  bo7:', '  tarkov:'],
+  ['return CHECKOUT.bo7;', 'return CHECKOUT.tarkov;'],
+  ["PRIMARY_CHECKOUT_PATH = checkoutPath('bo7')", "PRIMARY_CHECKOUT_PATH = checkoutPath('tarkov')"],
   ["CheckoutProduct = 'bo7'", "CheckoutProduct = 'apex'"],
-  ["_product: CheckoutProduct = 'bo7'", "_product: CheckoutProduct = 'r6'"],
-  ["PRODUCT_BASE = '/products/bo7/'", "PRODUCT_BASE = '/products/r6/'"],
-  ['Black Ops 7 <span class="site-brand__pill-accent">Cheats</span>', 'Marvel Rivals <span class="site-brand__pill-accent">Cheats</span>'],
-  ['Black Ops 7 <span class="site-brand__title-accent">Cheats</span>', 'Marvel Rivals <span class="site-brand__title-accent">Cheats</span>'],
-  ['Black Ops 7 Cheats', 'Rivals Cheat'],
-  ['Black Ops 7 cheats', 'Marvel Rivals cheats'],
-  ['Black Ops 7 cheat', 'Marvel Rivals cheat'],
+  ["_product: CheckoutProduct = 'bo7'", "_product: CheckoutProduct = 'tarkov'"],
+  ["PRODUCT_BASE = '/products/bo7/'", "PRODUCT_BASE = '/products/tarkov/'"],
+  ['Black Ops 7 <span class="site-brand__pill-accent">Cheats</span>', 'Escape from Tarkov <span class="site-brand__pill-accent">Cheats</span>'],
+  ['Black Ops 7 <span class="site-brand__title-accent">Cheats</span>', 'Escape from Tarkov <span class="site-brand__title-accent">Cheats</span>'],
+  ['Black Ops 7 Cheats', 'EFT Cheats'],
+  ['Black Ops 7 cheats', 'Escape from Tarkov cheats'],
+  ['Black Ops 7 cheat', 'Escape from Tarkov cheat'],
   ['Black Ops 7 Lite', 'Lite'],
   ['Black Ops 7 Pro', 'Pro'],
   ['Black Ops 7 Elite', 'Elite'],
   ['/blog/bo7-', '/blog/apex-'],
   ['slug: "bo7-', 'slug: "apex-'],
   ["slug: 'bo7-", "slug: 'apex-"],
-  ['buy-bo7-cheats', 'buy-r6-cheats'],
-  ['bo7-lite-vs-pro', 'r6-lite-vs-pro'],
-  ['bo7-practice-tips', 'r6-training-grounds-practice'],
-  ['bo7-training-tips', 'r6-training-tips'],
-  ['bo7-esp-setup', 'r6-esp-setup'],
-  ['bo7-radar', 'r6-radar'],
-  ['bo7-aimbot-guide', 'r6-aimbot-competitive'],
-  ['bo7-aimbot-combat', 'r6-aimbot-combat'],
-  ['bo7-stream-proof', 'r6-stream-proof'],
-  ['bo7-elite-tier', 'r6-elite-tier'],
-  ['bo7-cheat-features', 'r6-cheat-features'],
-  ['bo7-hwid-ban', 'r6-hwid-ban'],
-  ['bo7-external-loader', 'r6-external-loader'],
-  ['bo7-loadouts', 'r6-loadouts'],
-  ['bo7-cheat-setup', 'r6-cheat-setup'],
-  ['bo7-practice-settings', 'r6-console-commands'],
-  ['after-bo7-patch', 'after-r6-patch'],
-  ['bo7-positioning', 'r6-high-ground'],
-  ['bo7-aim-practice', 'r6-aim-practice'],
-  ['bo7-map-awareness', 'r6-map-awareness'],
-  ['choose-bo7-tier', 'choose-r6-tier'],
-  ['bo7 aimbot', 'Marvel Rivals aimbot'],
-  ['bo7 ESP', 'Marvel Rivals ESP'],
-  ['bo7 ability ESP', 'Marvel Rivals ability ESP'],
-  ['bo7 recoil control', 'Marvel Rivals recoil control'],
-  ['bo7 compatibility', 'Marvel Rivals compatibility'],
+  ['buy-bo7-cheats', 'buy-escape-from-tarkov-cheats'],
+  ['bo7-lite-vs-pro', 'tarkov-lite-vs-pro'],
+  ['bo7-practice-tips', 'tarkov-offline-practice'],
+  ['bo7-training-tips', 'tarkov-training-tips'],
+  ['bo7-esp-setup', 'tarkov-esp-setup'],
+  ['bo7-radar', 'tarkov-radar'],
+  ['bo7-aimbot-guide', 'tarkov-aimbot-raids'],
+  ['bo7-aimbot-combat', 'tarkov-aimbot-combat'],
+  ['bo7-stream-proof', 'tarkov-stream-proof'],
+  ['bo7-elite-tier', 'tarkov-elite-tier'],
+  ['bo7-cheat-features', 'tarkov-cheat-features'],
+  ['bo7-hwid-ban', 'tarkov-hwid-ban'],
+  ['bo7-external-loader', 'tarkov-external-loader'],
+  ['bo7-loadouts', 'tarkov-loadouts'],
+  ['bo7-cheat-setup', 'tarkov-cheat-setup'],
+  ['bo7-practice-settings', 'tarkov-practice-settings'],
+  ['after-bo7-patch', 'after-tarkov-patch'],
+  ['bo7-positioning', 'tarkov-positioning'],
+  ['bo7-aim-practice', 'tarkov-aim-practice'],
+  ['bo7-map-awareness', 'tarkov-map-awareness'],
+  ['choose-bo7-tier', 'choose-tarkov-tier'],
+  ['bo7 aimbot', 'Escape from Tarkov aimbot'],
+  ['bo7 ESP', 'Escape from Tarkov ESP'],
+  ['bo7 ability ESP', 'Escape from Tarkov ability ESP'],
+  ['bo7 recoil control', 'Escape from Tarkov recoil control'],
+  ['bo7 compatibility', 'Escape from Tarkov compatibility'],
   ['the Call of Duty PC launcher', 'the EA app or Ubisoft Connect'],
   ['Call of Duty PC launcher', 'EA app or Ubisoft Connect'],
-  ['Battlestate Games account', 'Ubisoft account'],
+  ['Battlestate Games account', 'BSG account'],
   ['Battlestate Games', 'Respawn Entertainment'],
-  ['Black Ops 7 PC — aimbot, ESP & config tools', 'Marvel Rivals PC — aimbot, ESP & config tools'],
-  ["TITLE_PREFIX = 'Black Ops 7 Cheats'", "TITLE_PREFIX = 'Rivals Cheat'"],
-  ['Black Ops 7', 'Marvel Rivals'],
+  ['Black Ops 7 PC — aimbot, ESP & config tools', 'Escape from Tarkov PC — aimbot, ESP & config tools'],
+  ["TITLE_PREFIX = 'Black Ops 7 Cheats'", "TITLE_PREFIX = 'EFT Cheats'"],
+  ['Black Ops 7', 'Escape from Tarkov'],
   ['Call of Duty', 'Apex'],
   ['bo7-', 'apex-'],
   ["'bo7'", "'apex'"],
   ['"bo7"', '"apex"'],
   ['bo7:', 'apex:'],
-  ['/products/black-ops-7', '/products/r6-legends'],
+  ['/products/black-ops-7', '/products/tarkov-legends'],
   ['@bo7cheats', '@cheatapex'],
 ];
 
@@ -162,7 +162,7 @@ function renameIfExists(fromRel, toRel) {
 function patchSiteImages() {
   const file = path.join(root, 'src', 'config', 'siteImages.ts');
   const lines = [
-    '/** Approved Marvel Rivals media — only these remote URLs are used site-wide. */',
+    '/** Approved Escape from Tarkov media — only these remote URLs are used site-wide. */',
     'export interface SiteCheatImage {',
     '  src: string;',
     '  alt: string;',
@@ -207,20 +207,20 @@ function patchSiteImages() {
 function patchCheckoutRedirects() {
   const file = path.join(root, 'src', 'config', 'checkout-redirects.mjs');
   const content = `/** Primary Zadeyo affiliate checkout (go link + product path). */
-export const R6_CHECKOUT_URL =
+export const TARKOV_CHECKOUT_URL =
   '${APEX_CHECKOUT}';
 
 export const CHECKOUT_URLS = {
-  r6: R6_CHECKOUT_URL,
-  skinChanger: R6_CHECKOUT_URL,
-  hwidSpoofer: R6_CHECKOUT_URL,
-  ugc: R6_CHECKOUT_URL,
+  tarkov: TARKOV_CHECKOUT_URL,
+  skinChanger: TARKOV_CHECKOUT_URL,
+  hwidSpoofer: TARKOV_CHECKOUT_URL,
+  ugc: TARKOV_CHECKOUT_URL,
 };
 
 /** Checkout paths → external product URLs (used by Node serve + Astro middleware). */
 export const CHECKOUT_PATH_REDIRECTS = new Map([
-  ['/go/r6', CHECKOUT_URLS.apex],
-  ['/go/r6/', CHECKOUT_URLS.apex],
+  ['/go/tarkov', CHECKOUT_URLS.apex],
+  ['/go/tarkov/', CHECKOUT_URLS.apex],
   ['/go/skin-changer', CHECKOUT_URLS.skinChanger],
   ['/go/skin-changer/', CHECKOUT_URLS.skinChanger],
   ['/go/hwid-spoofer', CHECKOUT_URLS.hwidSpoofer],
@@ -249,10 +249,10 @@ function patchSiteTs() {
   const content = `/** Bump when favicon assets change so browsers reload tab icons. */
 export const FAVICON_VERSION = 'rivals-cheat-m-2026';
 
-export const SITE_DOMAIN = 'rivalscheat.net';
+export const SITE_DOMAIN = 'cheatseft.org';
 export const SITE_URL = \`https://\${SITE_DOMAIN}\`;
-export const PRODUCT_BASE = '/products/r6/';
-export const TITLE_PREFIX = 'Rivals Cheat';
+export const PRODUCT_BASE = '/products/tarkov/';
+export const TITLE_PREFIX = 'EFT Cheats';
 export const SUPPORT_EMAIL = \`support@\${SITE_DOMAIN}\`;
 export const DISCORD_URL = 'https://discord.gg/Vu85F8auQS';
 `;
@@ -264,8 +264,8 @@ function patchFavicons() {
     const file = path.join(root, 'public', name);
     if (!fs.existsSync(file)) continue;
     let svg = fs.readFileSync(file, 'utf8');
-    svg = svg.replace(/Black Ops 7 Cheats/g, 'Rivals Cheat');
-    svg = svg.replace(/Rivals Cheat/g, 'Rivals Cheat');
+    svg = svg.replace(/Black Ops 7 Cheats/g, 'EFT Cheats');
+    svg = svg.replace(/EFT Cheats/g, 'EFT Cheats');
     svg = svg.replace(
       /(\n\s*fill="#F5F7FA"\s*\n\s*>)[A-Z](<\/text>)/,
       '$1A$2',
@@ -280,7 +280,7 @@ function patchCheckoutTs() {
   content = content.replace(
     /export const CHECKOUT_SLUGS[\s\S]*?};/,
     `export const CHECKOUT_SLUGS: Record<CheckoutProduct, string> = {
-  r6: 'apex',
+  tarkov: 'apex',
   skinChanger: 'skin-changer',
   hwidSpoofer: 'hwid-spoofer',
   ugc: 'ugc',
@@ -288,16 +288,16 @@ function patchCheckoutTs() {
   );
   content = content.replace(
     /export function checkoutPath\(_product: CheckoutProduct = 'bo7'\)/,
-    "export function checkoutPath(_product: CheckoutProduct = 'r6')",
+    "export function checkoutPath(_product: CheckoutProduct = 'tarkov')",
   );
-  content = content.replace(/return CHECKOUT\.bo7;/g, 'return CHECKOUT.r6;');
-  content = content.replace(/checkoutPath\('bo7'\)/g, "checkoutPath('r6')");
+  content = content.replace(/return CHECKOUT\.bo7;/g, 'return CHECKOUT.tarkov;');
+  content = content.replace(/checkoutPath\('bo7'\)/g, "checkoutPath('tarkov')");
   content = content.replace(
     /href\.includes\('%2Fproducts%2Fblack-ops-7'\)[\s\S]*?href\.includes\('\/products\/bo7'\)/,
-    `href.includes('%2Fproducts%2Fmarvel-rivals') ||
-    href.includes('/products/r6-legends') ||
+    `href.includes('%2Fproducts%2Fescape-from-tarkov') ||
+    href.includes('/products/tarkov-legends') ||
     href.includes('%2Fproducts%2Fapex') ||
-    href.includes('/products/r6') ||
+    href.includes('/products/tarkov') ||
     href.includes('%2Fproducts%2Fbo7') ||
     href.includes('/products/bo7')`,
   );
@@ -319,10 +319,10 @@ function patchRedirects() {
 function patchPathTs() {
   const file = path.join(root, 'src', 'utils', 'path.ts');
   let content = fs.readFileSync(file, 'utf8');
-  content = content.replace(/\/bo7-cheats/g, '/r6-cheats');
-  content = content.replace(/\/products\/bo7/g, '/products/r6');
-  content = content.replace(/bo7-lite-vs-pro/g, 'r6-lite-vs-pro');
-  content = content.replace(/products\/bo7-/g, 'products/r6-');
+  content = content.replace(/\/bo7-cheats/g, '/escape-from-tarkov-cheats');
+  content = content.replace(/\/products\/bo7/g, '/products/tarkov');
+  content = content.replace(/bo7-lite-vs-pro/g, 'tarkov-lite-vs-pro');
+  content = content.replace(/products\/bo7-/g, 'products/tarkov-');
   fs.writeFileSync(file, content, 'utf8');
 }
 
@@ -331,20 +331,20 @@ function patchSeoMeta() {
   let content = fs.readFileSync(file, 'utf8');
   content = content.replace(
     'Keep meta descriptions blunt about Black Ops 7 cheats for SERP snippets.',
-    'Keep meta descriptions clear about Marvel Rivals cheats for SERP snippets.',
+    'Keep meta descriptions clear about Escape from Tarkov cheats for SERP snippets.',
   );
   content = content.replace(
     /return `Black Ops 7 cheats guide: \$\{trimmed\}`;/,
-    'return `Marvel Rivals cheats guide: ${trimmed}`;',
+    'return `Escape from Tarkov cheats guide: ${trimmed}`;',
   );
   fs.writeFileSync(file, content, 'utf8');
 }
 
-renameIfExists('src/data/bo7CheatsLanding.ts', 'src/data/r6CheatsLanding.ts');
-renameIfExists('src/config/zadeyoBo7ProductSeo.ts', 'src/config/zadeyoR6ProductSeo.ts');
-renameIfExists('src/pages/go/bo7', 'src/pages/go/r6');
-renameIfExists('src/pages/bo7-cheats', 'src/pages/r6-cheats');
-renameIfExists('src/pages/products/bo7', 'src/pages/products/r6');
+renameIfExists('src/data/bo7CheatsLanding.ts', 'src/data/tarkovCheatsLanding.ts');
+renameIfExists('src/config/zadeyoBo7ProductSeo.ts', 'src/config/zadeyoTarkovProductSeo.ts');
+renameIfExists('src/pages/go/bo7', 'src/pages/go/tarkov');
+renameIfExists('src/pages/bo7-cheats', 'src/pages/escape-from-tarkov-cheats');
+renameIfExists('src/pages/products/bo7', 'src/pages/products/tarkov');
 
 patchSiteImages();
 patchCheckoutRedirects();

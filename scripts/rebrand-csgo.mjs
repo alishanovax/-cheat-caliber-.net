@@ -125,7 +125,7 @@ const REPLACEMENTS = [
   ['Legend and squad ESP', 'terrorist and counter-terrorist ESP'],
   ['Legend loadout', 'loadout'],
   ['per-Legend', 'per-map'],
-  ['Legends and zone pressure', 'round economy and site pressure'],
+  ['Legends and zone pressure', 'raid maps and extraction pressure'],
   ['Legend-specific', 'map-specific'],
   ['EA or Steam account', 'Steam account'],
   ['Firing Range', 'Deathmatch'],

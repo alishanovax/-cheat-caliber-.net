@@ -1,26 +1,24 @@
-/** Primary affiliate checkout (go link + product path). */
-export const R6_CHECKOUT_URL =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fmarvel-rivals&sf=zadeyo';
+/** Primary Zadeyo affiliate checkout (go link + product path). */
+export const TARKOV_CHECKOUT_URL =
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo';
 
 export const CHECKOUT_URLS = {
-  r6: R6_CHECKOUT_URL,
-  skinChanger: R6_CHECKOUT_URL,
-  hwidSpoofer: R6_CHECKOUT_URL,
-  ugc: R6_CHECKOUT_URL,
+  tarkov: TARKOV_CHECKOUT_URL,
+  skinChanger: TARKOV_CHECKOUT_URL,
+  hwidSpoofer: TARKOV_CHECKOUT_URL,
+  ugc: TARKOV_CHECKOUT_URL,
 };
 
 /** Checkout paths → external product URLs (used by Node serve + Astro middleware). */
 export const CHECKOUT_PATH_REDIRECTS = new Map([
-  ['/go/r6', CHECKOUT_URLS.r6],
-  ['/go/r6/', CHECKOUT_URLS.r6],
+  ['/go/tarkov', CHECKOUT_URLS.tarkov],
+  ['/go/tarkov/', CHECKOUT_URLS.tarkov],
   ['/go/skin-changer', CHECKOUT_URLS.skinChanger],
   ['/go/skin-changer/', CHECKOUT_URLS.skinChanger],
   ['/go/hwid-spoofer', CHECKOUT_URLS.hwidSpoofer],
   ['/go/hwid-spoofer/', CHECKOUT_URLS.hwidSpoofer],
   ['/go/ugc', CHECKOUT_URLS.ugc],
   ['/go/ugc/', CHECKOUT_URLS.ugc],
-  ['/go/r6', CHECKOUT_URLS.r6],
-  ['/go/r6/', CHECKOUT_URLS.r6],
 ]);
 
 export function resolveCheckoutPathRedirect(pathname) {

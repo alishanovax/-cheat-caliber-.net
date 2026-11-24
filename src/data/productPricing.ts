@@ -9,7 +9,7 @@ export interface ProductPlan {
   popular?: boolean;
 }
 
-/** Marvel Rivals plan tiers (Monthly $35 / 31 days, Lifetime $150). */
+/** Escape from Tarkov plan tiers (Monthly $35 / 31 days, Lifetime $150). */
 const standardPlans: ProductPlan[] = [
   {
     id: 'monthly',

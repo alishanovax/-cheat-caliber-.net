@@ -36,8 +36,8 @@ const REPLACEMENTS = [
   ['https://zadeyo.com/products/dota-2', 'https://zadeyo.com/products/fortnite'],
   ['%2Fproducts%2Fdota-2', '%2Fproducts%2Ffortnite'],
   ['/products/dota-2', '/products/fortnite'],
-  ['/go/dota-2/', '/go/r6/'],
-  ['/go/dota-2', '/go/r6'],
+  ['/go/dota-2/', '/go/tarkov/'],
+  ['/go/dota-2', '/go/tarkov'],
 
   ["checkoutPath('dota2')", "checkoutPath('fortnite')"],
   ['checkoutPath("dota2")', 'checkoutPath("fortnite")'],

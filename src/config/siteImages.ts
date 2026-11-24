@@ -1,52 +1,42 @@
-/** Approved Marvel Rivals media — only these remote URLs are used site-wide. */
+/** Approved Escape from Tarkov media — only these remote URLs are used site-wide. */
 export interface SiteCheatImage {
   src: string;
   alt: string;
 }
 
-const MARVEL_RIVALS_MEDIA = [
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/f2609d45-0e57-4a51-9200-e519edcad54a/1795387373259-mos4di-screenshot-2026-11-23-031527.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/c7f7b806-cb3e-4eea-8fa1-eca85c479073/1793193984809-2hjndd-phoenix-marvel-s2.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/c7f7b806-cb3e-4eea-8fa1-eca85c479073/1793193982458-7tofpj-phoenix-marvel-s1.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/f2609d45-0e57-4a51-9200-e519edcad54a/1795386797756-23z56w-screenshot-2026-11-23-032550.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/f2609d45-0e57-4a51-9200-e519edcad54a/1795386882037-7mxuyq-screenshot-2026-11-23-032159.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/f2609d45-0e57-4a51-9200-e519edcad54a/1795386849550-jmrfd8-screenshot-2026-11-23-032325.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/f2609d45-0e57-4a51-9200-e519edcad54a/1795387033028-kpx1mv-screenshot-2026-11-23-031926.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/marvel-rivals/f2609d45-0e57-4a51-9200-e519edcad54a/1795387042722-tz30v0-screenshot-2026-11-23-031858.webp',
+const TARKOV_MEDIA = [
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/tarkov/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1794650282570-d0xc5g-first-person-warehouse-esp-encounter.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/tarkov/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1794650292268-rx58dc-images.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/tarkov/c7f7b806-cb3e-4eea-8fa1-eca85c479073/1793194009013-kv4lg6-ancient-eft-s1.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/tarkov/c7f7b806-cb3e-4eea-8fa1-eca85c479073/1793194011207-1r44jj-ancient-eft-s2.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/tarkov/1242b160-0414-44df-95cc-e45319c48f50/1793307615366-ow9g1a-screenshot-3.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/tarkov/1242b160-0414-44df-95cc-e45319c48f50/1793307655446-h9o00o-screenshot-7.webp',
 ] as const;
 
 export const SITE_CHEAT_IMAGES: SiteCheatImage[] = [
   {
-    src: MARVEL_RIVALS_MEDIA[0],
-    alt: 'Marvel Rivals team fight screenshot on PC',
+    src: TARKOV_MEDIA[0],
+    alt: 'Escape from Tarkov first-person warehouse raid with ESP encounter on PC',
   },
   {
-    src: MARVEL_RIVALS_MEDIA[1],
-    alt: 'Marvel Rivals Phoenix hero in Season 2 gameplay',
+    src: TARKOV_MEDIA[1],
+    alt: 'Escape from Tarkov in-raid HUD and tactical overlay on PC',
   },
   {
-    src: MARVEL_RIVALS_MEDIA[2],
-    alt: 'Marvel Rivals Phoenix hero ability combat scene',
+    src: TARKOV_MEDIA[2],
+    alt: 'Escape from Tarkov raid scene with PMC gear and environment detail on PC',
   },
   {
-    src: MARVEL_RIVALS_MEDIA[3],
-    alt: 'Marvel Rivals objective map gameplay screenshot',
+    src: TARKOV_MEDIA[3],
+    alt: 'Escape from Tarkov tactical movement through a raid location on PC',
   },
   {
-    src: MARVEL_RIVALS_MEDIA[4],
-    alt: 'Marvel Rivals hero clash in a competitive match',
+    src: TARKOV_MEDIA[4],
+    alt: 'Escape from Tarkov product-style in-match screenshot on PC',
   },
   {
-    src: MARVEL_RIVALS_MEDIA[5],
-    alt: 'Marvel Rivals in-match HUD and squad view',
-  },
-  {
-    src: MARVEL_RIVALS_MEDIA[6],
-    alt: 'Marvel Rivals 6v6 team composition screenshot',
-  },
-  {
-    src: MARVEL_RIVALS_MEDIA[7],
-    alt: 'Marvel Rivals map rotation gameplay on PC',
+    src: TARKOV_MEDIA[5],
+    alt: 'Escape from Tarkov combat screenshot with loot and extraction context on PC',
   },
 ];
 

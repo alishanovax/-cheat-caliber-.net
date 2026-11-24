@@ -14,99 +14,99 @@ export interface PageSeoEntry {
 
 export const PAGE_SEO: Record<string, PageSeoEntry> = {
   '/': {
-    title: 'Rivals Cheat — PC aimbot, ESP & setup guides',
+    title: 'EFT Cheats — PC aimbot, ESP & setup guides',
     description:
-      'Compare Marvel Rivals PC cheat tiers, read setup guides, and check out secure options — aimbot, hero ESP, configs and support at rivalscheat.net.',
-    h1: 'Rivals Cheat',
+      'Compare Escape from Tarkov PC cheat tiers, read setup guides, and check out secure options — aimbot, PMC and scav ESP, configs and support at cheatseft.org.',
+    h1: 'EFT Cheats',
   },
-  '/products/r6/': {
-    title: 'Marvel Rivals PC cheats — Lite, Pro, Elite & utilities',
+  '/products/tarkov/': {
+    title: 'Escape from Tarkov PC cheats — Lite, Pro, Elite & utilities',
     description:
-      'Shop Marvel Rivals PC cheats: Lite ESP, Pro aimbot, Elite suite, HWID tools and UGC — compare features and checkout at rivalscheat.net.',
-    h1: 'Marvel Rivals PC cheats — compare tiers and utilities',
+      'Shop Escape from Tarkov PC cheats: Lite ESP, Pro aimbot, Elite suite, HWID tools and UGC — compare features and checkout at cheatseft.org.',
+    h1: 'Escape from Tarkov PC cheats — compare tiers and utilities',
   },
-  '/products/r6/lite/': {
+  '/products/tarkov/lite/': {
     title: 'Lite Cheats | Player ESP, Radar & Loot Timers',
     description:
-      'Lite cheats for PC — hero ESP, bomb-site markers, round timers and radar without aimbot. Stream-proof overlay and competitive presets on rivalscheat.net.',
+      'Lite cheats for PC — PMC and scav ESP, bomb-site markers, round timers and radar without aimbot. Stream-proof overlay and competitive presets on cheatseft.org.',
   },
-  '/products/r6/pro/': {
+  '/products/tarkov/pro/': {
     title: 'Pro Cheats | Aimbot, Smooth Aim & Wall ESP',
     description:
-      'Pro cheats include Lite ESP plus Aimbot, Smooth Aim, Sticky Aim and bone priority — competitive-safe defaults and portal presets for Marvel Rivals on PC.',
+      'Pro cheats include Lite ESP plus Aimbot, Smooth Aim, Sticky Aim and bone priority — competitive-safe defaults and portal presets for Escape from Tarkov on PC.',
   },
-  '/products/r6/elite/': {
-    title: 'Elite Rivals Cheat | Aimbot, ESP & Loot Assist',
+  '/products/tarkov/elite/': {
+    title: 'Elite EFT Cheats | Aimbot, ESP & Loot Assist',
     description:
-      'Elite tier includes advanced aim, full ESP, economy awareness tools, and priority update notes for Marvel Rivals on PC.',
+      'Elite tier includes advanced aim, full ESP, economy awareness tools, and priority update notes for Escape from Tarkov on PC.',
   },
-  '/products/r6/hwid-spoofer/': {
-    title: 'HWID Spoofer for Marvel Rivals | Hardware Identity Tools',
+  '/products/tarkov/hwid-spoofer/': {
+    title: 'HWID Spoofer for Escape from Tarkov | Hardware Identity Tools',
     description:
-      'HWID tools for Marvel Rivals on PC — guided steps for hardware identity resets. Read compatibility and risk notes before you buy at rivalscheat.net.',
+      'HWID tools for Escape from Tarkov on PC — guided steps for hardware identity resets. Read compatibility and risk notes before you buy at cheatseft.org.',
   },
-  '/products/r6/ugc/': {
-    title: 'UGC Tools | Marvel Rivals anti-cheat & platform Ban Appeals',
+  '/products/tarkov/ugc/': {
+    title: 'UGC Tools | Escape from Tarkov anti-cheat & platform Ban Appeals',
     description:
-      'UGC (Unban & Governance Control) organizes platform and anti-cheat ban appeals, dispute workflows and case tracking for Marvel Rivals players.',
+      'UGC (Unban & Governance Control) organizes platform and anti-cheat ban appeals, dispute workflows and case tracking for Escape from Tarkov players.',
   },
-  '/products/r6/unlock-all/': {
+  '/products/tarkov/unlock-all/': {
     title: 'loadout tools — skins, wraps & weapon previews',
     description:
-      'Loadout Pack for Marvel Rivals on PC — local cosmetic and weapon previews with your client. Compare scope and checkout at rivalscheat.net.',
+      'Loadout Pack for Escape from Tarkov on PC — local cosmetic and weapon previews with your client. Compare scope and checkout at cheatseft.org.',
   },
-  '/products/r6/utilities/': {
-    title: 'Marvel Rivals cheat utilities — HWID, UGC & loadout tools',
+  '/products/tarkov/utilities/': {
+    title: 'Escape from Tarkov cheat utilities — HWID, UGC & loadout tools',
     description:
-      'Utilities hub: HWID tools, platform and anti-cheat appeal workflows (UGC), and player loadout helpers for Marvel Rivals PC — compare before checkout.',
-    h1: 'Compare Marvel Rivals utilities — HWID, UGC & loadout tools',
+      'Utilities hub: HWID tools, platform and anti-cheat appeal workflows (UGC), and player loadout helpers for Escape from Tarkov PC — compare before checkout.',
+    h1: 'Compare Escape from Tarkov utilities — HWID, UGC & loadout tools',
   },
   '/blog/': {
-    title: 'Marvel Rivals guides — aimbot, ESP, tiers & patch days',
+    title: 'Escape from Tarkov guides — aimbot, ESP, tiers & patch days',
     description:
-      'Guides for Marvel Rivals PC cheats: aimbot and ESP setup, Lite vs Pro, practice mode drills, and what to check after patches and anti-cheat updates.',
-    h1: 'Marvel Rivals cheat guides — setup, tiers and patch checks',
+      'Guides for Escape from Tarkov PC cheats: aimbot and ESP setup, Lite vs Pro, practice mode drills, and what to check after patches and anti-cheat updates.',
+    h1: 'Escape from Tarkov cheat guides — setup, tiers and patch checks',
   },
   '/forum/': {
-    title: 'Marvel Rivals forum — loader, configs & product discussion',
+    title: 'Escape from Tarkov forum — loader, configs & product discussion',
     description:
-      'Community threads on loader setup, aim configs, product questions and patch-day checks — backed by guides on rivalscheat.net.',
-    h1: 'Forum — loader help, configs and Marvel Rivals cheat discussion',
+      'Community threads on loader setup, aim configs, product questions and patch-day checks — backed by guides on cheatseft.org.',
+    h1: 'Forum — loader help, configs and Escape from Tarkov cheat discussion',
   },
   '/faq/': {
-    title: 'FAQ — Marvel Rivals tiers, bans, loader & checkout | rivalscheat.net',
+    title: 'FAQ — Escape from Tarkov tiers, bans, loader & checkout | cheatseft.org',
     description:
-      'FAQ on Lite, Pro and Elite tiers, aimbot, wall ESP, radar, HWID spoofer, loadout tools, bans and loader setup at rivalscheat.net.',
-    h1: 'FAQ — Rivals Cheat tiers, bans, anti-cheat setup, loader help and checkout',
+      'FAQ on Lite, Pro and Elite tiers, aimbot, wall ESP, radar, HWID spoofer, loadout tools, bans and loader setup at cheatseft.org.',
+    h1: 'FAQ — EFT Cheats tiers, bans, anti-cheat setup, loader help and checkout',
   },
   '/terms/': {
     title: 'Terms — licenses, delivery, refunds & account risk',
     description:
-      'Terms for buying digital Marvel Rivals software on rivalscheat.net: license use, delivery, refunds, and risks when using third-party tools with platform titles.',
+      'Terms for buying digital Escape from Tarkov software on cheatseft.org: license use, delivery, refunds, and risks when using third-party tools with platform titles.',
     h1: 'Terms — licenses, delivery, refunds & account risk',
   },
   '/privacy/': {
     title: 'Privacy — analytics, cookies & checkout data',
     description:
-      'How rivalscheat.net uses analytics, cookies, and contact or checkout-related data for support and referrals. Read the full policy before you buy.',
+      'How cheatseft.org uses analytics, cookies, and contact or checkout-related data for support and referrals. Read the full policy before you buy.',
     h1: 'Privacy — analytics, cookies, checkout and contact data',
   },
   '/about/': {
-    title: 'About — Marvel Rivals tier guides, loader help & updates',
+    title: 'About — Escape from Tarkov tier guides, loader help & updates',
     description:
-      'Who we are: Marvel Rivals PC cheat tier comparisons, setup guides, and support channels at rivalscheat.net — independent of platform and publishers.',
-    h1: 'About — Marvel Rivals tier guides, loader help & updates',
+      'Who we are: Escape from Tarkov PC cheat tier comparisons, setup guides, and support channels at cheatseft.org — independent of platform and publishers.',
+    h1: 'About — Escape from Tarkov tier guides, loader help & updates',
   },
   '/support/': {
-    title: 'Support — loader, HWID & checkout help | rivalscheat.net',
+    title: 'Support — loader, HWID & checkout help | cheatseft.org',
     description:
-      'Loader, aim and ESP configs, HWID resets, and checkout help — FAQ and product guides on rivalscheat.net.',
+      'Loader, aim and ESP configs, HWID resets, and checkout help — FAQ and product guides on cheatseft.org.',
     h1: 'Support — loader, HWID, checkout & config help',
   },
-  '/r6-cheats/': {
-    title: 'Marvel Rivals cheats hub — PC tiers, features & checkout',
+  '/escape-from-tarkov-cheats/': {
+    title: 'Escape from Tarkov cheats hub — PC tiers, features & checkout',
     description:
-      'Overview of Marvel Rivals PC cheat tiers, core features, and loader-focused notes. Compare options and checkout at rivalscheat.net.',
+      'Overview of Escape from Tarkov PC cheat tiers, core features, and loader-focused notes. Compare options and checkout at cheatseft.org.',
   },
 };
 
@@ -123,34 +123,34 @@ export function getPageSeoEntry(pathname: string): PageSeoEntry | undefined {
 
 /** Blog post `<title>` / meta description overrides (exact audit phrases). */
 export const BLOG_POST_SEO: Record<string, Partial<PageSeoEntry>> = {
-  'r6-radar': {
-    title: 'Marvel Rivals radar guide — FOV, spacing & team callouts',
+  'tarkov-radar': {
+    title: 'Escape from Tarkov radar guide — FOV, spacing & team callouts',
     description:
-      'Use radar overlays safely in Marvel Rivals: FOV habits, spacing, and squad callouts for online matches and competitive — guide at rivalscheat.net.',
+      'Use radar overlays safely in Escape from Tarkov: FOV habits, spacing, and squad callouts for online matches and competitive — guide at cheatseft.org.',
   },
-  'r6-stream-proof': {
+  'tarkov-stream-proof': {
     title: 'Stream-safe overlays — hiding ESP from OBS & capture',
     description:
-      'Test OBS, Game Bar, and capture-card setups so stream viewers do not see overlays — practical checklist for Marvel Rivals creators on rivalscheat.net.',
+      'Test OBS, Game Bar, and capture-card setups so stream viewers do not see overlays — practical checklist for Escape from Tarkov creators on cheatseft.org.',
   },
-  'r6-aimbot-competitive': {
+  'tarkov-aimbot-raids': {
     title: 'casual matches aimbot — bone priority, prediction & smoothness',
   },
   'anti-cheat-fix': {
-    title: 'anti-cheat errors on Marvel Rivals PC — verify, repair & recovery',
+    title: 'anti-cheat errors on Escape from Tarkov PC — verify, repair & recovery',
     description:
-      'When anti-cheat fails to verify Marvel Rivals on PC: file checks, repairs, reinstall paths, and when account recovery applies — guide at rivalscheat.net.',
+      'When anti-cheat fails to verify Escape from Tarkov on PC: file checks, repairs, reinstall paths, and when account recovery applies — guide at cheatseft.org.',
   },
 };
 
 /** Optional on-page H1 overrides (blog posts). */
 export const BLOG_POST_PAGE_H1: Record<string, string> = {
   'anti-cheat-fix':
-    'What the anti-cheat error means — anti-cheat unable to verify Marvel Rivals (Marvel Rivals cheats)',
-  'r6-stream-proof':
-    'Stream-Proof Overlay Setup — hide wall ESP and script overlays from OBS (Marvel Rivals cheats)',
-  'r6-training-grounds-practice': 'Practice practice: aim drills before competitive (Marvel Rivals cheats)',
-  'r6-radar': 'Marvel Rivals radar on PC — FOV habits, spacing and team callouts',
+    'What the anti-cheat error means — anti-cheat unable to verify Escape from Tarkov (Escape from Tarkov cheats)',
+  'tarkov-stream-proof':
+    'Stream-Proof Overlay Setup — hide wall ESP and script overlays from OBS (Escape from Tarkov cheats)',
+  'tarkov-offline-practice': 'Practice practice: aim drills before competitive (Escape from Tarkov cheats)',
+  'tarkov-radar': 'Escape from Tarkov radar on PC — FOV habits, spacing and team callouts',
 };
 
 export function getBlogPostSeo(slug: string, fallback: PageSeoEntry): PageSeoEntry {
@@ -167,7 +167,7 @@ export function blogPostPageH1(slug: string, postTitle: string): string {
 }
 
 /** Layout `<title>` for blog posts; competitive override is used verbatim when under 60 chars. */
-export function blogPostLayoutTitle(slug: string, postTitle: string, brand = 'Rivals Cheat'): string {
+export function blogPostLayoutTitle(slug: string, postTitle: string, brand = 'EFT Cheats'): string {
   const override = BLOG_POST_SEO[slug]?.title;
   if (override && override.length <= 60) return override;
   if (override) return `${override.slice(0, 57).trim()}…`;

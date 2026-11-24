@@ -33,9 +33,9 @@ export function buildRssFeed(): string {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rivals Cheat Blog</title>
+    <title>EFT Cheats Blog</title>
     <link>${SITE_ORIGIN}/blog/</link>
-    <description>Marvel Rivals cheat guides, patch notes, and setup walkthroughs from rivalscheat.net.</description>
+    <description>Escape from Tarkov cheat guides, patch notes, and setup walkthroughs from cheatseft.org.</description>
     <language>en-us</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <atom:link href="${feedUrl}" rel="self" type="application/rss+xml" />

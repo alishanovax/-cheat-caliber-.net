@@ -1,4 +1,4 @@
-const storagePrefix = 'r6-cheat-forum-vote:';
+const storagePrefix = 'tarkov-cheat-forum-vote:';
 
 export function initForumVotes(): void {
   document.querySelectorAll<HTMLElement>('[data-forum-card], [data-forum-vote]').forEach((post) => {

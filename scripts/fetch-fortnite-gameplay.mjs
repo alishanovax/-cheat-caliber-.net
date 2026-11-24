@@ -1,6 +1,6 @@
 /**
- * Replace Dota-era gameplay/blog PNGs with Marvel Rivals screenshots.
- * Run after npm ci: node scripts/fetch-r6-gameplay.mjs
+ * Replace Dota-era gameplay/blog PNGs with Escape from Tarkov screenshots.
+ * Run after npm ci: node scripts/fetch-tarkov-gameplay.mjs
  */
 import { writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
@@ -8,50 +8,50 @@ import sharp from 'sharp';
 
 const CDN_A = 'https://sm.ign.com/t/ign_za/photo/default';
 const CDN_B = 'https://sm.ign.com/t/ign_latam/photo/default';
-const CDN_GALLERY = 'https://sm.ign.com/t/ign_pk/gallery/f/r6-g';
+const CDN_GALLERY = 'https://sm.ign.com/t/ign_pk/gallery/f/tarkov-g';
 
 const gameplayDir = path.resolve('public/images/gameplay');
 const blogDir = path.resolve('public/images/blog');
 const publicDir = path.resolve('public');
 
 const GAMEPLAY = [
-  { file: 'r6-esp-wallhack.png', url: `${CDN_B}/r6-battle-royale-chapter-5-season-1-train-1920x1080-a1_1nkx.1400.jpg` },
-  { file: 'r6-player-esp.png', url: `${CDN_A}/screenshot-6815-1725916496014_zkpv.1400.jpg` },
-  { file: 'r6-aimbot-combat.png', url: `${CDN_B}/r6-battle-royale-chapter-5-season-1-screenshot-c-1920x_vu5r.1400.jpg` },
-  { file: 'r6-radar-hack.png', url: `${CDN_A}/screenshot-6670-1725916496013_zv3w.1400.jpg` },
-  { file: 'r6-skin-changer.png', url: `${CDN_B}/r6-battle-royale-chapter-5-season-1-screenshot-b-1920x_8z8k.1400.jpg` },
-  { file: 'r6-auto-aim.png', url: `${CDN_A}/screenshot-7105-1725916496016_j9dr.1400.jpg` },
-  { file: 'r6-loot-radar.png', url: `${CDN_A}/screenshot-6960-1725916496015_vbtg.1400.jpg` },
+  { file: 'tarkov-esp-wallhack.png', url: `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-train-1920x1080-a1_1nkx.1400.jpg` },
+  { file: 'tarkov-player-esp.png', url: `${CDN_A}/screenshot-6815-1725916496014_zkpv.1400.jpg` },
+  { file: 'tarkov-aimbot-combat.png', url: `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-screenshot-c-1920x_vu5r.1400.jpg` },
+  { file: 'tarkov-radar-hack.png', url: `${CDN_A}/screenshot-6670-1725916496013_zv3w.1400.jpg` },
+  { file: 'tarkov-skin-changer.png', url: `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-screenshot-b-1920x_8z8k.1400.jpg` },
+  { file: 'tarkov-auto-aim.png', url: `${CDN_A}/screenshot-7105-1725916496016_j9dr.1400.jpg` },
+  { file: 'tarkov-loot-radar.png', url: `${CDN_A}/screenshot-6960-1725916496015_vbtg.1400.jpg` },
 ];
 
 const BLOG_POOL = [
-  `${CDN_GALLERY}/r6-gameplay-screenshots-2024_s2qs.1400.jpg`,
-  `${CDN_B}/r6-battle-royale-chapter-5-season-1-screenshot-a-1920x_xkzh.1400.jpg`,
-  `${CDN_B}/r6-battle-royale-chapter-5-season-1-screenshot-d-1920x_mzsk.1400.jpg`,
+  `${CDN_GALLERY}/tarkov-gameplay-screenshots-2024_s2qs.1400.jpg`,
+  `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-screenshot-a-1920x_xkzh.1400.jpg`,
+  `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-screenshot-d-1920x_mzsk.1400.jpg`,
   `${CDN_A}/screenshot-6380-1725916496012_gj96.1400.jpg`,
-  'https://sm.ign.com/t/ign_in/screenshot/default/r6-unreal-engine-5-1-scree-3_bcxh.1400.jpg',
-  'https://sm.ign.com/t/ign_latam/gallery/f/r6-c/r6-chapter-5-underground-images_5h3j.1400.jpg',
+  'https://sm.ign.com/t/ign_in/screenshot/default/tarkov-unreal-engine-5-1-scree-3_bcxh.1400.jpg',
+  'https://sm.ign.com/t/ign_latam/gallery/f/tarkov-c/tarkov-chapter-5-underground-images_5h3j.1400.jpg',
 ];
 
 const BLOG_BASES = [
-  'r6-training-grounds-practice',
-  'r6-training-tips',
-  'r6-cheat-setup',
-  'r6-cheat-features',
-  'r6-console-commands',
-  'r6-lite-vs-pro',
-  'r6-elite-tier',
-  'r6-aimbot-competitive',
-  'r6-esp-setup',
-  'r6-radar-hack-guide',
-  'r6-loadouts',
+  'tarkov-offline-practice',
+  'tarkov-training-tips',
+  'tarkov-cheat-setup',
+  'tarkov-cheat-features',
+  'tarkov-practice-settings',
+  'tarkov-lite-vs-pro',
+  'tarkov-elite-tier',
+  'tarkov-aimbot-raids',
+  'tarkov-esp-setup',
+  'tarkov-radar-hack-guide',
+  'tarkov-loadouts',
   'anti-cheat-patch-day-checklist',
-  'r6-hwid-ban',
-  'buy-r6-cheats',
-  'r6-aimbot-combat',
-  'eac-bypass-r6-guide',
-  'r6-external-loader',
-  'r6-stream-proof',
+  'tarkov-hwid-ban',
+  'buy-escape-from-tarkov-cheats',
+  'tarkov-aimbot-combat',
+  'eac-bypass-tarkov-guide',
+  'tarkov-external-loader',
+  'tarkov-stream-proof',
 ];
 
 async function fetchPng(url) {
@@ -77,7 +77,7 @@ let hero = null;
 for (const asset of GAMEPLAY) {
   try {
     const buf = await save(gameplayDir, asset.file, asset.url);
-    if (asset.file === 'r6-esp-wallhack.png') hero = buf;
+    if (asset.file === 'tarkov-esp-wallhack.png') hero = buf;
   } catch (err) {
     console.warn('skip', asset.file, err.message);
   }
@@ -103,7 +103,7 @@ if (hero) {
     await writeFile(path.join(publicDir, name), await sharp(logo).resize(size, size).png().toBuffer());
   }
   await writeFile(path.join(publicDir, 'favicon.ico'), await sharp(logo).resize(32, 32).png().toBuffer());
-  console.log('updated favicons from Marvel Rivals art');
+  console.log('updated favicons from Escape from Tarkov art');
 }
 
-console.log('Done fetching Marvel Rivals gameplay/blog images.');
+console.log('Done fetching Escape from Tarkov gameplay/blog images.');

@@ -1,23 +1,23 @@
 {
   "gameplay": [
     {
-      "file": "r6-hack-aimbot-esp.png",
-      "alt": "Marvel Rivals aimbot and ESP with FOV circle, red target box and snap line through cover",
+      "file": "tarkov-hack-aimbot-esp.png",
+      "alt": "Escape from Tarkov aimbot and ESP with FOV circle, red target box and snap line through cover",
       "srcIndex": 0
     },
     {
-      "file": "r6-hack-esp-wallhack.png",
-      "alt": "Marvel Rivals ESP wallhack with green player boxes in a tactical indoor firefight",
+      "file": "tarkov-hack-esp-wallhack.png",
+      "alt": "Escape from Tarkov ESP wallhack with green player boxes in a tactical indoor firefight",
       "srcIndex": 1
     },
     {
-      "file": "r6-hack-gameplay.jpg",
-      "alt": "Marvel Rivals PMC raid gameplay on PC with body-camera perspective in a gritty urban map",
+      "file": "tarkov-hack-gameplay.jpg",
+      "alt": "Escape from Tarkov PMC raid gameplay on PC with body-camera perspective in a gritty urban map",
       "srcIndex": 2
     },
     {
-      "file": "r6-hack-esp-indoor.png",
-      "alt": "Marvel Rivals ESP overlay with green bounding box while clearing an indoor hallway with a shotgun",
+      "file": "tarkov-hack-esp-indoor.png",
+      "alt": "Escape from Tarkov ESP overlay with green bounding box while clearing an indoor hallway with a shotgun",
       "srcIndex": 3
     }
   ],

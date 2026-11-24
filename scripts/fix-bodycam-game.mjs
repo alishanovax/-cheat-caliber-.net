@@ -1,4 +1,4 @@
-/** Marvel Rivals (Steam FPS) copy fixes — run: node scripts/fix-r6-game.mjs */
+/** Escape from Tarkov (Steam FPS) copy fixes — run: node scripts/fix-tarkov-game.mjs */
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -13,7 +13,7 @@ const REPLACEMENTS = [
   ['through Steam Games', 'through Steam'],
   ['on Steam Games', 'on Steam'],
   ['Steam Games', 'Steam'],
-  ['launch Marvel Rivals on Epic', 'launch Marvel Rivals on Steam'],
+  ['launch Escape from Tarkov on Epic', 'launch Escape from Tarkov on Steam'],
   ['Private Servers', 'offline raid'],
   ['private servers', 'shooting range'],
   ['Auto Shield Break', 'Recoil control'],
@@ -58,7 +58,7 @@ function walk(dir, out = []) {
 
 let n = 0;
 for (const file of walk(path.join(root, 'src'))) {
-  if (file.includes('fix-r6-game')) continue;
+  if (file.includes('fix-tarkov-game')) continue;
   const before = fs.readFileSync(file, 'utf8');
   let after = before;
   for (const [from, to] of REPLACEMENTS) {

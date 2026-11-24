@@ -59,50 +59,50 @@ export interface ProductPage {
 
 /** Guides paired with each product detail page */
 export const productRelatedBlogSlugs: Record<string, string[]> = {
-  lite: ['r6-esp-setup', 'r6-lite-vs-pro', 'r6-radar', 'anti-cheat-patch'],
+  lite: ['tarkov-esp-setup', 'tarkov-lite-vs-pro', 'tarkov-radar', 'anti-cheat-patch'],
   pro: [
-    'r6-aimbot-competitive',
-    'r6-aimbot-combat',
-    'r6-lite-vs-pro',
-    'r6-stream-proof',
+    'tarkov-aimbot-raids',
+    'tarkov-aimbot-combat',
+    'tarkov-lite-vs-pro',
+    'tarkov-stream-proof',
   ],
   elite: [
-    'r6-elite-tier',
-    'r6-cheat-features',
-    'r6-esp-setup',
+    'tarkov-elite-tier',
+    'tarkov-cheat-features',
+    'tarkov-esp-setup',
     'anti-cheat-patch',
-    'buy-r6-cheats',
+    'buy-escape-from-tarkov-cheats',
   ],
   'hwid-spoofer': [
-    'r6-hwid-ban',
+    'tarkov-hwid-ban',
     'anti-cheat-fix',
     'anti-cheat-patch',
-    'r6-external-loader',
+    'tarkov-external-loader',
   ],
   ugc: [
     'anti-cheat-fix',
-    'r6-hwid-ban',
-    'buy-r6-cheats',
+    'tarkov-hwid-ban',
+    'buy-escape-from-tarkov-cheats',
   ],
   'unlock-all': [
-    'r6-loadouts',
-    'r6-cheat-features',
-    'r6-stream-proof',
+    'tarkov-loadouts',
+    'tarkov-cheat-features',
+    'tarkov-stream-proof',
   ],
 };
 
-const productBase = '/products/r6/';
+const productBase = '/products/tarkov/';
 
 const defaultAcquisitionSteps: AcquisitionStep[] = [
   {
     num: '01',
     title: 'Review current status',
-    desc: 'Check the live banner on rivalscheat.net before purchase—especially after a Marvel Rivals or anti-cheat update.',
+    desc: 'Check the live banner on cheatseft.org before purchase—especially after a Escape from Tarkov or anti-cheat update.',
   },
   {
     num: '02',
     title: 'Choose your access tier',
-    desc: 'Select Elite Marvel Rivals cheats or the utility that matches your goal. Review the feature list before checkout via our secure checkout.',
+    desc: 'Select Elite Escape from Tarkov cheats or the utility that matches your goal. Review the feature list before checkout via our secure checkout.',
   },
   {
     num: '03',
@@ -112,7 +112,7 @@ const defaultAcquisitionSteps: AcquisitionStep[] = [
   {
     num: '04',
     title: 'Follow guided setup',
-    desc: 'Use only the customer portal, patch loader, and setup guide. Test in a lobby, load presets, then queue competitive or casual matches.',
+    desc: 'Use only the customer portal, patch loader, and setup guide. Test in a lobby, load presets, then queue competitive or online raids.',
   },
 ];
 
@@ -124,17 +124,17 @@ function acquisitionFor(productName: string): ProductAcquisition {
 }
 
 const sharedGoodToKnow =
-  'Marvel Rivals and anti-cheat receive frequent updates. Confirm module availability on the live status panel at rivalscheat.net before you purchase or launch. Overlay behavior may differ in lobbies, replays and spectator mode after patches.';
+  'Escape from Tarkov and anti-cheat receive frequent updates. Confirm module availability on the live status panel at cheatseft.org before you purchase or launch. Overlay behavior may differ in lobbies, replays and spectator mode after patches.';
 
 const sharedLimitations =
-  'Third-party software in Marvel Rivals can violate the game terms of service and lead to anti-cheat action. You use this software at your own risk. Compatibility and availability can change after game, anti-cheat, or Windows updates without notice.';
+  'Third-party software in Escape from Tarkov can violate the game terms of service and lead to anti-cheat action. You use this software at your own risk. Compatibility and availability can change after game, anti-cheat, or Windows updates without notice.';
 
 const r6SystemRequirements: SystemRequirement[] = [
   { icon: 'reqWindows', text: 'Windows 10 or Windows 11 (64-bit) with HVCI, Core Isolation, TPM and Secure Boot enabled.' },
-  { icon: 'reqEpic', text: 'Current PC build of Marvel Rivals with the latest patches applied.' },
+  { icon: 'reqEpic', text: 'Current PC build of Escape from Tarkov with the latest patches applied.' },
   { icon: 'reqSettings', text: 'Cloud DMA access for full functionality on supported builds.' },
   { icon: 'reqWifi', text: 'Stable internet connection for portal access and loader updates.' },
-  { icon: 'reqCpu', text: 'Intel or AMD system that meets Marvel Rivals hardware requirements.' },
+  { icon: 'reqCpu', text: 'Intel or AMD system that meets Escape from Tarkov hardware requirements.' },
 ];
 
 type GalleryKey = keyof typeof galleryRaw;
@@ -144,31 +144,31 @@ const galleryRaw = {
     src: SITE_CHEAT_IMAGES[0].src,
     alt: SITE_CHEAT_IMAGES[0].alt,
     caption: 'Soft aim & ESP',
-    captionDesc: 'Marvel Rivals trainer overlays tuned for PC gunfights.',
+    captionDesc: 'Escape from Tarkov trainer overlays tuned for PC gunfights.',
   },
   gpEspWallhack: {
     src: SITE_CHEAT_IMAGES[1].src,
     alt: SITE_CHEAT_IMAGES[1].alt,
     caption: 'Enemy ESP',
-    captionDesc: 'Player ESP with health, health and distance in Marvel Rivals multiplayer.',
+    captionDesc: 'Player ESP with health, health and distance in Escape from Tarkov multiplayer.',
   },
   gpGameplay: {
     src: SITE_CHEAT_IMAGES[2].src,
     alt: SITE_CHEAT_IMAGES[2].alt,
-    caption: 'Marvel Rivals co-op',
+    caption: 'Escape from Tarkov co-op',
     captionDesc: 'Tactical shooter action on PC with trainer-friendly overlays.',
   },
   gpEspIndoor: {
     src: SITE_CHEAT_IMAGES[3].src,
     alt: SITE_CHEAT_IMAGES[3].alt,
-    caption: 'Marvel Rivals raid combat',
-    captionDesc: 'Cel-shaded Marvel Rivals combat in a twilight outpost.',
+    caption: 'Escape from Tarkov raid combat',
+    captionDesc: 'Cel-shaded Escape from Tarkov combat in a twilight outpost.',
   },
   gpCourtyard: {
     src: SITE_CHEAT_IMAGES[0]!.src,
     alt: SITE_CHEAT_IMAGES[0]!.alt,
-    caption: 'Marvel Rivals firefight',
-    captionDesc: 'Marvel Rivals combat screenshot from approved media library.',
+    caption: 'Escape from Tarkov firefight',
+    captionDesc: 'Escape from Tarkov combat screenshot from approved media library.',
   },
 };
 
@@ -185,9 +185,9 @@ function slide(...keys: GalleryKey[]): ProductSlide[] {
 }
 
 const productDetailGalleryCaptions = [
-  { caption: 'Updates & anti-cheat', captionDesc: 'Stay aligned with Marvel Rivals patch and security news.' },
+  { caption: 'Updates & anti-cheat', captionDesc: 'Stay aligned with Escape from Tarkov patch and security news.' },
   { caption: 'Multiplayer gameplay', captionDesc: 'In-match view on a compact map with full HUD.' },
-  { caption: 'Quick Match perspective', captionDesc: 'First-person combat with kill feed and minimap.' },
+  { caption: 'Offline perspective', captionDesc: 'First-person raid with HUD and loot ESP.' },
 ] as const;
 
 function productDetailGallery(): ProductSlide[] {
@@ -213,7 +213,7 @@ const tierAbout: Record<string, ProductPage['about']> = {
       type: 'p',
       text: 'Lite is built for players who want map awareness first. In competitive, knowing enemy positions, chest locations and loot timings wins more fights than raw mechanics—Lite gives you that edge without aimbot automation.',
     },
-    { type: 'h2', text: 'casual matches-safe by design' },
+    { type: 'h2', text: 'online raids-safe by design' },
     {
       type: 'p',
       text: 'Lite skips Aimbot and bot modules entirely. Your gameplay looks natural while ESP, radar cheat and loot timers keep you informed. Stream-proof mode hides overlays from OBS capture for content creators.',
@@ -238,7 +238,7 @@ const tierAbout: Record<string, ProductPage['about']> = {
     { type: 'h2', text: 'Use Elite responsibly' },
     {
       type: 'p',
-      text: 'Elite power demands disciplined profiles. Test in lobbies, start with portal conservative presets, and scale up over days—not minutes. Use the portal guides before your first competitive queue.',
+      text: 'Elite power demands disciplined profiles. Test in lobbies, start with portal conservative presets, and scale up over days—not minutes. Use the portal guides before your first PMC raid.',
     },
   ],
 };
@@ -248,7 +248,7 @@ const tierBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Included modules' },
     {
       type: 'p',
-      text: 'Player ESP with distance and name tags, chest and reboot-van locator, loot spawn timers, radar cheat, and stream-safe overlay hiding. Config presets for online matches and casual matches ship in the portal—load before your first queue.',
+      text: 'Player ESP with distance and name tags, chest and reboot-van locator, loot spawn timers, radar cheat, and stream-safe overlay hiding. Config presets for online raids and online raids ship in the portal—load before your first queue.',
     },
     { type: 'h2', text: 'Upgrade path' },
     {
@@ -265,7 +265,7 @@ const tierBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Recommended pairing' },
     {
       type: 'p',
-      text: 'Pro is the most popular tier at rivalscheat.net—enough firepower for high-rank lobbies without Elite slot limits. Pair with our aimbot guide in the blog before your first competitive session.',
+      text: 'Pro is the most popular tier at cheatseft.org—enough firepower for high-rank lobbies without Elite slot limits. Pair with our aimbot guide in the blog before your first competitive session.',
     },
   ],
   elite: [
@@ -287,7 +287,7 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'When you need it' },
     {
       type: 'p',
-      text: 'Use when fresh platform accounts fail instantly on one PC but work elsewhere—classic HWID enforcement. Do not use for account-only anti-cheat cases; see [UGC](/products/r6/ugc/) instead.',
+      text: 'Use when fresh platform accounts fail instantly on one PC but work elsewhere—classic HWID enforcement. Do not use for account-only anti-cheat cases; see [UGC](/products/tarkov/ugc/) instead.',
     },
     { type: 'h2', text: 'Full workflow' },
     {
@@ -304,7 +304,7 @@ const utilityBodies: Record<string, ProductPage['body']> = {
     { type: 'h2', text: 'Realistic expectations' },
     {
       type: 'p',
-      text: 'Some anti-cheat bans cannot be reversed. UGC organizes evidence and follow-ups for platform review. Pair with [HWID Spoofer](/products/r6/hwid-spoofer/) when hardware is flagged, or a new account when reputation is burned.',
+      text: 'Some anti-cheat bans cannot be reversed. UGC organizes evidence and follow-ups for platform review. Pair with [HWID Spoofer](/products/tarkov/hwid-spoofer/) when hardware is flagged, or a new account when reputation is burned.',
     },
   ],
   'unlock-all': [
@@ -341,16 +341,16 @@ const productContent: Record<
       'Team color filter',
       'Loot spawn timers',
       'Radar cheat',
-      'casual matches preset config',
-      'casual matches preset config',
+      'online raids preset config',
+      'online raids preset config',
       'Cloud config backup',
       'Patch auto-updater',
     ],
     overview: {
       title: 'Lite: ESP and radar',
       paragraphs: [
-        'Lite is for hero ESP, chest markers, loot timers and radar. No aimbot. Set distance, colors and stream-proof in the portal before you queue.',
-        'Best if you want awareness in online matches and casual matches without combat automation. Overlays are updated after Marvel Rivals patches.',
+        'Lite is for PMC and Scav ESP, chest markers, loot timers and radar. No aimbot. Set distance, colors and stream-proof in the portal before you queue.',
+        'Best if you want awareness in online raids and online raids without combat automation. Overlays are updated after Escape from Tarkov patches.',
       ],
     },
   },
@@ -370,7 +370,7 @@ const productContent: Record<
       'FOV & smoothness tuning',
       'Per-weapon aimbot profiles',
       'Third-party alert integration',
-      'casual matches-safe default presets',
+      'online raids-safe default presets',
       'Lobby test profile',
       'Cloud config backup',
       'Patch auto-updater',
@@ -380,7 +380,7 @@ const productContent: Record<
       title: 'Pro: aimbot plus ESP',
       paragraphs: [
         'Pro includes everything in Lite, plus Aimbot, Smooth Aim, Sticky Aim and hotkey macros. Aim settings live in one tab. Start with a portal preset, not max sliders.',
-        'Most people pick Pro for online matches and casual matches. Bone priority and macros help in fights while defaults stay smooth.',
+        'Most people pick Pro for online raids and online raids. Bone priority and macros help in fights while defaults stay smooth.',
       ],
     },
   },
@@ -412,20 +412,20 @@ const productContent: Record<
       title: 'Elite: full cheat + extras',
       paragraphs: [
         'Elite includes Lite and Pro modules, plus loot assist, Triggerbot, Recoil control, loadout tools, full wall ESP and faster patch priority.',
-        'Elite slots are limited. Portal guides help you set safer profiles before competitive matchmaking. Check the status banner on rivalscheat.net before you buy Elite access.',
+        'Elite slots are limited. Portal guides help you set safer profiles before online raid matchmaking. Check the status banner on cheatseft.org before you buy Elite access.',
       ],
     },
   },
   'hwid-spoofer': {
     images: slide('gpEspIndoor', 'gpEspWallhack', 'gpGameplay'),
     goodToKnow:
-      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching Marvel Rivals.',
+      'Run the compatibility scan in the portal before spoofing. Create a Windows restore point first. Verify identifiers changed after a cold reboot before launching Escape from Tarkov.',
     limitations:
       'Spoofing does not help account-only anti-cheat cases. Never stack two spoof tools. Shared or work PCs may not be suitable. You accept all risk from driver-level changes.',
     systemRequirements: [
       { icon: 'reqWindows', text: 'Windows 10 or 11 64-bit with administrator access.' },
       { icon: 'reqRestorePoint', text: 'Ability to create a system restore point before running.' },
-      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching Marvel Rivals after spoofing.' },
+      { icon: 'reqShieldGuide', text: 'Follow the portal setup guide before launching Escape from Tarkov after spoofing.' },
       { icon: 'reqWifi', text: 'Stable connection for portal verification tools.' },
     ],
     fullFeatures: [
@@ -441,10 +441,10 @@ const productContent: Record<
       'Recovery case support',
     ],
     overview: {
-      title: 'HWID Spoofer for Marvel Rivals PC bans',
+      title: 'HWID Spoofer for Escape from Tarkov PC bans',
       paragraphs: [
         'Use the HWID Spoofer when anti-cheat flags your PC hardware but the platform account is still fine. Includes disk and MAC tools, a restore-point checklist, a compatibility scan and post-spoof checks.',
-        'Use it when new accounts die on one PC but work on another. It does not fix account-only anti-cheat bans. After spoofing, use a safer cheat profile before competitive matchmaking.',
+        'Use it when new accounts die on one PC but work on another. It does not fix account-only anti-cheat bans. After spoofing, use a safer cheat profile before online raid matchmaking.',
       ],
     },
   },
@@ -457,7 +457,7 @@ const productContent: Record<
     limitations:
       'UGC does not guarantee account restoration. Results vary by case type. Permanent anti-cheat bans may require a new account path instead of appeal.',
     systemRequirements: [
-      { icon: 'reqMailOrder', text: 'Order email used at checkout on rivalscheat.net or at checkout on rivalscheat.net.' },
+      { icon: 'reqMailOrder', text: 'Order email used at checkout on cheatseft.org or at checkout on cheatseft.org.' },
       { icon: 'reqShieldAccount', text: 'Account details and ban or restriction notification if available.' },
       { icon: 'reqWifiPortal', text: 'Internet access for portal updates and case dashboard.' },
     ],
@@ -500,7 +500,7 @@ const productContent: Record<
     overview: {
       title: 'loadout tools / Loadout Pack',
       paragraphs: [
-        'loadout tools / Loadout Pack lets you preview outfits, camos and attachments on your Marvel Rivals client. loadout tools does not change your in-game inventory or store purchases.',
+        'loadout tools / Loadout Pack lets you preview outfits, camos and attachments on your Escape from Tarkov client. loadout tools does not change your in-game inventory or store purchases.',
         'Only you see the preview skins. Other players see your real inventory. Included with Elite, or buy loadout tools alone without combat modules.',
       ],
     },
@@ -599,5 +599,5 @@ export const productHub = {
   title: t.products.title,
   subtitle: t.products.subtitle,
   description: 'Elite cheats with aimbot and ESP, plus HWID spoofer, UGC recovery and loadout tools for PC.',
-  buyUrl: checkoutPath('r6'),
+  buyUrl: checkoutPath('tarkov'),
 };

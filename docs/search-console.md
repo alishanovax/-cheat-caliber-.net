@@ -1,17 +1,17 @@
-# Search Console workflow (rivalscheat.net)
+# Search Console workflow (cheatseft.org)
 
 You verify the domain at your DNS provider—no HTML meta tags in the repo.
 
 ## Setup (once)
 
-1. Open [Google Search Console](https://search.google.com/search-console) and add the **domain** property for `rivalscheat.net` if it is not already there.
+1. Open [Google Search Console](https://search.google.com/search-console) and add the **domain** property for `cheatseft.org` if it is not already there.
 2. Under **Sitemaps**, submit the index first (required):
-   - `https://rivalscheat.net/sitemap.xml`
+   - `https://cheatseft.org/sitemap.xml`
 3. Optional — submit child sitemaps too (same URLs, clearer GSC status per section):
-   - `https://rivalscheat.net/sitemap-pages.xml`
-   - `https://rivalscheat.net/sitemap-products.xml`
-   - `https://rivalscheat.net/sitemap-blog.xml`
-   - `https://rivalscheat.net/sitemap-forum.xml`
+   - `https://cheatseft.org/sitemap-pages.xml`
+   - `https://cheatseft.org/sitemap-products.xml`
+   - `https://cheatseft.org/sitemap-blog.xml`
+   - `https://cheatseft.org/sitemap-forum.xml`
 4. Repeat in [Bing Webmaster Tools](https://www.bing.com/webmasters) if you use Bing.
 
 ## Monthly tune (15 minutes)
@@ -26,10 +26,10 @@ You verify the domain at your DNS provider—no HTML meta tags in the repo.
 
 | Common query intent | Edit path in `pageSeo.ts` |
 | ------------------- | ------------------------- |
-| Marvel Rivals cheats (broad) | `/` |
+| Escape from Tarkov cheats (broad) | `/` |
 | lite / pro / elite | `/hacks/compare/`, `/hacks/lite/`, etc. |
 | ESP wallhack, aimbot | `/hacks/pro/`, blog posts (titles set per article) |
-| hwid, loadout changer | `/products/r6/utilities/` |
+| hwid, loadout changer | `/products/tarkov/utilities/` |
 | purchase / refund | `/terms/`, `/contact/` |
 
 Product and blog article pages still use their own titles from content; add entries to `PAGE_SEO` only when you want a fixed override for a specific pathname.

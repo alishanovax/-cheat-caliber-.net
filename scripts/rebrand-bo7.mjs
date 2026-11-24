@@ -47,9 +47,9 @@ const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.astro']);
 /** Ordered longest-first replacements. */
 const REPLACEMENTS = [
   ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Frobrun', BO7_CHECKOUT],
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fmarvel-rivals&sf=zadeyo', BO7_CHECKOUT],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo', BO7_CHECKOUT],
   ['%2Fproducts%2Frobrun', '%2Fproducts%2Fblack-ops-7'],
-  ['%2Fproducts%2Fmarvel-rivals', '%2Fproducts%2Fblack-ops-7'],
+  ['%2Fproducts%2Fescape-from-tarkov', '%2Fproducts%2Fblack-ops-7'],
   ['https://cheatsrobrun.net', 'https://bo7cheats.org'],
   ['cheatsrobrun.net', 'bo7cheats.org'],
   ['cheatsrobrun-net', 'bo7cheats-org'],

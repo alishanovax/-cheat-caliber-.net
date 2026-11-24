@@ -43,7 +43,7 @@ const TEXT_EXTS = new Set([
 const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.astro']);
 
 const REPLACEMENTS = [
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov', ROBRUN_CHECKOUT],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo', ROBRUN_CHECKOUT],
   ['%2Fproducts%2Fescape-from-tarkov', '%2Fproducts%2Frobrun'],
   ['https://cheattarkov.net', 'https://cheatsrobrun.net'],
   ['cheattarkov.net', 'cheatsrobrun.net'],

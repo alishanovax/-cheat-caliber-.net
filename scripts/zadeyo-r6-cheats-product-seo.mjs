@@ -1,12 +1,12 @@
 /**
  * Copy into Zadeyo /products/rainbow-six-siege-cheats (Next.js product route).
- * rivalscheat.net mirrors this on /go/r6/ after deploy; zadeyo.com must be updated separately.
+ * cheatseft.org mirrors this on /go/tarkov/ after deploy; zadeyo.com must be updated separately.
  */
-import { ZADEYO_R6_PRODUCT_SEO, ZADEYO_R6_CHECKOUT_URL } from '../src/config/zadeyoR6ProductSeo.ts';
+import { ZADEYO_R6_PRODUCT_SEO, ZADEYO_TARKOV_CHECKOUT_URL } from '../src/config/zadeyoTarkovProductSeo.ts';
 
 export const ZADEYO_RAINBOW_SIX_SIEGE_CHBSGTS_PRODUCT_SEO = {
   ...ZADEYO_R6_PRODUCT_SEO,
-  checkoutUrl: ZADEYO_R6_CHECKOUT_URL,
+  checkoutUrl: ZADEYO_TARKOV_CHECKOUT_URL,
   /** Zadeyo CMS: use one <h1>; demote duplicate product hero headings to <h2>. */
   headingOutline: [
     { level: 'h1', text: ZADEYO_R6_PRODUCT_SEO.h1 },
@@ -17,9 +17,9 @@ export const ZADEYO_RAINBOW_SIX_SIEGE_CHBSGTS_PRODUCT_SEO = {
     { level: 'h2', text: 'Frequently asked questions' },
   ],
   keywordCap: {
-    phrase: 'Marvel Rivals cheats',
+    phrase: 'Escape from Tarkov cheats',
     maxUses: 8,
-    note: 'Keep phrase in title + meta only; use Marvel Rivals / the listing elsewhere.',
+    note: 'Keep phrase in title + meta only; use Escape from Tarkov / the listing elsewhere.',
   },
 };
 

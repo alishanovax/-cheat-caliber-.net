@@ -3,8 +3,8 @@ import path from 'node:path';
 
 const root = path.join(process.cwd(), 'src');
 const REPLACEMENTS = [
-  ['Escape from Tarkov and anti-cheat receive', 'Escape from Tarkov and anti-cheat receive'],
-  ['Easy Anti-Hack or Escape from Tarkov', 'anti-cheat or Escape from Tarkov'],
+  ['Caliber and anti-cheat receive', 'Caliber and anti-cheat receive'],
+  ['Easy Anti-Hack or Caliber', 'anti-cheat or Caliber'],
   ['Easy Anti-Hack', 'anti-cheat'],
   ['Easy Anti-Hack', 'anti-cheat'],
   ['anti-cheat patch-day', 'anti-cheat patch-day'],
@@ -20,8 +20,8 @@ const REPLACEMENTS = [
   ['anti-cheat cannot verify', 'anti-cheat cannot verify'],
   ['if anti-cheat cannot', 'if anti-cheat cannot'],
   ['from the loader or Steam', 'from the loader or Ubisoft Connect'],
-  ['launch Escape from Tarkov on Steam', 'launch Escape from Tarkov through Ubisoft Connect'],
-  ['Escape from Tarkov on Steam', 'Escape from Tarkov on PC'],
+  ['launch Caliber on Steam', 'launch Caliber through Ubisoft Connect'],
+  ['Caliber on Steam', 'Caliber on PC'],
   ['for Steam players', 'for PC players'],
   ['on Steam PC', 'on PC'],
   ['Steam PC', 'PC'],
@@ -30,14 +30,14 @@ const REPLACEMENTS = [
   ['Steam locker', 'in-game inventory'],
   ['Steam inventory', 'in-game inventory'],
   ['Steam review', 'BSG review'],
-  ['Steam restrictions', 'BSG account restrictions'],
+  ['Steam restrictions', 'game account restrictions'],
   ['Steam ban appeals', 'BSG ban appeals'],
   ['Steam game file verification', 'Ubisoft Connect file verification'],
   ['through Steam', 'through Ubisoft Connect'],
   ['normal Steam launch', 'normal Ubisoft Connect launch'],
   ['into the Steam folder', 'into the game folder'],
   ['Loot-shooter action on Steam', 'Tactical shooter action on PC'],
-  ['Mw4 Hacks', 'EFT Cheats'],
+  ['Mw4 Hacks', 'Caliber Cheats'],
 ];
 
 function walk(dir, out = []) {

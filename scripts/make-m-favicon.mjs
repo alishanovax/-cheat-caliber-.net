@@ -18,7 +18,7 @@ const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill=
   <rect width="512" height="512" rx="128" fill="url(#bg)"/>
   <rect x="12" y="12" width="488" height="488" rx="116" stroke="#2A333D" stroke-width="8"/>
   <path d="M256 64 112 128v112c0 96 60 164 144 208 84-44 144-112 144-208V128L256 64z" fill="url(#accent)" opacity="0.95"/>
-  <text x="256" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="208" font-weight="700" fill="#F5F7FA">E</text>
+  <text x="256" y="310" text-anchor="middle" font-family="Segoe UI, system-ui, sans-serif" font-size="208" font-weight="700" fill="#F5F7FA">C</text>
 </svg>`;
 
 const source = Buffer.from(svg);

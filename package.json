@@ -1,5 +1,5 @@
 {
-  "name": "cheatseft-org",
+  "name": "cheatcaliber-net",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -14,7 +14,7 @@
     "postinstall": "node scripts/cloudflare-postinstall.mjs",
     "astro": "astro",
     "optimize:images": "node scripts/optimize-images.mjs",
-    "install:images": "node scripts/install-tarkov-hack-images.mjs"
+    "install:images": "node scripts/install-caliber-images.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

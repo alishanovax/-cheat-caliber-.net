@@ -26,13 +26,13 @@ const TEXT_EXTS = new Set([
 const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.seo-baseline', '_template']);
 
 const PURCHASE_URL =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo';
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcaliber-novaxware&sf=zadeyo';
 
 /** Ordered longest-first replacements. */
 const REPLACEMENTS = [
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo', PURCHASE_URL],
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo', PURCHASE_URL],
-  ['%2Fproducts%2Fescape-from-tarkov', '%2Fproducts%2Fescape-from-tarkov'],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcaliber-novaxware&sf=zadeyo', PURCHASE_URL],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcaliber-novaxware&sf=zadeyo', PURCHASE_URL],
+  ['%2Fproducts%2Fcaliber-novaxware', '%2Fproducts%2Fcaliber-novaxware'],
   ['/products/bodycam-hacks', '/products/borderlands-hacks'],
   ['products/bodycam-hacks', 'products/borderlands-hacks'],
   ['/bodycam-hacks/', '/borderlands-hacks/'],
@@ -44,8 +44,8 @@ const REPLACEMENTS = [
   ['Bodycamhack', 'Borderlandscheats'],
   ['bodycamhack', 'borderlandscheats'],
 
-  ['/go/tarkov/', '/go/tarkov/'],
-  ['/go/tarkov', '/go/tarkov'],
+  ['/go/caliber/', '/go/caliber/'],
+  ['/go/caliber', '/go/caliber'],
   ["checkoutPath('bodycam')", "checkoutPath('borderlands')"],
   ['checkoutPath("bodycam")', 'checkoutPath("borderlands")'],
   ["product: 'bodycam'", "product: 'borderlands'"],

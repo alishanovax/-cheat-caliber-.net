@@ -1,5 +1,5 @@
 /**
- * Second-pass vocabulary cleanup: Dota/Steam/anti-cheat leftovers → Escape from Tarkov.
+ * Second-pass vocabulary cleanup: Dota/Steam/anti-cheat leftovers → Caliber.
  * Run: node scripts/vocab-mw4.mjs
  */
 import fs from 'node:fs';
@@ -27,16 +27,16 @@ const REPLACEMENTS = [
   ['via Steam', 'via Steam Games'],
   ['on Steam PC', 'on PC'],
   ['Steam PC', 'Windows PC'],
-  ['BSG account', 'BSG account'],
+  ['game account', 'game account'],
   ['Steam inventory', 'Steam locker'],
   ['Steam platform', 'Steam Games platform'],
   ['Steam overlay', 'Steam overlay'],
-  ['Steam restrictions', 'BSG account restrictions'],
-  ['Steam Escape from Tarkov', 'Escape from Tarkov on Epic'],
+  ['Steam restrictions', 'game account restrictions'],
+  ['Steam Caliber', 'Caliber on Epic'],
   ['through Steam', 'through Steam Games'],
   ['exiting Steam', 'exiting the Steam Games Launcher'],
-  ['Current Escape from Tarkov client via Steam', 'Current Escape from Tarkov client via Steam Games Launcher'],
-  ['right-click Escape from Tarkov → Properties', 'open Escape from Tarkov settings in the Steam Games Launcher'],
+  ['Current Caliber client via Steam', 'Current Caliber client via Steam Games Launcher'],
+  ['right-click Caliber → Properties', 'open Caliber settings in the Steam Games Launcher'],
   ['reqSteam', 'reqEpic'],
   ['compatSteam', 'compatEpic'],
   [' Steam ', ' Steam Games '],
@@ -89,7 +89,7 @@ const REPLACEMENTS = [
   ['map hack, zoom hack', 'ESP, map overlay hack'],
   ['map hack and', 'ESP wallhack and'],
   ['full map hack', 'full ESP wallhack'],
-  ['Map hack and PMC and scav ESP', 'ESP wallhack and PMC and scav ESP'],
+  ['Map hack and operator ESP', 'ESP wallhack and operator ESP'],
   ['map hack ESP', 'ESP wallhack'],
   ['map hack setup', 'ESP wallhack setup'],
   ['map hack', 'ESP wallhack'],
@@ -123,7 +123,7 @@ const REPLACEMENTS = [
   ['per-hero', 'per-weapon'],
   ['Per-hero', 'Per-weapon'],
   ['hero configs', 'weapon configs'],
-  ['PMC and scav ESP', 'PMC and scav ESP'],
+  ['operator ESP', 'operator ESP'],
   ['Hero ESP', 'Player ESP'],
   ['enemy hero', 'enemy player'],
   ['enemy heroes', 'enemy players'],
@@ -200,7 +200,7 @@ const REPLACEMENTS = [
   ['Fog of war', 'Storm circle'],
   ['fog of war', 'storm circle'],
 
-  ['Escape from Tarkov Scripts, Map Hack & ESP', 'Escape from Tarkov Aimbot, ESP & Wallhack'],
+  ['Caliber Scripts, Map Hack & ESP', 'Caliber Aimbot, ESP & Wallhack'],
   ['humanized scripts', 'humanized aimbot'],
   ['script automation', 'aimbot automation'],
   ['script delays', 'aimbot smoothness'],

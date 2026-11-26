@@ -35,12 +35,12 @@ function expandFaqAnswer(answer: string, faqId: string): string {
     ELITE: link(`Elite tier checkout (${faqId})`, productPath('elite')),
     LITE: link(`Lite ESP tier (${faqId})`, productPath('lite')),
     PRO: link(`Pro aimbot tier (${faqId})`, productPath('pro')),
-    PRODUCTS_HUB: link(`Full Escape from Tarkov catalog (${faqId})`, ROUTES.products),
+    PRODUCTS_HUB: link(`Full Caliber catalog (${faqId})`, ROUTES.products),
     HWID: link(`HWID spoofer utility — ${faqId}`, productPath('hwid-spoofer')),
     UGC: link(`UGC appeal tools — ${faqId}`, productPath('ugc')),
     SKIN: link(`loadout tools pack — ${faqId}`, productPath('unlock-all')),
     FAQ_PAGE: link(`Full FAQ index — ${faqId}`, ROUTES.faq),
-    BLOG: link(`Escape from Tarkov blog guides — ${faqId}`, ROUTES.blog),
+    BLOG: link(`Caliber blog guides — ${faqId}`, ROUTES.blog),
   };
   return Object.entries(slots).reduce(
     (text, [key, html]) => text.replaceAll(`{{${key}}}`, html),
@@ -57,21 +57,21 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'status',
     topic: 'setup',
     icon: 'faqStatus',
-    q: 'Where do I check if Escape from Tarkov cheats are online?',
-    a: a('The live status banner is on cheatseft.org. Always check after a Escape from Tarkov or anti-cheat update.'),
+    q: 'Where do I check if Caliber cheats are online?',
+    a: a('The live status banner is on cheatcaliber.net. Always check after a Caliber or anti-cheat update.'),
   },
   {
     id: 'after-buy',
     topic: 'setup',
     icon: 'faqAfterBuy',
     q: 'What happens after I buy?',
-    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Escape from Tarkov.'),
+    a: a('Your portal unlocks the loader, setup guide and config library via our secure checkout. Follow the guide before launching Caliber.'),
   },
   {
     id: 'ban-risk',
     topic: 'safety',
     icon: 'faqBanRisk',
-    q: 'Can I get banned using third-party Escape from Tarkov cheats?',
+    q: 'Can I get banned using third-party Caliber cheats?',
     a: a('Yes—any modification carries risk. anti-cheat and report systems evolve. Read current status and accept the risk before use.'),
   },
   {
@@ -79,7 +79,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'setup',
     icon: 'faqPlatforms',
     q: 'Which platforms are supported?',
-    a: a('Escape from Tarkov via the EA app or Ubisoft Connect on Windows 10/11 64-bit only. macOS and Linux are not supported.'),
+    a: a('Caliber via the EA app or Ubisoft Connect on Windows 10/11 64-bit only. macOS and Linux are not supported.'),
   },
   {
     id: 'license-move',
@@ -99,8 +99,8 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'what-is-esp',
     topic: 'esp',
     icon: 'faqWhatIsEsp',
-    q: 'What is Escape from Tarkov wall ESP / ESP?',
-    a: `wall ESP and PMC and scav ESP show enemy positions, chests, loot and POI camps through storm circle. {{LITE}} covers awareness overlays. {{PRO}} and {{ELITE}} add script modules on top.`,
+    q: 'What is Caliber wall ESP / ESP?',
+    a: `wall ESP and operator ESP show enemy positions, chests, loot and POI camps through storm circle. {{LITE}} covers awareness overlays. {{PRO}} and {{ELITE}} add script modules on top.`,
     scopes: ['lite', 'pro', 'elite'],
   },
   {
@@ -115,7 +115,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhichTierEsp',
     q: 'Which tier do I need for wall ESP only?',
-    a: `{{LITE}} is awareness only: PMC and scav ESP, chest locator, loot timers and map overlay. {{PRO}} adds aimbot. {{ELITE}} adds bots, kill steal and loadout tools.`,
+    a: `{{LITE}} is awareness only: operator ESP, chest locator, loot timers and map overlay. {{PRO}} adds aimbot. {{ELITE}} adds bots, kill steal and loadout tools.`,
     scopes: ['lite'],
   },
   {
@@ -152,7 +152,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'undetected',
     topic: 'safety',
     icon: 'faqUndetected',
-    q: 'Are undetected Escape from Tarkov cheats guaranteed?',
+    q: 'Are undetected Caliber cheats guaranteed?',
     a: a('No. Undetected is current status on the product page—not a permanent guarantee. Stop if the build shows updating, testing, or detected.'),
   },
   {
@@ -191,14 +191,14 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'products',
     icon: 'faqExternalLoader',
     q: 'Is the loader injected into the game folder?',
-    a: `EFT Cheats runs external with cloud config sync—no files injected into the Escape from Tarkov directory. anti-cheat risk still applies. See {{PRODUCTS_HUB}}.`,
+    a: `Caliber Cheats runs external with cloud config sync—no files injected into the Caliber directory. anti-cheat risk still applies. See {{PRODUCTS_HUB}}.`,
   },
   {
     id: 'blog-vs-cheats',
     topic: 'blog',
     icon: 'faqBlogVsCheats',
     q: 'Are blog cheat codes the same as competitive cheats?',
-    a: `No. Blog guides about Steam console commands apply only in custom lobbies with cheats enabled. casual matches Escape from Tarkov cheats are separate products—see {{LITE}}, {{PRO}} and {{ELITE}}.`,
+    a: `No. Blog guides about Steam console commands apply only in custom lobbies with cheats enabled. casual matches Caliber cheats are separate products—see {{LITE}}, {{PRO}} and {{ELITE}}.`,
   },
   {
     id: 'blog-setup',
@@ -227,7 +227,7 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'plans',
     icon: 'faqWhoPro',
     q: 'Who should buy Pro?',
-    a: `casual matches players who want Aimbot, Smooth Aim and Hotkey macros with wall ESP included. Pro is the most popular tier at cheatseft.org.`,
+    a: `casual matches players who want Aimbot, Smooth Aim and Hotkey macros with wall ESP included. Pro is the most popular tier at cheatcaliber.net.`,
     scopes: ['pro'],
   },
   {
@@ -243,14 +243,14 @@ const rawSiteFaqs: SiteFaqItem[] = [
     topic: 'safety',
     icon: 'faqEacUpdate',
     q: 'What should I do after a anti-cheat update?',
-    a: a('Check cheatseft.org status. Do not launch until the banner shows online. Load conservative presets after any patch.'),
+    a: a('Check cheatcaliber.net status. Do not launch until the banner shows online. Load conservative presets after any patch.'),
   },
   {
     id: 'install-help',
     topic: 'setup',
     icon: 'faqDiscordHelp',
     q: 'How do I get install help?',
-    a: a('After purchase, follow the portal setup guide with your order email, Windows version and Escape from Tarkov client build. The FAQ covers common loader errors.'),
+    a: a('After purchase, follow the portal setup guide with your order email, Windows version and Caliber client build. The FAQ covers common loader errors.'),
   },
   {
     id: 'zero-build-competitive',
@@ -279,8 +279,8 @@ const rawSiteFaqs: SiteFaqItem[] = [
     id: 'private-cheats',
     topic: 'safety',
     icon: 'faqPrivateCheats',
-    q: 'What are private Escape from Tarkov cheats?',
-    a: a('Private means per-user keys and maintained builds—not public zip packs. EFT Cheats ships portal delivery for ESP, aimbot and wall ESP tiers.'),
+    q: 'What are private Caliber cheats?',
+    a: a('Private means per-user keys and maintained builds—not public zip packs. Caliber Cheats ships portal delivery for ESP, aimbot and wall ESP tiers.'),
   },
   {
     id: 'faq-more',
@@ -306,7 +306,7 @@ export function getAllFaqs(): SiteFaqItem[] {
 /** Shared FAQ block copy + filters (home, /faq/, products, blog). */
 export const SITE_FAQ_SECTION_COPY = {
   eyebrow: 'All topics',
-  title: 'Escape from Tarkov cheats FAQ',
+  title: 'Caliber cheats FAQ',
   subtitle: 'Filter by cheat plans, wall ESP, aimbot, products, setup and guides.',
 } as const;
 
@@ -323,7 +323,7 @@ export const SITE_FAQ_FILTER_TOPICS: FaqTopic[] = [
 /** Section copy when FAQ list is scoped to the current page (not /faq/). */
 export const CONTEXTUAL_FAQ_SECTION_COPY = {
   eyebrow: 'Cheat FAQ',
-  title: 'Escape from Tarkov cheats questions',
+  title: 'Caliber cheats questions',
   subtitle: 'Straight answers on aimbot, ESP, bans and setup — see the full FAQ for every topic.',
 } as const;
 
@@ -367,7 +367,7 @@ const blogTopicFaqs: Record<string, SiteFaqItem[]> = {
       topic: 'blog',
       icon: 'faqBlogGuideStart',
       q: 'Should I use console cheat codes in competitive?',
-      a: a('No. practice mode lobby cheat codes only work in custom games with cheats enabled. casual matches requires separate Escape from Tarkov cheats from cheatseft.org tiers.'),
+      a: a('No. practice mode lobby cheat codes only work in custom games with cheats enabled. casual matches requires separate Caliber cheats from cheatcaliber.net tiers.'),
     },
     {
       id: 'blog-guide-tier',
@@ -431,7 +431,7 @@ const defaultBlogFaqs: SiteFaqItem[] = [
     topic: 'blog',
     icon: 'faqBlogDefault3',
     q: 'Will settings in this guide work next patch?',
-    a: a('Re-check status after every Escape from Tarkov update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
+    a: a('Re-check status after every Caliber update. Portal presets update with patch notes—reload configs instead of copying old sliders.'),
   },
 ];
 
@@ -445,7 +445,7 @@ export function getBlogFaqs(tag: string, slug: string): SiteFaqItem[] {
       topic: 'esp',
       icon: 'faqBlogSlugEsp',
       q: 'Which tier covers wall ESP from this guide?',
-      a: `{{LITE}} includes PMC and scav ESP, chest locator and loot timers. {{PRO}} adds combat aimbot on the same overlay stack.`,
+      a: `{{LITE}} includes operator ESP, chest locator and loot timers. {{PRO}} adds combat aimbot on the same overlay stack.`,
     });
   }
   if (slug.includes('script') || slug.includes('combo') || slug.includes('auto-combo')) {

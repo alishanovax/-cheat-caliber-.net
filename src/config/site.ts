@@ -1,9 +1,9 @@
 /** Bump when favicon assets change so browsers reload tab icons. */
-export const FAVICON_VERSION = 'cheatseft-e-2026';
+export const FAVICON_VERSION = 'cheatcaliber-c-2026';
 
-export const SITE_DOMAIN = 'cheatseft.org';
+export const SITE_DOMAIN = 'cheatcaliber.net';
 export const SITE_URL = `https://${SITE_DOMAIN}`;
-export const PRODUCT_BASE = '/products/tarkov/';
-export const TITLE_PREFIX = 'EFT Cheats';
+export const PRODUCT_BASE = '/products/caliber/';
+export const TITLE_PREFIX = 'Caliber Cheats';
 export const SUPPORT_EMAIL = `support@${SITE_DOMAIN}`;
 export const DISCORD_URL = 'https://discord.gg/Vu85F8auQS';

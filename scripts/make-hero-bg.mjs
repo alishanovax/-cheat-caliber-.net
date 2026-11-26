@@ -25,8 +25,8 @@ const pipeline = sharp(src)
   .linear(0.75, -12)
   .blur(0.55);
 
-const jpgPath = path.join(outDir, 'hero-tarkov-dark.jpg');
-const webpPath = path.join(outDir, 'hero-tarkov-dark.webp');
+const jpgPath = path.join(outDir, 'hero-caliber-dark.jpg');
+const webpPath = path.join(outDir, 'hero-caliber-dark.webp');
 
 await pipeline.clone().jpeg({ quality: 78, mozjpeg: true }).toFile(jpgPath);
 await pipeline.clone().webp({ quality: 72 }).toFile(webpPath);

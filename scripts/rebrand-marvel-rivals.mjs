@@ -1,5 +1,5 @@
 /**
- * R6 Cheat → EFT Cheats (Escape from Tarkov) rebrand for cheatseft.org
+ * R6 Cheat → Caliber Cheats (Caliber) rebrand for cheatcaliber.net
  * Run from project root: node scripts/rebrand-marvel-rivals.mjs
  */
 import fs from 'node:fs';
@@ -26,52 +26,52 @@ const TEXT_EXTS = new Set([
 const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.seo-baseline', '_template']);
 
 const MARVEL_CHECKOUT =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo';
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcaliber-novaxware&sf=zadeyo';
 
-/** Ordered longest-first replacements. Path slugs (/r6/, blog/tarkov-*) are preserved. */
+/** Ordered longest-first replacements. Path slugs (/r6/, blog/caliber-*) are preserved. */
 const REPLACEMENTS = [
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Ftarkov-faceit-cheats', MARVEL_CHECKOUT],
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Ftarkov-faceit', MARVEL_CHECKOUT],
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Ftarkov-legends', MARVEL_CHECKOUT],
-  ['%2Fproducts%2Ftarkov-faceit', '%2Fproducts%2Fescape-from-tarkov'],
-  ['%2Fproducts%2Ftarkov-legends', '%2Fproducts%2Fescape-from-tarkov'],
-  ['%2Fproducts%2Frainbow-six-siege-hacks', '%2Fproducts%2Fescape-from-tarkov'],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcaliber-faceit-cheats', MARVEL_CHECKOUT],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcaliber-faceit', MARVEL_CHECKOUT],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcaliber-legends', MARVEL_CHECKOUT],
+  ['%2Fproducts%2Fcaliber-faceit', '%2Fproducts%2Fcaliber-novaxware'],
+  ['%2Fproducts%2Fcaliber-legends', '%2Fproducts%2Fcaliber-novaxware'],
+  ['%2Fproducts%2Frainbow-six-siege-hacks', '%2Fproducts%2Fcaliber-novaxware'],
 
-  ['tarkov-cheat.com', 'cheatseft.org'],
-  ['tarkov-cheat-r-2026', 'rivals-cheat-m-2026'],
+  ['caliber-cheat.com', 'cheatcaliber.net'],
+  ['caliber-cheat-r-2026', 'rivals-cheat-m-2026'],
 
-  ["TITLE_PREFIX = 'R6 Cheat'", "TITLE_PREFIX = 'EFT Cheats'"],
-  ["FAVICON_VERSION = 'tarkov-cheat-r-2026'", "FAVICON_VERSION = 'rivals-cheat-m-2026'"],
-  ["export const SITE_DOMAIN = 'tarkov-cheat.com'", "export const SITE_DOMAIN = 'cheatseft.org'"],
+  ["TITLE_PREFIX = 'R6 Cheat'", "TITLE_PREFIX = 'Caliber Cheats'"],
+  ["FAVICON_VERSION = 'caliber-cheat-r-2026'", "FAVICON_VERSION = 'rivals-cheat-m-2026'"],
+  ["export const SITE_DOMAIN = 'caliber-cheat.com'", "export const SITE_DOMAIN = 'cheatcaliber.net'"],
 
-  ['site: \'https://tarkov-cheat.com\'', "site: 'https://cheatseft.org'"],
+  ['site: \'https://caliber-cheat.com\'', "site: 'https://cheatcaliber.net'"],
 
-  ['Tom Clancy\'s Rainbow Six Siege', 'Escape from Tarkov'],
-  ['Tom Clancys Rainbow Six Siege', 'Escape from Tarkov'],
-  ['Rainbow Six Siege', 'Escape from Tarkov'],
-  ['rainbow six siege', 'Escape from Tarkov'],
-  ['R6 Siege', 'Escape from Tarkov'],
+  ['Tom Clancy\'s Rainbow Six Siege', 'Caliber'],
+  ['Tom Clancys Rainbow Six Siege', 'Caliber'],
+  ['Rainbow Six Siege', 'Caliber'],
+  ['rainbow six siege', 'Caliber'],
+  ['R6 Siege', 'Caliber'],
   ['BattlEye', 'anti-cheat'],
   ['battleye', 'anti-cheat'],
 
-  ['R6 Cheat', 'EFT Cheats'],
-  ['R6 cheat', 'Escape from Tarkov cheat'],
-  ['R6 cheats', 'Escape from Tarkov cheats'],
-  ['R6 Hacks', 'EFT Cheats'],
-  ['R6 Hack', 'EFT Cheats'],
-  ['R6 hacks', 'Escape from Tarkov cheats'],
-  ['R6 hack', 'Escape from Tarkov cheat'],
+  ['R6 Cheat', 'Caliber Cheats'],
+  ['R6 cheat', 'Caliber cheat'],
+  ['R6 cheats', 'Caliber cheats'],
+  ['R6 Hacks', 'Caliber Cheats'],
+  ['R6 Hack', 'Caliber Cheats'],
+  ['R6 hacks', 'Caliber cheats'],
+  ['R6 hack', 'Caliber cheat'],
 
-  ['R6 aimbot', 'Escape from Tarkov aimbot'],
-  ['R6 ESP', 'Escape from Tarkov ESP'],
-  ['R6 gadget ESP', 'Escape from Tarkov ability ESP'],
-  ['R6 recoil control', 'Escape from Tarkov recoil control'],
-  ['R6 compatibility', 'Escape from Tarkov compatibility'],
+  ['R6 aimbot', 'Caliber aimbot'],
+  ['R6 ESP', 'Caliber ESP'],
+  ['R6 gadget ESP', 'Caliber ability ESP'],
+  ['R6 recoil control', 'Caliber recoil control'],
+  ['R6 compatibility', 'Caliber compatibility'],
   ['R6 Lite', 'Lite'],
   ['R6 Pro', 'Pro'],
   ['R6 Elite', 'Elite'],
 
-  ['operator ESP', 'PMC and scav ESP'],
+  ['operator ESP', 'operator ESP'],
   ['Operator ESP', 'Hero ESP'],
   ['gadget ESP', 'ability ESP'],
   ['Gadget ESP', 'Ability ESP'],
@@ -83,32 +83,32 @@ const REPLACEMENTS = [
   ['defuse kits', 'health packs'],
   ['Defuse kits', 'Health packs'],
 
-  ['Return to tarkov-cheat.com homepage', 'Return to cheatseft.org homepage'],
-  ['on tarkov-cheat.com', 'on cheatseft.org'],
-  ['tarkov-cheat.com before', 'cheatseft.org before'],
+  ['Return to caliber-cheat.com homepage', 'Return to cheatcaliber.net homepage'],
+  ['on caliber-cheat.com', 'on cheatcaliber.net'],
+  ['caliber-cheat.com before', 'cheatcaliber.net before'],
 
-  ['Rainbow Six Siege on PC', 'Escape from Tarkov on PC'],
-  ['Rainbow Six Siege cheats', 'Escape from Tarkov cheats'],
-  ['Rainbow Six Siege cheat', 'Escape from Tarkov cheat'],
-  ['Rainbow Six Siege PC', 'Escape from Tarkov PC'],
-  ['Rainbow Six Siege multiplayer', 'Escape from Tarkov multiplayer'],
-  ['Rainbow Six Siege matches', 'Escape from Tarkov matches'],
-  ['Rainbow Six Siege catalog', 'Escape from Tarkov catalog'],
-  ['Rainbow Six Siege product', 'Escape from Tarkov product'],
+  ['Rainbow Six Siege on PC', 'Caliber on PC'],
+  ['Rainbow Six Siege cheats', 'Caliber cheats'],
+  ['Rainbow Six Siege cheat', 'Caliber cheat'],
+  ['Rainbow Six Siege PC', 'Caliber PC'],
+  ['Rainbow Six Siege multiplayer', 'Caliber multiplayer'],
+  ['Rainbow Six Siege matches', 'Caliber matches'],
+  ['Rainbow Six Siege catalog', 'Caliber catalog'],
+  ['Rainbow Six Siege product', 'Caliber product'],
 
-  ['aria-label="R6 Cheat"', 'aria-label="EFT Cheats"'],
-  ['>R</text>', '>E</text>'],
-  ['R6 <span class="site-brand__pill-accent">Cheat</span>', 'EFT <span class="site-brand__pill-accent">Cheats</span>'],
-  ['R6 <span class="site-brand__title-accent">Cheat</span>', 'EFT <span class="site-brand__title-accent">Cheats</span>'],
+  ['aria-label="R6 Cheat"', 'aria-label="Caliber Cheats"'],
+  ['>R</text>', '>C</text>'],
+  ['R6 <span class="site-brand__pill-accent">Cheat</span>', 'Caliber <span class="site-brand__pill-accent">Cheats</span>'],
+  ['R6 <span class="site-brand__title-accent">Cheat</span>', 'Caliber <span class="site-brand__title-accent">Cheats</span>'],
 
-  ['Rainbow Six Siege cheats guide:', 'Escape from Tarkov cheats guide:'],
-  ['Rainbow Six Siege · PC', 'Escape from Tarkov · PC'],
+  ['Rainbow Six Siege cheats guide:', 'Caliber cheats guide:'],
+  ['Rainbow Six Siege · PC', 'Caliber · PC'],
   ['Ranked', 'Competitive'],
   ['ranked', 'competitive'],
 
-  ['name: \'R6 Cheat\'', "name: 'EFT Cheats'"],
-  ['domain: \'tarkov-cheat.com\'', "domain: 'cheatseft.org'"],
-  ['title: \'R6 Cheat\'', "title: 'EFT Cheats'"],
+  ['name: \'R6 Cheat\'', "name: 'Caliber Cheats'"],
+  ['domain: \'caliber-cheat.com\'', "domain: 'cheatcaliber.net'"],
+  ['title: \'R6 Cheat\'', "title: 'Caliber Cheats'"],
 ];
 
 function walk(dir, out = []) {
@@ -147,8 +147,8 @@ for (const file of files) {
 const checkoutFile = path.join(root, 'src', 'config', 'checkout-redirects.mjs');
 let checkout = fs.readFileSync(checkoutFile, 'utf8');
 checkout = checkout.replace(
-  /export const TARKOV_CHECKOUT_URL\s*=\s*'[^']*'/,
-  `export const TARKOV_CHECKOUT_URL =\n  '${MARVEL_CHECKOUT}'`,
+  /export const CALIBER_CHECKOUT_URL\s*=\s*'[^']*'/,
+  `export const CALIBER_CHECKOUT_URL =\n  '${MARVEL_CHECKOUT}'`,
 );
 fs.writeFileSync(checkoutFile, checkout);
 console.log('patched checkout-redirects.mjs');

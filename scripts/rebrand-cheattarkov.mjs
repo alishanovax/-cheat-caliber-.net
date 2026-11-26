@@ -1,5 +1,5 @@
 /**
- * cheatapex.net → cheattarkov.net (Escape from Tarkov)
+ * cheatapex.net → cheattarkov.net (Caliber)
  * Run: node scripts/rebrand-cheattarkov.mjs
  */
 import fs from 'node:fs';
@@ -8,7 +8,7 @@ import path from 'node:path';
 const root = path.resolve(import.meta.dirname, '..');
 
 const TARKOV_CHECKOUT =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo';
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcaliber-novaxware&sf=zadeyo';
 
 const TEXT_EXTS = new Set([
   '.ts',
@@ -31,63 +31,63 @@ const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.astro', 'rebrand-ch
 
 const REPLACEMENTS = [
   [TARKOV_CHECKOUT.replace('escape-from-tarkov', 'apex-legends'), TARKOV_CHECKOUT],
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo', TARKOV_CHECKOUT],
-  ['%2Fproducts%2Fescape-from-tarkov', '%2Fproducts%2Fescape-from-tarkov'],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcaliber-novaxware&sf=zadeyo', TARKOV_CHECKOUT],
+  ['%2Fproducts%2Fcaliber-novaxware', '%2Fproducts%2Fcaliber-novaxware'],
   ['https://cheatapex.net', 'https://cheattarkov.net'],
   ['cheatapex.net', 'cheattarkov.net'],
-  ['cheatapex-net', 'cheattarkov-net'],
-  ['cheatapex-2026', 'cheattarkov-2026'],
-  ['name = "cheatapex-net"', 'name = "cheattarkov-net"'],
-  ['"name": "cheatapex-net"', '"name": "cheattarkov-net"'],
+  ['cheatapex-net', 'cheatcaliber-net'],
+  ['cheatapex-2026', 'cheatcaliber-2026'],
+  ['name = "cheatapex-net"', 'name = "cheatcaliber-net"'],
+  ['"name": "cheatapex-net"', '"name": "cheatcaliber-net"'],
   ['Return to cheatapex.net homepage', 'Return to cheattarkov.net homepage'],
-  ['tarkovCheatsLanding', 'tarkovCheatsLanding'],
-  ['zadeyoTarkovProductSeo', 'zadeyoTarkovProductSeo'],
-  ['TARKOV_CHECKOUT_URL', 'TARKOV_CHECKOUT_URL'],
-  ['/escape-from-tarkov-cheats/', '/escape-from-tarkov-cheats/'],
-  ['/escape-from-tarkov-cheats', '/escape-from-tarkov-cheats'],
-  ['/products/tarkov/', '/products/tarkov/'],
-  ['/products/tarkov', '/products/tarkov'],
-  ['/go/tarkov/', '/go/tarkov/'],
-  ['/go/tarkov', '/go/tarkov'],
-  ['escape-from-tarkov-cheats', 'escape-from-tarkov-cheats'],
-  ["checkoutPath('tarkov')", "checkoutPath('tarkov')"],
-  ['checkoutPath("tarkov")', 'checkoutPath("tarkov")'],
+  ['caliberCheatsLanding', 'caliberCheatsLanding'],
+  ['zadeyoCaliberProductSeo', 'zadeyoCaliberProductSeo'],
+  ['CALIBER_CHECKOUT_URL', 'CALIBER_CHECKOUT_URL'],
+  ['/caliber-cheats/', '/caliber-cheats/'],
+  ['/caliber-cheats', '/caliber-cheats'],
+  ['/products/caliber/', '/products/caliber/'],
+  ['/products/caliber', '/products/caliber'],
+  ['/go/caliber/', '/go/caliber/'],
+  ['/go/caliber', '/go/caliber'],
+  ['caliber-cheats', 'caliber-cheats'],
+  ["checkoutPath('caliber')", "checkoutPath('caliber')"],
+  ['checkoutPath("caliber")', 'checkoutPath("caliber")'],
   ['checkoutPath(`apex`)', 'checkoutPath(`tarkov`)'],
-  ["product: 'tarkov'", "product: 'tarkov'"],
-  ['  tarkov:', '  tarkov:'],
-  ["checkoutForSlug(_slug: string): string {\n  return CHECKOUT.tarkov;", "checkoutForSlug(_slug: string): string {\n  return CHECKOUT.tarkov;"],
-  ["return CHECKOUT.tarkov;", 'return CHECKOUT.tarkov;'],
-  ['PRIMARY_CHECKOUT_PATH = checkoutPath(\'apex\')', "PRIMARY_CHECKOUT_PATH = checkoutPath('tarkov')"],
-  ["CheckoutProduct = 'apex'", "CheckoutProduct = 'tarkov'"],
-  ['apex: \'apex\'', "tarkov: 'tarkov'"],
-  ['_product: CheckoutProduct = \'apex\'', "_product: CheckoutProduct = 'tarkov'"],
-  ["TITLE_PREFIX = 'EFT Cheats'", "TITLE_PREFIX = 'Escape from Tarkov Cheats'"],
-  ["PRODUCT_BASE = '/products/tarkov/'", "PRODUCT_BASE = '/products/tarkov/'"],
-  ['/blog/apex-', '/blog/tarkov-'],
-  ['slug: "apex-', 'slug: "tarkov-'],
-  ["slug: 'apex-", "slug: 'tarkov-"],
-  ['buy-escape-from-tarkov-cheats', 'buy-escape-from-tarkov-cheats'],
-  ['tarkov-lite-vs-pro', 'tarkov-lite-vs-pro'],
-  ['tarkov-offline-practice', 'tarkov-offline-practice'],
-  ['tarkov-training-tips', 'tarkov-training-tips'],
-  ['tarkov-esp-setup', 'tarkov-esp-setup'],
-  ['tarkov-zone-map', 'tarkov-zone-map'],
-  ['tarkov-aimbot-raids', 'tarkov-aimbot-raids'],
-  ['tarkov-aimbot-combat', 'tarkov-aimbot-combat'],
-  ['tarkov-stream-proof', 'tarkov-stream-proof'],
-  ['tarkov-elite-tier', 'tarkov-elite-tier'],
-  ['tarkov-cheat-features', 'tarkov-cheat-features'],
-  ['tarkov-hwid-ban', 'tarkov-hwid-ban'],
-  ['tarkov-external-loader', 'tarkov-external-loader'],
-  ['tarkov-loadouts', 'tarkov-loadouts'],
-  ['tarkov-cheat-setup', 'tarkov-cheat-setup'],
-  ['tarkov-practice-settings', 'tarkov-practice-settings'],
-  ['tarkov-practice-settings-forum', 'tarkov-practice-settings-forum'],
-  ['after-tarkov-patch', 'after-tarkov-patch'],
-  ['tarkov-positioning', 'tarkov-positioning'],
-  ['tarkov-aim-practice', 'tarkov-aim-practice'],
-  ['tarkov-map-awareness', 'tarkov-map-awareness'],
-  ['choose-tarkov-tier', 'choose-tarkov-tier'],
+  ["product: 'caliber'", "product: 'caliber'"],
+  ['  caliber:', '  caliber:'],
+  ["checkoutForSlug(_slug: string): string {\n  return CHECKOUT.caliber;", "checkoutForSlug(_slug: string): string {\n  return CHECKOUT.caliber;"],
+  ["return CHECKOUT.caliber;", 'return CHECKOUT.caliber;'],
+  ['PRIMARY_CHECKOUT_PATH = checkoutPath(\'apex\')', "PRIMARY_CHECKOUT_PATH = checkoutPath('caliber')"],
+  ["CheckoutProduct = 'apex'", "CheckoutProduct = 'caliber'"],
+  ['apex: \'apex\'', "caliber: 'caliber'"],
+  ['_product: CheckoutProduct = \'apex\'', "_product: CheckoutProduct = 'caliber'"],
+  ["TITLE_PREFIX = 'Caliber Cheats'", "TITLE_PREFIX = 'Caliber Cheats'"],
+  ["PRODUCT_BASE = '/products/caliber/'", "PRODUCT_BASE = '/products/caliber/'"],
+  ['/blog/apex-', '/blog/caliber-'],
+  ['slug: "apex-', 'slug: "caliber-'],
+  ["slug: 'apex-", "slug: 'caliber-"],
+  ['buy-caliber-cheats', 'buy-caliber-cheats'],
+  ['caliber-lite-vs-pro', 'caliber-lite-vs-pro'],
+  ['caliber-training-practice', 'caliber-training-practice'],
+  ['caliber-training-tips', 'caliber-training-tips'],
+  ['caliber-esp-setup', 'caliber-esp-setup'],
+  ['caliber-map-awareness', 'caliber-map-awareness'],
+  ['caliber-aimbot-matches', 'caliber-aimbot-matches'],
+  ['caliber-aimbot-combat', 'caliber-aimbot-combat'],
+  ['caliber-stream-proof', 'caliber-stream-proof'],
+  ['caliber-elite-tier', 'caliber-elite-tier'],
+  ['caliber-cheat-features', 'caliber-cheat-features'],
+  ['caliber-hwid-ban', 'caliber-hwid-ban'],
+  ['caliber-external-loader', 'caliber-external-loader'],
+  ['caliber-loadouts', 'caliber-loadouts'],
+  ['caliber-cheat-setup', 'caliber-cheat-setup'],
+  ['caliber-practice-settings', 'caliber-practice-settings'],
+  ['caliber-practice-settings-forum', 'caliber-practice-settings-forum'],
+  ['after-caliber-patch', 'after-caliber-patch'],
+  ['caliber-positioning', 'caliber-positioning'],
+  ['caliber-aim-practice', 'caliber-aim-practice'],
+  ['caliber-map-awareness', 'caliber-map-awareness'],
+  ['choose-caliber-tier', 'choose-caliber-tier'],
   ['anti-cheat-patch-day', 'anti-cheat-patch-day'],
   ['anti-cheat-troubleshooting', 'anti-cheat-troubleshooting'],
   ['anti-cheat-verify', 'anti-cheat-verify'],
@@ -95,41 +95,41 @@ const REPLACEMENTS = [
   ['anti-cheat', 'anti-cheat'],
   ['BattlEye and game integrity', 'anti-cheat'],
   ['EAC', 'anti-cheat'],
-  ['EFT Cheats', 'Escape from Tarkov Cheats'],
-  ['Escape from Tarkov cheats', 'Escape from Tarkov cheats'],
-  ['Escape from Tarkov cheat', 'Escape from Tarkov cheat'],
-  ['Escape from Tarkov', 'Escape from Tarkov'],
+  ['Caliber Cheats', 'Caliber Cheats'],
+  ['Caliber cheats', 'Caliber cheats'],
+  ['Caliber cheat', 'Caliber cheat'],
+  ['Caliber', 'Caliber'],
   ['Lite', 'Tarkov Lite'],
   ['Pro', 'Tarkov Pro'],
   ['Elite', 'Tarkov Elite'],
-  ['Escape from Tarkov aimbot', 'tarkov aimbot'],
-  ['Escape from Tarkov ESP', 'tarkov ESP'],
-  ['Escape from Tarkov ability ESP', 'tarkov ability ESP'],
-  ['Escape from Tarkov recoil control', 'tarkov recoil control'],
-  ['Escape from Tarkov compatibility', 'tarkov compatibility'],
-  ['Tarkov raid combat', 'Tarkov raid combat'],
-  ['Tarkov raid combat', 'Tarkov firefight'],
-  ['PMC and scav ESP', 'PMC and scav ESP'],
-  ['PMC and scav ESP', 'PMC and PMC and scav ESP'],
-  ['loadout', 'PMC loadout'],
+  ['Caliber aimbot', 'tarkov aimbot'],
+  ['Caliber ESP', 'tarkov ESP'],
+  ['Caliber ability ESP', 'tarkov ability ESP'],
+  ['Caliber recoil control', 'tarkov recoil control'],
+  ['Caliber compatibility', 'tarkov compatibility'],
+  ['Caliber team fight', 'Caliber team fight'],
+  ['Caliber team fight', 'Caliber firefight'],
+  ['operator ESP', 'operator ESP'],
+  ['operator ESP', 'operator ESP'],
+  ['loadout', 'operator loadout'],
   ['per-map', 'per-map'],
-  ['raid maps and extraction pressure', 'raid maps and extraction pressure'],
-  ['Legends', 'PMC loadouts'],
+  ['maps and objective pressure', 'maps and objective pressure'],
+  ['Legends', 'operator loadouts'],
   ['map-specific', 'map-specific'],
-  ['BSG account', 'BSG account'],
+  ['game account', 'game account'],
   ['EA', 'BSG'],
-  ['Practice', 'offline raid'],
-  ['offline raid mode', 'offline raid'],
-  ['Competitive', 'PMC raid'],
+  ['Practice', 'training mode'],
+  ['training mode', 'training mode'],
+  ['Competitive', 'PvP raid'],
   ['Competitive', 'SCAV run'],
   ['Uncompetitive', 'customs'],
-  ['extract points', 'extract points'],
-  ['Escape from Tarkov <span class="site-brand__pill-accent">Cheats</span>', 'Tarkov <span class="site-brand__pill-accent">Cheats</span>'],
-  ['Escape from Tarkov <span class="site-brand__title-accent">Cheats</span>', 'Tarkov <span class="site-brand__title-accent">Cheats</span>'],
-  ['Escape from Tarkov PC — Aimbot, ESP & map overlay tools', 'Escape from Tarkov PC — aimbot, ESP & loot tools'],
-  ['aria-label="EFT Cheats"', 'aria-label="Escape from Tarkov Cheats"'],
-  ['>E</text>', '>T</text>'],
-  ['apex-', 'tarkov-'],
+  ['objective points', 'objective points'],
+  ['Caliber <span class="site-brand__pill-accent">Cheats</span>', 'Tarkov <span class="site-brand__pill-accent">Cheats</span>'],
+  ['Caliber <span class="site-brand__title-accent">Cheats</span>', 'Tarkov <span class="site-brand__title-accent">Cheats</span>'],
+  ['Caliber PC — Aimbot, ESP & map overlay tools', 'Caliber PC — aimbot, ESP & equipment tools'],
+  ['aria-label="Caliber Cheats"', 'aria-label="Caliber Cheats"'],
+  ['>C</text>', '>T</text>'],
+  ['apex-', 'caliber-'],
 ];
 
 const TARKOV_IMAGE_URLS = [
@@ -142,12 +142,12 @@ const TARKOV_IMAGE_URLS = [
 ];
 
 const IMAGE_ALTS = [
-  'Escape from Tarkov tactical warehouse interior with sight lines on PC',
-  'Escape from Tarkov raid screenshot with full HUD on PC',
-  'Escape from Tarkov in-raid combat screenshot on PC',
-  'Escape from Tarkov raid scene with equipment and environment detail on PC',
-  'Escape from Tarkov tactical movement in a raid on PC',
-  'Escape from Tarkov product-style in-match view on PC',
+  'Caliber tactical warehouse interior with sight lines on PC',
+  'Caliber raid screenshot with full HUD on PC',
+  'Caliber in-match combat screenshot on PC',
+  'Caliber raid scene with equipment and environment detail on PC',
+  'Caliber tactical movement in a raid on PC',
+  'Caliber product-style in-match view on PC',
 ];
 
 function walk(dir, out = []) {
@@ -182,19 +182,19 @@ function renameIfExists(fromRel, toRel) {
 function patchSiteImages() {
   const file = path.join(root, 'src', 'config', 'siteImages.ts');
   const lines = [
-    '/** Approved Escape from Tarkov media — only these remote URLs are used site-wide. */',
+    '/** Approved Caliber media — only these remote URLs are used site-wide. */',
     'export interface SiteCheatImage {',
     '  src: string;',
     '  alt: string;',
     '}',
     '',
-    'const TARKOV_MEDIA = [',
+    'const CALIBER_MEDIA = [',
     ...TARKOV_IMAGE_URLS.map((u) => `  '${u}',`),
     '] as const;',
     '',
     'export const SITE_CHEAT_IMAGES: SiteCheatImage[] = [',
     ...TARKOV_IMAGE_URLS.map(
-      (src, i) => `  {\n    src: TARKOV_MEDIA[${i}],\n    alt: '${IMAGE_ALTS[i]}',\n  },`,
+      (src, i) => `  {\n    src: CALIBER_MEDIA[${i}],\n    alt: '${IMAGE_ALTS[i]}',\n  },`,
     ),
     '];',
     '',
@@ -227,20 +227,20 @@ function patchSiteImages() {
 function patchCheckoutRedirects() {
   const file = path.join(root, 'src', 'config', 'checkout-redirects.mjs');
   const content = `/** Primary Zadeyo affiliate checkout (go link + product path). */
-export const TARKOV_CHECKOUT_URL =
+export const CALIBER_CHECKOUT_URL =
   '${TARKOV_CHECKOUT}';
 
 export const CHECKOUT_URLS = {
-  tarkov: TARKOV_CHECKOUT_URL,
-  skinChanger: TARKOV_CHECKOUT_URL,
-  hwidSpoofer: TARKOV_CHECKOUT_URL,
-  ugc: TARKOV_CHECKOUT_URL,
+  caliber: CALIBER_CHECKOUT_URL,
+  skinChanger: CALIBER_CHECKOUT_URL,
+  hwidSpoofer: CALIBER_CHECKOUT_URL,
+  ugc: CALIBER_CHECKOUT_URL,
 };
 
 /** Checkout paths → external product URLs (used by Node serve + Astro middleware). */
 export const CHECKOUT_PATH_REDIRECTS = new Map([
-  ['/go/tarkov', CHECKOUT_URLS.tarkov],
-  ['/go/tarkov/', CHECKOUT_URLS.tarkov],
+  ['/go/caliber', CHECKOUT_URLS.tarkov],
+  ['/go/caliber/', CHECKOUT_URLS.tarkov],
   ['/go/skin-changer', CHECKOUT_URLS.skinChanger],
   ['/go/skin-changer/', CHECKOUT_URLS.skinChanger],
   ['/go/hwid-spoofer', CHECKOUT_URLS.hwidSpoofer],
@@ -267,12 +267,12 @@ export function resolveCheckoutPathRedirect(pathname) {
 function patchSiteTs() {
   const file = path.join(root, 'src', 'config', 'site.ts');
   const content = `/** Bump when favicon assets change so browsers reload tab icons. */
-export const FAVICON_VERSION = 'cheattarkov-2026';
+export const FAVICON_VERSION = 'cheatcaliber-2026';
 
 export const SITE_DOMAIN = 'cheattarkov.net';
 export const SITE_URL = \`https://\${SITE_DOMAIN}\`;
-export const PRODUCT_BASE = '/products/tarkov/';
-export const TITLE_PREFIX = 'Escape from Tarkov Cheats';
+export const PRODUCT_BASE = '/products/caliber/';
+export const TITLE_PREFIX = 'Caliber Cheats';
 export const SUPPORT_EMAIL = \`support@\${SITE_DOMAIN}\`;
 export const DISCORD_URL = 'https://discord.gg/Vu85F8auQS';
 `;
@@ -284,18 +284,18 @@ function patchFavicons() {
     const file = path.join(root, 'public', name);
     if (!fs.existsSync(file)) continue;
     let svg = fs.readFileSync(file, 'utf8');
-    svg = svg.replace(/EFT Cheats/g, 'Escape from Tarkov Cheats');
+    svg = svg.replace(/Caliber Cheats/g, 'Caliber Cheats');
     svg = svg.replace(/(\n\s*fill="#F5F7FA"\s*\n\s*>)[A](<\/text>)/, '$1T$2');
     fs.writeFileSync(file, svg, 'utf8');
   }
 }
 
 // File / directory renames
-renameIfExists('src/data/tarkovCheatsLanding.ts', 'src/data/tarkovCheatsLanding.ts');
-renameIfExists('src/config/zadeyoTarkovProductSeo.ts', 'src/config/zadeyoTarkovProductSeo.ts');
-renameIfExists('src/pages/go/tarkov', 'src/pages/go/tarkov');
-renameIfExists('src/pages/escape-from-tarkov-cheats', 'src/pages/escape-from-tarkov-cheats');
-renameIfExists('src/pages/products/tarkov', 'src/pages/products/tarkov');
+renameIfExists('src/data/caliberCheatsLanding.ts', 'src/data/caliberCheatsLanding.ts');
+renameIfExists('src/config/zadeyoCaliberProductSeo.ts', 'src/config/zadeyoCaliberProductSeo.ts');
+renameIfExists('src/pages/go/caliber', 'src/pages/go/caliber');
+renameIfExists('src/pages/caliber-cheats', 'src/pages/caliber-cheats');
+renameIfExists('src/pages/products/caliber', 'src/pages/products/caliber');
 
 patchSiteImages();
 patchCheckoutRedirects();

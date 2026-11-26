@@ -11,10 +11,10 @@ async function optimizeDir(relativeDir) {
   if (!fs.existsSync(dir)) return;
 
   const allowed = new Set([
-    'tarkov-hack-aimbot-esp.png',
-    'tarkov-hack-esp-wallhack.png',
-    'tarkov-hack-gameplay.jpg',
-    'tarkov-hack-esp-indoor.png',
+    'caliber-hack-aimbot-esp.png',
+    'caliber-hack-esp-wallhack.png',
+    'caliber-hack-gameplay.jpg',
+    'caliber-hack-esp-indoor.png',
   ]);
   const files = fs
     .readdirSync(dir)

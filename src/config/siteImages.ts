@@ -1,42 +1,42 @@
-/** Approved Escape from Tarkov media — only these remote URLs are used site-wide. */
+/** Approved Caliber media — only these remote URLs are used site-wide. */
 export interface SiteCheatImage {
   src: string;
   alt: string;
 }
 
-const TARKOV_MEDIA = [
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/tarkov/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1794650282570-d0xc5g-first-person-warehouse-esp-encounter.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/tarkov/a9f4c0ff-33ca-4a16-975b-30648c04cb8c/1794650292268-rx58dc-images.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/tarkov/c7f7b806-cb3e-4eea-8fa1-eca85c479073/1793194009013-kv4lg6-ancient-eft-s1.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/tarkov/c7f7b806-cb3e-4eea-8fa1-eca85c479073/1793194011207-1r44jj-ancient-eft-s2.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/tarkov/1242b160-0414-44df-95cc-e45319c48f50/1793307615366-ow9g1a-screenshot-3.webp',
-  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/tarkov/1242b160-0414-44df-95cc-e45319c48f50/1793307655446-h9o00o-screenshot-7.webp',
+const CALIBER_MEDIA = [
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/caliber/02ab714e-de37-423b-81f2-afd7f7fd8d28/1794298177763-bj2j0u-images.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/caliber/02ab714e-de37-423b-81f2-afd7f7fd8d28/1794298146252-b173nd-images.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/caliber/02ab714e-de37-423b-81f2-afd7f7fd8d28/1794298089921-aj61qe-caliber-blog-undetected-eac.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/caliber/02ab714e-de37-423b-81f2-afd7f7fd8d28/1794298075962-b6h2q1-caliber-blog-cheats-know-before.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/caliber/c7f7b806-cb3e-4eea-8fa1-eca85c479073/1793194043626-ybprbf-cals1.webp',
+  'https://ooszazcwzmwhitdxwtom.supabase.co/storage/v1/object/public/seo-media-library/caliber/02ab714e-de37-423b-81f2-afd7f7fd8d28/1794298155792-k63tgc-screenshot-2022-04-08-213716-min.webp',
 ] as const;
 
 export const SITE_CHEAT_IMAGES: SiteCheatImage[] = [
   {
-    src: TARKOV_MEDIA[0],
-    alt: 'Escape from Tarkov first-person warehouse raid with ESP encounter on PC',
+    src: CALIBER_MEDIA[0],
+    alt: 'Caliber tactical firefight with operators and weapons on PC',
   },
   {
-    src: TARKOV_MEDIA[1],
-    alt: 'Escape from Tarkov in-raid HUD and tactical overlay on PC',
+    src: CALIBER_MEDIA[1],
+    alt: 'Caliber in-match HUD and squad combat screenshot on PC',
   },
   {
-    src: TARKOV_MEDIA[2],
-    alt: 'Escape from Tarkov raid scene with PMC gear and environment detail on PC',
+    src: CALIBER_MEDIA[2],
+    alt: 'Caliber gameplay with tactical operators and map detail on PC',
   },
   {
-    src: TARKOV_MEDIA[3],
-    alt: 'Escape from Tarkov tactical movement through a raid location on PC',
+    src: CALIBER_MEDIA[3],
+    alt: 'Caliber team fight with environmental cover and objective pressure on PC',
   },
   {
-    src: TARKOV_MEDIA[4],
-    alt: 'Escape from Tarkov product-style in-match screenshot on PC',
+    src: CALIBER_MEDIA[4],
+    alt: 'Caliber operator loadout and combat scene on PC',
   },
   {
-    src: TARKOV_MEDIA[5],
-    alt: 'Escape from Tarkov combat screenshot with loot and extraction context on PC',
+    src: CALIBER_MEDIA[5],
+    alt: 'Caliber third-person squad engagement screenshot on PC',
   },
 ];
 

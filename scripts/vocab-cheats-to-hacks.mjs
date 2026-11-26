@@ -42,10 +42,10 @@ function applyCopy(text) {
   let next = text;
 
   // Paths, slugs, identifiers (keep literal)
-  next = protect(next, /\/products\/escape-from-tarkov-cheats\b/g, 'path');
-  next = protect(next, /escape-from-tarkov-cheats(?=[-/'"`])/g, 'slug');
+  next = protect(next, /\/products\/caliber-cheats\b/g, 'path');
+  next = protect(next, /caliber-cheats(?=[-/'"`])/g, 'slug');
   next = protect(next, /cheatImageForSlug/g, 'fn');
-  next = protect(next, /tarkovCheatsLanding/g, 'id');
+  next = protect(next, /caliberCheatsLanding/g, 'id');
   next = protect(next, /\bbrowseCheats\b/g, 'key');
   next = protect(next, /\b(cheats|hacks):\s*\{/g, 'i18nsection');
   next = protect(next, /\bt\.(cheats|hacks)\b/g, 'tcheats');
@@ -65,7 +65,7 @@ function applyCopy(text) {
   next = next.replace(/\bcheat\b/g, 'hack');
 
   // User asked for "hacks" not singular "hack" on branding
-  next = next.replace(/\bEFT Cheats\b/g, 'EFT Cheats');
+  next = next.replace(/\bCaliber Cheats\b/g, 'Caliber Cheats');
   next = next.replace(/\bBuy hack\b/gi, 'Buy hacks');
   next = next.replace(/\bBuy Hack\b/g, 'Buy Hacks');
 

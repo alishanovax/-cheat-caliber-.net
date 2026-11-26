@@ -3,10 +3,10 @@ Allow: /
 
 Disallow: /go/
 
-Sitemap: https://cheatseft.org/sitemap.xml
-Sitemap: https://cheatseft.org/sitemap-pages.xml
-Sitemap: https://cheatseft.org/sitemap-products.xml
-Sitemap: https://cheatseft.org/sitemap-blog.xml
-Sitemap: https://cheatseft.org/sitemap-forum.xml
+Sitemap: https://cheatcaliber.net/sitemap.xml
+Sitemap: https://cheatcaliber.net/sitemap-pages.xml
+Sitemap: https://cheatcaliber.net/sitemap-products.xml
+Sitemap: https://cheatcaliber.net/sitemap-blog.xml
+Sitemap: https://cheatcaliber.net/sitemap-forum.xml
 
-# RSS: https://cheatseft.org/rss.xml
+# RSS: https://cheatcaliber.net/rss.xml

@@ -1,6 +1,6 @@
 /**
- * Replace Dota-era gameplay/blog PNGs with Escape from Tarkov screenshots.
- * Run after npm ci: node scripts/fetch-tarkov-gameplay.mjs
+ * Replace Dota-era gameplay/blog PNGs with Caliber screenshots.
+ * Run after npm ci: node scripts/fetch-caliber-gameplay.mjs
  */
 import { writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
@@ -8,50 +8,50 @@ import sharp from 'sharp';
 
 const CDN_A = 'https://sm.ign.com/t/ign_za/photo/default';
 const CDN_B = 'https://sm.ign.com/t/ign_latam/photo/default';
-const CDN_GALLERY = 'https://sm.ign.com/t/ign_pk/gallery/f/tarkov-g';
+const CDN_GALLERY = 'https://sm.ign.com/t/ign_pk/gallery/f/caliber-g';
 
 const gameplayDir = path.resolve('public/images/gameplay');
 const blogDir = path.resolve('public/images/blog');
 const publicDir = path.resolve('public');
 
 const GAMEPLAY = [
-  { file: 'tarkov-esp-wallhack.png', url: `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-train-1920x1080-a1_1nkx.1400.jpg` },
-  { file: 'tarkov-player-esp.png', url: `${CDN_A}/screenshot-6815-1725916496014_zkpv.1400.jpg` },
-  { file: 'tarkov-aimbot-combat.png', url: `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-screenshot-c-1920x_vu5r.1400.jpg` },
-  { file: 'tarkov-zone-map-hack.png', url: `${CDN_A}/screenshot-6670-1725916496013_zv3w.1400.jpg` },
-  { file: 'tarkov-skin-changer.png', url: `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-screenshot-b-1920x_8z8k.1400.jpg` },
-  { file: 'tarkov-auto-aim.png', url: `${CDN_A}/screenshot-7105-1725916496016_j9dr.1400.jpg` },
-  { file: 'tarkov-loot-radar.png', url: `${CDN_A}/screenshot-6960-1725916496015_vbtg.1400.jpg` },
+  { file: 'caliber-esp-wallhack.png', url: `${CDN_B}/caliber-battle-royale-chapter-5-season-1-train-1920x1080-a1_1nkx.1400.jpg` },
+  { file: 'caliber-player-esp.png', url: `${CDN_A}/screenshot-6815-1725916496014_zkpv.1400.jpg` },
+  { file: 'caliber-aimbot-combat.png', url: `${CDN_B}/caliber-battle-royale-chapter-5-season-1-screenshot-c-1920x_vu5r.1400.jpg` },
+  { file: 'caliber-map-awareness-hack.png', url: `${CDN_A}/screenshot-6670-1725916496013_zv3w.1400.jpg` },
+  { file: 'caliber-skin-changer.png', url: `${CDN_B}/caliber-battle-royale-chapter-5-season-1-screenshot-b-1920x_8z8k.1400.jpg` },
+  { file: 'caliber-auto-aim.png', url: `${CDN_A}/screenshot-7105-1725916496016_j9dr.1400.jpg` },
+  { file: 'caliber-loot-radar.png', url: `${CDN_A}/screenshot-6960-1725916496015_vbtg.1400.jpg` },
 ];
 
 const BLOG_POOL = [
-  `${CDN_GALLERY}/tarkov-gameplay-screenshots-2024_s2qs.1400.jpg`,
-  `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-screenshot-a-1920x_xkzh.1400.jpg`,
-  `${CDN_B}/tarkov-battle-royale-chapter-5-season-1-screenshot-d-1920x_mzsk.1400.jpg`,
+  `${CDN_GALLERY}/caliber-gameplay-screenshots-2024_s2qs.1400.jpg`,
+  `${CDN_B}/caliber-battle-royale-chapter-5-season-1-screenshot-a-1920x_xkzh.1400.jpg`,
+  `${CDN_B}/caliber-battle-royale-chapter-5-season-1-screenshot-d-1920x_mzsk.1400.jpg`,
   `${CDN_A}/screenshot-6380-1725916496012_gj96.1400.jpg`,
-  'https://sm.ign.com/t/ign_in/screenshot/default/tarkov-unreal-engine-5-1-scree-3_bcxh.1400.jpg',
-  'https://sm.ign.com/t/ign_latam/gallery/f/tarkov-c/tarkov-chapter-5-underground-images_5h3j.1400.jpg',
+  'https://sm.ign.com/t/ign_in/screenshot/default/caliber-unreal-engine-5-1-scree-3_bcxh.1400.jpg',
+  'https://sm.ign.com/t/ign_latam/gallery/f/caliber-c/caliber-chapter-5-underground-images_5h3j.1400.jpg',
 ];
 
 const BLOG_BASES = [
-  'tarkov-offline-practice',
-  'tarkov-training-tips',
-  'tarkov-cheat-setup',
-  'tarkov-cheat-features',
-  'tarkov-practice-settings',
-  'tarkov-lite-vs-pro',
-  'tarkov-elite-tier',
-  'tarkov-aimbot-raids',
-  'tarkov-esp-setup',
-  'tarkov-zone-map-hack-guide',
-  'tarkov-loadouts',
+  'caliber-training-practice',
+  'caliber-training-tips',
+  'caliber-cheat-setup',
+  'caliber-cheat-features',
+  'caliber-practice-settings',
+  'caliber-lite-vs-pro',
+  'caliber-elite-tier',
+  'caliber-aimbot-matches',
+  'caliber-esp-setup',
+  'caliber-map-awareness-hack-guide',
+  'caliber-loadouts',
   'anti-cheat-patch-day-checklist',
-  'tarkov-hwid-ban',
-  'buy-escape-from-tarkov-cheats',
-  'tarkov-aimbot-combat',
-  'eac-bypass-tarkov-guide',
-  'tarkov-external-loader',
-  'tarkov-stream-proof',
+  'caliber-hwid-ban',
+  'buy-caliber-cheats',
+  'caliber-aimbot-combat',
+  'eac-bypass-caliber-guide',
+  'caliber-external-loader',
+  'caliber-stream-proof',
 ];
 
 async function fetchPng(url) {
@@ -77,7 +77,7 @@ let hero = null;
 for (const asset of GAMEPLAY) {
   try {
     const buf = await save(gameplayDir, asset.file, asset.url);
-    if (asset.file === 'tarkov-esp-wallhack.png') hero = buf;
+    if (asset.file === 'caliber-esp-wallhack.png') hero = buf;
   } catch (err) {
     console.warn('skip', asset.file, err.message);
   }
@@ -103,7 +103,7 @@ if (hero) {
     await writeFile(path.join(publicDir, name), await sharp(logo).resize(size, size).png().toBuffer());
   }
   await writeFile(path.join(publicDir, 'favicon.ico'), await sharp(logo).resize(32, 32).png().toBuffer());
-  console.log('updated favicons from Escape from Tarkov art');
+  console.log('updated favicons from Caliber art');
 }
 
-console.log('Done fetching Escape from Tarkov gameplay/blog images.');
+console.log('Done fetching Caliber gameplay/blog images.');

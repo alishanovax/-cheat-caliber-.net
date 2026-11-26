@@ -1,4 +1,4 @@
-/** Escape from Tarkov (Steam FPS) copy fixes — run: node scripts/fix-tarkov-game.mjs */
+/** Caliber (Steam FPS) copy fixes — run: node scripts/fix-caliber-game.mjs */
 import fs from 'node:fs';
 import path from 'node:path';
 
@@ -13,8 +13,8 @@ const REPLACEMENTS = [
   ['through Steam Games', 'through Steam'],
   ['on Steam Games', 'on Steam'],
   ['Steam Games', 'Steam'],
-  ['launch Escape from Tarkov on Epic', 'launch Escape from Tarkov on Steam'],
-  ['Private Servers', 'offline raid'],
+  ['launch Caliber on Epic', 'launch Caliber on Steam'],
+  ['Private Servers', 'training mode'],
   ['private servers', 'shooting range'],
   ['Auto Shield Break', 'Recoil control'],
   ['Auto Finish', 'Triggerbot'],
@@ -28,13 +28,13 @@ const REPLACEMENTS = [
   ['Chest and floor-ammo ESP', 'Weapon and ammo pickup ESP'],
   ['high-ground angles and chest positions', 'angles and bomb-site lines'],
   ['same POI clear', 'same map route'],
-  ['Private Servers island', 'offline raid session'],
-  ['Private Servers islands', 'offline raid sessions'],
+  ['Private Servers island', 'training mode session'],
+  ['Private Servers islands', 'training mode sessions'],
   ['BR, SCAV run, SCAV run, Private Servers', 'Uncompetitive, Body Bomb, TDM, Hardpoint'],
-  ['Multiplayer, SCAV run, SCAV run, Private Servers', 'PMC raid, SCAV run, Uncompetitive, Hardpoint'],
-  ['Multiplayer, SCAV run and SCAV run', 'PMC raid, Uncompetitive and competitive seasons'],
-  ['Multiplayer and SCAV run', 'PMC raid and SCAV run'],
-  ['SCAV run and Private Servers', 'SCAV run seasons and offline raid'],
+  ['Multiplayer, SCAV run, SCAV run, Private Servers', 'PvP raid, SCAV run, Uncompetitive, Hardpoint'],
+  ['Multiplayer, SCAV run and SCAV run', 'PvP raid, Uncompetitive and competitive seasons'],
+  ['Multiplayer and SCAV run', 'PvP raid and SCAV run'],
+  ['SCAV run and Private Servers', 'SCAV run seasons and training mode'],
   ['SCAV run or SCAV run', 'Uncompetitive or SCAV run'],
   ['SCAV run presets', 'competitive-season presets'],
   ['before SCAV run', 'before competitive matchmaking'],
@@ -58,7 +58,7 @@ function walk(dir, out = []) {
 
 let n = 0;
 for (const file of walk(path.join(root, 'src'))) {
-  if (file.includes('fix-tarkov-game')) continue;
+  if (file.includes('fix-caliber-game')) continue;
   const before = fs.readFileSync(file, 'utf8');
   let after = before;
   for (const [from, to] of REPLACEMENTS) {

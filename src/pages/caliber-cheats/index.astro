@@ -3,7 +3,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import { resolvePageSeo } from '../../config/seo';
 import { PRIMARY_CHEAT_IMAGE } from '../../config/siteImages';
 import { checkoutPath } from '../../config/checkout';
-import { tarkovCheatsLanding } from '../../data/tarkovCheatsLanding';
+import { caliberCheatsLanding } from '../../data/caliberCheatsLanding';
 import ResponsiveImage from '../../components/ResponsiveImage.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { breadcrumbSchema, webPageSchema } from '../../utils/schema';
@@ -11,13 +11,13 @@ import { Button } from '@/components/starwind/button';
 import { Prose } from '@/components/starwind/prose';
 import { ROUTES } from '../../utils/path';
 
-const seo = resolvePageSeo('/escape-from-tarkov-cheats/');
+const seo = resolvePageSeo('/caliber-cheats/');
 const breadcrumbs = [
   { name: 'Home', path: '/' },
-  { name: 'PC', path: '/escape-from-tarkov-cheats/' },
+  { name: 'PC', path: '/caliber-cheats/' },
 ];
-const checkout = checkoutPath('tarkov');
-const copy = tarkovCheatsLanding;
+const checkout = checkoutPath('caliber');
+const copy = caliberCheatsLanding;
 
 function linkify(text: string): string {
   return text.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_m, label: string, href: string) => {
@@ -34,7 +34,7 @@ function linkify(text: string): string {
     webPageSchema({
       name: copy.h1,
       description: seo.description,
-      url: '/escape-from-tarkov-cheats/',
+      url: '/caliber-cheats/',
     }),
     breadcrumbSchema(breadcrumbs),
   ]}

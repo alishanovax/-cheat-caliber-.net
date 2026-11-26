@@ -1,5 +1,5 @@
 /**
- * rivalscheat.net → cheatseft.org (Escape from Tarkov — EFT Cheats)
+ * rivalscheat.net → cheatcaliber.net (Caliber — Caliber Cheats)
  * Run: node scripts/rebrand-cheatseft.mjs
  */
 import fs from 'node:fs';
@@ -8,7 +8,7 @@ import path from 'node:path';
 const root = path.resolve(import.meta.dirname, '..');
 
 const TARKOV_CHECKOUT =
-  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo';
+  'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcaliber-novaxware&sf=zadeyo';
 
 const TEXT_EXTS = new Set([
   '.ts',
@@ -31,93 +31,93 @@ const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.astro']);
 
 const REPLACEMENTS = [
   [
-    'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov',
+    'https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcaliber-novaxware&sf=zadeyo',
     TARKOV_CHECKOUT,
   ],
   ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fmarvel-rivals&sf=zadeyo', TARKOV_CHECKOUT],
-  ['%2Fproducts%2Fmarvel-rivals', '%2Fproducts%2Fescape-from-tarkov'],
-  ['https://rivalscheat.net', 'https://cheatseft.org'],
-  ['rivalscheat.net', 'cheatseft.org'],
+  ['%2Fproducts%2Fmarvel-rivals', '%2Fproducts%2Fcaliber-novaxware'],
+  ['https://rivalscheat.net', 'https://cheatcaliber.net'],
+  ['rivalscheat.net', 'cheatcaliber.net'],
   ['rivalscheat', 'cheatseft'],
-  ['r6-cheat-com', 'cheatseft-org'],
-  ['name = "r6-cheat-com"', 'name = "cheatseft-org"'],
-  ['"name": "r6-cheat-com"', '"name": "cheatseft-org"'],
-  ['Return to rivalscheat.net homepage', 'Return to cheatseft.org homepage'],
-  ['r6CheatsLanding', 'tarkovCheatsLanding'],
-  ['zadeyoR6ProductSeo', 'zadeyoTarkovProductSeo'],
-  ['R6_CHECKOUT_URL', 'TARKOV_CHECKOUT_URL'],
-  ['/r6-cheats/', '/escape-from-tarkov-cheats/'],
-  ['/r6-cheats', '/escape-from-tarkov-cheats'],
-  ['/products/r6/', '/products/tarkov/'],
-  ['/products/r6', '/products/tarkov'],
-  ['/go/r6/', '/go/tarkov/'],
-  ['/go/r6', '/go/tarkov'],
-  ['r6-cheats', 'escape-from-tarkov-cheats'],
-  ["checkoutPath('r6')", "checkoutPath('tarkov')"],
-  ['checkoutPath("r6")', 'checkoutPath("tarkov")'],
-  ["product: 'r6'", "product: 'tarkov'"],
-  ['  r6:', '  tarkov:'],
+  ['r6-cheat-com', 'cheatcaliber-net'],
+  ['name = "r6-cheat-com"', 'name = "cheatcaliber-net"'],
+  ['"name": "r6-cheat-com"', '"name": "cheatcaliber-net"'],
+  ['Return to rivalscheat.net homepage', 'Return to cheatcaliber.net homepage'],
+  ['r6CheatsLanding', 'caliberCheatsLanding'],
+  ['zadeyoR6ProductSeo', 'zadeyoCaliberProductSeo'],
+  ['R6_CHECKOUT_URL', 'CALIBER_CHECKOUT_URL'],
+  ['/r6-cheats/', '/caliber-cheats/'],
+  ['/r6-cheats', '/caliber-cheats'],
+  ['/products/r6/', '/products/caliber/'],
+  ['/products/r6', '/products/caliber'],
+  ['/go/r6/', '/go/caliber/'],
+  ['/go/r6', '/go/caliber'],
+  ['r6-cheats', 'caliber-cheats'],
+  ["checkoutPath('r6')", "checkoutPath('caliber')"],
+  ['checkoutPath("r6")', 'checkoutPath("caliber")'],
+  ["product: 'r6'", "product: 'caliber'"],
+  ['  r6:', '  caliber:'],
   [
     "checkoutForSlug(_slug: string): string {\n  return CHECKOUT.r6;",
-    "checkoutForSlug(_slug: string): string {\n  return CHECKOUT.tarkov;",
+    "checkoutForSlug(_slug: string): string {\n  return CHECKOUT.caliber;",
   ],
-  ['return CHECKOUT.r6;', 'return CHECKOUT.tarkov;'],
-  ["PRIMARY_CHECKOUT_PATH = checkoutPath('r6')", "PRIMARY_CHECKOUT_PATH = checkoutPath('tarkov')"],
-  ["CheckoutProduct = 'r6'", "CheckoutProduct = 'tarkov'"],
-  ['r6: \'r6\'', "tarkov: 'tarkov'"],
-  ["_product: CheckoutProduct = 'r6'", "_product: CheckoutProduct = 'tarkov'"],
-  ["TITLE_PREFIX = 'Rivals Cheat'", "TITLE_PREFIX = 'EFT Cheats'"],
-  ["PRODUCT_BASE = '/products/r6/'", "PRODUCT_BASE = '/products/tarkov/'"],
-  ['/blog/r6-', '/blog/tarkov-'],
-  ['slug: "r6-', 'slug: "tarkov-'],
-  ["slug: 'r6-", "slug: 'tarkov-"],
-  ['buy-r6-cheats', 'buy-escape-from-tarkov-cheats'],
-  ['r6-lite-vs-pro', 'tarkov-lite-vs-pro'],
-  ['r6-training-grounds-practice', 'tarkov-offline-practice'],
-  ['r6-training-tips', 'tarkov-training-tips'],
-  ['r6-esp-setup', 'tarkov-esp-setup'],
-  ['r6-radar', 'tarkov-zone-map'],
-  ['r6-aimbot-competitive', 'tarkov-aimbot-raids'],
-  ['r6-aimbot-combat', 'tarkov-aimbot-combat'],
-  ['r6-stream-proof', 'tarkov-stream-proof'],
-  ['r6-elite-tier', 'tarkov-elite-tier'],
-  ['r6-cheat-features', 'tarkov-cheat-features'],
-  ['r6-hwid-ban', 'tarkov-hwid-ban'],
-  ['r6-external-loader', 'tarkov-external-loader'],
-  ['r6-loadouts', 'tarkov-loadouts'],
-  ['r6-cheat-setup', 'tarkov-cheat-setup'],
-  ['r6-console-commands', 'tarkov-practice-settings'],
-  ['r6-console-commands-forum', 'tarkov-practice-settings-forum'],
-  ['after-r6-patch', 'after-tarkov-patch'],
-  ['r6-high-ground', 'tarkov-positioning'],
-  ['r6-aim-practice', 'tarkov-aim-practice'],
-  ['r6-map-awareness', 'tarkov-map-awareness'],
-  ['choose-r6-tier', 'choose-tarkov-tier'],
+  ['return CHECKOUT.r6;', 'return CHECKOUT.caliber;'],
+  ["PRIMARY_CHECKOUT_PATH = checkoutPath('r6')", "PRIMARY_CHECKOUT_PATH = checkoutPath('caliber')"],
+  ["CheckoutProduct = 'r6'", "CheckoutProduct = 'caliber'"],
+  ['r6: \'r6\'', "caliber: 'caliber'"],
+  ["_product: CheckoutProduct = 'r6'", "_product: CheckoutProduct = 'caliber'"],
+  ["TITLE_PREFIX = 'Rivals Cheat'", "TITLE_PREFIX = 'Caliber Cheats'"],
+  ["PRODUCT_BASE = '/products/r6/'", "PRODUCT_BASE = '/products/caliber/'"],
+  ['/blog/r6-', '/blog/caliber-'],
+  ['slug: "r6-', 'slug: "caliber-'],
+  ["slug: 'r6-", "slug: 'caliber-"],
+  ['buy-r6-cheats', 'buy-caliber-cheats'],
+  ['r6-lite-vs-pro', 'caliber-lite-vs-pro'],
+  ['r6-training-grounds-practice', 'caliber-training-practice'],
+  ['r6-training-tips', 'caliber-training-tips'],
+  ['r6-esp-setup', 'caliber-esp-setup'],
+  ['r6-radar', 'caliber-map-awareness'],
+  ['r6-aimbot-competitive', 'caliber-aimbot-matches'],
+  ['r6-aimbot-combat', 'caliber-aimbot-combat'],
+  ['r6-stream-proof', 'caliber-stream-proof'],
+  ['r6-elite-tier', 'caliber-elite-tier'],
+  ['r6-cheat-features', 'caliber-cheat-features'],
+  ['r6-hwid-ban', 'caliber-hwid-ban'],
+  ['r6-external-loader', 'caliber-external-loader'],
+  ['r6-loadouts', 'caliber-loadouts'],
+  ['r6-cheat-setup', 'caliber-cheat-setup'],
+  ['r6-console-commands', 'caliber-practice-settings'],
+  ['r6-console-commands-forum', 'caliber-practice-settings-forum'],
+  ['after-r6-patch', 'after-caliber-patch'],
+  ['r6-high-ground', 'caliber-positioning'],
+  ['r6-aim-practice', 'caliber-aim-practice'],
+  ['r6-map-awareness', 'caliber-map-awareness'],
+  ['choose-r6-tier', 'choose-caliber-tier'],
   ['eac-patch-day', 'anti-cheat-patch-day'],
   ['eac-troubleshooting', 'anti-cheat-troubleshooting'],
   ['eac-verify', 'anti-cheat-verify'],
   ['Easy anti-cheat', 'BattlEye and game integrity'],
-  ['Rivals Cheat', 'EFT Cheats'],
-  ['Rivals <span class="site-brand__pill-accent">Cheat</span>', 'EFT <span class="site-brand__pill-accent">Cheats</span>'],
-  ['Rivals <span class="site-brand__title-accent">Cheat</span>', 'EFT <span class="site-brand__title-accent">Cheats</span>'],
-  ['Marvel Rivals cheats', 'Escape from Tarkov cheats'],
-  ['Marvel Rivals cheat', 'Escape from Tarkov cheat'],
-  ['Marvel Rivals', 'Escape from Tarkov'],
-  ['Marvel Rivals <span class="site-brand__pill-accent">Cheats</span>', 'EFT <span class="site-brand__pill-accent">Cheats</span>'],
-  ['Marvel Rivals <span class="site-brand__title-accent">Cheats</span>', 'EFT <span class="site-brand__title-accent">Cheats</span>'],
-  ['Marvel Rivals PC — Aimbot, ESP & map overlay tools', 'Escape from Tarkov PC — aimbot, ESP & loot ESP'],
-  ['aria-label="Rivals Cheat"', 'aria-label="EFT Cheats"'],
-  ['Marvel Rivals on PC — aimbot, ESP & config tools', 'Escape from Tarkov on PC — aimbot, ESP & raid tools'],
-  ['>M</text>', '>E</text>'],
-  ['r6-', 'tarkov-'],
-  ['R6 firefight', 'Tarkov raid combat'],
-  ['hero ESP', 'PMC and scav ESP'],
-  ['round economy and site pressure', 'raid maps and extraction pressure'],
-  ['Ubisoft account', 'BSG account'],
-  ['training grounds', 'offline raid mode'],
-  ['objectives', 'extract points'],
-  ['%2Fproducts%2Fr6-faceit', '%2Fproducts%2Fescape-from-tarkov'],
-  ['%2Fproducts%2Fr6-legends', '%2Fproducts%2Fescape-from-tarkov'],
+  ['Rivals Cheat', 'Caliber Cheats'],
+  ['Rivals <span class="site-brand__pill-accent">Cheat</span>', 'Caliber <span class="site-brand__pill-accent">Cheats</span>'],
+  ['Rivals <span class="site-brand__title-accent">Cheat</span>', 'Caliber <span class="site-brand__title-accent">Cheats</span>'],
+  ['Marvel Rivals cheats', 'Caliber cheats'],
+  ['Marvel Rivals cheat', 'Caliber cheat'],
+  ['Marvel Rivals', 'Caliber'],
+  ['Marvel Rivals <span class="site-brand__pill-accent">Cheats</span>', 'Caliber <span class="site-brand__pill-accent">Cheats</span>'],
+  ['Marvel Rivals <span class="site-brand__title-accent">Cheats</span>', 'Caliber <span class="site-brand__title-accent">Cheats</span>'],
+  ['Marvel Rivals PC — Aimbot, ESP & map overlay tools', 'Caliber PC — aimbot, ESP & equipment ESP'],
+  ['aria-label="Rivals Cheat"', 'aria-label="Caliber Cheats"'],
+  ['Marvel Rivals on PC — aimbot, ESP & config tools', 'Caliber on PC — aimbot, ESP & raid tools'],
+  ['>M</text>', '>C</text>'],
+  ['r6-', 'caliber-'],
+  ['R6 firefight', 'Caliber team fight'],
+  ['hero ESP', 'operator ESP'],
+  ['round economy and site pressure', 'maps and objective pressure'],
+  ['Ubisoft account', 'game account'],
+  ['training grounds', 'training mode'],
+  ['objectives', 'objective points'],
+  ['%2Fproducts%2Fr6-faceit', '%2Fproducts%2Fcaliber-novaxware'],
+  ['%2Fproducts%2Fr6-legends', '%2Fproducts%2Fcaliber-novaxware'],
 ];
 
 const TARKOV_IMAGE_URLS = [
@@ -130,12 +130,12 @@ const TARKOV_IMAGE_URLS = [
 ];
 
 const IMAGE_ALTS = [
-  'Escape from Tarkov first-person warehouse raid with ESP encounter on PC',
-  'Escape from Tarkov in-raid HUD and tactical overlay on PC',
-  'Escape from Tarkov raid scene with PMC gear and environment detail on PC',
-  'Escape from Tarkov tactical movement through a raid location on PC',
-  'Escape from Tarkov product-style in-match screenshot on PC',
-  'Escape from Tarkov combat screenshot with loot and extraction context on PC',
+  'Caliber first-person warehouse raid with ESP encounter on PC',
+  'Caliber in-match HUD and tactical overlay on PC',
+  'Caliber raid scene with PvP gear and environment detail on PC',
+  'Caliber tactical movement through a raid location on PC',
+  'Caliber product-style in-match screenshot on PC',
+  'Caliber combat screenshot with loot and extraction context on PC',
 ];
 
 function walk(dir, out = []) {
@@ -170,19 +170,19 @@ function renameIfExists(fromRel, toRel) {
 function patchSiteImages() {
   const file = path.join(root, 'src', 'config', 'siteImages.ts');
   const lines = [
-    '/** Approved Escape from Tarkov media — only these remote URLs are used site-wide. */',
+    '/** Approved Caliber media — only these remote URLs are used site-wide. */',
     'export interface SiteCheatImage {',
     '  src: string;',
     '  alt: string;',
     '}',
     '',
-    'const TARKOV_MEDIA = [',
+    'const CALIBER_MEDIA = [',
     ...TARKOV_IMAGE_URLS.map((u) => `  '${u}',`),
     '] as const;',
     '',
     'export const SITE_CHEAT_IMAGES: SiteCheatImage[] = [',
     ...TARKOV_IMAGE_URLS.map(
-      (src, i) => `  {\n    src: TARKOV_MEDIA[${i}],\n    alt: '${IMAGE_ALTS[i]}',\n  },`,
+      (src, i) => `  {\n    src: CALIBER_MEDIA[${i}],\n    alt: '${IMAGE_ALTS[i]}',\n  },`,
     ),
     '];',
     '',
@@ -215,20 +215,20 @@ function patchSiteImages() {
 function patchCheckoutRedirects() {
   const file = path.join(root, 'src', 'config', 'checkout-redirects.mjs');
   const content = `/** Primary Zadeyo affiliate checkout (go link + product path). */
-export const TARKOV_CHECKOUT_URL =
+export const CALIBER_CHECKOUT_URL =
   '${TARKOV_CHECKOUT}';
 
 export const CHECKOUT_URLS = {
-  tarkov: TARKOV_CHECKOUT_URL,
-  skinChanger: TARKOV_CHECKOUT_URL,
-  hwidSpoofer: TARKOV_CHECKOUT_URL,
-  ugc: TARKOV_CHECKOUT_URL,
+  caliber: CALIBER_CHECKOUT_URL,
+  skinChanger: CALIBER_CHECKOUT_URL,
+  hwidSpoofer: CALIBER_CHECKOUT_URL,
+  ugc: CALIBER_CHECKOUT_URL,
 };
 
 /** Checkout paths → external product URLs (used by Node serve + Astro middleware). */
 export const CHECKOUT_PATH_REDIRECTS = new Map([
-  ['/go/tarkov', CHECKOUT_URLS.tarkov],
-  ['/go/tarkov/', CHECKOUT_URLS.tarkov],
+  ['/go/caliber', CHECKOUT_URLS.tarkov],
+  ['/go/caliber/', CHECKOUT_URLS.tarkov],
   ['/go/skin-changer', CHECKOUT_URLS.skinChanger],
   ['/go/skin-changer/', CHECKOUT_URLS.skinChanger],
   ['/go/hwid-spoofer', CHECKOUT_URLS.hwidSpoofer],
@@ -255,12 +255,12 @@ export function resolveCheckoutPathRedirect(pathname) {
 function patchSiteTs() {
   const file = path.join(root, 'src', 'config', 'site.ts');
   const content = `/** Bump when favicon assets change so browsers reload tab icons. */
-export const FAVICON_VERSION = 'cheatseft-e-2026';
+export const FAVICON_VERSION = 'cheatcaliber-c-2026';
 
-export const SITE_DOMAIN = 'cheatseft.org';
+export const SITE_DOMAIN = 'cheatcaliber.net';
 export const SITE_URL = \`https://\${SITE_DOMAIN}\`;
-export const PRODUCT_BASE = '/products/tarkov/';
-export const TITLE_PREFIX = 'EFT Cheats';
+export const PRODUCT_BASE = '/products/caliber/';
+export const TITLE_PREFIX = 'Caliber Cheats';
 export const SUPPORT_EMAIL = \`support@\${SITE_DOMAIN}\`;
 export const DISCORD_URL = 'https://discord.gg/Vu85F8auQS';
 `;
@@ -272,8 +272,8 @@ function patchFavicons() {
     const file = path.join(root, 'public', name);
     if (!fs.existsSync(file)) continue;
     let svg = fs.readFileSync(file, 'utf8');
-    svg = svg.replace(/Rivals Cheat/g, 'EFT Cheats');
-    svg = svg.replace(/aria-label="[^"]*"/g, 'aria-label="EFT Cheats"');
+    svg = svg.replace(/Rivals Cheat/g, 'Caliber Cheats');
+    svg = svg.replace(/aria-label="[^"]*"/g, 'aria-label="Caliber Cheats"');
     svg = svg.replace(/(fill="#F5F7FA"\s*\n\s*>)[A-Z](<\/text>)/, '$1E$2');
     fs.writeFileSync(file, svg, 'utf8');
   }
@@ -287,9 +287,9 @@ function patchRedirects() {
     /https:\/\/zadeyo\.com\/go\/ALISHA\?to=%2Fproducts%2F[^ \n]+/g,
     TARKOV_CHECKOUT,
   );
-  content = content.replaceAll('/products/r6/', '/products/tarkov/');
-  content = content.replaceAll('/r6-cheats', '/escape-from-tarkov-cheats');
-  content = content.replaceAll('/blog/r6-', '/blog/tarkov-');
+  content = content.replaceAll('/products/r6/', '/products/caliber/');
+  content = content.replaceAll('/r6-cheats', '/caliber-cheats');
+  content = content.replaceAll('/blog/r6-', '/blog/caliber-');
   fs.writeFileSync(file, content, 'utf8');
   console.log('patched public/_redirects');
 }
@@ -298,7 +298,7 @@ function patchRobots() {
   const file = path.join(root, 'public', 'robots.txt');
   if (!fs.existsSync(file)) return;
   let content = fs.readFileSync(file, 'utf8');
-  content = content.replaceAll('rivalscheat.net', 'cheatseft.org');
+  content = content.replaceAll('rivalscheat.net', 'cheatcaliber.net');
   fs.writeFileSync(file, content, 'utf8');
 }
 
@@ -306,10 +306,10 @@ function patchWebManifest() {
   const file = path.join(root, 'public', 'site.webmanifest');
   if (!fs.existsSync(file)) return;
   const manifest = {
-    name: 'EFT Cheats',
-    short_name: 'EFT Cheats',
+    name: 'Caliber Cheats',
+    short_name: 'Caliber Cheats',
     description:
-      'Escape from Tarkov PC cheats: aimbot, ESP, loot ESP, and raid tools on cheatseft.org.',
+      'Caliber PC cheats: aimbot, ESP, equipment ESP, and raid tools on cheatcaliber.net.',
     start_url: '/',
     scope: '/',
     display: 'standalone',
@@ -332,11 +332,11 @@ function patchWebManifest() {
   fs.writeFileSync(file, `${JSON.stringify(manifest, null, 2)}\n`, 'utf8');
 }
 
-renameIfExists('src/data/r6CheatsLanding.ts', 'src/data/tarkovCheatsLanding.ts');
-renameIfExists('src/config/zadeyoR6ProductSeo.ts', 'src/config/zadeyoTarkovProductSeo.ts');
-renameIfExists('src/pages/go/r6', 'src/pages/go/tarkov');
-renameIfExists('src/pages/r6-cheats', 'src/pages/escape-from-tarkov-cheats');
-renameIfExists('src/pages/products/r6', 'src/pages/products/tarkov');
+renameIfExists('src/data/r6CheatsLanding.ts', 'src/data/caliberCheatsLanding.ts');
+renameIfExists('src/config/zadeyoR6ProductSeo.ts', 'src/config/zadeyoCaliberProductSeo.ts');
+renameIfExists('src/pages/go/r6', 'src/pages/go/caliber');
+renameIfExists('src/pages/r6-cheats', 'src/pages/caliber-cheats');
+renameIfExists('src/pages/products/r6', 'src/pages/products/caliber');
 
 patchSiteImages();
 patchCheckoutRedirects();

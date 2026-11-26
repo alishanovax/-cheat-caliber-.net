@@ -64,10 +64,10 @@ const APEX_IMAGE_URLS = [
 ];
 
 const IMAGE_ALTS = [
-  'Black Ops 7 PC PMC raid combat with squad positions on the map',
+  'Black Ops 7 PC PvP raid combat with squad positions on the map',
   'Black Ops 7 competitive firefight screenshot with full HUD on PC',
   'Black Ops 7 third-person combat during a team engagement on PC',
-  'Black Ops 7 gameplay scene with raid maps and extraction pressure on PC',
+  'Black Ops 7 gameplay scene with maps and objective pressure on PC',
   'Black Ops 7 product-style in-match view on PC',
   'Black Ops 7 squad fight with tactical overlay on PC',
 ];

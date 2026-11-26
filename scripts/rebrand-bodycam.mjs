@@ -36,10 +36,10 @@ const REPLACEMENTS = [
   ['products/fortnite-hacks', 'products/bodycam-hacks'],
   ['https://zadeyo.com/go/QRH?to=%2Fproducts%2Ffortnite', 'https://zadeyo.com/go/QRH?to=%2Fproducts%2Frainbow-six-siege-cheats'],
   ['https://zadeyo.com/products/fortnite', 'https://zadeyo.com/products/bodycam'],
-  ['%2Fproducts%2Ffortnite', '%2Fproducts%2Fescape-from-tarkov'],
+  ['%2Fproducts%2Ffortnite', '%2Fproducts%2Fcaliber-novaxware'],
   ['/products/fortnite', '/products/bodycam'],
-  ['/go/tarkov/', '/go/tarkov/'],
-  ['/go/tarkov', '/go/tarkov'],
+  ['/go/caliber/', '/go/caliber/'],
+  ['/go/caliber', '/go/caliber'],
 
   ["checkoutPath('fortnite')", "checkoutPath('bodycam')"],
   ['checkoutPath("fortnite")', 'checkoutPath("bodycam")'],
@@ -90,7 +90,7 @@ const REPLACEMENTS = [
   ['Epic store', 'Steam inventory'],
   ['Epic ', 'Steam '],
 
-  ['PMC raid', 'Multiplayer'],
+  ['PvP raid', 'Multiplayer'],
   ['Zero Build', 'SCAV run'],
   ['SCAV run Arena', 'SCAV run'],
   ['Creative', 'Private Servers'],

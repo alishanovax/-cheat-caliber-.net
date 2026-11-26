@@ -1,23 +1,23 @@
 {
   "gameplay": [
     {
-      "file": "tarkov-hack-aimbot-esp.png",
-      "alt": "Escape from Tarkov aimbot and ESP with FOV circle, red target box and snap line through cover",
+      "file": "caliber-hack-aimbot-esp.png",
+      "alt": "Caliber aimbot and ESP with FOV circle, red target box and snap line through cover",
       "srcIndex": 0
     },
     {
-      "file": "tarkov-hack-esp-wallhack.png",
-      "alt": "Escape from Tarkov ESP wallhack with green player boxes in a tactical indoor firefight",
+      "file": "caliber-hack-esp-wallhack.png",
+      "alt": "Caliber ESP wallhack with green player boxes in a tactical indoor firefight",
       "srcIndex": 1
     },
     {
-      "file": "tarkov-hack-gameplay.jpg",
-      "alt": "Escape from Tarkov PMC raid gameplay on PC with body-camera perspective in a gritty urban map",
+      "file": "caliber-hack-gameplay.jpg",
+      "alt": "Caliber PvP raid gameplay on PC with body-camera perspective in a gritty urban map",
       "srcIndex": 2
     },
     {
-      "file": "tarkov-hack-esp-indoor.png",
-      "alt": "Escape from Tarkov ESP overlay with green bounding box while clearing an indoor hallway with a shotgun",
+      "file": "caliber-hack-esp-indoor.png",
+      "alt": "Caliber ESP overlay with green bounding box while clearing an indoor hallway with a shotgun",
       "srcIndex": 3
     }
   ],

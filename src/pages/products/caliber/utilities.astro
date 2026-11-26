@@ -18,11 +18,11 @@ import {
 } from '@/components/starwind/table';
 
 const utilities = productPages.filter((p) => p.kind === 'utility');
-const seo = resolvePageSeo('/products/tarkov/utilities/');
+const seo = resolvePageSeo('/products/caliber/utilities/');
 const breadcrumbs = [
   { name: 'Home', path: '/' },
   { name: 'Products', path: productHub.path },
-  { name: 'Compare utilities', path: '/products/tarkov/utilities/' },
+  { name: 'Compare utilities', path: '/products/caliber/utilities/' },
 ];
 
 const utilityUseCases: Record<string, string> = {
@@ -39,7 +39,7 @@ const utilityUseCases: Record<string, string> = {
     webPageSchema({
       name: seo.h1 ?? seo.title,
       description: seo.description,
-      url: '/products/tarkov/utilities/',
+      url: '/products/caliber/utilities/',
     }),
     breadcrumbSchema(breadcrumbs),
     itemListSchema(
@@ -57,7 +57,7 @@ const utilityUseCases: Record<string, string> = {
       <header class="mt-6 max-w-3xl space-y-3">
         <h1 class="text-3xl font-bold normal-case md:text-4xl">{seo.h1}</h1>
         <p class="text-lg text-muted-foreground">
-          These Escape from Tarkov cheat utilities solve different problems—HWID Spoofer, UGC, and loadout tools each
+          These Caliber cheat utilities solve different problems—HWID Spoofer, UGC, and loadout tools each
           target a distinct recovery or cosmetic workflow. Match the tool to your situation before checkout.
         </p>
       </header>
@@ -110,7 +110,7 @@ const utilityUseCases: Record<string, string> = {
       </ul>
 
       <div class="mt-10">
-        <Button as="a" href={productHub.path} variant="outline">Return to Escape from Tarkov products hub</Button>
+        <Button as="a" href={productHub.path} variant="outline">Return to Caliber products hub</Button>
       </div>
     </div>
   </section>

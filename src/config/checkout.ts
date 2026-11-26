@@ -9,7 +9,7 @@ export type CheckoutProduct = keyof typeof CHECKOUT;
 
 /** URL slug for /go/[slug]/ checkout redirect pages. */
 export const CHECKOUT_SLUGS: Record<CheckoutProduct, string> = {
-  tarkov: 'tarkov',
+  caliber: 'caliber',
   skinChanger: 'skin-changer',
   hwidSpoofer: 'hwid-spoofer',
   ugc: 'ugc',
@@ -20,16 +20,16 @@ export const CHECKOUT_SLUG_TO_PRODUCT = Object.fromEntries(
 ) as Record<string, CheckoutProduct>;
 
 /** All Buy now / checkout CTAs use the same external go link. */
-export function checkoutPath(_product: CheckoutProduct = 'tarkov'): string {
-  return CHECKOUT.tarkov;
+export function checkoutPath(_product: CheckoutProduct = 'caliber'): string {
+  return CHECKOUT.caliber;
 }
 
 /** Default product checkout redirect (replaces legacy Discord CTAs). */
-export const PRIMARY_CHECKOUT_PATH = checkoutPath('tarkov');
+export const PRIMARY_CHECKOUT_PATH = checkoutPath('caliber');
 
 /** Map internal product slugs to checkout (single destination). */
 export function checkoutForSlug(_slug: string): string {
-  return CHECKOUT.tarkov;
+  return CHECKOUT.caliber;
 }
 
 /** Resolve blog CTA or legacy href values to internal checkout paths. */
@@ -39,7 +39,7 @@ export function resolveCheckoutHref(href: string): string {
   if (!href.startsWith('http')) {
     const normalized = href.startsWith('/') ? href : `/${href}`;
     if (GO_CHECKOUT_PATH.test(normalized)) {
-      return CHECKOUT.tarkov;
+      return CHECKOUT.caliber;
     }
     return normalized;
   }
@@ -51,7 +51,7 @@ export function resolveCheckoutHref(href: string): string {
   }
 
   if (href.includes('%2Fproducts%2Fcloud-dma') || href.includes('/products/cloud-dma')) {
-    return checkoutPath('tarkov');
+    return checkoutPath('caliber');
   }
   if (href.includes('%2Fproducts%2Fskin-changer') || href.includes('/products/skin-changer')) {
     return checkoutPath('skinChanger');
@@ -64,16 +64,16 @@ export function resolveCheckoutHref(href: string): string {
   }
   if (
     href.includes('zadeyo.com/go/') ||
-    href.includes('%2Fescape-from-tarkov-cheats') ||
-    href.includes('/escape-from-tarkov-cheats') ||
-    href.includes('%2Fproducts%2Fescape-from-tarkov') ||
-    href.includes('/products/tarkov-legends') ||
+    href.includes('%2Fcaliber-cheats') ||
+    href.includes('/caliber-cheats') ||
+    href.includes('%2Fproducts%2Fcaliber-novaxware') ||
+    href.includes('/products/caliber-legends') ||
     href.includes('%2Fproducts%2Fapex') ||
-    href.includes('/products/tarkov') ||
-    href.includes('%2Fproducts%2Fescape-from-tarkov') ||
-    href.includes('/products/tarkov')
+    href.includes('/products/caliber') ||
+    href.includes('%2Fproducts%2Fcaliber-novaxware') ||
+    href.includes('/products/caliber')
   ) {
-    return checkoutPath('tarkov');
+    return checkoutPath('caliber');
   }
 
   return href;

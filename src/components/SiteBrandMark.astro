@@ -4,20 +4,20 @@ import { footerLogoAltForPath } from '../config/seoLogoAlt';
 
 interface Props {
   showIcon?: boolean;
-  /** Header: pill lockup. Footer: icon-only (letter E mark). */
+  /** Header: pill lockup. Footer: icon-only (letter C mark). */
   compact?: boolean;
   class?: string;
 }
 
 const { showIcon = false, compact = false, class: className } = Astro.props;
-const brandTagline = 'Escape from Tarkov on PC — aimbot, ESP & raid tools';
+const brandTagline = 'Caliber on PC — aimbot, ESP & tactical tools';
 const footerIconOnly = showIcon && !compact;
 ---
 
 <a
   href="/"
   class:list={['site-brand', compact && 'site-brand--compact', className]}
-  aria-label={showIcon ? 'Return to cheatseft.org homepage' : t.ui.homeAria}
+  aria-label={showIcon ? 'Return to cheatcaliber.net homepage' : t.ui.homeAria}
 >
   {
     showIcon && (
@@ -33,12 +33,12 @@ const footerIconOnly = showIcon && !compact;
   {
     compact ? (
       <span class="site-brand__pill" aria-hidden="true">
-        EFT <span class="site-brand__pill-accent">Cheats</span>
+        Caliber <span class="site-brand__pill-accent">Cheats</span>
       </span>
     ) : footerIconOnly ? null : (
       <span class="site-brand__stack min-w-0" aria-hidden="true">
         <span class="site-brand__title">
-          EFT <span class="site-brand__title-accent">Cheats</span>
+          Caliber <span class="site-brand__title-accent">Cheats</span>
         </span>
         <span class="site-brand__tagline">{brandTagline}</span>
       </span>

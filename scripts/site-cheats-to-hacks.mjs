@@ -10,12 +10,12 @@ const SKIP = new Set(['node_modules', '.git', 'dist']);
 const EXTS = new Set(['.ts', '.astro', '.mjs', '.js', '.json', '.md', '.txt', '.webmanifest', '.css', '.toml']);
 
 const SLUG_REPLACEMENTS = [
-  ['buy-escape-from-tarkov-cheats', 'buy-escape-from-tarkov-cheats'],
-  ['tarkov-cheat-setup', 'tarkov-cheat-setup'],
-  ['/escape-from-tarkov-cheats/', '/escape-from-tarkov-cheats/'],
-  ['/escape-from-tarkov-cheats', '/escape-from-tarkov-cheats'],
-  ['tarkovCheatsLanding', 'tarkovCheatsLanding'],
-  ['%2Fescape-from-tarkov-cheats', '%2Ftarkov-hacks'],
+  ['buy-caliber-cheats', 'buy-caliber-cheats'],
+  ['caliber-cheat-setup', 'caliber-cheat-setup'],
+  ['/caliber-cheats/', '/caliber-cheats/'],
+  ['/caliber-cheats', '/caliber-cheats'],
+  ['caliberCheatsLanding', 'caliberCheatsLanding'],
+  ['%2Fcaliber-cheats', '%2Fcaliber-hacks'],
 ];
 
 const PROTECT = [];
@@ -44,13 +44,13 @@ function protectUrls(text) {
 
 function applyVocab(text) {
   let next = protectUrls(text);
-  next = next.replace(/\bEscape from Tarkov cheats\b/gi, 'Escape from Tarkov hacks');
-  next = next.replace(/\bEscape from Tarkov cheats\b/gi, 'Escape from Tarkov hacks');
-  next = next.replace(/\bEFT Cheatss\b/g, 'EFT Cheats');
-  next = next.replace(/\bEscape from Tarkov cheats\b/g, 'Escape from Tarkov cheats');
-  next = next.replace(/\br6 cheats\b/g, 'Escape from Tarkov cheats');
-  next = next.replace(/\bbuy r6 cheats\b/gi, 'buy Escape from Tarkov cheats');
-  next = next.replace(/\bBuy Escape from Tarkov cheats\b/g, 'Buy Escape from Tarkov cheats');
+  next = next.replace(/\bCaliber cheats\b/gi, 'Caliber hacks');
+  next = next.replace(/\bCaliber cheats\b/gi, 'Caliber hacks');
+  next = next.replace(/\bCaliber Cheatss\b/g, 'Caliber Cheats');
+  next = next.replace(/\bCaliber cheats\b/g, 'Caliber cheats');
+  next = next.replace(/\br6 cheats\b/g, 'Caliber cheats');
+  next = next.replace(/\bbuy r6 cheats\b/gi, 'buy Caliber cheats');
+  next = next.replace(/\bBuy Caliber cheats\b/g, 'Buy Caliber cheats');
   next = next.replace(/\bCheats\b/g, 'Hacks');
   next = next.replace(/\bcheats\b/g, 'hacks');
   next = next.replace(/\bCheat\b/g, 'Hack');
@@ -71,12 +71,12 @@ function applySlugs(text) {
 }
 
 function renameLanding() {
-  const from = path.join(root, 'src', 'data', 'tarkovCheatsLanding.ts');
-  const to = path.join(root, 'src', 'data', 'tarkovCheatsLanding.ts');
+  const from = path.join(root, 'src', 'data', 'caliberCheatsLanding.ts');
+  const to = path.join(root, 'src', 'data', 'caliberCheatsLanding.ts');
   if (fs.existsSync(from)) {
     fs.writeFileSync(to, applyVocab(applySlugs(fs.readFileSync(from, 'utf8'))));
     fs.unlinkSync(from);
-    console.log('renamed tarkovCheatsLanding.ts → tarkovCheatsLanding.ts');
+    console.log('renamed caliberCheatsLanding.ts → caliberCheatsLanding.ts');
   }
 }
 
@@ -102,17 +102,17 @@ for (const file of walk(root)) {
   }
 }
 
-const fromPage = path.join(root, 'src', 'pages', 'escape-from-tarkov-cheats');
-const toPage = path.join(root, 'src', 'pages', 'tarkov-hacks');
+const fromPage = path.join(root, 'src', 'pages', 'caliber-cheats');
+const toPage = path.join(root, 'src', 'pages', 'caliber-hacks');
 if (fs.existsSync(fromPage) && !fs.existsSync(toPage)) {
   fs.renameSync(fromPage, toPage);
-  console.log('renamed pages/escape-from-tarkov-cheats → tarkov-hacks');
+  console.log('renamed pages/caliber-cheats → caliber-hacks');
 } else if (fs.existsSync(fromPage) && fs.existsSync(toPage)) {
   for (const name of fs.readdirSync(fromPage)) {
     fs.copyFileSync(path.join(fromPage, name), path.join(toPage, name));
   }
   fs.rmSync(fromPage, { recursive: true });
-  console.log('merged pages/escape-from-tarkov-cheats → tarkov-hacks');
+  console.log('merged pages/caliber-cheats → caliber-hacks');
 }
 
 console.log(`Done. Updated ${n} files.`);

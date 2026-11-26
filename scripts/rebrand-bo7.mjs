@@ -47,9 +47,9 @@ const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.astro']);
 /** Ordered longest-first replacements. */
 const REPLACEMENTS = [
   ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Frobrun', BO7_CHECKOUT],
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo', BO7_CHECKOUT],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcaliber-novaxware&sf=zadeyo', BO7_CHECKOUT],
   ['%2Fproducts%2Frobrun', '%2Fproducts%2Fblack-ops-7'],
-  ['%2Fproducts%2Fescape-from-tarkov', '%2Fproducts%2Fblack-ops-7'],
+  ['%2Fproducts%2Fcaliber-novaxware', '%2Fproducts%2Fblack-ops-7'],
   ['https://cheatsrobrun.net', 'https://bo7cheats.org'],
   ['cheatsrobrun.net', 'bo7cheats.org'],
   ['cheatsrobrun-net', 'bo7cheats-org'],
@@ -108,8 +108,8 @@ const REPLACEMENTS = [
   ['robrun ability ESP', 'bo7 ability ESP'],
   ['robrun recoil control', 'bo7 recoil control'],
   ['robrun compatibility', 'bo7 compatibility'],
-  ['the Battlestate Games launcher', 'the Call of Duty PC launcher'],
-  ['Battlestate Games launcher', 'Call of Duty PC launcher'],
+  ['the Crytek launcher', 'the Call of Duty PC launcher'],
+  ['Crytek launcher', 'Call of Duty PC launcher'],
   ['Return to bo7cheats.org homepage', 'Return to bo7cheats.org homepage'],
   ['RobRun PC — Aimbot, ESP & map overlay tools', 'Black Ops 7 PC — aimbot, ESP & config tools'],
   ['TITLE_PREFIX = \'RobRun Cheats\'', "TITLE_PREFIX = 'Black Ops 7 Cheats'"],

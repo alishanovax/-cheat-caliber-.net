@@ -7,34 +7,34 @@ import path from 'node:path';
 const root = process.cwd();
 
 const REPLACEMENTS = [
-  ['/products/tarkov-hacks/', '/products/tarkov/'],
-  ['products/escape-from-tarkov-cheats/', 'products/r6/'],
+  ['/products/caliber-hacks/', '/products/caliber/'],
+  ['products/caliber-cheats/', 'products/r6/'],
 
-  ['tarkov-cheat-features', 'tarkov-cheat-features'],
-  ['tarkov-practice-settings-guide', 'tarkov-offline-practice'],
-  ['tarkov-console-hacks-tips', 'tarkov-training-tips'],
-  ['how-to-use-tarkov-practice-settings', 'tarkov-cheat-setup'],
-  ['tarkov-practice-settings-hacks', 'tarkov-practice-settings'],
-  ['how-to-buy-escape-from-tarkov-cheats-2026', 'buy-escape-from-tarkov-cheats'],
-  ['tarkov-hwid-spoofer-after-ban', 'tarkov-hwid-ban'],
-  ['tarkov-zone-map-hack-guide', 'tarkov-zone-map'],
-  ['tarkov-external-loader', 'tarkov-external-loader'],
-  ['tarkov-esp-wallhack-setup', 'tarkov-esp-setup'],
-  ['tarkov-stream-proof-setup', 'tarkov-stream-proof'],
-  ['tarkov-aimbot-raids-guide', 'tarkov-aimbot-raids'],
-  ['tarkov-aimbot-combat-guide', 'tarkov-aimbot-combat'],
-  ['tarkov-elite-tier-tier-guide', 'tarkov-elite-tier'],
-  ['tarkov-skin-changer-guide', 'tarkov-loadouts'],
+  ['caliber-cheat-features', 'caliber-cheat-features'],
+  ['caliber-practice-settings-guide', 'caliber-training-practice'],
+  ['caliber-console-hacks-tips', 'caliber-training-tips'],
+  ['how-to-use-caliber-practice-settings', 'caliber-cheat-setup'],
+  ['caliber-practice-settings-hacks', 'caliber-practice-settings'],
+  ['how-to-buy-caliber-cheats-2026', 'buy-caliber-cheats'],
+  ['caliber-hwid-spoofer-after-ban', 'caliber-hwid-ban'],
+  ['caliber-map-awareness-hack-guide', 'caliber-map-awareness'],
+  ['caliber-external-loader', 'caliber-external-loader'],
+  ['caliber-esp-wallhack-setup', 'caliber-esp-setup'],
+  ['caliber-stream-proof-setup', 'caliber-stream-proof'],
+  ['caliber-aimbot-matches-guide', 'caliber-aimbot-matches'],
+  ['caliber-aimbot-combat-guide', 'caliber-aimbot-combat'],
+  ['caliber-elite-tier-tier-guide', 'caliber-elite-tier'],
+  ['caliber-skin-changer-guide', 'caliber-loadouts'],
   ['anti-cheat-patch-day-day-checklist', 'anti-cheat-patch-day'],
-  ['anti-cheat-tarkov-guide', 'anti-cheat-troubleshooting'],
+  ['anti-cheat-caliber-guide', 'anti-cheat-troubleshooting'],
 
   ['can-custom-lobby-hack-codes-be-used-in-competitive', 'lobby-codes-competitive'],
-  ['how-to-enable-the-tarkov-console', 'tarkov-practice-settings-forum'],
-  ['practice-tarkov-positioning-safely', 'tarkov-positioning'],
-  ['what-to-check-after-a-tarkov-patch', 'after-tarkov-patch'],
-  ['tarkov-lite-or-pro-tier-comparison', 'lite-vs-pro'],
-  ['how-to-learn-weapon-aim-in-creative', 'tarkov-aim-practice'],
-  ['what-does-tarkov-map-awareness-include', 'tarkov-map-awareness'],
+  ['how-to-enable-the-caliber-console', 'caliber-practice-settings-forum'],
+  ['practice-caliber-positioning-safely', 'caliber-positioning'],
+  ['what-to-check-after-a-caliber-patch', 'after-caliber-patch'],
+  ['caliber-lite-or-pro-tier-comparison', 'lite-vs-pro'],
+  ['how-to-learn-weapon-aim-in-creative', 'caliber-aim-practice'],
+  ['what-does-caliber-map-awareness-include', 'caliber-map-awareness'],
   ['how-to-set-up-map-overlay', 'map-overlay-setup'],
   ['what-zoom-settings-are-comfortable', 'camera-zoom'],
   ['how-to-tune-script-delay-settings', 'aimbot-delay'],
@@ -47,7 +47,7 @@ const REPLACEMENTS = [
   ['how-to-check-stream-proof-capture', 'stream-proof-obs'],
   ['what-to-do-after-hwid-change', 'after-hwid-change'],
   ['what-to-check-before-installing-tools', 'before-install'],
-  ['how-to-choose-tarkov-product-tier', 'choose-tarkov-tier'],
+  ['how-to-choose-caliber-product-tier', 'choose-caliber-tier'],
 ];
 
 const SKIP = new Set(['node_modules', '.git', 'dist']);
@@ -79,11 +79,11 @@ for (const file of walk(root)) {
   }
 }
 
-const fromDir = path.join(root, 'src', 'pages', 'products', 'tarkov-hacks');
+const fromDir = path.join(root, 'src', 'pages', 'products', 'caliber-hacks');
 const toDir = path.join(root, 'src', 'pages', 'products', 'r6');
 if (fs.existsSync(fromDir) && !fs.existsSync(toDir)) {
   fs.renameSync(fromDir, toDir);
-  console.log('renamed pages/products/tarkov-hacks → r6');
+  console.log('renamed pages/products/caliber-hacks → r6');
 }
 
 console.log(`Updated ${n} files.`);

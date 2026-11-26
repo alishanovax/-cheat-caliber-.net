@@ -3,18 +3,18 @@ import path from 'node:path';
 
 const root = path.join(import.meta.dirname, '..', 'src');
 const REPLACEMENTS = [
-  ['PMC loadout tools', 'loadout tools'],
-  ['PMC raid', 'online matches'],
+  ['operator loadout tools', 'loadout tools'],
+  ['PvP raid', 'online matches'],
   ['SCAV run', 'casual matches'],
-  ['offline raid', 'practice mode'],
-  ['PMC and', 'Player and'],
-  ['PMC runs', 'online runs'],
+  ['training mode', 'practice mode'],
+  ['PvP and', 'Player and'],
+  ['PvP runs', 'online runs'],
   ['SCAV raids', 'casual matches'],
   ['anti-cheat', 'anti-cheat'],
   ['anti-cheat', 'apex-ac'],
   ['BSG', 'platform'],
   [' SCAV', ' casual'],
-  ['PMC', 'player'],
+  ['PvP', 'player'],
 ];
 
 function walk(dir, out = []) {

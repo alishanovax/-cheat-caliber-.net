@@ -9,7 +9,7 @@ export interface ProductPlan {
   popular?: boolean;
 }
 
-/** Escape from Tarkov plan tiers (Monthly $35 / 31 days, Lifetime $150). */
+/** Caliber plan tiers (Monthly $35 / 31 days, Lifetime $150). */
 const standardPlans: ProductPlan[] = [
   {
     id: 'monthly',

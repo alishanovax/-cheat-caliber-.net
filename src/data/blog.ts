@@ -61,9 +61,9 @@ export function getFeaturedBlogPosts(limit = 3) {
 
 /** Homepage blog strip — transactional/commercial picks first. */
 const HOMEPAGE_COMMERCIAL_SLUGS = [
-  'buy-escape-from-tarkov-cheats',
-  'tarkov-lite-vs-pro',
-  'tarkov-aimbot-competitive',
+  'buy-caliber-cheats',
+  'caliber-lite-vs-pro',
+  'caliber-aimbot-competitive',
 ] as const;
 
 export function getHomepageBlogPosts(limit = 3) {

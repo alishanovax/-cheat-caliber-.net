@@ -38,9 +38,9 @@ if (!post) {
 
 const postPath = `/blog/${post.slug}/`;
 const blogCrumbLabels: Record<string, string> = {
-  'tarkov-training-grounds-practice': 'Buy Escape from Tarkov cheats — tier guides (blog hub)',
-  'tarkov-stream-proof': 'Stream-proof guides (blog hub)',
-  'tarkov-zone-map': 'Zone map guides (blog hub)',
+  'caliber-training-practice': 'Buy Caliber cheats — tier guides (blog hub)',
+  'caliber-stream-proof': 'Stream-proof guides (blog hub)',
+  'caliber-map-awareness': 'Zone map guides (blog hub)',
 };
 const blogCrumbLabel = blogCrumbLabels[post.slug] ?? 'Blog';
 const breadcrumbs = [
@@ -57,10 +57,10 @@ function linkify(text: string): string {
       const normalized = normalizeInternalPath(href);
       return `<a href="${normalized}">${label}</a>`;
     })
-    .replace(/(https:\/\/tarkov-cheat\.com[^\s.,;)]*)/g, (_match, url: string) => {
-      const path = url.replace(/^https:\/\/tarkov-cheat\.com/, '');
+    .replace(/(https:\/\/caliber-cheat\.com[^\s.,;)]*)/g, (_match, url: string) => {
+      const path = url.replace(/^https:\/\/caliber-cheat\.com/, '');
       const normalized = normalizeInternalPath(path);
-      const href = normalized.startsWith('http') ? normalized : `https://cheatseft.org${normalized}`;
+      const href = normalized.startsWith('http') ? normalized : `https://cheatcaliber.net${normalized}`;
       return `<a href="${href}">${url}</a>`;
     });
 }
@@ -125,9 +125,9 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
               alt={
                 post.slug === 'anti-cheat-fix'
                   ? `${post.title} — anti-cheat verification troubleshooting on PC`
-                  : post.slug === 'tarkov-stream-proof'
+                  : post.slug === 'caliber-stream-proof'
                     ? `${post.title} — hide wall ESP and script overlays on stream`
-                    : `${post.title} — Escape from Tarkov cheat gameplay screenshot`
+                    : `${post.title} — Caliber cheat gameplay screenshot`
               }
               width={960}
               height={540}
@@ -188,9 +188,9 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
                     html={linkify(block.text)}
                     href={resolveCheckoutHref(block.href)}
                     buyLabel={
-                      post.slug === 'tarkov-training-grounds-practice'
-                        ? 'Shop Escape from Tarkov cheats (CTA)'
-                        : post.slug === 'tarkov-stream-proof'
+                      post.slug === 'caliber-training-practice'
+                        ? 'Shop Caliber cheats (CTA)'
+                        : post.slug === 'caliber-stream-proof'
                           ? 'Buy stream-proof tier (inline CTA)'
                           : undefined
                     }
@@ -202,29 +202,29 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
           </Prose>
 
           <nav class="blog-article__actions" aria-label="Continue reading">
-            <Button as="a" href={checkoutPath('tarkov')} variant="primary" aria-label={t.ui.checkoutAria}>
+            <Button as="a" href={checkoutPath('caliber')} variant="primary" aria-label={t.ui.checkoutAria}>
               {
                 post.slug === 'anti-cheat-fix'
                   ? 'Checkout after anti-cheat fix'
-                  : post.slug === 'tarkov-stream-proof'
-                    ? 'Buy stream-proof Escape from Tarkov tier'
-                    : post.slug === 'tarkov-training-grounds-practice'
-                      ? 'Shop Escape from Tarkov cheats'
-                      : post.slug === 'tarkov-zone-map'
+                  : post.slug === 'caliber-stream-proof'
+                    ? 'Buy stream-proof Caliber tier'
+                    : post.slug === 'caliber-training-practice'
+                      ? 'Shop Caliber cheats'
+                      : post.slug === 'caliber-map-awareness'
                         ? 'Buy Lite map overlay tier'
-                        : 'Buy EFT Cheats'
+                        : 'Buy Caliber Cheats'
               }
               <Icon name="arrowRight" size={17} />
             </Button>
             <Button as="a" href={ROUTES.products} variant="outline">
               {
                 post.slug === 'anti-cheat-fix'
-                  ? 'Open Escape from Tarkov product catalog'
-                  : post.slug === 'tarkov-stream-proof'
+                  ? 'Open Caliber product catalog'
+                  : post.slug === 'caliber-stream-proof'
                     ? 'Open stream-safe product hub'
-                    : post.slug === 'tarkov-training-grounds-practice'
+                    : post.slug === 'caliber-training-practice'
                       ? 'Compare Lite and Pro tiers'
-                      : post.slug === 'tarkov-zone-map'
+                      : post.slug === 'caliber-map-awareness'
                         ? 'Product catalog'
                         : 'View products'
               }
@@ -233,11 +233,11 @@ const articleH1 = blogPostPageH1(post.slug, post.title);
               {
                 post.slug === 'anti-cheat-fix'
                   ? 'Browse patch-day guides'
-                  : post.slug === 'tarkov-stream-proof'
+                  : post.slug === 'caliber-stream-proof'
                     ? 'More OBS setup guides'
-                    : post.slug === 'tarkov-training-grounds-practice'
+                    : post.slug === 'caliber-training-practice'
                       ? 'More buy & checkout guides'
-                      : post.slug === 'tarkov-zone-map'
+                      : post.slug === 'caliber-map-awareness'
                         ? 'Map overlay & ESP guides'
                         : 'More guides'
               }

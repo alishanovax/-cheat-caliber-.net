@@ -1,15 +1,15 @@
 /**
  * Copy into Zadeyo /products/rainbow-six-siege-cheats (Next.js product route).
- * cheatseft.org mirrors this on /go/tarkov/ after deploy; zadeyo.com must be updated separately.
+ * cheatcaliber.net mirrors this on /go/caliber/ after deploy; zadeyo.com must be updated separately.
  */
-import { ZADEYO_R6_PRODUCT_SEO, ZADEYO_TARKOV_CHECKOUT_URL } from '../src/config/zadeyoTarkovProductSeo.ts';
+import { ZADEYO_CALIBER_PRODUCT_SEO, ZADEYO_CALIBER_CHECKOUT_URL } from '../src/config/zadeyoCaliberProductSeo.ts';
 
 export const ZADEYO_RAINBOW_SIX_SIEGE_CHBSGTS_PRODUCT_SEO = {
-  ...ZADEYO_R6_PRODUCT_SEO,
-  checkoutUrl: ZADEYO_TARKOV_CHECKOUT_URL,
+  ...ZADEYO_CALIBER_PRODUCT_SEO,
+  checkoutUrl: ZADEYO_CALIBER_CHECKOUT_URL,
   /** Zadeyo CMS: use one <h1>; demote duplicate product hero headings to <h2>. */
   headingOutline: [
-    { level: 'h1', text: ZADEYO_R6_PRODUCT_SEO.h1 },
+    { level: 'h1', text: ZADEYO_CALIBER_PRODUCT_SEO.h1 },
     { level: 'h2', text: 'Product details' },
     { level: 'h2', text: 'Gameplay screenshots' },
     { level: 'h2', text: 'Features' },
@@ -17,9 +17,9 @@ export const ZADEYO_RAINBOW_SIX_SIEGE_CHBSGTS_PRODUCT_SEO = {
     { level: 'h2', text: 'Frequently asked questions' },
   ],
   keywordCap: {
-    phrase: 'Escape from Tarkov cheats',
+    phrase: 'Caliber cheats',
     maxUses: 8,
-    note: 'Keep phrase in title + meta only; use Escape from Tarkov / the listing elsewhere.',
+    note: 'Keep phrase in title + meta only; use Caliber / the listing elsewhere.',
   },
 };
 

@@ -1,13 +1,13 @@
 /**
- * Remove the word "radar" from live site copy + rename blog slug tarkov-radar → tarkov-zone-map.
+ * Remove the word "radar" from live site copy + rename blog slug caliber-radar → caliber-map-awareness.
  * Run: node scripts/strip-radar-word.mjs
  */
 import fs from 'node:fs';
 import path from 'node:path';
 
 const root = path.resolve(import.meta.dirname, '..');
-const SLUG_FROM = 'tarkov-radar';
-const SLUG_TO = 'tarkov-zone-map';
+const SLUG_FROM = 'caliber-radar';
+const SLUG_TO = 'caliber-map-awareness';
 
 const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.astro']);
 const TEXT_EXTS = new Set(['.ts', '.astro', '.mjs', '.json', '.md', '.webmanifest', '.txt', '.html', '.css']);
@@ -29,17 +29,17 @@ function walk(dir, out = []) {
 
 const PHRASE_REPLACEMENTS = [
   [SLUG_FROM, SLUG_TO],
-  ['/blog/tarkov-radar/', `/blog/${SLUG_TO}/`],
-  ['/blog/tarkov-radar', `/blog/${SLUG_TO}`],
-  ['tarkov-radar-hack-guide', `${SLUG_TO}-guide`],
-  ['tarkov-radar-cheat-guide', `${SLUG_TO}-guide`],
+  ['/blog/caliber-radar/', `/blog/${SLUG_TO}/`],
+  ['/blog/caliber-radar', `/blog/${SLUG_TO}`],
+  ['caliber-radar-hack-guide', `${SLUG_TO}-guide`],
+  ['caliber-radar-cheat-guide', `${SLUG_TO}-guide`],
   ['onRadarPost', 'onZoneMapPost'],
   ['radarGuideProductLinks', 'zoneMapGuideProductLinks'],
   ['Radar cheat guides (blog hub)', 'Zone map guides (blog hub)'],
   ['Buy Lite radar cheat tier', 'Buy Lite map overlay tier'],
   ['Radar & ESP guides', 'Map overlay & ESP guides'],
   ['Checkout Lite radar tier', 'Checkout Lite map overlay tier'],
-  ['Escape from Tarkov cheats shop (radar sidebar)', 'Escape from Tarkov cheats shop (zone map sidebar)'],
+  ['Caliber cheats shop (radar sidebar)', 'Caliber cheats shop (zone map sidebar)'],
   ['Elite tier (radar + aimbot)', 'Elite tier (map overlay + aimbot)'],
   ['Loadout tools (radar guide)', 'Loadout tools (zone map guide)'],
   ['HWID spoofer (radar setup)', 'HWID spoofer (zone map setup)'],
@@ -47,8 +47,8 @@ const PHRASE_REPLACEMENTS = [
   ['Radar cheat guide — loader support', 'Zone map guide — loader support'],
   ['Radar guide hub — more setup guides', 'Zone map hub — more setup guides'],
   ['Elite tier from radar guide sidebar', 'Elite tier from zone map guide sidebar'],
-  ['Escape from Tarkov cheats shop linked from radar guide', 'Escape from Tarkov cheats shop linked from zone map guide'],
-  ['loot radar', 'loot ESP'],
+  ['Caliber cheats shop linked from radar guide', 'Caliber cheats shop linked from zone map guide'],
+  ['loot radar', 'equipment ESP'],
   ['Mini-radar overlay', 'Mini-map overlay'],
   ['mini-radar overlay', 'mini-map overlay'],
   ['Mini-radar,', 'Mini-map overlay,'],
@@ -123,12 +123,12 @@ const PHRASE_REPLACEMENTS = [
   ['| Radar ', '| Map overlay '],
   ['Radar & Loot Timers', 'Map overlay & Loot Timers'],
   ['Player ESP, Radar &', 'Player ESP, map overlay &'],
-  ['Escape from Tarkov radar cheats guide', 'Escape from Tarkov map overlay guide'],
-  ['Escape from Tarkov Radar cheat Guide', 'Escape from Tarkov map overlay guide'],
-  ['Escape from Tarkov radar cheat guide', 'Escape from Tarkov map overlay guide'],
-  ['Escape from Tarkov radar guide', 'Escape from Tarkov zone map guide'],
-  ['Escape from Tarkov radar on PC', 'Escape from Tarkov zone map on PC'],
-  ['EFT Cheats: PC aimbot, ESP & radar', 'EFT Cheats: PC aimbot, ESP & map overlay'],
+  ['Caliber radar cheats guide', 'Caliber map overlay guide'],
+  ['Caliber Radar cheat Guide', 'Caliber map overlay guide'],
+  ['Caliber radar cheat guide', 'Caliber map overlay guide'],
+  ['Caliber radar guide', 'Caliber zone map guide'],
+  ['Caliber radar on PC', 'Caliber zone map on PC'],
+  ['Caliber Cheats: PC aimbot, ESP & radar', 'Caliber Cheats: PC aimbot, ESP & map overlay'],
   ['wall ESP, radar and', 'wall ESP, map overlay and'],
   ['wall ESP, radar,', 'wall ESP, map overlay,'],
   ['aimbot ESP, wall ESP, radar and', 'aimbot ESP, wall ESP, map overlay and'],

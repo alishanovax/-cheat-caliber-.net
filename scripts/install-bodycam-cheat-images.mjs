@@ -1,6 +1,6 @@
 /**
- * Install the four approved Escape from Tarkov hack screenshots into public/images/.
- * Run: node scripts/install-tarkov-hack-images.mjs
+ * Install the four approved Caliber hack screenshots into public/images/.
+ * Run: node scripts/install-caliber-images.mjs
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -28,10 +28,10 @@ function findAsset(namePart) {
 }
 
 const TARGETS = [
-  { id: 'image-f47b9287', out: 'tarkov-hack-aimbot-esp.png' },
-  { id: 'image-8c08f8ce', out: 'tarkov-hack-esp-wallhack.png' },
-  { id: 'image-af852abe', out: 'tarkov-hack-gameplay.jpg' },
-  { id: 'image-77a0ce29', out: 'tarkov-hack-esp-indoor.png' },
+  { id: 'image-f47b9287', out: 'caliber-hack-aimbot-esp.png' },
+  { id: 'image-8c08f8ce', out: 'caliber-hack-esp-wallhack.png' },
+  { id: 'image-af852abe', out: 'caliber-hack-gameplay.jpg' },
+  { id: 'image-77a0ce29', out: 'caliber-hack-esp-indoor.png' },
 ];
 
 const imagesRoot = path.join(root, 'public', 'images');

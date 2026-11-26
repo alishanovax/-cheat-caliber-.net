@@ -10,8 +10,8 @@ const files = [
 for (const file of files) {
   let text = fs.readFileSync(file, 'utf8');
   const before = text;
-  text = text.split('R6Hacks').join('EFT Cheats');
-  text = text.replace(/status:\s*'Escape from Tarkov[^']*'/, "status: 'Escape from Tarkov online'");
+  text = text.split('R6Hacks').join('Caliber Cheats');
+  text = text.replace(/status:\s*'Caliber[^']*'/, "status: 'Caliber online'");
   if (text !== before) {
     fs.writeFileSync(file, text);
     console.log('updated', file);

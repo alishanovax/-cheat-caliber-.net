@@ -43,66 +43,66 @@ const TEXT_EXTS = new Set([
 const SKIP_DIRS = new Set(['node_modules', '.git', 'dist', '.astro']);
 
 const REPLACEMENTS = [
-  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fescape-from-tarkov&sf=zadeyo', ROBRUN_CHECKOUT],
-  ['%2Fproducts%2Fescape-from-tarkov', '%2Fproducts%2Frobrun'],
+  ['https://zadeyo.com/go/ALISHA?to=%2Fproducts%2Fcaliber-novaxware&sf=zadeyo', ROBRUN_CHECKOUT],
+  ['%2Fproducts%2Fcaliber-novaxware', '%2Fproducts%2Frobrun'],
   ['https://cheattarkov.net', 'https://cheatsrobrun.net'],
   ['cheattarkov.net', 'cheatsrobrun.net'],
-  ['cheattarkov-net', 'cheatsrobrun-net'],
-  ['cheattarkov-t-2026', 'cheatsrobrun-r-2026'],
-  ['cheattarkov-2026', 'cheatsrobrun-r-2026'],
-  ['cheattarkov-forum-vote:', 'cheatsrobrun-forum-vote:'],
-  ['tarkovCheatsLanding', 'robrunCheatsLanding'],
-  ['zadeyoTarkovProductSeo', 'zadeyoRobrunProductSeo'],
-  ['ZADEYO_TARKOV_CHECKOUT_URL', 'ZADEYO_ROBRUN_CHECKOUT_URL'],
-  ['TARKOV_CHECKOUT_URL', 'ROBRUN_CHECKOUT_URL'],
-  ['/escape-from-tarkov-cheats/', '/robrun-cheats/'],
-  ['/escape-from-tarkov-cheats', '/robrun-cheats'],
-  ['escape-from-tarkov-cheats', 'robrun-cheats'],
-  ['/products/tarkov/', '/products/robrun/'],
-  ['/products/tarkov', '/products/robrun'],
-  ['/go/tarkov/', '/go/robrun/'],
-  ['/go/tarkov', '/go/robrun'],
-  ["checkoutPath('tarkov')", "checkoutPath('robrun')"],
-  ['checkoutPath("tarkov")', 'checkoutPath("robrun")'],
-  ["product: 'tarkov'", "product: 'robrun'"],
-  ['  tarkov:', '  robrun:'],
-  ["return CHECKOUT.tarkov;", 'return CHECKOUT.robrun;'],
-  ["PRIMARY_CHECKOUT_PATH = checkoutPath('tarkov')", "PRIMARY_CHECKOUT_PATH = checkoutPath('robrun')"],
-  ["CheckoutProduct = 'tarkov'", "CheckoutProduct = 'robrun'"],
-  ["_product: CheckoutProduct = 'tarkov'", "_product: CheckoutProduct = 'robrun'"],
-  ["PRODUCT_BASE = '/products/tarkov/'", "PRODUCT_BASE = '/products/robrun/'"],
-  ['Escape from Tarkov Cheats', 'RobRun Cheats'],
-  ['Escape from Tarkov cheats', 'RobRun cheats'],
-  ['Escape from Tarkov cheat', 'RobRun cheat'],
-  ['Escape from Tarkov', 'RobRun'],
+  ['cheatcaliber-net', 'cheatsrobrun-net'],
+  ['cheatcaliber-t-2026', 'cheatsrobrun-r-2026'],
+  ['cheatcaliber-2026', 'cheatsrobrun-r-2026'],
+  ['cheatcaliber-forum-vote:', 'cheatsrobrun-forum-vote:'],
+  ['caliberCheatsLanding', 'robrunCheatsLanding'],
+  ['zadeyoCaliberProductSeo', 'zadeyoRobrunProductSeo'],
+  ['ZADEYO_CALIBER_CHECKOUT_URL', 'ZADEYO_ROBRUN_CHECKOUT_URL'],
+  ['CALIBER_CHECKOUT_URL', 'ROBRUN_CHECKOUT_URL'],
+  ['/caliber-cheats/', '/robrun-cheats/'],
+  ['/caliber-cheats', '/robrun-cheats'],
+  ['caliber-cheats', 'robrun-cheats'],
+  ['/products/caliber/', '/products/robrun/'],
+  ['/products/caliber', '/products/robrun'],
+  ['/go/caliber/', '/go/robrun/'],
+  ['/go/caliber', '/go/robrun'],
+  ["checkoutPath('caliber')", "checkoutPath('robrun')"],
+  ['checkoutPath("caliber")', 'checkoutPath("robrun")'],
+  ["product: 'caliber'", "product: 'robrun'"],
+  ['  caliber:', '  robrun:'],
+  ["return CHECKOUT.caliber;", 'return CHECKOUT.robrun;'],
+  ["PRIMARY_CHECKOUT_PATH = checkoutPath('caliber')", "PRIMARY_CHECKOUT_PATH = checkoutPath('robrun')"],
+  ["CheckoutProduct = 'caliber'", "CheckoutProduct = 'robrun'"],
+  ["_product: CheckoutProduct = 'caliber'", "_product: CheckoutProduct = 'robrun'"],
+  ["PRODUCT_BASE = '/products/caliber/'", "PRODUCT_BASE = '/products/robrun/'"],
+  ['Caliber Cheats', 'RobRun Cheats'],
+  ['Caliber cheats', 'RobRun cheats'],
+  ['Caliber cheat', 'RobRun cheat'],
+  ['Caliber', 'RobRun'],
   ['Tarkov Lite', 'RobRun Lite'],
   ['Tarkov Pro', 'RobRun Pro'],
   ['Tarkov Elite', 'RobRun Elite'],
-  ['/blog/tarkov-', '/blog/robrun-'],
-  ['slug: "tarkov-', 'slug: "robrun-'],
-  ["slug: 'tarkov-", "slug: 'robrun-"],
-  ['tarkov-lite-vs-pro', 'robrun-lite-vs-pro'],
-  ['tarkov-firing-range-practice', 'robrun-practice-tips'],
-  ['tarkov-training-tips', 'robrun-training-tips'],
-  ['tarkov-offline-practice', 'robrun-practice-tips'],
-  ['tarkov-esp-setup', 'robrun-esp-setup'],
-  ['tarkov-zone-map', 'robrun-radar'],
-  ['tarkov-aimbot-raids', 'robrun-aimbot-guide'],
-  ['tarkov-aimbot-combat', 'robrun-aimbot-combat'],
-  ['tarkov-stream-proof', 'robrun-stream-proof'],
-  ['tarkov-elite-tier', 'robrun-elite-tier'],
-  ['tarkov-cheat-features', 'robrun-cheat-features'],
-  ['tarkov-hwid-ban', 'robrun-hwid-ban'],
-  ['tarkov-external-loader', 'robrun-external-loader'],
-  ['tarkov-loadouts', 'robrun-loadouts'],
-  ['tarkov-cheat-setup', 'robrun-cheat-setup'],
-  ['tarkov-practice-settings', 'robrun-practice-settings'],
-  ['tarkov-practice-settings-forum', 'robrun-practice-settings-forum'],
-  ['after-tarkov-patch', 'after-robrun-patch'],
-  ['tarkov-positioning', 'robrun-positioning'],
-  ['tarkov-aim-practice', 'robrun-aim-practice'],
-  ['tarkov-map-awareness', 'robrun-map-awareness'],
-  ['choose-tarkov-tier', 'choose-robrun-tier'],
+  ['/blog/caliber-', '/blog/robrun-'],
+  ['slug: "caliber-', 'slug: "robrun-'],
+  ["slug: 'caliber-", "slug: 'robrun-"],
+  ['caliber-lite-vs-pro', 'robrun-lite-vs-pro'],
+  ['caliber-firing-range-practice', 'robrun-practice-tips'],
+  ['caliber-training-tips', 'robrun-training-tips'],
+  ['caliber-training-practice', 'robrun-practice-tips'],
+  ['caliber-esp-setup', 'robrun-esp-setup'],
+  ['caliber-map-awareness', 'robrun-radar'],
+  ['caliber-aimbot-matches', 'robrun-aimbot-guide'],
+  ['caliber-aimbot-combat', 'robrun-aimbot-combat'],
+  ['caliber-stream-proof', 'robrun-stream-proof'],
+  ['caliber-elite-tier', 'robrun-elite-tier'],
+  ['caliber-cheat-features', 'robrun-cheat-features'],
+  ['caliber-hwid-ban', 'robrun-hwid-ban'],
+  ['caliber-external-loader', 'robrun-external-loader'],
+  ['caliber-loadouts', 'robrun-loadouts'],
+  ['caliber-cheat-setup', 'robrun-cheat-setup'],
+  ['caliber-practice-settings', 'robrun-practice-settings'],
+  ['caliber-practice-settings-forum', 'robrun-practice-settings-forum'],
+  ['after-caliber-patch', 'after-robrun-patch'],
+  ['caliber-positioning', 'robrun-positioning'],
+  ['caliber-aim-practice', 'robrun-aim-practice'],
+  ['caliber-map-awareness', 'robrun-map-awareness'],
+  ['choose-caliber-tier', 'choose-robrun-tier'],
   ['tarkov aimbot', 'robrun aimbot'],
   ['tarkov ESP', 'robrun ESP'],
   ['tarkov ability ESP', 'robrun ability ESP'],
@@ -110,13 +110,13 @@ const REPLACEMENTS = [
   ['tarkov compatibility', 'robrun compatibility'],
   ['Tarkov <span class="site-brand__pill-accent">Cheats</span>', 'RobRun <span class="site-brand__pill-accent">Cheats</span>'],
   ['Tarkov <span class="site-brand__title-accent">Cheats</span>', 'RobRun <span class="site-brand__title-accent">Cheats</span>'],
-  ['Escape from Tarkov PC — aimbot, ESP & loot tools', 'RobRun PC — aimbot, ESP & config tools'],
+  ['Caliber PC — aimbot, ESP & equipment tools', 'RobRun PC — aimbot, ESP & config tools'],
   ['Return to cheattarkov.net homepage', 'Return to cheatsrobrun.net homepage'],
   ['Return to cheatsrobrun.net homepage', 'Return to cheatsrobrun.net homepage'],
   ['@cheattarkov', '@cheatsrobrun'],
   ['cheattarkov', 'cheatsrobrun'],
   ['Tarkov', 'RobRun'],
-  ['tarkov-', 'robrun-'],
+  ['caliber-', 'robrun-'],
 ];
 
 function walk(dir, out = []) {
@@ -253,7 +253,7 @@ function patchFavicons() {
     const file = path.join(root, 'public', name);
     if (!fs.existsSync(file)) continue;
     let svg = fs.readFileSync(file, 'utf8');
-    svg = svg.replace(/Escape from Tarkov Cheats/g, 'RobRun Cheats');
+    svg = svg.replace(/Caliber Cheats/g, 'RobRun Cheats');
     svg = svg.replace(/RobRun Cheats/g, 'RobRun Cheats');
     svg = svg.replace(/(\n\s*fill="#F5F7FA"\s*\n\s*>)[T](<\/text>)/, '$1R$2');
     fs.writeFileSync(file, svg, 'utf8');
@@ -275,11 +275,11 @@ function patchCheckoutTs() {
   fs.writeFileSync(file, content, 'utf8');
 }
 
-renameIfExists('src/data/tarkovCheatsLanding.ts', 'src/data/robrunCheatsLanding.ts');
-renameIfExists('src/config/zadeyoTarkovProductSeo.ts', 'src/config/zadeyoRobrunProductSeo.ts');
-renameIfExists('src/pages/go/tarkov', 'src/pages/go/robrun');
-renameIfExists('src/pages/escape-from-tarkov-cheats', 'src/pages/robrun-cheats');
-renameIfExists('src/pages/products/tarkov', 'src/pages/products/robrun');
+renameIfExists('src/data/caliberCheatsLanding.ts', 'src/data/robrunCheatsLanding.ts');
+renameIfExists('src/config/zadeyoCaliberProductSeo.ts', 'src/config/zadeyoRobrunProductSeo.ts');
+renameIfExists('src/pages/go/caliber', 'src/pages/go/robrun');
+renameIfExists('src/pages/caliber-cheats', 'src/pages/robrun-cheats');
+renameIfExists('src/pages/products/caliber', 'src/pages/products/robrun');
 
 patchSiteImages();
 patchCheckoutRedirects();

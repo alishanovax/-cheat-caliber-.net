@@ -1,5 +1,5 @@
 /** Bump when favicon assets change so browsers reload tab icons. */
-export const FAVICON_VERSION = 'cheatcaliber-c-2026';
+export const FAVICON_VERSION = 'cheatcaliber-c-2026-v2';
 
 export const SITE_DOMAIN = 'cheatcaliber.net';
 export const SITE_URL = `https://${SITE_DOMAIN}`;

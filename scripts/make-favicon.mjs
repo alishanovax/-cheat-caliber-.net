@@ -71,13 +71,4 @@ const ico = encodeIco([await png(16), await png(32)]);
 fs.writeFileSync(path.join(out, 'favicon.ico'), ico);
 console.log('wrote favicon.ico', ico.length);
 
-const png128 = await png(128);
-const b64 = png128.toString('base64');
-const svg = [
-  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Caliber Cheats">',
-  `  <image href="data:image/png;base64,${b64}" width="128" height="128" />`,
-  '</svg>',
-  '',
-].join('\n');
-fs.writeFileSync(path.join(out, 'favicon.svg'), svg);
-console.log('wrote favicon.svg', svg.length);
+console.log('favicon.svg left unchanged — edit public/favicon.svg (path-based C) directly.');
